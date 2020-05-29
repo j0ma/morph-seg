@@ -1,0 +1,2 @@
+comparison-table*.md filter=lfs diff=lfs merge=lfs -text
+data/comparison-table*.md filter=lfs diff=lfs merge=lfs -text

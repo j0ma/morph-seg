@@ -1,0 +1,11 @@
+click
+morfessor
+sentencepiece
+subword-nmt
+pandas
+tabulate
+<<<<<<< HEAD
+torchtext
+sacremoses
+=======
+>>>>>>> 856af8cfbaad157e5fadf38111ea1048f98eb3bb
