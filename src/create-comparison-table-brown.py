@@ -46,11 +46,12 @@ n_spaces = output.applymap(lambda s: sum([1 if ' ' in c else 0 for c in s])).sum
 output['n_spaces'] = n_spaces
 output.sort_values('n_spaces', ascending=False, inplace=True)
 
-with open(os.path.join(OUTPUT_FOLDER, OUTPUT_FNAME), 'w') as MARKDOWN_TABLE_PATH:
-    output.to_markdown(MARKDOWN_TABLE_PATH)
-    PKL_PATH = MARKDOWN_TABLE_PATH.replace('.md', '.pkl')
-    output.to_pickle(PKL_PATH)
+MARKDOWN_TABLE_PATH = os.path.join(OUTPUT_FOLDER, OUTPUT_FNAME)
+PKL_PATH = MARKDOWN_TABLE_PATH.replace('.md', '.pkl')
+with open(MARKDOWN_TABLE_PATH, 'w') as MARKDOWN_TABLE_FILE:
+    output.to_markdown(MARKDOWN_TABLE_FILE)
 
+output.to_pickle(PKL_PATH)
     
 
 

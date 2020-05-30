@@ -42,11 +42,14 @@ for fn, is_bpe, name in zip(FILENAMES, IS_BPE, NAMES):
     output[name] = segm
 
 # sort by total number of spaces in row (to show segmented words)
-n_spaces = output.applymap(lambda s: sum([1 if ' ' in c else 0 for c in s])).sum(axis=1)
-output['n_spaces'] = n_spaces
-output.sort_values('n_spaces', ascending=False, inplace=True)
+# n_spaces = output.applymap(lambda s: sum([1 if ' ' in c else 0 for c in s])).sum(axis=1)
+# output['n_spaces'] = n_spaces
+# output.sort_values('n_spaces', ascending=False, inplace=True)
 
-MARKDOWN_TABLE_PATH = os.path.join(OUTPUT_FOLDER, OUTPUT_FNAME),
+# Shuffle the data
+output = output.sample(frac=1).reset_index(drop=True)
+
+MARKDOWN_TABLE_PATH = os.path.join(OUTPUT_FOLDER, OUTPUT_FNAME)
 PKL_PATH = MARKDOWN_TABLE_PATH.replace('.md', '.pkl')
 with open(MARKDOWN_TABLE_PATH, 'w') as MARKDOWN_TABLE_FILE:
     output.to_markdown(MARKDOWN_TABLE_FILE)
