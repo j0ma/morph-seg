@@ -78,12 +78,8 @@ def run_morfessor_flatcat(model_name, input_path, seed_segmentation_path):
 @click.option('--output-folder', 
                default="../data/segmented/", 
                type=click.Path(exists=True))
-<<<<<<< HEAD
 @click.option('--model-type', default='baseline')
 def main(input_path, output_folder, model_type):
-=======
-def main(input_path, output_folder):
->>>>>>> 856af8cfbaad157e5fadf38111ea1048f98eb3bb
     # load data
     p, f = os.path.split(input_path)
     file_name, extension = os.path.splitext(f)
@@ -103,11 +99,10 @@ def main(input_path, output_folder):
             lambda mn, ip: run_morfessor_flatcat(mn, ip, None),
             lambda mn, ip: run_morfessor_flatcat(mn, ip, None)
     ]
-<<<<<<< HEAD
     if model_type == 'all': 
         print('Models to run:\n - {}'.format("\n - ".join(models)))
         for model, run in zip(models, functions):
-            output_filename = f"{file_name}.segmented.{model}{extension}"
+            output_filename = f"{file_name}.segmented.{model}"
             OUTPUT_PATH = os.path.join(OUTPUT_FOLDER, output_filename)
             
             print(f'Now running: {model}')
@@ -130,12 +125,7 @@ def main(input_path, output_folder):
         run = lambda mn, ip: run_morfessor_baseline(mn, ip)
         
         print('Running baseline model only...')
-=======
-    
-    print('Models to run:\n - {}'.format("\n - ".join(models)))
-    for model, run in zip(models, functions):
->>>>>>> 856af8cfbaad157e5fadf38111ea1048f98eb3bb
-        output_filename = f"{file_name}.segmented.{model}{extension}"
+        output_filename = f"{file_name}.segmented.{model}"
         OUTPUT_PATH = os.path.join(OUTPUT_FOLDER, output_filename)
         
         print(f'Now running: {model}')
@@ -152,11 +142,6 @@ def main(input_path, output_folder):
         else:
             print('No model received, not going to write to disk...')
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 856af8cfbaad157e5fadf38111ea1048f98eb3bb
 if __name__ == '__main__':
     main()
 

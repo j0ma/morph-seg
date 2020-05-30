@@ -33,7 +33,7 @@ def is_word(token):
 
 ALL_SENTENCES = flatten([read_file(p) for p in PATHS])
 ALL_TOKENS = flatten([tok.tokenize(sent) for sent in ALL_SENTENCES])
-ALL_WORD_TOKENS = '\n'.join(sorted({t for t in ALL_TOKENS if is_word(t)}))
+ALL_WORD_TOKENS = '\n'.join(sorted({t.lower() for t in ALL_TOKENS if is_word(t)}))
 
 with open(OUTPUT_PATH, 'w') as f:
     f.write(ALL_WORD_TOKENS)

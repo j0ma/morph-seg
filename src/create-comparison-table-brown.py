@@ -48,6 +48,8 @@ output.sort_values('n_spaces', ascending=False, inplace=True)
 
 with open(os.path.join(OUTPUT_FOLDER, OUTPUT_FNAME), 'w') as MARKDOWN_TABLE_PATH:
     output.to_markdown(MARKDOWN_TABLE_PATH)
+    PKL_PATH = MARKDOWN_TABLE_PATH.replace('.md', '.pkl')
+    output.to_pickle(PKL_PATH)
 
     
 

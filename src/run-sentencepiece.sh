@@ -1,13 +1,8 @@
 SPM_TRAIN="sentencepiece/spm_train.py"
 SPM_ENCODE="sentencepiece/spm_encode.py"
 MODEL_OUTPUT="../tmp/sentencepiece.bpe"
-<<<<<<< HEAD
 INPUT_FILE="../data/raw/all-flores-words-nonumbers.en"
 OUTPUT_FILE="../data/segmented/all-flores-words-nonumbers.en.segmented.sentencepiece"
-=======
-INPUT_FILE="../data/raw/brown_wordlist.wordonly.txt"
-OUTPUT_FILE="../data/segmented/brown_wordlist.segmented.sentencepiece"
->>>>>>> 856af8cfbaad157e5fadf38111ea1048f98eb3bb
 BPE_SIZE=5000
 
 python $SPM_TRAIN \
