@@ -1,8 +1,8 @@
 SPM_TRAIN="sentencepiece/spm_train.py"
 SPM_ENCODE="sentencepiece/spm_encode.py"
 MODEL_OUTPUT="../tmp/sentencepiece.bpe"
-INPUT_FILE="../data/raw/all-flores-words-nonumbers.en"
-OUTPUT_FILE="../data/segmented/all-flores-words-nonumbers.en.segmented.sentencepiece"
+INPUT_FILE="../data/raw/yiddish-lrec2020-romanized"
+OUTPUT_FILE="../data/segmented/yiddish-lrec2020-romanized.segmented.sentencepiece"
 BPE_SIZE=5000
 
 python $SPM_TRAIN \
