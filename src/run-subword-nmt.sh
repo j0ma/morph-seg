@@ -1,6 +1,6 @@
-INPUT_FILE="../data/raw/all-flores-words-nonumbers.en"
+INPUT_FILE="../data/raw/yiddish-lrec2020-romanized"
 CODES_FILE="../tmp/subword-nmt.bpe.codes"
-OUTPUT_FILE="../data/segmented/all-flores-words-nonumbers.en.segmented.subword-nmt"
+OUTPUT_FILE="../data/segmented/yiddish-lrec2020-romanized.segmented.subword-nmt"
 BPE_SIZE=5000
 
 echo "Learning BPE..."

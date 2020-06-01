@@ -41,7 +41,7 @@ def run_morfessor_baseline(model_name, input_path, hyperparams=None):
 
     return model, train_words, segmentations
 
-def run_morfessor_flatcat(model_name, input_path, seed_segmentation_path):
+def run_morfessor_flatcat(model_name, input_path, seed_segmentation_path, corpus_weight=1.0):
 
     if seed_segmentation_path is None:
         _ = "brown_wordlist.segmented.morfessor-baseline-batch-recursive.txt"
@@ -53,7 +53,7 @@ def run_morfessor_flatcat(model_name, input_path, seed_segmentation_path):
     train_words = [w for _, w, _ in train_data]
 
     morph_usage = flatcat.categorizationscheme.MorphUsageProperties()
-    model = flatcat.FlatcatModel(morph_usage, corpusweight=1.0)
+    model = flatcat.FlatcatModel(morph_usage, corpusweight=corpus_weight)
 
     # this might result in overfit, change later(?)
     model.add_corpus_data(io.read_segmentation_file(seed_segmentation_path))
