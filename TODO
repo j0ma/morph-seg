@@ -1,0 +1,12 @@
+# TODO
+- [x] Get gold standard analyses from LinguaRobot for hyperparameters
+- [x] Get flatcat segmentation error to go away
+    - If all else fails, use command line utilities
+- [x] Make sure new separated morfessor scripts work
+
+
+## LATER
+- [] Create hyperparameter-tunable experiment script for baseline
+    - What metric? How do I see it?
+    - Dev set log likelihood if using unsupervised?
+- [] Check out guild.ai and see if it can help with this
