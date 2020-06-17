@@ -1,3 +1,4 @@
+from collections import Counter
 import sacremoses as sm
 import itertools as it
 import morfessor
@@ -38,9 +39,9 @@ def train_model(lang,
     
     print(f'Now running: {model}')
     if 'flatcat' in model:
-        run = lambda mn, ip: h.run_morfessor_flatcat(mn, ip, construction_separator=construction_separator),
+        run = lambda mn, ip: run_morfessor_flatcat(mn, ip, construction_separator=construction_separator),
     else:
-        run = h.run_morfessor_baseline
+        run = run_morfessor_baseline
 
     model_bin, words, segmentations = run(model , input_path)
     
@@ -48,15 +49,15 @@ def train_model(lang,
     if words is not None and segmentations is not None:
         output_lines = [f"{w}\t{s}" for w, s in zip(words, segmentations)]
         segmentation_lines = [f'{segmentation_counts[s]} {s}' for s in segmentations]
-        h.write_file(output_lines, OUTPUT_PATH)
-        h.write_file(segmentation_lines, SEGM_PATH)
+        write_file(output_lines, OUTPUT_PATH)
+        write_file(segmentation_lines, SEGM_PATH)
     else:
         print('No segmentations received, not going to write to disk...')
     
     # save model to pickle
     if model_bin is not None:
-        bin_path = model_output_path or f"{OUTPUT_FOLDER}/../../bin/{input_file_name}-{model}-{lang}.bin")
-        h.dump_pickle(model_bin, bin_path)
+        bin_path = model_output_path or f"../bin/{input_file_name}-{model}-{lang}.bin"
+        dump_pickle(model_bin, bin_path)
     else:
         print('No model received, not going to write to disk...')
 
@@ -157,12 +158,12 @@ def run_morfessor_baseline(model_name, input_path, hyperparams=None):
     return model, train_words, segmentations
 
 def dump_pickle(obj, f):
-    with open(f, 'wb') as f:
-        pickle.dump(obj, f)
+    with open(f, 'wb') as fout:
+        pickle.dump(obj, fout)
 
 def write_file(lines, f):
-    with open(f, 'w') as f:
-        f.write("\n".join(lines))
+    with open(f, 'w') as fout:
+        fout.write("\n".join(lines))
 
 def read_lines(f):
     with open(f, 'r') as f:

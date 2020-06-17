@@ -1,4 +1,3 @@
-from collections import Counter
 import helpers as h
 import morfessor
 import pickle
@@ -20,7 +19,7 @@ import os
 @click.option('--output', '-o',
                default="../data/segmented/", 
                help="Folder to save segmentations in.",
-               type=click.Path(exists=True))
+               type=click.Path())
 @click.option('--model-type', default='baseline-batch-recursive')
 @click.option('--model-output-path', help="Path to save model binary in", default=None)
 def main(lang, input_path, output, model_type, model_output_path):
@@ -31,6 +30,12 @@ def main(lang, input_path, output, model_type, model_output_path):
 
     INPUT_PATH = os.path.abspath(input_path)
     OUTPUT_FOLDER = os.path.abspath(output)
+    
+    # make output folder if it doesn't exist
+    if not os.path.exists(OUTPUT_FOLDER):
+        print(f'Not found: {OUTPUT_FOLDER}. Creating...')
+        os.system(f'mkdir -p {OUTPUT_FOLDER}')
+
     MODEL_TYPES = {'batch-recursive', 'batch-viterbi', 
                    'online-recursive', 'online-viterbi'}
 
@@ -49,7 +54,7 @@ def main(lang, input_path, output, model_type, model_output_path):
                 input_path=INPUT_PATH,
                 input_file_name=file_name,
                 model_output_path=model_output_path,
-                segm_output_path)
+                segm_output_folder=OUTPUT_FOLDER)
 
 
 if __name__ == '__main__':
