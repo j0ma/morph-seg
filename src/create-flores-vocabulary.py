@@ -66,7 +66,6 @@ def main(lang, output_file=None, dry_run=False, with_counts=False):
         for t in flatten([tokenize(sent) for sent in sentences]):
             yield t
 
-    # ALL_SENTENCES = flatten([read_file(p) for p in PATHS])
     N_MAX = None
     ALL_TOKEN_COUNTS = Counter(t for t in all_tokens(all_sentences(PATHS, n_max=N_MAX)) if is_word(t))
     ALL_LOWERCASE_TOKEN_COUNTS = Counter(t.lower() for t in all_tokens(all_sentences(PATHS, n_max=N_MAX)) if is_word(t))
@@ -80,10 +79,10 @@ def main(lang, output_file=None, dry_run=False, with_counts=False):
     if not dry_run:
 
         # create output files
-        ALL_WORD_TOKENS_WITHCOUNTS = sorted(ALL_TOKEN_COUNTS.items(), key=lambda t: t[0])
+        ALL_WORD_TOKENS_WITHCOUNTS = list(sorted(ALL_TOKEN_COUNTS.items(), key=lambda t: t[0]))
         ALL_WORD_TOKENS_NOCOUNTS = [t for t, c in ALL_WORD_TOKENS_WITHCOUNTS]
 
-        ALL_LOWERCASE_WORD_TOKENS_WITHCOUNTS = sorted(ALL_LOWERCASE_TOKEN_COUNTS.items(), key=lambda t: t[0])
+        ALL_LOWERCASE_WORD_TOKENS_WITHCOUNTS = list(reversed(sorted(ALL_LOWERCASE_TOKEN_COUNTS.items(), key=lambda t: t[1])))
         ALL_LOWERCASE_WORD_TOKENS_NOCOUNTS = [t for t, c in ALL_LOWERCASE_WORD_TOKENS_WITHCOUNTS]
 
         h.write_file(ALL_WORD_TOKENS_NOCOUNTS, OUTPUT_PATH)
