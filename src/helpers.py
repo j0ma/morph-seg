@@ -6,11 +6,13 @@ import pickle
 import click
 import os
 
-def train_model(model_name, 
+def train_model(lang, 
+        model_name, 
         input_path, 
         input_file_name, 
         model_output_path, 
-        segm_output_folder):
+        segm_output_folder, 
+        construction_separator=" + "):
     """
     Description
     ------------
@@ -35,8 +37,12 @@ def train_model(model_name,
     SEGM_PATH = os.path.join(segm_output_folder, segmentation_filename)
     
     print(f'Now running: {model}')
-    model_bin, words, segmentations = \
-            h.run_morfessor_baseline(model, input_path)
+    if 'flatcat' in model:
+        run = lambda mn, ip: h.run_morfessor_flatcat(mn, ip, construction_separator=construction_separator),
+    else:
+        run = h.run_morfessor_baseline
+
+    model_bin, words, segmentations = run(model , input_path)
     
     segmentation_counts = Counter(segmentations)
     if words is not None and segmentations is not None:
@@ -49,7 +55,7 @@ def train_model(model_name,
     
     # save model to pickle
     if model_bin is not None:
-        bin_path = model_output_path or f"{OUTPUT_FOLDER}/../../bin/{input_file_name}-{model}.bin")
+        bin_path = model_output_path or f"{OUTPUT_FOLDER}/../../bin/{input_file_name}-{model}-{lang}.bin")
         h.dump_pickle(model_bin, bin_path)
     else:
         print('No model received, not going to write to disk...')
