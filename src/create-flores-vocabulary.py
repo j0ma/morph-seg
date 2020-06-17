@@ -79,7 +79,7 @@ def main(lang, output_file=None, dry_run=False, with_counts=False):
     if not dry_run:
 
         # create output files
-        ALL_WORD_TOKENS_WITHCOUNTS = list(sorted(ALL_TOKEN_COUNTS.items(), key=lambda t: t[0]))
+        ALL_WORD_TOKENS_WITHCOUNTS = list(reversed(sorted(ALL_TOKEN_COUNTS.items(), key=lambda t: t[1])))
         ALL_WORD_TOKENS_NOCOUNTS = [t for t, c in ALL_WORD_TOKENS_WITHCOUNTS]
 
         ALL_LOWERCASE_WORD_TOKENS_WITHCOUNTS = list(reversed(sorted(ALL_LOWERCASE_TOKEN_COUNTS.items(), key=lambda t: t[1])))
