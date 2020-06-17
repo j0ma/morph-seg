@@ -53,17 +53,23 @@ def main(lang, output_file=None, dry_run=False, with_counts=False):
     def is_word(token):
         return (not token) or (token[0].isalnum())
 
-    def all_sentences(paths):
-        for s in flatten([read_file(p) for p in paths]):
-            yield s
+    def all_sentences(paths, n_max=None):
+        sents = flatten([read_file(p) for p in paths])
+        if n_max is not None:
+            for s, i in zip(sents, range(n_max)):
+                yield s
+        else:
+            for s in sents:
+                    yield s
 
     def all_tokens(sentences):
         for t in flatten([tokenize(sent) for sent in sentences]):
             yield t
 
     # ALL_SENTENCES = flatten([read_file(p) for p in PATHS])
-    ALL_TOKEN_COUNTS = Counter(t for t in all_tokens(all_sentences(PATHS)) if is_word(t))
-    ALL_LOWERCASE_TOKEN_COUNTS = Counter(t.lower() for t in all_tokens(all_sentences(PATHS)) if is_word(t))
+    N_MAX = None
+    ALL_TOKEN_COUNTS = Counter(t for t in all_tokens(all_sentences(PATHS, n_max=N_MAX)) if is_word(t))
+    ALL_LOWERCASE_TOKEN_COUNTS = Counter(t.lower() for t in all_tokens(all_sentences(PATHS, n_max=N_MAX)) if is_word(t))
 
     n_types_non_lowercase = len(ALL_TOKEN_COUNTS)
     n_types_lowercase = len(ALL_LOWERCASE_TOKEN_COUNTS)
@@ -86,7 +92,7 @@ def main(lang, output_file=None, dry_run=False, with_counts=False):
 
         if with_counts:
             ALL_WORD_TOKENS_WITHCOUNTS = [f"{c}\t{t}" for t,c in ALL_WORD_TOKENS_WITHCOUNTS]
-            ALL_LOWERCASE_WORD_TOKENS_WITHCOUNTS = [f"{c}\t{t}" for t,c in ALL_LOWERCASE_TOKEN_COUNTS]
+            ALL_LOWERCASE_WORD_TOKENS_WITHCOUNTS = [f"{c}\t{t}" for t,c in ALL_LOWERCASE_WORD_TOKENS_WITHCOUNTS]
             h.write_file(ALL_WORD_TOKENS_WITHCOUNTS, OUTPUT_PATH + '-withcounts')
             h.write_file(ALL_LOWERCASE_WORD_TOKENS_WITHCOUNTS, 
                          OUTPUT_PATH + '-lowercase-withcounts')
