@@ -1,6 +1,7 @@
-INPUT_FILE="../data/raw/yiddish-lrec2020-romanized"
-CODES_FILE="../tmp/subword-nmt.bpe.codes"
-OUTPUT_FILE="../data/segmented/yiddish-lrec2020-romanized.segmented.subword-nmt"
+SLUG="yiddish-lrec2020-romanized"
+INPUT_FILE="../data/raw/${SLUG}"
+CODES_FILE="../bin/${SLUG}-subword-nmt.bpe.codes"
+OUTPUT_FILE="../data/segmented/${SLUG}.segmented.subword-nmt"
 BPE_SIZE=5000
 
 echo "Learning BPE..."

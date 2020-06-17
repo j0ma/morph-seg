@@ -1,8 +1,43 @@
+import sacremoses as sm
+import itertools as it
 import morfessor
 import flatcat
 import pickle
 import click
 import os
+
+def segment_word(model, w):
+    """
+    Description
+    -----------
+    Segment word `w` using `model` by looking up w 
+    in the model analyses, and default to Viterbi 
+    segmentation if necessary, ie. in case `w` is OOV
+    or in case the model does not support .segment().
+    """
+    try:
+        out = model.segment(w)
+    except (KeyError, AttributeError):
+        out = model.viterbi_segment(w)
+    return out
+
+def segment_sentence(model, sentence, tokenizer=None):
+    """
+    Description
+    -----------
+    Segments `sentence` using `model` and `tokenizer`.
+
+    Parameters
+    ----------
+    model: Morfessor model
+        - in reality this can be anything that supports
+          the .segment() method
+    """
+    if tokenizer is None:
+        tokenizer = sm.MosesTokenizer('en')
+    words = tokenizer.tokenzie(sentence)
+    segmentations = flatten([segment_word(model, w) for w in words])
+    return  " ".join(segmentations)
 
 def run_morfessor_flatcat(model_name, input_path, seed_segmentation_path=None, construction_separator=" + ", corpus_weight=1.0):
 
@@ -34,7 +69,7 @@ def run_morfessor_flatcat(model_name, input_path, seed_segmentation_path=None, c
     else:
         raise ValueError("Invalid training method!")
 
-    segmentations = [model.viterbi_segment(w) for w in train_words]
+    segmentations = [model.viterbi_segment(w)[0][0] for w in train_words]
 
     return model, train_words, segmentations
 
@@ -63,7 +98,7 @@ def run_morfessor_baseline(model_name, input_path, hyperparams=None):
         raise ValueError("Invalid training method!")
 
     train_words = [w for _, w in train_data]
-    segmentations = [" ".join(model.viterbi_segment(w)[0]) for w in train_words]
+    segmentations = [" ".join(model.segment(w)) for w in train_words]
 
     return model, train_words, segmentations
 
@@ -74,3 +109,10 @@ def dump_pickle(obj, f):
 def write_file(lines, f):
     with open(f, 'w') as f:
         f.write("\n".join(lines))
+
+def read_lines(f):
+    with open(f, 'r') as f:
+        return [l.strip() for l in f.readlines() if l.strip() != '']
+
+def flatten(nested):
+    return list(it.chain.from_iterable(nested))

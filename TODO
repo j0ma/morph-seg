@@ -6,7 +6,5 @@
 
 
 ## LATER
-- [] Create hyperparameter-tunable experiment script for baseline
-    - What metric? How do I see it?
-    - Dev set log likelihood if using unsupervised?
+- [] Enable tuning on Morpho Challenge 2010 data
 - [] Check out guild.ai and see if it can help with this

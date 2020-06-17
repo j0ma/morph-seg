@@ -1,8 +1,9 @@
 SPM_TRAIN="sentencepiece/spm_train.py"
 SPM_ENCODE="sentencepiece/spm_encode.py"
-MODEL_OUTPUT="../tmp/sentencepiece.bpe"
-INPUT_FILE="../data/raw/yiddish-lrec2020-romanized"
-OUTPUT_FILE="../data/segmented/yiddish-lrec2020-romanized.segmented.sentencepiece"
+SLUG="yiddish-lrec2020-romanized"
+INPUT_FILE="../data/raw/${SLUG}"
+OUTPUT_FILE="../data/segmented/${SLUG}.segmented.sentencepiece"
+MODEL_OUTPUT="../bin/${SLUG}-sentencepiece.bpe"
 BPE_SIZE=5000
 
 python $SPM_TRAIN \

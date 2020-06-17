@@ -7,20 +7,22 @@ import click
 import os
 
 @click.command()
-@click.option('--input-path', 
+@click.option('--input-path', '-i',
               default="../data/raw/brown_wordlist", 
+              help="Path to input wordlist. [NB: file, not folder!]",
               type=click.Path(exists=True))
-@click.option('--output-folder', 
+@click.option('--output', '-o',
                default="../data/segmented/", 
+               help="Folder to save segmentations in. [NB: folder, not file!]",
                type=click.Path(exists=True))
 @click.option('--model-type', default='baseline')
-def main(input_path, output_folder, model_type):
+def main(input_path, output, model_type):
     # load data
     p, f = os.path.split(input_path)
     file_name, extension = os.path.splitext(f)
 
     INPUT_PATH = os.path.abspath(input_path)
-    OUTPUT_FOLDER = os.path.abspath(output_folder)
+    OUTPUT_FOLDER = os.path.abspath(output)
 
     models = [f"morfessor-baseline-{tr}" for tr in 
               ('batch-recursive', 'batch-viterbi', 
@@ -52,7 +54,7 @@ def main(input_path, output_folder, model_type):
             
             # save model to pickle
             if model_bin is not None:
-                h.dump_pickle(model_bin, f"{OUTPUT_FOLDER}/../../bin/{model}.bin")
+                h.dump_pickle(model_bin, f"{OUTPUT_FOLDER}/../../bin/{file_name}-{model}.bin")
             else:
                 print('No model received, not going to write to disk...')
     elif model_type == 'baseline':
@@ -80,7 +82,7 @@ def main(input_path, output_folder, model_type):
         
         # save model to pickle
         if model_bin is not None:
-            h.dump_pickle(model_bin, f"{OUTPUT_FOLDER}/../../bin/{model}.bin")
+            h.dump_pickle(model_bin, f"{OUTPUT_FOLDER}/../../bin/{file_name}-{model}.bin")
         else:
             print('No model received, not going to write to disk...')
 
