@@ -13,6 +13,7 @@ def train_model(lang,
         input_file_name, 
         model_output_path, 
         segm_output_folder, 
+        corpus_weight=1.0,
         construction_separator=" + "):
     """
     Description
@@ -23,6 +24,7 @@ def train_model(lang,
 
     Parameters
     ----------
+    lang: str
     model_name: str
     input_path: str
         Path to input wordlist
@@ -39,7 +41,7 @@ def train_model(lang,
     
     print(f'Now running: {model}')
     if 'flatcat' in model:
-        run = lambda mn, ip: run_morfessor_flatcat(mn, ip, construction_separator=construction_separator),
+        run = lambda mn, ip: run_morfessor_flatcat(mn, ip, construction_separator=construction_separator, lang=lang)
     else:
         run = run_morfessor_baseline
 
@@ -73,7 +75,7 @@ def segment_word(model, w):
     try:
         out = model.segment(w)
     except (KeyError, AttributeError):
-        out = model.viterbi_segment(w)
+        out = model.viterbi_segment(w)[0]
     return out
 
 def segment_sentence(model, sentence, tokenizer=None):
@@ -85,20 +87,22 @@ def segment_sentence(model, sentence, tokenizer=None):
     Parameters
     ----------
     model: Morfessor model
-        - in reality this can be anything that supports
-          the .segment() method
+    sentence: str
+    tokenizer: object
     """
-    if tokenizer is None:
-        tokenizer = sm.MosesTokenizer('en')
-    words = tokenizer.tokenzie(sentence)
+    if tokenizer is not None:
+        words = tokenizer.tokenize(sentence)
+    else:
+        words = sentence.split()
+
     segmentations = flatten([segment_word(model, w) for w in words])
     return  " ".join(segmentations)
 
-def run_morfessor_flatcat(model_name, input_path, seed_segmentation_path=None, construction_separator=" + ", corpus_weight=1.0):
+def run_morfessor_flatcat(model_name, input_path, lang='en', seed_segmentation_path=None, construction_separator=" + ", corpus_weight=1.0):
 
     if seed_segmentation_path is None:
-        _ = "brown_wordlist.segmented.morfessor-baseline-batch-recursive.segmentation-only"
-        seed_segmentation_path = os.path.abspath(f'../data/segmented/{_}')
+        _ = f"all-flores-words-{lang}.segmented.morfessor-baseline-batch-recursive.segmentation-only"
+        seed_segmentation_path = os.path.abspath(f'../data/segmented/flores/{lang}/{_}')
 
     io = flatcat.FlatcatIO(construction_separator=construction_separator)
 
@@ -116,7 +120,8 @@ def run_morfessor_flatcat(model_name, input_path, seed_segmentation_path=None, c
     model.add_corpus_data(seed_segmentation_file)
     model.initialize_hmm()
 
-    training_type = model_name.replace('flatcat-','')
+    training_type = 'online' if 'online' in model_name else 'batch'
+    print('training type = {}'.format(training_type))
     if training_type == 'batch':
         model.train_batch()
     elif training_type == 'online':
@@ -171,3 +176,4 @@ def read_lines(f):
 
 def flatten(nested):
     return list(it.chain.from_iterable(nested))
+    

@@ -33,6 +33,7 @@ TGT_TOKENIZER="cat"  # learn target-side BPE over untokenized (raw) text
 
 # obsolete
 #SPM_TRAIN=$SCRIPTS/sentencepiece/spm_train.py
+
 #SPM_ENCODE=$SCRIPTS/spm_encode.py
 
 URLS=(
