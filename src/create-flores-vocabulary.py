@@ -14,7 +14,8 @@ import os
 @click.command()
 @click.option('--lang', required=True)
 @click.option('--output-file', '-o')
-def main(lang, output_file=None):
+@click.option('--dry-run', is_flag=True, default=False)
+def main(lang, output_file=None, dry_run=False):
 
     if output_file is None:
         output_file = f'all-flores-words-{lang}'
@@ -50,10 +51,16 @@ def main(lang, output_file=None):
 
     ALL_SENTENCES = flatten([read_file(p) for p in PATHS])
     ALL_TOKENS = flatten([tokenize(sent) for sent in ALL_SENTENCES])
-    ALL_WORD_TOKENS = '\n'.join(sorted({t for t in ALL_TOKENS if is_word(t)}))
+    ALL_WORD_TOKENS = sorted({t for t in ALL_TOKENS if is_word(t)})
 
-    with open(OUTPUT_PATH, 'w') as f:
-        f.write(ALL_WORD_TOKENS)
+    n_types_non_lowercase = len(ALL_WORD_TOKENS)
+    n_types_lowercase = len({t.lower() for t in ALL_WORD_TOKENS})
+    print(f"No. of word types (non-lowercased): {n_types_non_lowercase}")
+    print(f"No. of word types (lowercased): {n_types_lowercase}")
+
+    if not dry_run:
+        with open(OUTPUT_PATH, 'w') as f:
+            f.write("\n".join(ALL_WORD_TOKENS))
 
 if __name__ == '__main__':
     main()
