@@ -52,15 +52,20 @@ def main(lang, output_file=None, dry_run=False):
     ALL_SENTENCES = flatten([read_file(p) for p in PATHS])
     ALL_TOKENS = flatten([tokenize(sent) for sent in ALL_SENTENCES])
     ALL_WORD_TOKENS = sorted({t for t in ALL_TOKENS if is_word(t)})
+    ALL_LOWERCASE_WORD_TOKENS = {t.lower() for t in ALL_WORD_TOKENS}
 
     n_types_non_lowercase = len(ALL_WORD_TOKENS)
-    n_types_lowercase = len({t.lower() for t in ALL_WORD_TOKENS})
+    n_types_lowercase = len(ALL_LOWERCASE_WORD_TOKENS)
     print(f"No. of word types (non-lowercased): {n_types_non_lowercase}")
     print(f"No. of word types (lowercased): {n_types_lowercase}")
+    print(f"Data compression ratio: {round(n_types_non_lowercase/n_types_lowercase, 3)}")
 
     if not dry_run:
         with open(OUTPUT_PATH, 'w') as f:
             f.write("\n".join(ALL_WORD_TOKENS))
+
+        with open(OUTPUT_PATH + '-lowercase', 'w') as f:
+            f.write("\n".join(ALL_LOWERCASE_WORD_TOKENS))
 
 if __name__ == '__main__':
     main()
