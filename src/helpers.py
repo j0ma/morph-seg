@@ -129,7 +129,7 @@ def run_morfessor_flatcat(model_name, input_path, lang='en', seed_segmentation_p
     else:
         raise ValueError("Invalid training method!")
 
-    segmentations = [model.viterbi_segment(w)[0][0] for w in train_words]
+    segmentations = [model.viterbi_segment(w)[0] for w in train_words]
 
     return model, train_words, segmentations
 
