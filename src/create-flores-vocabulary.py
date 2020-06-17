@@ -10,91 +10,105 @@ import sacremoses as sm
 import itertools as it
 import helpers as h
 import pickle
+import string
 import click
 import math
 import os
+
+PUNC = set(string.punctuation)
+
+def read_file(p):
+    with open(p, 'r') as f:
+        for l in f:
+            yield l.strip()
+
+def flatten(nested):
+    for x in it.chain.from_iterable(nested):
+        yield x
+
+def is_word(token):
+    return (not token) or token in PUNC or (token[0].isalnum())
+
+def compute_token_counts(paths, tokenize=None, n_max=None):
+    """Computes token counts"""
+    n_iters = 0
+    if n_max is None:
+        n_max = math.inf
+
+    token_counts = Counter()
+    lowercase_token_counts = Counter()
+    for path in paths:
+        sentences = read_file(path)
+        for sent in sentences:
+            n_iters += 1
+            if n_iters >= n_max:
+                return token_counts, lowercase_token_counts
+            
+            tokens = tokenize(sent)
+            for t in tokens:
+                if not is_word(t):
+                    continue
+                token_counts[t] += 1 
+                lowercase_token_counts[t.lower()] += 1
+    
+    return token_counts, lowercase_token_counts
+
+def dump_tokens(token_counts, output_path, output_path_with_counts, with_counts):
+    with open(output_path, 'w') as f_no_counts, open(output_path_with_counts, 'w') as f_with_counts:
+        for token, token_count in reversed(sorted(token_counts.items(), key=lambda t: t[1])):
+            f_no_counts.write(f"{token}\n")
+            if with_counts:
+                f_with_counts.write(f"{token_count}\t{token}\n")
 
 @click.command()
 @click.option('--lang', required=True)
 @click.option('--output-file', '-o')
 @click.option('--dry-run', is_flag=True, default=False)
 @click.option('--with-counts', is_flag=True, default=False)
-def main(lang, output_file=None, dry_run=False, with_counts=False):
+@click.option('--n-max', type=int)
+def main(lang, output_file=None, dry_run=False, with_counts=False, n_max=None):
 
     if output_file is None:
         output_file = f'all-flores-words-{lang}'
 
     if lang == 'en':
         data_folders = ["../data/raw/wiki_ne_en", "../data/raw/wiki_si_en"]
-        OUTPUT_PATH = os.path.join('../data/raw/', output_file)
+        output_path = os.path.join('../data/raw/', output_file)
     else:        
         data_folders = [f"../data/raw/wiki_{lang}_en"]
-        OUTPUT_PATH = os.path.join(data_folders[0], output_file)
+        output_path = os.path.join(data_folders[0], output_file)
 
-    PATHS= [f"{df}/train.{lang}" for df in data_folders]
+    input_paths= [f"{df}/train.{lang}" for df in data_folders]
+    output_path_with_counts = output_path + '-withcounts'
+    output_path_lowercase = output_path + '-lowercase'
+    output_path_lowercase_with_counts = output_path + '-lowercase-withcounts'
 
     # instantiate tokenizer
     if lang == 'en':
         tokenize = lambda sent: sm.MosesTokenizer('en').tokenize(sent)
     else:
         # we don't need to tokenize since indic_nlp_library already did
-        tokenize = lambda sent: sent.split() 
+        tokenize = lambda sent: sent.split(' ') 
 
     # load the files
-    def read_file(p):
-        with open(p, 'r') as f:
-            for l in f:
-                yield l.strip()
-
-    def flatten(nested):
-        for x in it.chain.from_iterable(nested):
-            yield x
-
-    def is_word(token):
-        return (not token) or (token[0].isalnum())
-
-    def all_sentences(paths, n_max=None):
-        sents = flatten([read_file(p) for p in paths])
-        if n_max is not None:
-            for s, i in zip(sents, range(n_max)):
-                yield s
-        else:
-            for s in sents:
-                    yield s
-
-    def all_tokens(sentences):
-        for t in flatten([tokenize(sent) for sent in sentences]):
-            yield t
-
-    N_MAX = None
-    ALL_TOKEN_COUNTS = Counter(t for t in all_tokens(all_sentences(PATHS, n_max=N_MAX)) if is_word(t))
-    ALL_LOWERCASE_TOKEN_COUNTS = Counter(t.lower() for t in all_tokens(all_sentences(PATHS, n_max=N_MAX)) if is_word(t))
-
-    n_types_non_lowercase = len(ALL_TOKEN_COUNTS)
-    n_types_lowercase = len(ALL_LOWERCASE_TOKEN_COUNTS)
+    token_counts, lowercase_token_counts = compute_token_counts(input_paths, tokenize, n_max)
+    n_types_non_lowercase = len(token_counts)
+    n_types_lowercase = len(lowercase_token_counts)
     print(f"No. of word types (non-lowercased): {n_types_non_lowercase}")
     print(f"No. of word types (lowercased): {n_types_lowercase}")
     print(f"Data compression ratio: {round(n_types_non_lowercase/n_types_lowercase, 3)}")
 
     if not dry_run:
 
-        # create output files
-        ALL_WORD_TOKENS_WITHCOUNTS = list(reversed(sorted(ALL_TOKEN_COUNTS.items(), key=lambda t: t[1])))
-        ALL_WORD_TOKENS_NOCOUNTS = [t for t, c in ALL_WORD_TOKENS_WITHCOUNTS]
+        dump_tokens(token_counts, 
+                    output_path, 
+                    output_path_with_counts, 
+                    with_counts)
 
-        ALL_LOWERCASE_WORD_TOKENS_WITHCOUNTS = list(reversed(sorted(ALL_LOWERCASE_TOKEN_COUNTS.items(), key=lambda t: t[1])))
-        ALL_LOWERCASE_WORD_TOKENS_NOCOUNTS = [t for t, c in ALL_LOWERCASE_WORD_TOKENS_WITHCOUNTS]
-
-        h.write_file(ALL_WORD_TOKENS_NOCOUNTS, OUTPUT_PATH)
-        h.write_file(ALL_LOWERCASE_WORD_TOKENS_NOCOUNTS, 
-                     OUTPUT_PATH + '-lowercase')
-
-        if with_counts:
-            ALL_WORD_TOKENS_WITHCOUNTS = [f"{c}\t{t}" for t,c in ALL_WORD_TOKENS_WITHCOUNTS]
-            ALL_LOWERCASE_WORD_TOKENS_WITHCOUNTS = [f"{c}\t{t}" for t,c in ALL_LOWERCASE_WORD_TOKENS_WITHCOUNTS]
-            h.write_file(ALL_WORD_TOKENS_WITHCOUNTS, OUTPUT_PATH + '-withcounts')
-            h.write_file(ALL_LOWERCASE_WORD_TOKENS_WITHCOUNTS, 
-                         OUTPUT_PATH + '-lowercase-withcounts')
+        dump_tokens(lowercase_token_counts, 
+                    output_path_lowercase, 
+                    output_path_lowercase_with_counts, 
+                    with_counts)
 
 if __name__ == '__main__':
     main()
