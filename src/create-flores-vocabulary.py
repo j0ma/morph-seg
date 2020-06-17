@@ -5,17 +5,21 @@ reads in all the training files used to train flores,
 and extracts their english vocabularies
 """
 
+from collections import Counter
 import sacremoses as sm
 import itertools as it
+import helpers as h
 import pickle
 import click
+import math
 import os
 
 @click.command()
 @click.option('--lang', required=True)
 @click.option('--output-file', '-o')
 @click.option('--dry-run', is_flag=True, default=False)
-def main(lang, output_file=None, dry_run=False):
+@click.option('--with-counts', is_flag=True, default=False)
+def main(lang, output_file=None, dry_run=False, with_counts=False):
 
     if output_file is None:
         output_file = f'all-flores-words-{lang}'
@@ -49,23 +53,43 @@ def main(lang, output_file=None, dry_run=False):
     def is_word(token):
         return (not token) or (token[0].isalnum())
 
-    ALL_SENTENCES = flatten([read_file(p) for p in PATHS])
-    ALL_TOKENS = flatten([tokenize(sent) for sent in ALL_SENTENCES])
-    ALL_WORD_TOKENS = sorted({t for t in ALL_TOKENS if is_word(t)})
-    ALL_LOWERCASE_WORD_TOKENS = {t.lower() for t in ALL_WORD_TOKENS}
+    def all_sentences(paths):
+        for s in flatten([read_file(p) for p in paths]):
+            yield s
 
-    n_types_non_lowercase = len(ALL_WORD_TOKENS)
-    n_types_lowercase = len(ALL_LOWERCASE_WORD_TOKENS)
+    def all_tokens(sentences):
+        for t in flatten([tokenize(sent) for sent in sentences]):
+            yield t
+
+    # ALL_SENTENCES = flatten([read_file(p) for p in PATHS])
+    ALL_TOKEN_COUNTS = Counter(t for t in all_tokens(all_sentences(PATHS)) if is_word(t))
+    ALL_LOWERCASE_TOKEN_COUNTS = Counter(t.lower() for t in all_tokens(all_sentences(PATHS)) if is_word(t))
+
+    n_types_non_lowercase = len(ALL_TOKEN_COUNTS)
+    n_types_lowercase = len(ALL_LOWERCASE_TOKEN_COUNTS)
     print(f"No. of word types (non-lowercased): {n_types_non_lowercase}")
     print(f"No. of word types (lowercased): {n_types_lowercase}")
     print(f"Data compression ratio: {round(n_types_non_lowercase/n_types_lowercase, 3)}")
 
     if not dry_run:
-        with open(OUTPUT_PATH, 'w') as f:
-            f.write("\n".join(ALL_WORD_TOKENS))
 
-        with open(OUTPUT_PATH + '-lowercase', 'w') as f:
-            f.write("\n".join(ALL_LOWERCASE_WORD_TOKENS))
+        # create output files
+        ALL_WORD_TOKENS_WITHCOUNTS = sorted(ALL_TOKEN_COUNTS.items(), key=lambda t: t[0])
+        ALL_WORD_TOKENS_NOCOUNTS = [t for t, c in ALL_WORD_TOKENS_WITHCOUNTS]
+
+        ALL_LOWERCASE_WORD_TOKENS_WITHCOUNTS = sorted(ALL_LOWERCASE_TOKEN_COUNTS.items(), key=lambda t: t[0])
+        ALL_LOWERCASE_WORD_TOKENS_NOCOUNTS = [t for t, c in ALL_LOWERCASE_WORD_TOKENS_WITHCOUNTS]
+
+        h.write_file(ALL_WORD_TOKENS_NOCOUNTS, OUTPUT_PATH)
+        h.write_file(ALL_LOWERCASE_WORD_TOKENS_NOCOUNTS, 
+                     OUTPUT_PATH + '-lowercase')
+
+        if with_counts:
+            ALL_WORD_TOKENS_WITHCOUNTS = [f"{c}\t{t}" for t,c in ALL_WORD_TOKENS_WITHCOUNTS]
+            ALL_LOWERCASE_WORD_TOKENS_WITHCOUNTS = [f"{c}\t{t}" for t,c in ALL_LOWERCASE_TOKEN_COUNTS]
+            h.write_file(ALL_WORD_TOKENS_WITHCOUNTS, OUTPUT_PATH + '-withcounts')
+            h.write_file(ALL_LOWERCASE_WORD_TOKENS_WITHCOUNTS, 
+                         OUTPUT_PATH + '-lowercase-withcounts')
 
 if __name__ == '__main__':
     main()

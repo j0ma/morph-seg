@@ -166,9 +166,9 @@ def dump_pickle(obj, f):
     with open(f, 'wb') as fout:
         pickle.dump(obj, fout)
 
-def write_file(lines, f):
+def write_file(lines, f, sep="\n"):
     with open(f, 'w') as fout:
-        fout.write("\n".join(lines))
+        fout.writelines([l + sep for l in lines])
 
 def read_lines(f):
     with open(f, 'r') as f:
