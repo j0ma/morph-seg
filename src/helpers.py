@@ -6,6 +6,54 @@ import pickle
 import click
 import os
 
+def train_model(model_name, 
+        input_path, 
+        input_file_name, 
+        model_output_path, 
+        segm_output_folder):
+    """
+    Description
+    ------------
+    Trains the Morfessor Baseline model. 
+    After training, dumps model binary to disk 
+    and performs segmentation on the training data.
+
+    Parameters
+    ----------
+    model_name: str
+    input_path: str
+        Path to input wordlist
+    input_file_name: str
+    model_output_path: str
+    segm_output_folder: str
+        Path to segmentation output folder
+    """
+    model = f"morfessor-{model_name}"
+    output_filename = f"{input_file_name}.segmented.{model}"
+    segmentation_filename = f"{output_filename}.segmentation-only"
+    OUTPUT_PATH = os.path.join(segm_output_folder, output_filename)
+    SEGM_PATH = os.path.join(segm_output_folder, segmentation_filename)
+    
+    print(f'Now running: {model}')
+    model_bin, words, segmentations = \
+            h.run_morfessor_baseline(model, input_path)
+    
+    segmentation_counts = Counter(segmentations)
+    if words is not None and segmentations is not None:
+        output_lines = [f"{w}\t{s}" for w, s in zip(words, segmentations)]
+        segmentation_lines = [f'{segmentation_counts[s]} {s}' for s in segmentations]
+        h.write_file(output_lines, OUTPUT_PATH)
+        h.write_file(segmentation_lines, SEGM_PATH)
+    else:
+        print('No segmentations received, not going to write to disk...')
+    
+    # save model to pickle
+    if model_bin is not None:
+        bin_path = model_output_path or f"{OUTPUT_FOLDER}/../../bin/{input_file_name}-{model}.bin")
+        h.dump_pickle(model_bin, bin_path)
+    else:
+        print('No model received, not going to write to disk...')
+
 def segment_word(model, w):
     """
     Description
