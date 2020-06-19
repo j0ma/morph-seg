@@ -79,26 +79,34 @@ def dump_tokens(
 
 @click.command()
 @click.option("--lang", required=True)
+@click.option("--raw-data-folder", required=True)
 @click.option("--output-file", "-o")
 @click.option("--dry-run", is_flag=True, default=False)
 @click.option("--with-counts", is_flag=True, default=False)
 @click.option("--n-max", type=int)
-def main(lang, output_file=None, dry_run=False, with_counts=False, n_max=None):
+def main(
+    lang,
+    raw_data_folder=None,
+    output_file=None,
+    dry_run=False,
+    with_counts=False,
+    n_max=None,
+):
 
     if output_file is None:
         output_file = f"flores.vocab.{lang}"
 
     if lang == "en":
-        data_folders = [
-            "../data/raw/flores/wiki_ne_en",
-            "../data/raw/flores/wiki_si_en",
+        raw_data_folders = [
+            f"{raw_data_folder}/flores/wiki_ne_en",
+            f"{raw_data_folder}/flores/wiki_si_en",
         ]
         output_path = os.path.join("../data/raw/flores/", output_file)
     else:
-        data_folders = [f"../data/raw/flores/wiki_{lang}_en"]
-        output_path = os.path.join(data_folders[0], output_file)
+        raw_data_folders = [f"{raw_data_folder}/flores/wiki_{lang}_en"]
+        output_path = os.path.join(raw_data_folders[0], output_file)
 
-    input_paths = [f"{df}/train.{lang}" for df in data_folders]
+    input_paths = [f"{df}/train.{lang}" for df in raw_data_folders]
     output_path_with_counts = output_path + ".withcounts"
     output_path_lowercase = output_path + ".lowercase"
     output_path_lowercase_with_counts = output_path + ".lowercase.withcounts"
@@ -111,7 +119,8 @@ def main(lang, output_file=None, dry_run=False, with_counts=False, n_max=None):
             return sm.MosesTokenizer("en").tokenize(sent)
 
     else:
-        # we don't need to tokenize since indic_nlp_library already did in prepare_{ne,si}en.sh
+        # we don't need to tokenize since indic_nlp_library
+        # already did in prepare_{ne,si}en.sh
         def tokenize(sent):
             return sent.split(" ")
 

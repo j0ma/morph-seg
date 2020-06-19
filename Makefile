@@ -4,28 +4,22 @@ create_flores_vocab: \
 	create_flores_vocab_si
 
 create_flores_vocab_en:
-	cd ./src
-	python create-flores-vocabulary.py \
+	python ./src/create-flores-vocabulary.py \
 		--lang en \
-		--with-counts \
-		--lowercase
-	cd ..
+		--raw-data-folder ./data/raw \
+		--with-counts
 
 create_flores_vocab_ne:
-	cd ./src
-	python create-flores-vocabulary.py \
+	python ./src/create-flores-vocabulary.py \
 		--lang ne \
-		--with-counts \
-		--lowercase
-	cd ..
+		--raw-data-folder ./data/raw \
+		--with-counts
 
 create_flores_vocab_si:
-	cd ./src
-	python create-flores-vocabulary.py \
+	python ./src/create-flores-vocabulary.py \
 		--lang si \
-		--with-counts \
-		--lowercase
-	cd ..
+		--raw-data-folder ./data/raw \
+		--with-counts
 
 prepare_neen:
 	bash ./prepare_neen.sh
