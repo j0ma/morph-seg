@@ -56,6 +56,7 @@ def train_model(
     model_output_folder,
     model_output_path,
     segm_output_folder,
+    seed_segmentation_path=None,
     corpus_weight=1.0,
     construction_separator=" + ",
     lowercase=True,
@@ -88,12 +89,15 @@ def train_model(
 
     print(f"Now running: {model}")
 
-    if "flatcat" in model:
+    flatcat_mode = "flatcat" in model
+
+    if flatcat_mode:
 
         def run(model_name, input_path):
             return run_morfessor_flatcat(
                 model_name,
                 input_path,
+                seed_segmentation_path=seed_segmentation_path,
                 construction_separator=construction_separator,
                 lang=lang,
                 lowercase=lowercase,
@@ -116,7 +120,11 @@ def train_model(
     io = morfessor.MorfessorIO(
         encoding=UTF8, construction_separator=construction_separator
     )
-    segmentations = model_bin.get_segmentations()
+
+    if not flatcat_mode:
+        segmentations = model_bin.get_segmentations()
+    else:
+        segmentations = []
 
     if segmentations:
         io.write_segmentation_file(output_path, segmentations)
@@ -190,7 +198,9 @@ def run_morfessor_flatcat(
             f"../data/segmented/flores/{lang}/{_}"
         )
 
-    io = flatcat.FlatcatIO(construction_separator=construction_separator)
+    io = flatcat.FlatcatIO(
+        construction_separator=construction_separator, category_separator=None
+    )
 
     train_data = [t for t in io.read_corpus_list_file(input_path)]
 
@@ -209,6 +219,8 @@ def run_morfessor_flatcat(
     model.initialize_hmm()
 
     training_type = "online" if "online" in model_name else "batch"
+
+    print("beginning training...")
 
     if training_type == "batch":
         model.train_batch()

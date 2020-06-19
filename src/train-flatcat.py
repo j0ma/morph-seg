@@ -7,6 +7,7 @@ import helpers as h
 # SUPPORTED FLATCAT MODEL VARIANTS:
 # - 'batch'
 
+
 @click.command()
 @click.option("--lang", required=True)
 @click.option(
@@ -30,6 +31,11 @@ import helpers as h
 @click.option(
     "--model-output-path", help="Path to save model binary in", default=None
 )
+@click.option(
+    "--seed-segmentation-path",
+    help="Path to load seed segmentation from",
+    default=None,
+)
 @click.option("--construction-separator", default=" + ")
 @click.option("--lowercase", help="Use lowercase words", is_flag=True)
 def main(
@@ -39,6 +45,7 @@ def main(
     model_type,
     model_output_folder,
     model_output_path,
+    seed_segmentation_path,
     construction_separator,
     lowercase,
 ):
@@ -48,6 +55,7 @@ def main(
 
     abs_input_path = os.path.abspath(input_path)
     abs_output_folder = os.path.abspath(output)
+    abs_seed_segm_path = os.path.abspath(seed_segmentation_path)
 
     # make output folder if it doesn't exist
 
@@ -70,6 +78,7 @@ def main(
             input_file_name=file_name,
             model_output_folder=model_output_folder,
             model_output_path=model_output_path,
+            seed_segmentation_path=abs_seed_segm_path,
             segm_output_folder=abs_output_folder,
             lowercase=lowercase,
         )
