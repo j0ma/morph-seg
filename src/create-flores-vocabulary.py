@@ -101,7 +101,7 @@ def main(
             f"{raw_data_folder}/flores/wiki_ne_en",
             f"{raw_data_folder}/flores/wiki_si_en",
         ]
-        output_path = os.path.join("../data/raw/flores/", output_file)
+        output_path = os.path.join(f"{raw_data_folder}/flores/", output_file)
     else:
         raw_data_folders = [f"{raw_data_folder}/flores/wiki_{lang}_en"]
         output_path = os.path.join(raw_data_folders[0], output_file)
