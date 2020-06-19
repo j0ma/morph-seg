@@ -23,7 +23,7 @@ TGT=en
 
 ROOT=$(dirname "$0")
 SCRIPTS=$ROOT/src
-DATA=$ROOT/data/raw
+DATA=$ROOT/data/raw/flores
 TMP=$DATA/wiki_${SRC}_${TGT}
 #DATABIN=$ROOT/data-bin/wiki_${SRC}_${TGT}_bpe${BPESIZE}
 mkdir -p $TMP # $DATABIN

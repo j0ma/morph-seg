@@ -89,10 +89,13 @@ def main(lang, output_file=None, dry_run=False, with_counts=False, n_max=None):
         output_file = f"flores.vocab.{lang}"
 
     if lang == "en":
-        data_folders = ["../data/raw/wiki_ne_en", "../data/raw/wiki_si_en"]
-        output_path = os.path.join("../data/raw/", output_file)
+        data_folders = [
+            "../data/raw/flores/wiki_ne_en",
+            "../data/raw/flores/wiki_si_en",
+        ]
+        output_path = os.path.join("../data/raw/flores/", output_file)
     else:
-        data_folders = [f"../data/raw/wiki_{lang}_en"]
+        data_folders = [f"../data/raw/flores/wiki_{lang}_en"]
         output_path = os.path.join(data_folders[0], output_file)
 
     input_paths = [f"{df}/train.{lang}" for df in data_folders]

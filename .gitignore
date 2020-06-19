@@ -1,6 +1,6 @@
 data/comparison-table*.md
 src/__pycache__
 __pycache__
-data/raw/all-clean*
+data/raw/flores/all-clean*
 src/indic/indic_nlp_library
-data/raw/wiki*
+data/raw/flores/wiki*
