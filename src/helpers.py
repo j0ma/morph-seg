@@ -78,6 +78,14 @@ def train_model(
     output_filename = f"{input_file_name}.segmented.{model}"
     output_path = os.path.join(segm_output_folder, output_filename)
 
+    # make sure model is saved based on absolute path
+
+    if model_output_folder:
+        model_output_folder = os.path.abspath(model_output_folder)
+
+    if model_output_path:
+        model_output_path = os.path.abspath(model_output_path)
+
     print(f"Now running: {model}")
 
     if "flatcat" in model:
