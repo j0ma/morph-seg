@@ -108,7 +108,7 @@ def main(lang, output_file=None, dry_run=False, with_counts=False, n_max=None):
             return sm.MosesTokenizer("en").tokenize(sent)
 
     else:
-        # we don't need to tokenize since indic_nlp_library already did
+        # we don't need to tokenize since indic_nlp_library already did in prepare_{ne,si}en.sh
         def tokenize(sent):
             return sent.split(" ")
 

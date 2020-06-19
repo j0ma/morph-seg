@@ -27,6 +27,7 @@ import helpers as h
     "--model-output-path", help="Path to save model binary in", default=None
 )
 @click.option("--construction-separator", default=" + ")
+@click.option("--lowercase", help="Use lowercase words", is_flag=True)
 def main(
     lang,
     input_path,
@@ -34,6 +35,7 @@ def main(
     model_type,
     model_output_path,
     construction_separator,
+    lowercase,
 ):
     # load data
     ___, __file = os.path.split(input_path)
@@ -43,6 +45,7 @@ def main(
     abs_output_folder = os.path.abspath(output)
 
     # make output folder if it doesn't exist
+
     if not os.path.exists(abs_output_folder):
         print(f"Not found: {abs_output_folder}. Creating...")
         os.system(f"mkdir -p {abs_output_folder}")
@@ -53,6 +56,7 @@ def main(
         models = [f"flatcat-{model_type}"]
 
     print("Models to run:\n - {}".format("\n - ".join(models)))
+
     for model in models:
         h.train_model(
             lang=lang,
@@ -61,6 +65,7 @@ def main(
             input_file_name=file_name,
             model_output_path=model_output_path,
             segm_output_folder=abs_output_folder,
+            lowercase=lowercase,
         )
 
 

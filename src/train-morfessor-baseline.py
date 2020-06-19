@@ -29,7 +29,8 @@ import helpers as h
 @click.option(
     "--model-output-path", help="Path to save model binary in", default=None
 )
-def main(lang, input_path, output, model_type, model_output_path):
+@click.option('--lowercase', help="Use lowercase words", is_flag=True)
+def main(lang, input_path, output, model_type, model_output_path, lowercase):
 
     # load data
     p, f = os.path.split(input_path)
@@ -69,6 +70,7 @@ def main(lang, input_path, output, model_type, model_output_path):
             input_file_name=file_name,
             model_output_path=model_output_path,
             segm_output_folder=abs_output_folder,
+            lowercase=lowercase
         )
 
 

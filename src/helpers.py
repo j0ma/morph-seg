@@ -49,7 +49,6 @@ def segment_sentence(model, sentence, tokenizer=None):
 
 
 def train_model(
-    io,
     lang,
     model_name,
     input_path,
@@ -58,6 +57,7 @@ def train_model(
     segm_output_folder,
     corpus_weight=1.0,
     construction_separator=" + ",
+    lowercase=True,
 ):
     """
     Description
@@ -80,10 +80,19 @@ def train_model(
                 input_path,
                 construction_separator=construction_separator,
                 lang=lang,
+                lowercase=lowercase,
             )
 
     else:
-        run = run_morfessor_baseline
+
+        def run(model_name, input_path):
+            return run_morfessor_baseline(
+                model_name,
+                input_path,
+                construction_separator=construction_separator,
+                lang=lang,
+                lowercase=lowercase,
+            )
 
     model_bin = run(model, input_path)
 
@@ -109,7 +118,14 @@ def train_model(
         print("No model received, not going to write to disk...")
 
 
-def run_morfessor_baseline(model_name, input_path, sep=" ", hyperparams=None):
+def run_morfessor_baseline(
+    model_name,
+    input_path,
+    construction_separator=" ",
+    hyperparams=None,
+    lang=None,
+    lowercase=True,
+):
     if hyperparams is None:
         hyperparams = {}
 
@@ -143,12 +159,16 @@ def run_morfessor_flatcat(
     seed_segmentation_path=None,
     construction_separator=" + ",
     corpus_weight=1.0,
+    lowercase=True,
 ):
 
     # TODO: do these work?
 
     if seed_segmentation_path is None:
-        _ = f"flores-{lang}.segmented.morfessor-baseline-batch-recursive"
+        if lowercase:
+            _ = f"flores.vocab.{lang}.lowercase.segmented.morfessor-baseline-batch-recursive"
+        else:
+            _ = f"flores.vocab.{lang}.segmented.morfessor-baseline-batch-recursive"
         seed_segmentation_path = os.path.abspath(
             f"../data/segmented/flores/{lang}/{_}"
         )
@@ -156,6 +176,9 @@ def run_morfessor_flatcat(
     io = flatcat.FlatcatIO(construction_separator=construction_separator)
 
     train_data = [t for t in io.read_corpus_list_file(input_path)]
+
+    # if lowercase:
+    # train_data = [t.lower() for t in train_data]
 
     morph_usage = flatcat.categorizationscheme.MorphUsageProperties()
     model = flatcat.FlatcatModel(morph_usage, corpusweight=corpus_weight)
