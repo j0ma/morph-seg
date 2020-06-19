@@ -89,9 +89,10 @@ create_flores_vocab_si:
 		--with-counts
 
 package_morfessor_models:
-	mkdir /tmp/morfessor-models
-	cp ./bin/* /tmp/morfessor-models
-	zip -r morfessor-models.zip /tmp/morfessor-models
+	mkdir -p morfessor-models
+	cp ./bin/* morfessor-models/
+	zip -r morfessor-models.zip ./morfessor-models
+	rm -R morfessor-models
 
 prepare_neen:
 	bash ./prepare_neen.sh
