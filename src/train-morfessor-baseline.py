@@ -27,10 +27,23 @@ import helpers as h
 )
 @click.option("--model-type", default="baseline-batch-recursive")
 @click.option(
+    "--model-output-folder",
+    help="Folder to save model in (using the default name for the binary)",
+    default=None,
+)
+@click.option(
     "--model-output-path", help="Path to save model binary in", default=None
 )
-@click.option('--lowercase', help="Use lowercase words", is_flag=True)
-def main(lang, input_path, output, model_type, model_output_path, lowercase):
+@click.option("--lowercase", help="Use lowercase words", is_flag=True)
+def main(
+    lang,
+    input_path,
+    output,
+    model_type,
+    model_output_folder,
+    model_output_path,
+    lowercase,
+):
 
     # load data
     p, f = os.path.split(input_path)
@@ -68,9 +81,10 @@ def main(lang, input_path, output, model_type, model_output_path, lowercase):
             model_name=model,
             input_path=abs_input_path,
             input_file_name=file_name,
+            model_output_folder=model_output_folder,
             model_output_path=model_output_path,
             segm_output_folder=abs_output_folder,
-            lowercase=lowercase
+            lowercase=lowercase,
         )
 
 

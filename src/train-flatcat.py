@@ -7,7 +7,6 @@ import helpers as h
 # SUPPORTED FLATCAT MODEL VARIANTS:
 # - 'batch'
 
-
 @click.command()
 @click.option("--lang", required=True)
 @click.option(
@@ -24,6 +23,11 @@ import helpers as h
 )
 @click.option("--model-type", default="batch")
 @click.option(
+    "--model-output-folder",
+    help="Folder to save model in (using the default name for the binary)",
+    default=None,
+)
+@click.option(
     "--model-output-path", help="Path to save model binary in", default=None
 )
 @click.option("--construction-separator", default=" + ")
@@ -33,6 +37,7 @@ def main(
     input_path,
     output,
     model_type,
+    model_output_folder,
     model_output_path,
     construction_separator,
     lowercase,
@@ -63,6 +68,7 @@ def main(
             model_name=model,
             input_path=abs_input_path,
             input_file_name=file_name,
+            model_output_folder=model_output_folder,
             model_output_path=model_output_path,
             segm_output_folder=abs_output_folder,
             lowercase=lowercase,

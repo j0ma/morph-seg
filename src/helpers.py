@@ -53,6 +53,7 @@ def train_model(
     model_name,
     input_path,
     input_file_name,
+    model_output_folder,
     model_output_path,
     segm_output_folder,
     corpus_weight=1.0,
@@ -66,6 +67,13 @@ def train_model(
     After training, dumps model binary to disk
     and performs segmentation on the training data.
     """
+
+    if not model_output_folder or model_output_path:
+        err_msg = (
+            "Required: one of `model_output_folder` or `model_output_path`"
+        )
+        raise ValueError(err_msg)
+
     model = f"morfessor-{model_name}"
     output_filename = f"{input_file_name}.segmented.{model}"
     output_path = os.path.join(segm_output_folder, output_filename)
@@ -111,7 +119,8 @@ def train_model(
 
     if model_bin is not None:
         bin_path = (
-            model_output_path or f"../bin/{input_file_name}-{model}-{lang}.bin"
+            model_output_path
+            or f"{model_output_folder}/{input_file_name}-{model}-{lang}.bin"
         )
         io.write_binary_model_file(bin_path, model_bin)
     else:
