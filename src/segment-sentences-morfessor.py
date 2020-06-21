@@ -28,8 +28,9 @@ def load_model(model_file):
 @click.option(
     "--include-original", is_flag=True, required=False, default=False
 )
+@click.option('--lowercase', is_flag=True, default=False)
 @click.option("--lang", "-l", help="Language")
-def main(input_file, output_file, model_file, include_original, lang):
+def main(input_file, output_file, model_file, include_original, lowercase, lang):
     sentences = h.read_lines(input_file)
     model = load_model(model_file)
 
@@ -37,7 +38,14 @@ def main(input_file, output_file, model_file, include_original, lang):
         tokenizer = sm.MosesTokenizer("en")
     else:
         tokenizer = None
-    segmented = [h.segment_sentence(model, s, tokenizer) for s in sentences]
+
+    segmented = []
+
+    for s in sentences:
+        if lowercase:
+            s = s.lower()
+        seg = h.segment_sentence(model, s, tokenizer)
+        segmented.append(seg)
 
     if include_original:
         segmented = [
