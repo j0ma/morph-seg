@@ -1,5 +1,6 @@
 click
 morfessor
+Morfessor-Flatcat
 sentencepiece
 subword-nmt
 pandas
