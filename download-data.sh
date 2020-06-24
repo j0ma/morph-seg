@@ -15,7 +15,7 @@ SI_TGT=si
 NE_TGT=ne
 
 ROOT=$(dirname "$0")
-DATA=$ROOT/data/raw
+DATA=$ROOT/data/raw/flores
 NE_ROOT=$DATA/all-clean-ne
 SI_ROOT=$DATA/all-clean-si
 HI_ROOT=$DATA/all-clean-hi
