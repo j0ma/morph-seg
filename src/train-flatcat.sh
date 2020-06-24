@@ -133,7 +133,7 @@ echo "Construction sep: ${_arg_construction_separator}"
 echo "Perplexity thres: ${_arg_perplexity_threshold}"
 echo "Language: ${_arg_lang}"
 
-MODEL_OUTPUT_PATH="${_arg_model_output_path}/flores.vocab.en.lowercase-morfessor-flatcat-${_arg_model_type}-${_arg_lang}.bin"
+MODEL_OUTPUT_PATH="${_arg_model_output_path}/flores.vocab.${_arg_lang}.lowercase-morfessor-flatcat-${_arg_model_type}-${_arg_lang}.bin"
 
 flatcat-train \
     "$SEED_PATH" \

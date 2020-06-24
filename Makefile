@@ -2,14 +2,37 @@ all: download prep flores
 
 flores: create_flores_vocab train_morfessor
 
-flores_test: create_flores_vocab train_morfessor_baseline train_flatcat_sh
+train_morfessor: train_morfessor_baseline train_flatcat_sh
 
-train_morfessor: train_morfessor_baseline train_flatcat
+train_flatcat_sh: \
+	train_flatcat_sh_ne \
+	train_flatcat_sh_en \
+	train_flatcat_sh_si
 
-train_flatcat_sh:
+train_flatcat_sh_en:
 	echo "Training Morfessor Flatcat for EN"
 	bash ./src/train-flatcat.sh \
 		--lang en \
+		--model-type batch \
+		--model-output-path ./bin \
+		--construction-separator "<ConstSep>" \
+		--perplexity-threshold 10 \
+		--lowercase
+
+train_flatcat_sh_ne:
+	echo "Training Morfessor Flatcat for NE"
+	bash ./src/train-flatcat.sh \
+		--lang ne \
+		--model-type batch \
+		--model-output-path ./bin \
+		--construction-separator "<ConstSep>" \
+		--perplexity-threshold 10 \
+		--lowercase
+
+train_flatcat_sh_si:
+	echo "Training Morfessor Flatcat for SI"
+	bash ./src/train-flatcat.sh \
+		--lang si \
 		--model-type batch \
 		--model-output-path ./bin \
 		--construction-separator "<ConstSep>" \
