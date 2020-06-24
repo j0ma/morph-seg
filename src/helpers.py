@@ -187,8 +187,6 @@ def run_morfessor_flatcat(
     lowercase=True,
 ):
 
-    # TODO: do these work?
-
     if seed_segmentation_path is None:
         if lowercase:
             _ = f"flores.vocab.{lang}.lowercase.segmented.morfessor-baseline-batch-recursive"
@@ -199,13 +197,10 @@ def run_morfessor_flatcat(
         )
 
     io = flatcat.FlatcatIO(
-        construction_separator=construction_separator, category_separator=None
+            encoding=UTF8, construction_separator=construction_separator
     )
 
     train_data = [t for t in io.read_corpus_list_file(input_path)]
-
-    # if lowercase:
-    # train_data = [t.lower() for t in train_data]
 
     morph_usage = flatcat.categorizationscheme.MorphUsageProperties()
     model = flatcat.FlatcatModel(morph_usage, corpusweight=corpus_weight)
@@ -245,7 +240,6 @@ def write_file(lines, f, sep="\n"):
 def read_lines(f):
     with open(f, "r") as f:
         return [line.strip() for line in f.readlines() if line.strip() != ""]
-
 
 def flatten(nested):
     return list(it.chain.from_iterable(nested))

@@ -143,12 +143,6 @@ get_raw_data_folders() {
     fi
 }
 
-printf 'Value of --%s: %s\n' 'lang' "$_arg_lang"
-printf 'Value of --%s: %s\n' 'raw-data-folder' "$_arg_raw_data_folder"
-printf 'Value of --%s: %s\n' 'output-file' "$_arg_output_file"
-printf 'Value of --%s: %s\n' 'with-counts' "$_arg_with_counts"
-
-echo "Computing raw data folders"
 TRAIN_FILES=$(get_raw_data_folders "$_arg_raw_data_folder" "$_arg_lang")
 cat $TRAIN_FILES |
     compute_token_counts "$_arg_lang" "$_arg_with_counts" \

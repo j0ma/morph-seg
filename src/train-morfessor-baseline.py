@@ -35,6 +35,7 @@ import helpers as h
     "--model-output-path", help="Path to save model binary in", default=None
 )
 @click.option("--lowercase", help="Use lowercase words", is_flag=True)
+@click.option("--construction-separator", default=" + ") 
 def main(
     lang,
     input_path,
@@ -43,6 +44,7 @@ def main(
     model_output_folder,
     model_output_path,
     lowercase,
+    construction_separator
 ):
 
     # load data
@@ -85,6 +87,7 @@ def main(
             model_output_path=model_output_path,
             segm_output_folder=abs_output_folder,
             lowercase=lowercase,
+            construction_separator=construction_separator
         )
 
 
