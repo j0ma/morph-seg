@@ -197,7 +197,9 @@ def run_morfessor_flatcat(
         )
 
     io = flatcat.FlatcatIO(
-            encoding=UTF8, construction_separator=construction_separator
+            encoding=UTF8, 
+            construction_separator=construction_separator,
+            category_separator="ThisIsDefinitelyNotASeparator"
     )
 
     train_data = [t for t in io.read_corpus_list_file(input_path)]
