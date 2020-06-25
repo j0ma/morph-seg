@@ -205,7 +205,7 @@ foreach $i (0 .. $nwords - 1) {
     # all the morphemes it has in common with the current word (i).
     #
     %theirmorphemes = ();
-    if (@{$pairsfound[$i]}) {	# This word does have some pairs
+    if (defined $pairsfound[$i]) {	# This word does have some pairs
 	foreach $j (@{$pairsfound[$i]}) { # For each pair...
 	    # ... find the linking morpheme
 	    $morpheme_i = shift @{$correspmorphemes[$i]};
