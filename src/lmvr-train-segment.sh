@@ -46,43 +46,43 @@ lmvr-train $dir/baselinemodel.$lan.clean.txt \
     -o $dir/$input.segmented
 
 ## Segment train, dev, and test sets using the segmentation model
-echo "Segmenting using LMVR..."
-lmvr-segment \
-    $dir/lmvr.${extension}.model.tar.gz  \
-    $dir/$input -p $P \
-    --output-newlines \
-    --encoding UTF-8 \
-    -o $dir/$input.$extension.segmented
+#echo "Segmenting using LMVR..."
+#lmvr-segment \
+    #$dir/lmvr.${extension}.model.tar.gz  \
+    #$dir/$input -p $P \
+    #--output-newlines \
+    #--encoding UTF-8 \
+    #-o $dir/$input.$extension.segmented
 
-#cat $dir/$input.$extension.segmented | \
-    #perl -pe 's/\n/ /g' | \
-    #perl -pe 's/  /\n/g' > $dir/$input.$extension.segmented.sent
+##cat $dir/$input.$extension.segmented | \
+    ##perl -pe 's/\n/ /g' | \
+    ##perl -pe 's/  /\n/g' > $dir/$input.$extension.segmented.sent
 
-cp $dir/$input.$extension.segmented $dir/$input.$extension.segmented.sent
+#cp $dir/$input.$extension.segmented $dir/$input.$extension.segmented.sent
 
-lmvr-segment \
-    $dir/lmvr.${extension}.model.tar.gz  \
-    $dir/dev.$lan -p $P \
-    --output-newlines \
-    --encoding UTF-8 \
-    -o $dir/dev.$lan.$extension.segmented
+#lmvr-segment \
+    #$dir/lmvr.${extension}.model.tar.gz  \
+    #$dir/dev.$lan -p $P \
+    #--output-newlines \
+    #--encoding UTF-8 \
+    #-o $dir/dev.$lan.$extension.segmented
 
-#cat $dir/dev.$lan.$extension.segmented | \
-    #perl -pe 's/\n/ /g' | \
-    #perl -pe 's/  /\n/g' > $dir/dev.$lan.$extension.segmented.sent
+##cat $dir/dev.$lan.$extension.segmented | \
+    ##perl -pe 's/\n/ /g' | \
+    ##perl -pe 's/  /\n/g' > $dir/dev.$lan.$extension.segmented.sent
 
-cp $dir/dev.$extension.segmented $dir/dev.$extension.segmented.sent
+#cp $dir/dev.$extension.segmented $dir/dev.$extension.segmented.sent
 
-lmvr-segment \
-    $dir/lmvr.${extension}.model.tar.gz  \
-    $dir/test.$lan -p $P \
-    --output-newlines \
-    --encoding UTF-8 \
-    -o $dir/test.$lan.$extension.segmented
+#lmvr-segment \
+    #$dir/lmvr.${extension}.model.tar.gz  \
+    #$dir/test.$lan -p $P \
+    #--output-newlines \
+    #--encoding UTF-8 \
+    #-o $dir/test.$lan.$extension.segmented
 
-cp $dir/test.$extension.segmented $dir/test.$extension.segmented.sent
+#cp $dir/test.$extension.segmented $dir/test.$extension.segmented.sent
 
-#cat $dir/test.$lan.$extension.segmented | \
-    #perl -pe 's/\n/ /g' | \
-    #perl -pe 's/  /\n/g' > $dir/test.$lan.$extension.segmented.sent
+##cat $dir/test.$lan.$extension.segmented | \
+    ##perl -pe 's/\n/ /g' | \
+    ##perl -pe 's/  /\n/g' > $dir/test.$lan.$extension.segmented.sent
 
