@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# Evaluate system output (test_analyses) against the Morpho Challenge gold standard (gold_analyses) using
+# n_pairs word pairs, outputting files starting with output_prefix.
+#
+# For the English data, using 1000 pairs is recommended.
+
 gold_analyses=$1
 test_analyses=$2
 n_pairs=$3
