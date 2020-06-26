@@ -7,3 +7,4 @@ pandas
 tabulate
 torchtext
 sacremoses
+virtualenv

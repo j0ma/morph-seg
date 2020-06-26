@@ -1,6 +1,14 @@
-all: download prep flores
+SHELL=bash
+
+all: init install_lmvr prep download prep flores
 
 flores: create_flores_vocab train_morfessor
+
+install_lmvr: 
+	bash ./src/download-lmvr.sh
+
+train_lmvr:
+	bash ./src/lmvr-train-segment.sh
 
 train_morfessor: train_morfessor_baseline train_flatcat_sh
 
@@ -163,3 +171,6 @@ prepare_sien:
 
 download:
 	bash ./download-data.sh
+
+init:
+	pip install -r requirements.txt
