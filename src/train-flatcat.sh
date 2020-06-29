@@ -140,8 +140,16 @@ flatcat-train \
     -m "$_arg_model_type" \
     --save-binary-model "$MODEL_OUTPUT_PATH" \
     --construction-separator "$_arg_construction_separator" \
-    --category-separator "ThisWillForSureNotBeASeparator" \
+    --category-separator "ThisWontThrowError" \
     --perplexity-threshold "$_arg_perplexity_threshold" \
     --progressbar -e "UTF-8"
 
+#flatcat-segment \
+    #"$SEED_PATH" \
+    #-m "$_arg_model_type" \
+    #--save-binary-model "$MODEL_OUTPUT_PATH" \
+    #--construction-separator "$_arg_construction_separator" \
+    #--category-separator "ThisWontThrowError" \
+    #--perplexity-threshold "$_arg_perplexity_threshold" \
+    #--progressbar -e "UTF-8"
 # ] <-- needed because of Argbash
