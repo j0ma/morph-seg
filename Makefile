@@ -1,12 +1,9 @@
-SHELL=bash
-
-all: init install_lmvr prep download prep flores
+all: init install_lmvr download prep flores
 
 flores: create_flores_vocab train_morfessor
 
 install_lmvr:
 	bash ./src/download-lmvr.sh
-
 
 train_lmvr: train_lmvr_ne train_lmvr_si train_lmvr_en
 
@@ -19,7 +16,7 @@ train_lmvr_ne:
 		--segmentation-output-path ./data/segmented/flores/ne \
 		--model-output-path ./bin \
 		--lexicon-output-path ./data \
-		--max-epochs 1
+		--max-epochs 5
 
 train_lmvr_si:
 	bash ./src/train-lmvr.sh \
@@ -30,7 +27,7 @@ train_lmvr_si:
 		--segmentation-output-path ./data/segmented/flores/si \
 		--model-output-path ./bin \
 		--lexicon-output-path ./data \
-		--max-epochs 1
+		--max-epochs 5
 
 train_lmvr_en:
 	bash ./src/train-lmvr.sh \
@@ -41,7 +38,7 @@ train_lmvr_en:
 		--segmentation-output-path ./data/segmented/flores/en \
 		--model-output-path ./bin \
 		--lexicon-output-path ./data \
-		--max-epochs 1
+		--max-epochs 5
 
 train_morfessor: train_morfessor_baseline train_flatcat_sh
 
@@ -168,31 +165,31 @@ create_flores_vocab_en:
 	echo "Creating vocabulary for EN"
 	bash ./src/create-flores-vocabulary.sh \
 		--lang en \
-		--raw-data-folder ./data/raw \
-		--output-file ./data/raw/flores/flores.vocab.en.lowercase.withcounts \
+		--raw-data-folder data/raw \
+		--output-file data/raw/flores/flores.vocab.en.lowercase.withcounts \
 		--with-counts
 
 create_flores_vocab_ne:
 	echo "Creating vocabulary for NE"
 	bash ./src/create-flores-vocabulary.sh \
 		--lang ne \
-		--raw-data-folder ./data/raw \
-		--output-file ./data/raw/flores/wiki_ne_en/flores.vocab.ne.lowercase.withcounts \
+		--raw-data-folder data/raw \
+		--output-file data/raw/flores/wiki_ne_en/flores.vocab.ne.lowercase.withcounts \
 		--with-counts
 
 create_flores_vocab_si:
 	echo "Creating vocabulary for SI"
 	bash ./src/create-flores-vocabulary.sh \
 		--lang si \
-		--raw-data-folder ./data/raw \
-		--output-file ./data/raw/flores/wiki_si_en/flores.vocab.si.lowercase.withcounts \
+		--raw-data-folder data/raw \
+		--output-file data/raw/flores/wiki_si_en/flores.vocab.si.lowercase.withcounts \
 		--with-counts
 
-package_morfessor_models:
-	mkdir -p morfessor-models
-	cp ./bin/* morfessor-models/
-	zip -r morfessor-models.zip ./morfessor-models
-	rm -R morfessor-models
+package_segmentation_models:
+	mkdir -p segmentation-models
+	cp ./bin/* segmentation-models/
+	zip -r segmentation-models.zip ./segmentation-models
+	rm -R segmentation-models
 
 prep: prepare_neen prepare_sien
 
