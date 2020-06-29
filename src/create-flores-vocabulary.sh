@@ -125,7 +125,7 @@ compute_token_counts() {
             perl "$MOSES_REM_NON_PRINT_CHAR" |
             perl "$MOSES_TOKENIZER_SCRIPT" |
             perl "$MOSES_LOWERCASE_SCRIPT" |
-            python "$HTML_UNESCAPE_SCRIPT" |
+            perl -C -MHTML::Entities -pe 'decode_entities($_);' |
             sed "s/ /\n/g" |
             sort |
             $UNIQ_CMD |

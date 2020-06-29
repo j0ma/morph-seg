@@ -30,4 +30,5 @@ cd "$LMVR_PATH"
 source "$LMVR_ENV_PATH/bin/activate"
 python setup.py install
 pip install backports.functools_lru_cache
+pip install click
 deactivate
