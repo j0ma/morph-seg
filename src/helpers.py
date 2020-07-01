@@ -1,19 +1,19 @@
 import itertools as it
 import os
 import pickle
-
+import sys
 import flatcat
 import morfessor
 
 UTF8 = "utf-8"
-
+IS_PYTHON2 = sys.version.startswith('2.7')
 
 def segment_word(model, w):
     """
     Description
     -----------
-    Segment word `w` using `model` by looking up w
-    in the model analyses, and default to Viterbi
+    Segment word `w` using `model` by looking up w 
+    in the model analyses, and default to Viterbi 
     segmentation if necessary, ie. in case `w` is OOV
     or in case the model does not support .segment().
     """
@@ -22,8 +22,12 @@ def segment_word(model, w):
     except (KeyError, AttributeError):
         out = model.viterbi_segment(w)[0]
 
-    return out
+    if IS_PYTHON2:
+        out = [seg.decode('utf-8').encode('utf-8') for seg in out]
+    else:
+        pass
 
+    return out
 
 def segment_sentence(model, sentence, tokenizer=None):
     """
@@ -75,8 +79,8 @@ def train_model(
         )
         raise ValueError(err_msg)
 
-    model = f"morfessor-{model_name}"
-    output_filename = f"{input_file_name}.segmented.{model}"
+    model = "morfessor-{}".format(model_name)
+    output_filename = "{}.segmented.{}".format(input_file_name, model)
     output_path = os.path.join(segm_output_folder, output_filename)
 
     # make sure model is saved based on absolute path
@@ -87,7 +91,7 @@ def train_model(
     if model_output_path:
         model_output_path = os.path.abspath(model_output_path)
 
-    print(f"Now running: {model}")
+    print("Now running: {}".format(model))
 
     flatcat_mode = "flatcat" in model
 
@@ -136,7 +140,9 @@ def train_model(
     if model_bin is not None:
         bin_path = (
             model_output_path
-            or f"{model_output_folder}/{input_file_name}-{model}-{lang}.bin"
+            or "{}/{}-{}-{}.bin".format(model_putput_folder,
+                                        input_file_name, 
+                                        model, lang)
         )
         io.write_binary_model_file(bin_path, model_bin)
     else:
@@ -189,11 +195,11 @@ def run_morfessor_flatcat(
 
     if seed_segmentation_path is None:
         if lowercase:
-            _ = f"flores.vocab.{lang}.lowercase.segmented.morfessor-baseline-batch-recursive"
+            _ = "flores.vocab.{}.lowercase.segmented.morfessor-baseline-batch-recursive".format(lang)
         else:
-            _ = f"flores.vocab.{lang}.segmented.morfessor-baseline-batch-recursive"
+            _ = "flores.vocab.{}.segmented.morfessor-baseline-batch-recursive".format(lang)
         seed_segmentation_path = os.path.abspath(
-            f"../data/segmented/flores/{lang}/{_}"
+            "../data/segmented/flores/{}/{}".format(lang, _)
         )
 
     io = flatcat.FlatcatIO(

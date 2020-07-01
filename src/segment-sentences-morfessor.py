@@ -1,20 +1,28 @@
+# -*- coding: utf-8 -*-
 import itertools as it
 import os
 import pickle
-import sys
 from collections import Counter
 
 import click
 import flatcat
 import morfessor
-import sacremoses as sm
+# import sacremoses as sm
 
 import helpers as h
 
 
 def load_model(model_file):
-    io = morfessor.MorfessorIO()
-    model = io.read_binary_model_file(model_file)
+
+    # tarball only used for LMVR
+    if model_file.endswith('tar.gz'):
+        io = flatcat.FlatcatIO()
+        model = io.read_tarball_model_file(model_file)
+        model.initialize_hmm()
+
+    else:
+        io = morfessor.MorfessorIO()
+        model = io.read_binary_model_file(model_file)
 
     return model
 
@@ -28,20 +36,36 @@ def load_model(model_file):
 @click.option(
     "--include-original", is_flag=True, required=False, default=False
 )
-@click.option('--lowercase', is_flag=True, default=False)
+@click.option("--lowercase", is_flag=True, default=False)
+@click.option("--tokenize", is_flag=True, default=False, help="Tokenize with Sacremoses")
 @click.option("--lang", "-l", help="Language")
-def main(input_file, output_file, model_file, include_original, lowercase, lang):
+@click.option("--print-every", default=1000)
+def main(
+    input_file, output_file, model_file, include_original, lowercase, tokenize, lang, print_every=100
+):
     sentences = h.read_lines(input_file)
     model = load_model(model_file)
 
-    if lang == "en":
-        tokenizer = sm.MosesTokenizer("en")
-    else:
-        tokenizer = None
+    # NOTE: DEPRECATED
+    # we only tokenize if the language is english and the user explicitly requested it
+    # if lang == "en" and tokenize:
+        # print('Tokenizing using Sacremoses!')
+        # tokenizer = sm.MosesTokenizer("en")
+    # elif tokenize:
+        # raise NotImplementedError("Only EN tokenization supported with Moses!")
+    # else:
+        # tokenizer = None
+
+    # disable sacremoses
+    tokenizer = None
 
     segmented = []
 
-    for s in sentences:
+    n_sent = len(sentences)
+    for ix, s in enumerate(sentences):
+        if ix % print_every == 0:
+            print('Processing sentence {}/{}'.format(ix+1, n_sent))
+
         if lowercase:
             s = s.lower()
         seg = h.segment_sentence(model, s, tokenizer)
@@ -49,14 +73,16 @@ def main(input_file, output_file, model_file, include_original, lowercase, lang)
 
     if include_original:
         segmented = [
-            f"{sent}\t{segm}" for sent, segm in zip(sentences, segmented)
+            "{}\t{}".format(sent, segm) 
+            for sent, segm 
+            in zip(sentences, segmented)
         ]
 
     if output_file != "-":
         h.write_file(segmented, output_file)
     else:
         for s in segmented:
-            sys.stdout.write(f"{s}\n")
+            sys.stdout.write("{}\n".format(s))
 
 
 if __name__ == "__main__":
