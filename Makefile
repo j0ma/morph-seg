@@ -169,6 +169,11 @@ create_flores_vocab_en:
 		--output-file data/raw/flores/flores.vocab.en.lowercase.withcounts \
 		--with-counts
 
+	cut \
+		-d' ' -f 2- \
+		data/raw/flores/flores.vocab.en.lowercase.withcounts \
+		> data/raw/flores/flores.vocab.en.lowercase
+
 create_flores_vocab_ne:
 	echo "Creating vocabulary for NE"
 	bash ./src/create-flores-vocabulary.sh \
@@ -177,6 +182,11 @@ create_flores_vocab_ne:
 		--output-file data/raw/flores/wiki_ne_en/flores.vocab.ne.lowercase.withcounts \
 		--with-counts
 
+	cut \
+		-d' ' -f 2- \
+		data/raw/flores/wiki_ne_en/flores.vocab.ne.lowercase.withcounts \
+		> data/raw/flores/wiki_ne_en/flores.vocab.ne.lowercase
+
 create_flores_vocab_si:
 	echo "Creating vocabulary for SI"
 	bash ./src/create-flores-vocabulary.sh \
@@ -184,6 +194,12 @@ create_flores_vocab_si:
 		--raw-data-folder data/raw \
 		--output-file data/raw/flores/wiki_si_en/flores.vocab.si.lowercase.withcounts \
 		--with-counts
+
+	cut \
+		-d' ' -f 2- \
+		data/raw/flores/wiki_si_en/flores.vocab.si.lowercase.withcounts \
+		> data/raw/flores/wiki_si_en/flores.vocab.si.lowercase
+
 
 package_segmentation_models:
 	mkdir -p segmentation-models

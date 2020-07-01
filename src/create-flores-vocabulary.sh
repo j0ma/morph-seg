@@ -129,6 +129,7 @@ compute_token_counts() {
             sed "s/ /\n/g" |
             sort |
             $UNIQ_CMD |
+            sed "s/^\s*//g" |
             $SORT_CMD
     else
         sed "s/--/ -- /g" |
@@ -136,6 +137,7 @@ compute_token_counts() {
             sed "s/ /\n/g" |
             sort |
             $UNIQ_CMD |
+            sed "s/^\s*//g" |
             $SORT_CMD
     fi
 }
