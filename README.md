@@ -1,6 +1,6 @@
 # Morphological / BPE segmentation experiments
 
-## Morpho Challenge Eval - 07/01/2020
+## Morpho Challenge Eval on English - 07/01/2020
 
 These models were trained on Flores data, applied to Flores/Brown data, and evaluated with respect to the Morpho Challenge 2010 gold standard analyses.
 
