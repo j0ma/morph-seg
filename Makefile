@@ -1,6 +1,6 @@
 all: init install_lmvr download prep flores
 
-flores: create_flores_vocab train_morfessor
+flores: create_flores_vocab train_morfessor train_lmvr
 
 install_lmvr:
 	bash ./src/download-lmvr.sh
@@ -33,6 +33,82 @@ train_lmvr_en:
 	bash ./src/train-lmvr.sh \
 		--lang en \
 		--lexicon-size 5000 \
+		--corpus-name flores.vocab \
+		--input-path ./data/raw/flores/flores.vocab.en.lowercase.withcounts \
+		--segmentation-output-path ./data/segmented/flores/en \
+		--model-output-path ./bin \
+		--lexicon-output-path ./data \
+		--max-epochs 5
+
+train_lmvr_2000: \
+	train_lmvr_ne_2000 \
+	train_lmvr_si_2000 \
+	train_lmvr_en_2000
+
+train_lmvr_ne_2000:
+	bash ./src/train-lmvr.sh \
+		--lang ne \
+		--lexicon-size 2000 \
+		--corpus-name flores.vocab \
+		--input-path ./data/raw/flores/wiki_ne_en/flores.vocab.ne.lowercase.withcounts \
+		--segmentation-output-path ./data/segmented/flores/ne \
+		--model-output-path ./bin \
+		--lexicon-output-path ./data \
+		--max-epochs 5
+
+train_lmvr_si_2000:
+	bash ./src/train-lmvr.sh \
+		--lang si \
+		--lexicon-size 2000 \
+		--corpus-name flores.vocab \
+		--input-path ./data/raw/flores/wiki_si_en/flores.vocab.si.lowercase.withcounts \
+		--segmentation-output-path ./data/segmented/flores/si \
+		--model-output-path ./bin \
+		--lexicon-output-path ./data \
+		--max-epochs 5
+
+train_lmvr_en_2000:
+	bash ./src/train-lmvr.sh \
+		--lang en \
+		--lexicon-size 2000 \
+		--corpus-name flores.vocab \
+		--input-path ./data/raw/flores/flores.vocab.en.lowercase.withcounts \
+		--segmentation-output-path ./data/segmented/flores/en \
+		--model-output-path ./bin \
+		--lexicon-output-path ./data \
+		--max-epochs 5
+
+train_lmvr_3000: \
+	train_lmvr_ne_3000 \
+	train_lmvr_si_3000 \
+	train_lmvr_en_3000
+
+train_lmvr_ne_3000:
+	bash ./src/train-lmvr.sh \
+		--lang ne \
+		--lexicon-size 3000 \
+		--corpus-name flores.vocab \
+		--input-path ./data/raw/flores/wiki_ne_en/flores.vocab.ne.lowercase.withcounts \
+		--segmentation-output-path ./data/segmented/flores/ne \
+		--model-output-path ./bin \
+		--lexicon-output-path ./data \
+		--max-epochs 5
+
+train_lmvr_si_3000:
+	bash ./src/train-lmvr.sh \
+		--lang si \
+		--lexicon-size 3000 \
+		--corpus-name flores.vocab \
+		--input-path ./data/raw/flores/wiki_si_en/flores.vocab.si.lowercase.withcounts \
+		--segmentation-output-path ./data/segmented/flores/si \
+		--model-output-path ./bin \
+		--lexicon-output-path ./data \
+		--max-epochs 5
+
+train_lmvr_en_3000:
+	bash ./src/train-lmvr.sh \
+		--lang en \
+		--lexicon-size 3000 \
 		--corpus-name flores.vocab \
 		--input-path ./data/raw/flores/flores.vocab.en.lowercase.withcounts \
 		--segmentation-output-path ./data/segmented/flores/en \

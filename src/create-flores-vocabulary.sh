@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -euo pipefail
+
 # Created by argbash-init v2.8.1
 # ARG_OPTIONAL_SINGLE([lang])
 # ARG_OPTIONAL_SINGLE([raw-data-folder])

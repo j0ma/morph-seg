@@ -212,9 +212,9 @@ printf 'Value of --%s: %s\n' 'max-epochs' "$_arg_max_epochs"
 printf 'Value of --%s: %s\n' 'encoding' "$_arg_encoding"
 
 echo "Training morfessor baseline..."
-MBL_SEGM_OUTPUT="$_arg_segmentation_output_path/morfessor-baseline.lmvr.seed.${_arg_lang}"
+MBL_SEGM_OUTPUT="$_arg_segmentation_output_path/morfessor-baseline.lmvr.${_arg_lexicon_size}.seed.${_arg_lang}"
 MBL_SEGM_CLEAN="${MBL_SEGM_OUTPUT//seed\.${_arg_lang}/seed.clean.${_arg_lang}}"
-MBL_LEXICON_OUTPUT_FNAME="${_arg_lexicon_output_path}/${_arg_corpus_name}.morfessor-baseline.lexicon.${_arg_lang}.txt"
+MBL_LEXICON_OUTPUT_FNAME="${_arg_lexicon_output_path}/${_arg_corpus_name}.${_arg_lexicon_size}.morfessor-baseline.lexicon.${_arg_lang}.txt"
 morfessor-train \
     -x ${MBL_LEXICON_OUTPUT_FNAME} \
     -S "${MBL_SEGM_OUTPUT}" \
@@ -225,8 +225,8 @@ cp "${MBL_SEGM_OUTPUT}" "${MBL_SEGM_CLEAN}"
 
 ## Train LMVR model using the training set
 echo "Training LMVR model..."
-LMVR_MODEL_OUTPUT_FNAME="${_arg_model_output_path}/${_arg_corpus_name}.lmvr.model.${_arg_lang}.tar.gz"
-LMVR_LEXICON_OUTPUT_FNAME="${_arg_lexicon_output_path}/${_arg_corpus_name}.lmvr.lexicon.${_arg_lang}.txt"
+LMVR_MODEL_OUTPUT_FNAME="${_arg_model_output_path}/${_arg_corpus_name}.${_arg_lexicon_size}.lmvr.model.${_arg_lang}.tar.gz"
+LMVR_LEXICON_OUTPUT_FNAME="${_arg_lexicon_output_path}/${_arg_corpus_name}.${_arg_lexicon_size}.lmvr.lexicon.${_arg_lang}.txt"
 
 # TODO: why is -T relevant if we use lmvr-segment already?
 #       notably, it's not relevant in flatcat!
@@ -247,7 +247,7 @@ lmvr-train "${MBL_SEGM_CLEAN}" \
 # since we're using lmvr-segment below
 
 echo "Segmenting using LMVR..."
-LMVR_SEGM_OUTPUT_FNAME="$_arg_segmentation_output_path/${_arg_corpus_name}.segmented.lmvr.${_arg_lang}"
+LMVR_SEGM_OUTPUT_FNAME="$_arg_segmentation_output_path/${_arg_corpus_name}.${_arg_lexicon_size}.segmented.lmvr.${_arg_lang}"
 lmvr-segment \
     "${LMVR_MODEL_OUTPUT_FNAME}" \
     "${_arg_input_path}" \

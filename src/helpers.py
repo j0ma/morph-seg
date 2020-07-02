@@ -140,7 +140,7 @@ def train_model(
     if model_bin is not None:
         bin_path = (
             model_output_path
-            or "{}/{}-{}-{}.bin".format(model_putput_folder,
+            or "{}/{}-{}-{}.bin".format(model_output_folder,
                                         input_file_name, 
                                         model, lang)
         )
