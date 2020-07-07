@@ -6,6 +6,10 @@ set -euo pipefail
 #
 # For the English data, using 1000 pairs is recommended.
 
+# Incantation to get directory of this script
+# from https://stackoverflow.com/a/246128/944164
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
 gold_analyses=$1
 test_analyses=$2
 n_pairs=$3
@@ -22,8 +26,8 @@ cut -f1 "$gold_analyses" > "$gold_words"
 cut -f1 "$test_analyses" > "$test_words"
 
 # Generate gold/test pairs
-src/morpho-challenge/sample_word_pairs_v2.pl -n "$n_pairs" -refwords "$test_words" < "$gold_analyses" > "$gold_pairs"
-src/morpho-challenge/sample_word_pairs_v2.pl -n "$n_pairs" -refwords "$gold_words" < "$test_analyses" > "$test_pairs"
+"$DIR"/morpho-challenge/sample_word_pairs_v2.pl -n "$n_pairs" -refwords "$test_words" < "$gold_analyses" > "$gold_pairs"
+"$DIR"/morpho-challenge/sample_word_pairs_v2.pl -n "$n_pairs" -refwords "$gold_words" < "$test_analyses" > "$test_pairs"
 
 # Evaluate
-src/morpho-challenge/eval_morphemes_v2.pl "$gold_pairs" "$test_pairs" "$gold_analyses" "$test_analyses" > "$score"
+"$DIR"/morpho-challenge/eval_morphemes_v2.pl "$gold_pairs" "$test_pairs" "$gold_analyses" "$test_analyses" > "$score"

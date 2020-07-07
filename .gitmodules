@@ -1,0 +1,3 @@
+[submodule "MORSEL"]
+	path = MORSEL
+	url = git@github.com:ConstantineLignos/MORSEL.git
