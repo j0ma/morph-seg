@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -euxo pipefail
+set -euo pipefail
 
 # Example usage: ./src/morsel-bpe.sh data/raw/flores/flores.vocab.en.lowercase.withcounts 1800 2500 <output directory>
 # The first BPE size number is what is used for the stems, which should be smaller than your desired output vocab size,
