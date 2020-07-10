@@ -39,12 +39,12 @@ for cw in $CORPUS_WEIGHTS; do
         "${N_PAIRS}" \
         "${EVAL_PREFIX}"
 
-    BLEU=$(
+    F1=$(
         tail -1 \
             "${OUTPUT_FOLDER}/morfessor-baseline-batch-recursive.corpusweight${cw}.score" |
             cut -d' ' -f3 | sed "s/%;//g"
     )
 
-    printf "%s\t%s\n" "${cw}" "${BLEU}" >>"${TUNING_RESULTS_FILE}"
+    printf "%s\t%s\n" "${cw}" "${F1}" >>"${TUNING_RESULTS_FILE}"
 
 done
