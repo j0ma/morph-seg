@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -euo pipefail
+set -euxo pipefail
 
 # Created by argbash-init v2.8.1
 # ARG_OPTIONAL_SINGLE([lang])
@@ -131,7 +131,7 @@ compute_token_counts() {
             sed "s/ /\n/g" |
             sort |
             $UNIQ_CMD |
-            sed "s/^\s*//g" |
+            sed "/^\s*/d" |
             $SORT_CMD
     else
         sed "s/--/ -- /g" |
@@ -139,7 +139,7 @@ compute_token_counts() {
             sed "s/ /\n/g" |
             sort |
             $UNIQ_CMD |
-            sed "s/^\s*//g" |
+            sed "/^\s*/d" |
             $SORT_CMD
     fi
 }

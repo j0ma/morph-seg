@@ -6,7 +6,8 @@ import flatcat
 import morfessor
 
 UTF8 = "utf-8"
-IS_PYTHON2 = sys.version.startswith('2.7')
+IS_PYTHON2 = sys.version.startswith("2.7")
+
 
 def segment_word(model, w):
     """
@@ -23,11 +24,12 @@ def segment_word(model, w):
         out = model.viterbi_segment(w)[0]
 
     if IS_PYTHON2:
-        out = [seg.decode('utf-8').encode('utf-8') for seg in out]
+        out = [seg.decode("utf-8").encode("utf-8") for seg in out]
     else:
         pass
 
     return out
+
 
 def segment_sentence(model, sentence, tokenizer=None):
     """
@@ -80,7 +82,7 @@ def train_model(
         raise ValueError(err_msg)
 
     model = "morfessor-{}".format(model_name)
-    output_filename = "{}.segmented.{}".format(input_file_name, model)
+    output_filename = "{}.segmented.{}.corpusweight{}".format(input_file_name, model, corpus_weight)
     output_path = os.path.join(segm_output_folder, output_filename)
 
     # make sure model is saved based on absolute path
@@ -116,6 +118,7 @@ def train_model(
                 construction_separator=construction_separator,
                 lang=lang,
                 lowercase=lowercase,
+                corpus_weight=corpus_weight,
             )
 
     model_bin = run(model, input_path)
@@ -140,9 +143,13 @@ def train_model(
     if model_bin is not None:
         bin_path = (
             model_output_path
-            or "{}/{}-{}-{}.bin".format(model_output_folder,
-                                        input_file_name, 
-                                        model, lang)
+            or "{}/{}-{}-corpusweight{}-{}.bin".format(
+                model_output_folder,
+                input_file_name,
+                model,
+                corpus_weight,
+                lang,
+            )
         )
         io.write_binary_model_file(bin_path, model_bin)
     else:
@@ -156,6 +163,7 @@ def run_morfessor_baseline(
     hyperparams=None,
     lang=None,
     lowercase=True,
+    corpus_weight=1.0,
 ):
     if hyperparams is None:
         hyperparams = {}
@@ -165,7 +173,7 @@ def run_morfessor_baseline(
 
     training_type = model_name.replace("morfessor-baseline-", "")
 
-    model = morfessor.BaselineModel()
+    model = morfessor.BaselineModel(corpusweight=corpus_weight)
 
     if training_type == "batch-recursive":
         model.load_data(train_data)
@@ -195,17 +203,21 @@ def run_morfessor_flatcat(
 
     if seed_segmentation_path is None:
         if lowercase:
-            _ = "flores.vocab.{}.lowercase.segmented.morfessor-baseline-batch-recursive".format(lang)
+            _ = "flores.vocab.{}.lowercase.segmented.morfessor-baseline-batch-recursive".format(
+                lang
+            )
         else:
-            _ = "flores.vocab.{}.segmented.morfessor-baseline-batch-recursive".format(lang)
+            _ = "flores.vocab.{}.segmented.morfessor-baseline-batch-recursive".format(
+                lang
+            )
         seed_segmentation_path = os.path.abspath(
             "../data/segmented/flores/{}/{}".format(lang, _)
         )
 
     io = flatcat.FlatcatIO(
-            encoding=UTF8, 
-            construction_separator=construction_separator,
-            category_separator="ThisIsDefinitelyNotASeparator"
+        encoding=UTF8,
+        construction_separator=construction_separator,
+        category_separator="ThisIsDefinitelyNotASeparator",
     )
 
     train_data = [t for t in io.read_corpus_list_file(input_path)]
@@ -248,6 +260,7 @@ def write_file(lines, f, sep="\n"):
 def read_lines(f):
     with open(f, "r") as f:
         return [line.strip() for line in f.readlines() if line.strip() != ""]
+
 
 def flatten(nested):
     return list(it.chain.from_iterable(nested))
