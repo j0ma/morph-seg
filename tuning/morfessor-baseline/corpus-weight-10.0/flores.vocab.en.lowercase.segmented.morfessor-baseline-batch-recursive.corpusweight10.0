@@ -1,4 +1,4 @@
-# Output from Morfessor Baseline 2.0.6, 2020-07-10 02:37:23
+# Output from Morfessor Baseline 2.0.6, 2020-07-10 03:52:08
 66930 !
 57443 "
 1785 #
@@ -2154,8 +2154,8 @@
 1 .-j
 9909 . + .
 47735 ...
-324 ... + .
-27 ... + . + .
+324 . + ...
+27 . + ... + .
 13 ... + ...
 2 ... + ... + .
 3 ........
@@ -2163,10 +2163,10 @@
 4 ..........
 3 ...........
 2 ........... + .
-1 ..............
-1 .............. + ... + .
-1 ...................
-1 ................... + . + .
+1 ........... + ...
+1 ..................
+1 .................. + .
+1 .................. + ...
 2 . + 00
 1 .0001
 1 . + 001
@@ -2564,7 +2564,7 @@
 3 01.txt
 1 01234567
 6 0123456789
-2 0123456789-
+2 0123456789 + -
 1 014
 1 015
 2 0159
@@ -6255,7 +6255,6 @@
 2 840
 2 847
 8 8482
-1 849
 1 84cm
 40 85
 2 85,000
@@ -6629,7 +6628,7 @@
 1 aaargh
 1 aaarrrrgh
 4 aabbccddeeffgghhiijjkkllmmnnooppqqrrssttuuvvwwxxyyzz
-2 aabbccddeeffgghhiijjkkllmmnnooppqqrrssttuuvvwwxxyyzz0123456789
+2 aabbccddeeffgghhiijjkkllmmnnooppqqrrssttuuvvwwxxyyzz + 0123456789
 1 aabbcciippqq12369
 4 aabenraa
 16 aac
@@ -17316,8 +17315,8 @@
 1 brows
 396 browse
 1 browse + able
-1 browseaddress
-1 browseaddress + .
+1 browse + address
+1 browseaddress.
 4 browseallow
 5 browsed
 4 browsedeny
@@ -17555,7 +17554,7 @@
 105 bugs
 19 bugs.
 1 bugs.kde.org
-1 bugs.kde.orgor
+1 bugs.kde.org + or
 1 bugs.kde.org + to
 1 bugs.kde.org + where
 1 bugs.launchpad.net
@@ -94269,7 +94268,7 @@
 1 usagerx
 14 usages
 1 u + said
-3 us + a + in
+3 usain
 1 usak
 1 usama
 104 usb
@@ -97099,7 +97098,7 @@
 1 werber
 12242 were
 1 were + -
-1 were-were
+1 were + - + were
 449 weren
 2 werent
 4 werert

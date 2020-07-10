@@ -1,4 +1,4 @@
-# Output from Morfessor Baseline 2.0.6, 2020-07-10 02:36:27
+# Output from Morfessor Baseline 2.0.6, 2020-07-10 03:51:15
 66930 !
 57443 "
 1785 #
@@ -384,7 +384,7 @@
 1 ' + greater
 1 ' + green
 1 'grit
-1 'groundnuts
+1 ' + groundnuts
 1 'gudiya
 1 ' + guidance
 3 ' + h
@@ -1211,7 +1211,7 @@
 1 'zinking
 1 'étre
 1 'être
-1 ' + île
+1 'île
 1 'ýðø
 2 'ŭ
 1 'මෙලෝ
@@ -1595,7 +1595,7 @@
 1 - + group
 16 -gt
 1 - + guess
-1 - + guesthouse
+1 -guesthouse
 1 -guten
 5 - + guys
 1 - + gym
@@ -2155,16 +2155,16 @@
 9909 . + .
 47735 ...
 324 ... + .
-27 . + . + ...
+27 ... + . + .
 13 ... + ...
 2 ... + ... + .
-3 ... + ... + . + .
+3 . + . + ... + ...
 2 ... + ... + ...
 4 ..........
-3 ...........
-2 ........... + .
-1 ........... + ...
-1 ........... + ... + ... + .
+3 .......... + .
+2 ............
+1 . + . + ............
+1 ............ + ... + ...
 1 ...................
 1 ................... + . + .
 2 . + 00
@@ -2177,7 +2177,7 @@
 2 . + 1
 1 .120s
 1 . + 123
-1 . + 19s
+1 .19s
 7 .1d
 200 .1f
 1 . + 20s
@@ -2193,7 +2193,7 @@
 2 .2fkb
 2 .2fpts
 2 .308
-1 . + 315
+1 .315
 1 . + 34
 1 .357
 1 . + 38
@@ -2279,7 +2279,7 @@
 29 . + h
 3 . + hh
 7 . + hidden
-1 .hombres
+1 . + hombres
 3 .hpp
 1 . + htm
 6 . + html
@@ -3848,7 +3848,7 @@
 8 1999-2009
 1 1999-2011
 2 19mb
-1 19s
+1 19 + s
 43 19th
 3 19th-century
 1 19x147mm
@@ -4827,7 +4827,7 @@
 9 3128
 1 312x440
 1 3 + 13
-1 315
+1 3 + 15
 3 316
 4 3174
 1 319.75
@@ -6249,13 +6249,12 @@
 1 84-
 4 84-key
 1 84-month
-1 8 + 4-year-old
+1 84-year-old
 1 84.29
 1 84.9
 2 840
 2 847
 8 8482
-1 849
 1 84cm
 40 85
 2 85,000
@@ -6625,7 +6624,7 @@
 2 aaaargh
 13 aaah
 1 aaahh
-1 aaahhhhh
+1 a + aahhhhh
 1 a + aargh
 1 aaarrrrgh
 4 aabbccddeeffgghhiijjkkllmmnnooppqqrrssttuuvvwwxxyyzz
@@ -6642,7 +6641,7 @@
 178 aah
 1 a + ahhh
 2 aahhhh
-1 a + ahhhhh
+1 aahhhhh
 1 aah + s
 1 a + a + i
 16 aaiun
@@ -8815,7 +8814,7 @@
 1 alloweth
 79 allowing
 502 allows
-1 allow + unauthenticated
+1 allowunauthenticated
 5 alloy
 1 alloying
 5 alloys
@@ -17263,8 +17262,8 @@
 11 broomfield
 1 broom + s
 13 broomstick
-2 bros
-1 bros + .
+2 bro + s
+1 bros.
 2 brosef
 1 broski
 1 broski-whaddya-knowski
@@ -20471,8 +20470,8 @@
 1 chephar-haammonai
 8 chephirah
 49 cheque
-1 cheque + book
-1 cheque + books
+1 chequebook
+1 chequebook + s
 1 cheque + red
 4 cheques
 6 c + her
@@ -23573,7 +23572,7 @@
 5 converging
 2 conversant
 342 conversation
-1 conversation + -ing
+1 conversation-ing
 3 conversational
 2 conversationalist
 94 conversations
@@ -24793,8 +24792,8 @@
 2 crossbeam
 1 crossbill
 1 crossbill + s
-1 cross + bow
-1 crossbows
+1 crossbow
+1 crossbow + s
 1 crossbreed
 1 cross + check
 2 crossconnector
@@ -25937,8 +25936,8 @@
 1 darkolivegreen + 3
 1 darkolivegreen + 4
 4 dark + on
-1 dark + orange
-1 darkorange1
+1 darkorange
+1 darkorange + 1
 1 darkorange2
 1 darkorange3
 1 darkorange4
@@ -25946,7 +25945,7 @@
 1 darkorchid + 1
 1 darkorchid + 2
 1 darkorchid + 3
-1 darkorchid + 4
+1 darkorchid4
 1 dark + period
 2 darkred
 4 darkroom
@@ -26187,8 +26186,8 @@
 20 daytime
 22 dayton
 25 daytona
-1 daywalker
-1 daywalker + s
+1 day + walker
+1 day + walkers
 1 daza
 2 daze
 2 dazed
@@ -27785,7 +27784,7 @@
 1 dial-a-joke
 18 dial-up
 3 dialect
-1 dialects
+1 dialect + s
 14 dialed
 4 dialing
 1 dialling
@@ -34488,8 +34487,8 @@
 1 fellow + disciples
 4 fellowes
 1 fellowheirs
-1 fellow + helper
-1 fellowhelpers
+1 fellowhelper
+1 fellowhelper + s
 1 fellowlabourer
 2 fellowlabourers
 2 fellowprisoner
@@ -34902,8 +34901,8 @@
 3 fillings
 60 fills
 1 fill + with
-1 filly
-1 filly + you
+1 fill + y
+1 fillyyou
 377 film
 1 film-makers
 1 film-making
@@ -39246,7 +39245,7 @@
 8 goodbyes
 1 good + d
 1 good + e
-1 goodest
+1 good + est
 1 goodhachari
 4 goodies
 2 gooding
@@ -39432,7 +39431,7 @@
 1 government-certified
 3 government-funded
 1 government-led
-1 government + - + owned
+1 government-owned
 1 government + - + run
 1 government-sanctioned
 1 government-sponsored
@@ -40056,7 +40055,7 @@
 5 grounders
 1 groundhogs
 3 grounding
-1 ground + nuts
+1 groundnuts
 44 grounds
 1 groundsel
 2 groundsels
@@ -40328,7 +40327,7 @@
 1 guess + work
 179 guest
 2 guestchamber
-2 guesthouse
+2 guest + house
 1 guestion
 3 guestroom
 125 guests
@@ -43384,7 +43383,7 @@
 3 homan
 1 hombori
 6 hombre
-1 hombre + s
+1 hombres
 1 homburg
 4141 home
 1 home-baked
@@ -47714,8 +47713,8 @@
 2 jack + man
 3 jacko
 20 jackpot
-1 jack + rabbit
-1 jack + rabbits
+1 jackrabbit
+1 jackrabbit + s
 19 jacks
 101 jackson
 20 jacksonville
@@ -47870,8 +47869,8 @@
 3 jamendo.
 407 james
 1 jameses
-5 james + on
-1 jamesons
+5 jameson
+1 jameson + s
 34 jamestown
 53 jamie
 1 jamie + son
@@ -48922,7 +48921,7 @@
 67 juice
 1 juice + d
 56 juicer
-2 juice + s
+2 juices
 1 juicing
 11 juicy
 1 juicy-ass
@@ -48983,8 +48982,8 @@
 1 juncture
 201 june
 30 juneau
-1 june + bug
-1 junebugs
+1 junebug
+1 junebug + s
 3 jung
 237 jungle
 1 jungle + - + house
@@ -53589,11 +53588,11 @@
 1 lighter-skinned
 6 lightest
 3 lighteth
-1 lightgoldenrod
-1 lightgoldenrod + 1
-1 lightgoldenrod + 2
-1 lightgoldenrod + 3
-1 lightgoldenrod + 4
+1 light + goldenrod
+1 lightgoldenrod1
+1 light + goldenrod2
+1 light + goldenrod3
+1 light + goldenrod4
 2 lightgoldenrodyellow
 2 lightgray
 2 light + green
@@ -64502,7 +64501,7 @@
 1 of + jesus
 1 of + jhansi
 1 of + juice
-1 ofjuices
+1 of + juices
 1 of + july
 1 of + june
 1 of + just
@@ -66086,7 +66085,7 @@
 4 over + do
 1 over + done
 9 overdose
-1 overdosed
+1 overdose + d
 2 overdraft
 2 over + dressed
 3 over + drive
@@ -72352,8 +72351,8 @@
 4 qrh
 4 qrz.
 6 qscale
-1 q + string
-1 qstring.
+1 qstring
+1 qstring + .
 3 qsynth
 94 qt
 1 qt-like
@@ -74104,7 +74103,7 @@
 1 reciprocate + s
 3 reciprocating
 1 reciprocity
-1 re + circulation
+1 recirculation
 7 recital
 1 recital + s
 2 recitation
@@ -74698,9 +74697,9 @@
 1 reigo
 2 reiher
 1 reiki
-1 reimagine
+1 re + imagine
 1 reimagined
-1 reimagine + s
+1 reimagines
 4 reimann
 4 reimburse
 1 reimbursed
@@ -80799,8 +80798,8 @@
 1 sheep + s
 1 sheepsbutt
 6 sheepshearers
-1 sheep + skin
-1 sheepskins
+1 sheepskin
+1 sheepskin + s
 31 sheer
 2 sheerah
 1 sheeren
@@ -82628,8 +82627,8 @@
 4 sleepover
 30 sleeps
 2 sleep + walk
-1 sleepwalker
-1 sleepwalker + s
+1 sleep + walker
+1 sleepwalkers
 12 sleepwalking
 21 sleepy
 1 sleepy-head
@@ -83756,7 +83755,7 @@
 1 sources + believe
 3 sourcing
 4 soured
-2 so + uris
+2 souris
 4 sourpuss
 1 s + ours
 3 so + us
@@ -89492,7 +89491,7 @@
 1 thesetwoanimalactivist
 1 the + seventh
 1 these + visions
-1 thesewarriors
+1 these + warriors
 1 the + shelters
 1 the + singer
 17 thesis
@@ -92274,7 +92273,7 @@
 32 turneth
 2 turn + in
 217 turning
-1 turning + thesewarriors
+1 turningthesewarriors
 4 turnip
 3 turnip-head
 1 turnips
@@ -93010,7 +93009,7 @@
 20 unattended
 5 unattractive
 1 unauditably
-1 unauthenticated
+1 un + authenticated
 2 unauthorised
 27 unauthorized
 1 unavailability
@@ -93635,7 +93634,7 @@
 1 unluckiness
 19 unlucky
 23 unma
-1 unmade
+1 un + made
 1 unma + i
 4 unmaintained
 18 unmake
@@ -97646,7 +97645,7 @@
 21 widescreen
 18 widespread
 5 widest
-1 widey
+1 wide + y
 810 widget
 1 widgetry
 191 widgets

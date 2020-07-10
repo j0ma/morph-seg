@@ -1,4 +1,4 @@
-# Output from Morfessor Baseline 2.0.6, 2020-07-10 02:44:48
+# Output from Morfessor Baseline 2.0.6, 2020-07-10 03:56:48
 66930 !
 57443 "
 1785 #
@@ -2155,7 +2155,7 @@
 9909 . + .
 47735 ...
 324 ... + .
-27 . + . + ...
+27 ... + . + .
 13 ... + ...
 2 ... + ... + .
 3 ........
@@ -6255,7 +6255,6 @@
 2 840
 2 847
 8 8482
-1 849
 1 84cm
 40 85
 2 85,000
@@ -15532,7 +15531,7 @@
 2 blackwatch
 2 blackwater
 21 blackwell
-1 black + y
+1 blacky
 9 bladder
 2 bladders
 114 blade
@@ -22397,7 +22396,7 @@
 2 combatants
 1 combating
 1 combative
-2 com + be
+2 combe
 2 combed
 1 combin
 1 combina
@@ -87682,7 +87681,7 @@
 405 tags
 2 tags-locale
 2 tagum
-2 tag + us
+2 tagus
 2 tagxml
 4 tagy
 6 tah
@@ -88630,7 +88629,7 @@
 1 tellthatwe
 11 telluride
 1 tellurium
-3 tell + y
+3 telly
 3 telmar
 8 telmarine
 11 telmarines

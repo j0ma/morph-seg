@@ -1,7 +1,7 @@
 INPUT_FILE="./data/raw/flores/flores.vocab.en.lowercase.withcounts"
 INPUT_NOCOUNTS="./data/raw/flores/flores.vocab.en.lowercase"
 TRAIN_SCRIPT="./src/train-morfessor-baseline.py"
-EVAL_SCRIPT="./src/eval_mc.sh"
+EVAL_SCRIPT="./src/eval-mc.sh"
 OUTPUT_BASE="./tuning/morfessor-baseline/"
 CORPUS_WEIGHTS=$(cat ./tuning/morfessor-baseline/corpus-weights)
 MODEL_OUTPUT_FOLDER="./bin/"
@@ -28,10 +28,14 @@ for cw in $CORPUS_WEIGHTS; do
         --corpus-weight "${cw}" \
         --lowercase
 
+    echo "Creating MC2010 formatted segmentations..."
+
     paste \
         "${INPUT_NOCOUNTS}" \
         "${SEGM_OUTPUT_FILE}" \
         >"${EVAL_SEGM_OUTPUT_FILE}"
+
+    echo "Computing F1..."
 
     bash ${EVAL_SCRIPT} \
         "${GOLD_ANALYSES}" \
@@ -40,9 +44,9 @@ for cw in $CORPUS_WEIGHTS; do
         "${EVAL_PREFIX}"
 
     F1=$(
-        tail -1 \
-            "${OUTPUT_FOLDER}/morfessor-baseline-batch-recursive.corpusweight${cw}.score" |
-            cut -d' ' -f3 | sed "s/%;//g"
+        tail -1 "${EVAL_PREFIX}.score" |
+            cut -d' ' -f3 |
+            sed "s/%;//g"
     )
 
     printf "%s\t%s\n" "${cw}" "${F1}" >>"${TUNING_RESULTS_FILE}"
