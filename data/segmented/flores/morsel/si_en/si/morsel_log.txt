@@ -1,0 +1,1293 @@
+Setting parameters from /Users/lignos/repos/morph-seg/params/morsel/tuned.txt
+Loading wordlist from /Users/lignos/repos/morph-seg/data/wordlists/si_en/train.si.wordlist using charset UTF-8
+174997 types loaded.
+4180520 tokens loaded.
+Init time: 2.576s
+
+Lexicon stats:
+Types: 174997 Tokens: 4180520
+
+Handling hyphenation...
+Lexicon stats:
+Types: 174997 Tokens: 4180520
+Memory status: 283MiB Used, 7635MiB Remaining
+
+Starting learning...
+Iteration 1
+Lexicon stats:
+Types: 174997 Tokens: 4180520
+Base size: 0
+Derived size: 0
+Unmodeled size: 174997
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +(ක්, $)
+Weighted Types: 3666, Types: 1296, Tokens: 217620, Pairs: 4108, Normal/Accom. Pairs: 1296/0
+Samples: (4108) 643ක්/643, ඔප්පුවක්/ඔප්පුව, ගතිකරයක්/ගතිකරය
+Overlap Ratio: undefined (no base or stem overlap)
+Breaking tie between +(ක්, $) and +($, ක්)
+Seg. Precision: 0.5988909426987061
+Selected +($, ක්)
+Learned +($, ක්)
+Weighted Types: 4118, Types: 1456, Tokens: 262201, Pairs: 5001, Normal/Accom. Pairs: 1296/160
+Samples: (5001) ගොඩබැසීම/ගොඩබැසීමක්, ද්රව්යක/ද්රව්යක්, දිශාදර්ශකය/දිශාදර්ශකයක්
+0 new pairs inferred by conservative inference.
+Memory status: 356MiB Used, 7562MiB Remaining
+
+
+Iteration 2
+Lexicon stats:
+Types: 174997 Tokens: 4180520
+Base size: 4226
+Derived size: 4226
+Unmodeled size: 166545
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, ෙන්)
+Weighted Types: 2479, Types: 477, Tokens: 118482, Pairs: 2005, Normal/Accom. Pairs: 477/0
+Samples: (2005) යථාර්ථය/යථාර්ථයෙන්, විම/විමෙන්, හානිය/හානියෙන්
+Overlap ratio: 0.9335324869305451
+Seg. Precision: 0.7441497659906396
+Selected +($, ෙන්)
+Learned +($, ෙන්)
+Weighted Types: 3497, Types: 673, Tokens: 149160, Pairs: 3045, Normal/Accom. Pairs: 477/196
+Samples: (3045) යථාර්ථය/යථාර්ථයෙන්, වායුවෙ/වායුවෙන්, හානිය/හානියෙන්
+120 new pairs inferred by conservative inference.
+Memory status: 356MiB Used, 7562MiB Remaining
+
+
+Iteration 3
+Lexicon stats:
+Types: 175057 Tokens: 4180721
+Base size: 5305
+Derived size: 6707
+Unmodeled size: 163045
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, යි)
+Weighted Types: 2017, Types: 713, Tokens: 689179, Pairs: 4350, Normal/Accom. Pairs: 712/1
+Samples: (4350) කොන්ඩෙ/කොන්ඩෙයි, වාහන/වාහනයි, විදානය/විදානයයි
+Overlap ratio: 2.247816593886463
+Seg. Precision: 0.7473794549266247
+Selected +($, යි)
+Learned +($, යි)
+Weighted Types: 2164, Types: 765, Tokens: 703459, Pairs: 4734, Normal/Accom. Pairs: 712/53
+Samples: (4734) කොන්ඩෙ/කොන්ඩෙයි, වාහන/වාහනයි, විදානය/විදානයයි
+124 new pairs inferred by conservative inference.
+Memory status: 376MiB Used, 7542MiB Remaining
+
+
+Iteration 4
+Lexicon stats:
+Types: 175119 Tokens: 4180868
+Base size: 8826
+Derived size: 11215
+Unmodeled size: 155078
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, ට)
+Weighted Types: 1334, Types: 1334, Tokens: 323693, Pairs: 7172, Normal/Accom. Pairs: 1334/0
+Samples: (7172) කැන්ඩි/කැන්ඩිට, බිදදැමීම/බිදදැමීමට, සෙන්/සෙන්ට
+Overlap ratio: 1.6848436246992782
+Seg. Precision: 0.6352380952380953
+Selected +($, ට)
+Learned +($, ට)
+Weighted Types: 1527, Types: 1527, Tokens: 612307, Pairs: 7471, Normal/Accom. Pairs: 1526/1
+Samples: (7471) කැන්ඩි/කැන්ඩිට, බිදදැමීම/බිදදැමීමට, සෙන්/සෙන්ට
+392 new pairs inferred by conservative inference.
+Memory status: 326MiB Used, 7592MiB Remaining
+
+
+Iteration 5
+Lexicon stats:
+Types: 175315 Tokens: 4181210
+Base size: 13464
+Derived size: 19071
+Unmodeled size: 142780
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, ත්)
+Weighted Types: 1222, Types: 432, Tokens: 582395, Pairs: 3064, Normal/Accom. Pairs: 432/0
+Samples: (3064) ආධාර/ආධාරත්, කරෙ/කරෙත්, ගියා/ගියාත්
+Overlap ratio: 1.2086811352253757
+Seg. Precision: 0.45617740232312565
+Selected +($, ත්)
+Learned +($, ත්)
+Weighted Types: 1400, Types: 495, Tokens: 645994, Pairs: 3664, Normal/Accom. Pairs: 464/31
+Samples: (3664) ආධාර/ආධාරත්, එකෙ/එකෙත්, ගියා/ගියාත්
+466 new pairs inferred by conservative inference.
+Memory status: 293MiB Used, 7625MiB Remaining
+
+
+Iteration 6
+Lexicon stats:
+Types: 175547 Tokens: 4182989
+Base size: 15016
+Derived size: 23139
+Unmodeled size: 137392
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, ේ)
+Weighted Types: 1066, Types: 1066, Tokens: 247258, Pairs: 4051, Normal/Accom. Pairs: 1066/0
+Samples: (4051) කියෙව්ව/කියෙව්වේ, ගැලපීම/ගැලපීමේ, හිරිකිත/හිරිකිතේ
+Overlap ratio: 1.1040998217468805
+Seg. Precision: 0.5040189125295508
+Selected +($, ේ)
+Learned +($, ේ)
+Weighted Types: 1176, Types: 1176, Tokens: 423419, Pairs: 4223, Normal/Accom. Pairs: 1169/7
+Samples: (4223) ගැලපීම/ගැලපීමේ, ගෙන්වන්න/ගෙන්වන්නේ, භාෂාව/භාෂාවේ
+972 new pairs inferred by conservative inference.
+Memory status: 373MiB Used, 7545MiB Remaining
+
+
+Iteration 7
+Lexicon stats:
+Types: 176033 Tokens: 4185105
+Base size: 16629
+Derived size: 28320
+Unmodeled size: 131084
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, ින්)
+Weighted Types: 977, Types: 188, Tokens: 57919, Pairs: 981, Normal/Accom. Pairs: 188/0
+Samples: (981) කැමරාවක/කැමරාවකින්, පදනම/පදනමින්, පැයක/පැයකින්
+Overlap ratio: 0.8591160220994475
+Seg. Precision: 0.3679060665362035
+Selected +($, ින්)
+Learned +($, ින්)
+Weighted Types: 1231, Types: 237, Tokens: 76992, Pairs: 1352, Normal/Accom. Pairs: 200/37
+Samples: (1352) කැමරාවක/කැමරාවකින්, පදනම/පදනමින්, පැයක/පැයකින්
+472 new pairs inferred by conservative inference.
+Memory status: 294MiB Used, 7624MiB Remaining
+
+
+Iteration 8
+Lexicon stats:
+Types: 176265 Tokens: 4185618
+Base size: 17194
+Derived size: 29984
+Unmodeled size: 129087
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, වා)
+Weighted Types: 877, Types: 310, Tokens: 49356, Pairs: 1302, Normal/Accom. Pairs: 306/4
+Samples: (1302) තෝරන/තෝරනවා, මගහරින/මගහරිනවා, සැකකරන/සැකකරනවා
+Overlap ratio: 3.4280442804428044
+Seg. Precision: 0.45722713864306785
+Selected +($, වා)
+Learned +($, වා)
+Weighted Types: 1431, Types: 506, Tokens: 210948, Pairs: 2104, Normal/Accom. Pairs: 336/170
+Samples: (2104) උදව්වෙන/උදව්වෙනවා, පිරවේ/පිරවේවා, බලගන්න/බලගන්නවා
+34 new pairs inferred by conservative inference.
+Memory status: 330MiB Used, 7588MiB Remaining
+
+
+Iteration 9
+Lexicon stats:
+Types: 176282 Tokens: 4185639
+Base size: 18286
+Derived size: 31565
+Unmodeled size: 126431
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, ගේ)
+Weighted Types: 634, Types: 224, Tokens: 71588, Pairs: 1866, Normal/Accom. Pairs: 224/0
+Samples: (1866) ඩෙනිස්/ඩෙනිස්ගේ, බල්ලා/බල්ලාගේ, වොල්ටර්/වොල්ටර්ගේ
+Overlap ratio: 1.2250470809792844
+Seg. Precision: 0.6978193146417445
+Selected +($, ගේ)
+Learned +($, ගේ)
+Weighted Types: 670, Types: 237, Tokens: 87919, Pairs: 1963, Normal/Accom. Pairs: 237/0
+Samples: (1963) ඩෙනිස්/ඩෙනිස්ගේ, බල්ලා/බල්ලාගේ, වොල්ටර්/වොල්ටර්ගේ
+174 new pairs inferred by conservative inference.
+Memory status: 399MiB Used, 7519MiB Remaining
+
+
+Iteration 10
+Lexicon stats:
+Types: 176367 Tokens: 4185755
+Base size: 19168
+Derived size: 33701
+Unmodeled size: 123498
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, නම්)
+Weighted Types: 629, Types: 121, Tokens: 406049, Pairs: 793, Normal/Accom. Pairs: 121/0
+Samples: (793) ඇරිය/ඇරියනම්, කෑගැහුවෙ/කෑගැහුවෙනම්, බේරගන්නව/බේරගන්නවනම්
+Overlap ratio: 1.0797773654916512
+Seg. Precision: 0.5707547169811321
+Selected +($, නම්)
+Learned +($, නම්)
+Weighted Types: 1086, Types: 209, Tokens: 518706, Pairs: 1364, Normal/Accom. Pairs: 147/62
+Samples: (1364) අනින්/අනින්නම්, කෑගැහුවෙ/කෑගැහුවෙනම්, බේරගන්නව/බේරගන්නවනම්
+29 new pairs inferred by conservative inference.
+Memory status: 309MiB Used, 7609MiB Remaining
+
+
+Iteration 11
+Lexicon stats:
+Types: 176381 Tokens: 4185772
+Base size: 19503
+Derived size: 34931
+Unmodeled size: 121947
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, වෙලා)
+Weighted Types: 608, Types: 76, Tokens: 54699, Pairs: 264, Normal/Accom. Pairs: 76/0
+Samples: (264) අන්ත්රා/අන්ත්රාවෙලා, අලු/අලුවෙලා, වෙනස්/වෙනස්වෙලා
+Overlap ratio: 1.1071428571428572
+Seg. Precision: 0.9382716049382716
+Selected +($, වෙලා)
+Learned +($, වෙලා)
+Weighted Types: 880, Types: 110, Tokens: 64527, Pairs: 414, Normal/Accom. Pairs: 80/30
+Samples: (414) අන්ත්රා/අන්ත්රාවෙලා, අලු/අලුවෙලා, වෙනස්/වෙනස්වෙලා
+2 new pairs inferred by conservative inference.
+Memory status: 405MiB Used, 7513MiB Remaining
+
+
+Iteration 12
+Lexicon stats:
+Types: 176382 Tokens: 4185773
+Base size: 19627
+Derived size: 35219
+Unmodeled size: 121536
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, ද)
+Weighted Types: 562, Types: 562, Tokens: 743849, Pairs: 3716, Normal/Accom. Pairs: 562/0
+Samples: (3716) කොනඩයක්/කොනඩයක්ද, පිටවෙයි/පිටවෙයිද, මහත්තයා/මහත්තයාද
+Overlap ratio: 1.1876617773943055
+Seg. Precision: 0.5991471215351812
+Selected +($, ද)
+Learned +($, ද)
+Weighted Types: 774, Types: 774, Tokens: 1010964, Pairs: 5236, Normal/Accom. Pairs: 774/0
+Samples: (5236) කුළුණක්/කුළුණක්ද, පිටවෙයි/පිටවෙයිද, මහත්තයා/මහත්තයාද
+202 new pairs inferred by conservative inference.
+Memory status: 350MiB Used, 7568MiB Remaining
+
+
+Iteration 13
+Lexicon stats:
+Types: 176479 Tokens: 4185963
+Base size: 21066
+Derived size: 40651
+Unmodeled size: 114762
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +(ගන්න, $)
+Weighted Types: 464, Types: 58, Tokens: 14225, Pairs: 209, Normal/Accom. Pairs: 58/0
+Samples: (209) තේරුම්ගන්න/තේරුම්, පැහැරගන්න/පැහැර, වෙස්වලාගන්න/වෙස්වලා
+Overlap ratio: 1.6703296703296704
+Seg. Precision: 0.001678435004051395
+Seg. Precision too low
+
+Vetting transform +(යෙක්, $)
+Weighted Types: 440, Types: 55, Tokens: 3811, Pairs: 317, Normal/Accom. Pairs: 55/0
+Samples: (317) පව්කාරයෙක්/පව්කාර, රැවටිලිකාරයෙක්/රැවටිලිකාර, සුනඛයෙක්/සුනඛ
+Overlap ratio: 3.097560975609756
+Seg. Precision: 0.001591619400393564
+Seg. Precision too low
+
+Vetting transform +($, ොත්)
+Weighted Types: 410, Types: 79, Tokens: 9003, Pairs: 348, Normal/Accom. Pairs: 79/0
+Samples: (348) අත්හැරිය/අත්හැරියොත්, කියව්ව/කියව්වොත්, කිව්ව/කිව්වොත්
+Overlap ratio: 0.9745222929936306
+Seg. Precision: 0.6869565217391305
+Selected +($, ොත්)
+Learned +($, ොත්)
+Weighted Types: 452, Types: 87, Tokens: 13607, Pairs: 357, Normal/Accom. Pairs: 87/0
+Samples: (357) අත්හැරිය/අත්හැරියොත්, කියව්ව/කියව්වොත්, කිව්ව/කිව්වොත්
+130 new pairs inferred by conservative inference.
+Memory status: 351MiB Used, 7567MiB Remaining
+
+
+Iteration 14
+Lexicon stats:
+Types: 176537 Tokens: 4186061
+Base size: 21149
+Derived size: 41138
+Unmodeled size: 114250
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, ්නෙ)
+Weighted Types: 410, Types: 79, Tokens: 4094, Pairs: 464, Normal/Accom. Pairs: 79/0
+Samples: (464) අගුලක/අගුලක්නෙ, ඉනන/ඉනන්නෙ, මාන/මාන්නෙ
+Overlap ratio: 1.0208333333333333
+Seg. Precision: 0.42934782608695654
+Selected +($, ්නෙ)
+Learned +($, ්නෙ)
+Weighted Types: 930, Types: 179, Tokens: 82885, Pairs: 867, Normal/Accom. Pairs: 141/38
+Samples: (867) ඉනන/ඉනන්නෙ, මාන/මාන්නෙ, හලන්/හලන්නෙ
+106 new pairs inferred by conservative inference.
+Memory status: 362MiB Used, 7556MiB Remaining
+
+
+Iteration 15
+Lexicon stats:
+Types: 176590 Tokens: 4186133
+Base size: 21209
+Derived size: 41870
+Unmodeled size: 113511
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, ම)
+Weighted Types: 389, Types: 389, Tokens: 211580, Pairs: 2542, Normal/Accom. Pairs: 389/0
+Samples: (2542) නාලිකාවක/නාලිකාවකම, විශිෂ්ට/විශිෂ්ටම, හැලී/හැලීම
+Overlap ratio: 1.089928057553957
+Seg. Precision: 0.2731741573033708
+Selected +($, ම)
+Learned +($, ම)
+Weighted Types: 764, Types: 764, Tokens: 823365, Pairs: 4348, Normal/Accom. Pairs: 764/0
+Samples: (4348) නාලිකාවක/නාලිකාවකම, වෙනසක්/වෙනසක්ම, හැලී/හැලීම
+194 new pairs inferred by conservative inference.
+Memory status: 335MiB Used, 7583MiB Remaining
+
+
+Iteration 16
+Lexicon stats:
+Types: 176685 Tokens: 4186273
+Base size: 21842
+Derived size: 46409
+Unmodeled size: 108434
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, name)
+Weighted Types: 320, Types: 40, Tokens: 37472, Pairs: 624, Normal/Accom. Pairs: 40/0
+Samples: (624) xbm/xbmname, තත්ව/තත්වname, මාරුව/මාරුවname
+Overlap ratio: 1.289902280130293
+Seg. Precision: 0.8163265306122449
+Selected +($, name)
+Learned +($, name)
+Weighted Types: 336, Types: 42, Tokens: 37563, Pairs: 659, Normal/Accom. Pairs: 42/0
+Samples: (659) xbm/xbmname, තත්ව/තත්වname, මාරුව/මාරුවname
+18 new pairs inferred by conservative inference.
+Memory status: 371MiB Used, 7547MiB Remaining
+
+
+Iteration 17
+Lexicon stats:
+Types: 176694 Tokens: 4186291
+Base size: 22168
+Derived size: 47081
+Unmodeled size: 107445
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, ලා)
+Weighted Types: 311, Types: 110, Tokens: 42374, Pairs: 681, Normal/Accom. Pairs: 110/0
+Samples: (681) පව්/පව්ලා, බෑණ/බෑණලා, හැකර්/හැකර්ලා
+Overlap ratio: 1.1601123595505618
+Seg. Precision: 0.205607476635514
+Selected +($, ලා)
+Learned +($, ලා)
+Weighted Types: 713, Types: 252, Tokens: 217020, Pairs: 1241, Normal/Accom. Pairs: 145/107
+Samples: (1241) බැද/බැදලා, බැහැල/බැහැලා, හැකර්/හැකර්ලා
+119 new pairs inferred by conservative inference.
+Memory status: 407MiB Used, 7511MiB Remaining
+
+
+Iteration 18
+Lexicon stats:
+Types: 176752 Tokens: 4186480
+Base size: 22639
+Derived size: 48189
+Unmodeled size: 105924
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +(ය, $)
+Weighted Types: 307, Types: 307, Tokens: 23101, Pairs: 1546, Normal/Accom. Pairs: 307/0
+Samples: (1546) අමාත්යය/අමාත්ය, ඔබතුමිය/ඔබතුමි, ලතෝනිය/ලතෝනි
+Overlap ratio: 1.1946246524559778
+Seg. Precision: 0.008878477644745213
+Seg. Precision too low
+
+Vetting transform +($, යෙක්)
+Weighted Types: 304, Types: 38, Tokens: 3362, Pairs: 380, Normal/Accom. Pairs: 37/1
+Samples: (380) ආසාදිත/ආසාදිතයෙක්, නංගි/නංගියෙක්, පරෙවි/පරෙවියෙක්
+Overlap ratio: 1.8385093167701863
+Seg. Precision: 0.1919191919191919
+Selected +($, යෙක්)
+Learned +($, යෙක්)
+Weighted Types: 936, Types: 117, Tokens: 10350, Pairs: 627, Normal/Accom. Pairs: 78/39
+Samples: (627) කාලකණ්නිය/කාලකණ්නියෙක්, පරෙවි/පරෙවියෙක්, පෙරේතය/පෙරේතයෙක්
+21 new pairs inferred by conservative inference.
+Memory status: 363MiB Used, 7555MiB Remaining
+
+
+Iteration 19
+Lexicon stats:
+Types: 176762 Tokens: 4186494
+Base size: 22775
+Derived size: 48699
+Unmodeled size: 105288
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, ්)
+Weighted Types: 303, Types: 303, Tokens: 93983, Pairs: 1612, Normal/Accom. Pairs: 303/0
+Samples: (1612) 66ක/66ක්, ඇගයීම/ඇගයීම්, බැලුවෙ/බැලුවේ
+Overlap ratio: 0.8194444444444444
+Seg. Precision: 0.03442399454669393
+Seg. Precision too low
+
+Vetting transform +($, ගෙන)
+Weighted Types: 301, Types: 58, Tokens: 28143, Pairs: 291, Normal/Accom. Pairs: 58/0
+Samples: (291) දැනෙ/දැනෙගෙන, මැන/මැනගෙන, සාදා/සාදාගෙන
+Overlap ratio: 1.0457516339869282
+Seg. Precision: 0.4603174603174603
+Selected +($, ගෙන)
+Learned +($, ගෙන)
+Weighted Types: 436, Types: 84, Tokens: 101759, Pairs: 354, Normal/Accom. Pairs: 84/0
+Samples: (354) දැනෙ/දැනෙගෙන, මැන/මැනගෙන, සාදා/සාදාගෙන
+46 new pairs inferred by conservative inference.
+Memory status: 287MiB Used, 7631MiB Remaining
+
+
+Iteration 20
+Lexicon stats:
+Types: 176785 Tokens: 4186552
+Base size: 22906
+Derived size: 49090
+Unmodeled size: 104789
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, වත්)
+Weighted Types: 275, Types: 53, Tokens: 99524, Pairs: 580, Normal/Accom. Pairs: 53/0
+Samples: (580) ඉන්නෙ/ඉන්නෙවත්, ඉස්කෝලෙ/ඉස්කෝලෙවත්, සමඟ/සමඟවත්
+Overlap ratio: 0.8782608695652174
+Seg. Precision: 0.25853658536585367
+Selected +($, වත්)
+Learned +($, වත්)
+Weighted Types: 535, Types: 103, Tokens: 183380, Pairs: 1112, Normal/Accom. Pairs: 103/0
+Samples: (1112) ඉස්කෝලෙ/ඉස්කෝලෙවත්, සංගීතය/සංගීතයවත්, සමඟ/සමඟවත්
+46 new pairs inferred by conservative inference.
+Memory status: 326MiB Used, 7592MiB Remaining
+
+
+Iteration 21
+Lexicon stats:
+Types: 176808 Tokens: 4186589
+Base size: 23043
+Derived size: 50247
+Unmodeled size: 103518
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, න්)
+Weighted Types: 274, Types: 97, Tokens: 93994, Pairs: 1145, Normal/Accom. Pairs: 97/0
+Samples: (1145) අඩුකරන්න/අඩුකරන්නන්, ඉන්දිය/ඉන්දියන්, ප්රතිශතය/ප්රතිශතයන්
+Overlap ratio: 0.8741258741258742
+Seg. Precision: 0.04355635383924562
+Seg. Precision too low
+
+Vetting transform +($, ව)
+Weighted Types: 236, Types: 236, Tokens: 36300, Pairs: 2742, Normal/Accom. Pairs: 236/0
+Samples: (2742) මැග්නීටෝ/මැග්නීටෝව, යාළුවකේ/යාළුවකේව, යොසුකෝ/යොසුකෝව
+Overlap ratio: 1.0946094609460946
+Seg. Precision: 0.21318879855465223
+Selected +($, ව)
+Learned +($, ව)
+Weighted Types: 688, Types: 688, Tokens: 388850, Pairs: 3863, Normal/Accom. Pairs: 686/2
+Samples: (3863) මැග්නීටෝ/මැග්නීටෝව, යොසුකෝ/යොසුකෝව, වලලු/වලලුව
+223 new pairs inferred by conservative inference.
+Memory status: 345MiB Used, 7573MiB Remaining
+
+
+Iteration 22
+Lexicon stats:
+Types: 176916 Tokens: 4186759
+Base size: 23128
+Derived size: 54327
+Unmodeled size: 99461
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, ∙)
+Weighted Types: 214, Types: 214, Tokens: 525170, Pairs: 1873, Normal/Accom. Pairs: 214/0
+Samples: (1873) ඇලෙක්ස්/ඇලෙක්ස්∙, තාත්තා∙∙/තාත්තා∙∙∙, තුවාල/තුවාල∙
+Overlap ratio: 1.207670720299345
+Seg. Precision: 0.5257985257985258
+Selected +($, ∙)
+Learned +($, ∙)
+Weighted Types: 378, Types: 378, Tokens: 789861, Pairs: 3494, Normal/Accom. Pairs: 367/11
+Samples: (3494) උල්පතකින්/උල්පතකින්∙, මායාවකින්/මායාවකින්∙, රැන්ඩි/රැන්ඩි∙
+39 new pairs inferred by conservative inference.
+Memory status: 401MiB Used, 7517MiB Remaining
+
+
+Iteration 23
+Lexicon stats:
+Types: 176935 Tokens: 4186779
+Base size: 23717
+Derived size: 57858
+Unmodeled size: 95360
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, යෝ)
+Weighted Types: 187, Types: 66, Tokens: 5008, Pairs: 344, Normal/Accom. Pairs: 66/0
+Samples: (344) බහුබූත/බහුබූතයෝ, මිත්යාදෘෂ්ටික/මිත්යාදෘෂ්ටිකයෝ, විද්යාඥ/විද්යාඥයෝ
+Overlap ratio: 1.2149122807017543
+Seg. Precision: 0.532258064516129
+Selected +($, යෝ)
+Learned +($, යෝ)
+Weighted Types: 286, Types: 101, Tokens: 9567, Pairs: 555, Normal/Accom. Pairs: 71/30
+Samples: (555) මිත්යාදෘෂ්ටික/මිත්යාදෘෂ්ටිකයෝ, වදකාර/වදකාරයෝ, වෙඩික්කාරය/වෙඩික්කාරයෝ
+76 new pairs inferred by conservative inference.
+Memory status: 277MiB Used, 7640MiB Remaining
+
+
+Iteration 24
+Lexicon stats:
+Types: 176973 Tokens: 4186848
+Base size: 23863
+Derived size: 58317
+Unmodeled size: 94793
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, යන්)
+Weighted Types: 171, Types: 33, Tokens: 6051, Pairs: 449, Normal/Accom. Pairs: 33/0
+Samples: (449) අසනිප/අසනිපයන්, නුවණක්කාර/නුවණක්කාරයන්, සහායක/සහායකයන්
+Overlap ratio: 1.2882562277580072
+Seg. Precision: 0.19411764705882353
+Selected +($, යන්)
+Learned +($, යන්)
+Weighted Types: 795, Types: 153, Tokens: 22121, Pairs: 1146, Normal/Accom. Pairs: 89/64
+Samples: (1146) අසනිප/අසනිපයන්, ශෝකය/ශෝකයන්, සහායක/සහායකයන්
+74 new pairs inferred by conservative inference.
+Memory status: 352MiB Used, 7566MiB Remaining
+
+
+Iteration 25
+Lexicon stats:
+Types: 177009 Tokens: 4186955
+Base size: 23888
+Derived size: 59122
+Unmodeled size: 93999
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, නේ)
+Weighted Types: 153, Types: 54, Tokens: 86425, Pairs: 668, Normal/Accom. Pairs: 54/0
+Samples: (668) තාත්තල/තාත්තලනේ, දවස/දවසනේ, මාමා/මාමානේ
+Overlap ratio: 0.868231046931408
+Seg. Precision: 0.1062992125984252
+Selected +($, නේ)
+Learned +($, නේ)
+Weighted Types: 311, Types: 110, Tokens: 283309, Pairs: 1193, Normal/Accom. Pairs: 109/1
+Samples: (1193) ආරංචියක්/ආරංචියක්නේ, තාත්තල/තාත්තලනේ, විදිහයි/විදිහයිනේ
+98 new pairs inferred by conservative inference.
+Memory status: 385MiB Used, 7533MiB Remaining
+
+
+Iteration 26
+Lexicon stats:
+Types: 177053 Tokens: 4187032
+Base size: 24006
+Derived size: 60409
+Unmodeled size: 92638
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, ගත්තා)
+Weighted Types: 212, Types: 19, Tokens: 2979, Pairs: 118, Normal/Accom. Pairs: 19/0
+Samples: (118) කඩා/කඩාගත්තා, යවා/යවාගත්තා, වෙනස්කර/වෙනස්කරගත්තා
+Overlap ratio: 0.6222222222222222
+Seg. Precision: 0.41304347826086957
+Selected +($, ගත්තා)
+Learned +($, ගත්තා)
+Weighted Types: 414, Types: 37, Tokens: 9991, Pairs: 158, Normal/Accom. Pairs: 37/0
+Samples: (158) ගිනි/ගිනිගත්තා, යවා/යවාගත්තා, වෙනස්කර/වෙනස්කරගත්තා
+19 new pairs inferred by conservative inference.
+Memory status: 275MiB Used, 7642MiB Remaining
+
+
+Iteration 27
+Lexicon stats:
+Types: 177062 Tokens: 4187048
+Base size: 24022
+Derived size: 60581
+Unmodeled size: 92459
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +(ව, $)
+Weighted Types: 141, Types: 141, Tokens: 11948, Pairs: 493, Normal/Accom. Pairs: 141/0
+Samples: (493) කෙන්යාව/කෙන්යා, දැමුව/දැමු, ප්රාර්ථනාව/ප්රාර්ථනා
+Conflict: Inverse of transform already learned.
+
+Vetting transform ($, නො)+
+Weighted Types: 141, Types: 50, Tokens: 14478, Pairs: 380, Normal/Accom. Pairs: 50/0
+Samples: (380) ඉවසිලිමත්/නොඉවසිලිමත්, ලැබෙනකොට/නොලැබෙනකොට, වෙච්ච/නොවෙච්ච
+Overlap ratio: 1.0655737704918034
+Seg. Precision: 0.24509803921568626
+Selected ($, නො)+
+Learned ($, නො)+
+Weighted Types: 272, Types: 96, Tokens: 136160, Pairs: 546, Normal/Accom. Pairs: 96/0
+Samples: (546) පැමිණීමත්/නොපැමිණීමත්, ලැබෙනකොට/නොලැබෙනකොට, වෙච්ච/නොවෙච්ච
+31 new pairs inferred by conservative inference.
+Memory status: 409MiB Used, 7509MiB Remaining
+
+
+Iteration 28
+Lexicon stats:
+Types: 177076 Tokens: 4187070
+Base size: 24076
+Derived size: 61158
+Unmodeled size: 91842
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, ස්)
+Weighted Types: 136, Types: 48, Tokens: 9507, Pairs: 534, Normal/Accom. Pairs: 48/0
+Samples: (534) කමින්/කමින්ස්, කැට්/කැට්ස්, මීල්/මීල්ස්
+Overlap ratio: 1.2864077669902914
+Seg. Precision: 0.10909090909090909
+Selected +($, ස්)
+Learned +($, ස්)
+Weighted Types: 263, Types: 93, Tokens: 31600, Pairs: 652, Normal/Accom. Pairs: 77/16
+Samples: (652) කමින්/කමින්ස්, කැට්/කැට්ස්, මීල්/මීල්ස්
+77 new pairs inferred by conservative inference.
+Memory status: 278MiB Used, 7640MiB Remaining
+
+
+Iteration 29
+Lexicon stats:
+Types: 177114 Tokens: 4187274
+Base size: 24382
+Derived size: 61870
+Unmodeled size: 90862
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, යා)
+Weighted Types: 127, Types: 45, Tokens: 25732, Pairs: 433, Normal/Accom. Pairs: 43/2
+Samples: (433) කිලන්/කිලන්යා, ජාති/ජාතියා, ශ්රේෂ්ඨතම/ශ්රේෂ්ඨතමයා
+Overlap ratio: 0.9603399433427762
+Seg. Precision: 0.13636363636363635
+Selected +($, යා)
+Learned +($, යා)
+Weighted Types: 571, Types: 202, Tokens: 47245, Pairs: 895, Normal/Accom. Pairs: 140/62
+Samples: (895) කවටය/කවටයා, පැමිණි/පැමිණියා, පුත්රය/පුත්රයා
+190 new pairs inferred by conservative inference.
+Memory status: 325MiB Used, 7593MiB Remaining
+
+
+Iteration 30
+Lexicon stats:
+Types: 177204 Tokens: 4187472
+Base size: 24332
+Derived size: 62710
+Unmodeled size: 90162
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, වෙන්න)
+Weighted Types: 257, Types: 23, Tokens: 18111, Pairs: 163, Normal/Accom. Pairs: 23/0
+Samples: (163) කුණු/කුණුවෙන්න, සහභාගි/සහභාගිවෙන්න, සිනහ/සිනහවෙන්න
+Overlap ratio: 0.7985074626865671
+Seg. Precision: 0.32857142857142857
+Selected +($, වෙන්න)
+Learned +($, වෙන්න)
+Weighted Types: 771, Types: 69, Tokens: 51713, Pairs: 317, Normal/Accom. Pairs: 59/10
+Samples: (317) නිදහස්ව/නිදහස්වෙන්න, විශාලව/විශාලවෙන්න, සිනහ/සිනහවෙන්න
+3 new pairs inferred by conservative inference.
+Memory status: 383MiB Used, 7535MiB Remaining
+
+
+Iteration 31
+Lexicon stats:
+Types: 177205 Tokens: 4187473
+Base size: 24291
+Derived size: 62958
+Unmodeled size: 89956
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, ේදී)
+Weighted Types: 166, Types: 32, Tokens: 11478, Pairs: 326, Normal/Accom. Pairs: 32/0
+Samples: (326) අදියර/අදියරේදී, ක්ෂිතිජය/ක්ෂිතිජයේදී, කැනඩාව/කැනඩාවේදී
+Overlap ratio: 0.8906752411575563
+Seg. Precision: 0.5333333333333333
+Selected +($, ේදී)
+Learned +($, ේදී)
+Weighted Types: 452, Types: 87, Tokens: 24493, Pairs: 701, Normal/Accom. Pairs: 54/33
+Samples: (701) අදියර/අදියරේදී, උපන්දිනේ/උපන්දිනේදී, රැකියාව/රැකියාවේදී
+17 new pairs inferred by conservative inference.
+Memory status: 290MiB Used, 7628MiB Remaining
+
+
+Iteration 32
+Lexicon stats:
+Types: 177213 Tokens: 4187481
+Base size: 24285
+Derived size: 63376
+Unmodeled size: 89552
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +(කරන්න, $)
+Weighted Types: 123, Types: 11, Tokens: 3865, Pairs: 52, Normal/Accom. Pairs: 11/0
+Samples: (52) පුහුනුකරන්න/පුහුනු, බාධාකරන්න/බාධා, භාවිතාකරන්න/භාවිතා
+Overlap ratio: 4.2
+Seg. Precision: 3.178455848358761E-4
+Seg. Precision too low
+
+Vetting transform +($, ම්)
+Weighted Types: 119, Types: 42, Tokens: 4325, Pairs: 371, Normal/Accom. Pairs: 42/0
+Samples: (371) අතුරුදන්වීම/අතුරුදන්වීම්, රාජ්ය/රාජ්යම්, වෙළෙද/වෙළෙදම්
+Overlap ratio: 0.935064935064935
+Seg. Precision: 0.05991440798858773
+Seg. Precision too low
+
+Vetting transform +($, ෙ)
+Weighted Types: 115, Types: 115, Tokens: 11209, Pairs: 1108, Normal/Accom. Pairs: 115/0
+Samples: (1108) අමරණීයත්වය/අමරණීයත්වයෙ, අලංකාර/අලංකාරෙ, විනාඩිය/විනාඩියෙ
+Overlap ratio: 0.9087221095334685
+Seg. Precision: 0.13706793802145412
+Selected +($, ෙ)
+Learned +($, ෙ)
+Weighted Types: 346, Types: 346, Tokens: 181340, Pairs: 1741, Normal/Accom. Pairs: 345/1
+Samples: (1741) අමරණීයත්වය/අමරණීයත්වයෙ, ඇහැව්ව/ඇහැව්වෙ, තත්ව/තත්වෙ
+412 new pairs inferred by conservative inference.
+Memory status: 323MiB Used, 7595MiB Remaining
+
+
+Iteration 33
+Lexicon stats:
+Types: 177410 Tokens: 4188106
+Base size: 24134
+Derived size: 65522
+Unmodeled size: 87754
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, ුම්)
+Weighted Types: 109, Types: 21, Tokens: 15897, Pairs: 95, Normal/Accom. Pairs: 21/0
+Samples: (95) පරෙ/පරෙුම්, වැඳ/වැඳුම්, විස/විසුම්
+Overlap ratio: 0.4418604651162791
+Seg. Precision: 0.1926605504587156
+Selected +($, ුම්)
+Learned +($, ුම්)
+Weighted Types: 187, Types: 36, Tokens: 19535, Pairs: 156, Normal/Accom. Pairs: 29/7
+Samples: (156) ගිල/ගිලුම්, ලිව/ලිවුම්, වැඳ/වැඳුම්
+37 new pairs inferred by conservative inference.
+Memory status: 383MiB Used, 7535MiB Remaining
+
+
+Iteration 34
+Lexicon stats:
+Types: 177427 Tokens: 4188220
+Base size: 24153
+Derived size: 65688
+Unmodeled size: 87586
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +(ෙක්, ෝ)
+Weighted Types: 99, Types: 35, Tokens: 2016, Pairs: 158, Normal/Accom. Pairs: 35/0
+Samples: (158) කොටස්කරුවෙක්/කොටස්කරුවෝ, කොටෙක්/කොටෝ, සැකකරුවෙක්/සැකකරුවෝ
+Overlap ratio: 1.670731707317073
+Seg. Precision: 0.07972665148063782
+Selected +(ෙක්, ෝ)
+Learned +(ෙක්, ෝ)
+Weighted Types: 127, Types: 45, Tokens: 2971, Pairs: 194, Normal/Accom. Pairs: 45/0
+Samples: (194) කොටස්කරුවෙක්/කොටස්කරුවෝ, ගුල්ලෙක්/ගුල්ලෝ, සැකකරුවෙක්/සැකකරුවෝ
+16 new pairs inferred by conservative inference.
+Memory status: 318MiB Used, 7600MiB Remaining
+
+
+Iteration 35
+Lexicon stats:
+Types: 177435 Tokens: 4188268
+Base size: 24229
+Derived size: 65898
+Unmodeled size: 87308
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, ing)
+Weighted Types: 94, Types: 18, Tokens: 618, Pairs: 134, Normal/Accom. Pairs: 18/0
+Samples: (134) alias/aliasing, hop/hoping, str/string
+Overlap ratio: 1.3333333333333333
+Seg. Precision: 0.4
+Selected +($, ing)
+Learned +($, ing)
+Weighted Types: 104, Types: 20, Tokens: 702, Pairs: 158, Normal/Accom. Pairs: 18/2
+Samples: (158) bug/bugging, hop/hoping, str/string
+2 new pairs inferred by conservative inference.
+Memory status: 310MiB Used, 7608MiB Remaining
+
+
+Iteration 36
+Lexicon stats:
+Types: 177436 Tokens: 4188270
+Base size: 24383
+Derived size: 66056
+Unmodeled size: 86997
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, කම්)
+Weighted Types: 114, Types: 22, Tokens: 9575, Pairs: 168, Normal/Accom. Pairs: 22/0
+Samples: (168) ඇතිවෙන/ඇතිවෙනකම්, දකින/දකිනකම්, යාළු/යාළුකම්
+Overlap ratio: 0.8571428571428571
+Seg. Precision: 0.4
+Selected +($, කම්)
+Learned +($, කම්)
+Weighted Types: 223, Types: 43, Tokens: 50025, Pairs: 212, Normal/Accom. Pairs: 41/2
+Samples: (212) ඉල්ලන/ඉල්ලනකම්, දිනන/දිනනකම්, ලබාගන්න/ලබාගන්නකම්
+19 new pairs inferred by conservative inference.
+Memory status: 351MiB Used, 7567MiB Remaining
+
+
+Iteration 37
+Lexicon stats:
+Types: 177445 Tokens: 4188289
+Base size: 24386
+Derived size: 66277
+Unmodeled size: 86782
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +(ි, ී)
+Weighted Types: 91, Types: 91, Tokens: 20102, Pairs: 729, Normal/Accom. Pairs: 91/0
+Samples: (729) ඉඩදේවි/ඉඩදේවී, කරවාවි/කරවාවී, රයිලි/රයිලී
+Overlap ratio: 1.4837758112094395
+Seg. Precision: 0.1801980198019802
+Selected +(ි, ී)
+Learned +(ි, ී)
+Weighted Types: 202, Types: 202, Tokens: 36883, Pairs: 959, Normal/Accom. Pairs: 202/0
+Samples: (959) ඉඩදේවි/ඉඩදේවී, කරවාවි/කරවාවී, නිර්දෝශි/නිර්දෝශී
+181 new pairs inferred by conservative inference.
+Memory status: 296MiB Used, 7622MiB Remaining
+
+
+Iteration 38
+Lexicon stats:
+Types: 177531 Tokens: 4188503
+Base size: 24654
+Derived size: 67417
+Unmodeled size: 85460
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, ගන්න)
+Weighted Types: 88, Types: 11, Tokens: 16792, Pairs: 173, Normal/Accom. Pairs: 11/0
+Samples: (173) කොර/කොරගන්න, ගලෝ/ගලෝගන්න, බැඳ/බැඳගන්න
+Overlap ratio: 0.6304347826086957
+Seg. Precision: 0.0763888888888889
+Selected +($, ගන්න)
+Learned +($, ගන්න)
+Weighted Types: 736, Types: 92, Tokens: 38791, Pairs: 368, Normal/Accom. Pairs: 92/0
+Samples: (368) කෙල/කෙලගන්න, බැඳ/බැඳගන්න, හිතා/හිතාගන්න
+56 new pairs inferred by conservative inference.
+Memory status: 340MiB Used, 7578MiB Remaining
+
+
+Iteration 39
+Lexicon stats:
+Types: 177557 Tokens: 4188545
+Base size: 24557
+Derived size: 67835
+Unmodeled size: 85165
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, s)
+Weighted Types: 86, Types: 86, Tokens: 7779, Pairs: 543, Normal/Accom. Pairs: 86/0
+Samples: (543) atlantique/atlantiques, here/heres, want/wants
+Overlap ratio: 0.7761194029850746
+Seg. Precision: 0.41545893719806765
+Selected +($, s)
+Learned +($, s)
+Weighted Types: 86, Types: 86, Tokens: 7779, Pairs: 553, Normal/Accom. Pairs: 86/0
+Samples: (553) atlantique/atlantiques, here/heres, want/wants
+12 new pairs inferred by conservative inference.
+Memory status: 327MiB Used, 7591MiB Remaining
+
+
+Iteration 40
+Lexicon stats:
+Types: 177563 Tokens: 4188552
+Base size: 25038
+Derived size: 68399
+Unmodeled size: 84126
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, කෝ)
+Weighted Types: 85, Types: 30, Tokens: 79323, Pairs: 191, Normal/Accom. Pairs: 30/0
+Samples: (191) අරින්න/අරින්නකෝ, දිහන්/දිහන්කෝ, මිරා/මිරාකෝ
+Overlap ratio: 0.9928571428571429
+Seg. Precision: 0.43478260869565216
+Selected +($, කෝ)
+Learned +($, කෝ)
+Weighted Types: 141, Types: 50, Tokens: 139858, Pairs: 288, Normal/Accom. Pairs: 48/2
+Samples: (288) අරින්න/අරින්නකෝ, ඉල්ලන්න/ඉල්ලන්නකෝ, මිරා/මිරාකෝ
+26 new pairs inferred by conservative inference.
+Memory status: 352MiB Used, 7566MiB Remaining
+
+
+Iteration 41
+Lexicon stats:
+Types: 177574 Tokens: 4188578
+Base size: 25072
+Derived size: 68704
+Unmodeled size: 83798
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, ු)
+Weighted Types: 84, Types: 84, Tokens: 28984, Pairs: 543, Normal/Accom. Pairs: 84/0
+Samples: (543) නංවන/නංවනු, නයිට්වර/නයිට්වරු, පැටව/පැටවු
+Overlap ratio: 0.9032967032967033
+Seg. Precision: 0.08374875373878365
+Selected +($, ු)
+Learned +($, ු)
+Weighted Types: 175, Types: 175, Tokens: 59374, Pairs: 817, Normal/Accom. Pairs: 173/2
+Samples: (817) එක්වෙන/එක්වෙනු, නයිට්වර/නයිට්වරු, මෝර/මෝරු
+401 new pairs inferred by conservative inference.
+Memory status: 393MiB Used, 7525MiB Remaining
+
+
+Iteration 42
+Lexicon stats:
+Types: 177770 Tokens: 4189324
+Base size: 25114
+Derived size: 69920
+Unmodeled size: 82736
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, න්න)
+Weighted Types: 83, Types: 16, Tokens: 9723, Pairs: 286, Normal/Accom. Pairs: 16/0
+Samples: (286) කොටුකර/කොටුකරන්න, පිරිමහ/පිරිමහන්න, හූර/හූරන්න
+Overlap ratio: 0.688
+Seg. Precision: 0.021621621621621623
+Seg. Precision too low
+
+Vetting transform +($, ා)
+Weighted Types: 76, Types: 76, Tokens: 14800, Pairs: 810, Normal/Accom. Pairs: 76/0
+Samples: (810) අහුවුණ/අහුවුණා, පිම්බ/පිම්බා, හැසිරුණ/හැසිරුණා
+Overlap ratio: 0.7788461538461539
+Seg. Precision: 0.027446731672083786
+Seg. Precision too low
+
+Vetting transform +($, ට්)
+Weighted Types: 74, Types: 26, Tokens: 30954, Pairs: 174, Normal/Accom. Pairs: 26/0
+Samples: (174) ගොස්/ගොස්ට්, බිරා/බිරාට්, රෙන්/රෙන්ට්
+Overlap ratio: 0.725
+Seg. Precision: 0.1145374449339207
+Selected +($, ට්)
+Learned +($, ට්)
+Weighted Types: 153, Types: 54, Tokens: 104518, Pairs: 312, Normal/Accom. Pairs: 45/9
+Samples: (312) ගොස්/ගොස්ට්, මෙතනට/මෙතනට්, රෙන්/රෙන්ට්
+65 new pairs inferred by conservative inference.
+Memory status: 369MiB Used, 7549MiB Remaining
+
+
+Iteration 43
+Lexicon stats:
+Types: 177802 Tokens: 4189580
+Base size: 25176
+Derived size: 70229
+Unmodeled size: 82397
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +(වන්, $)
+Weighted Types: 62, Types: 12, Tokens: 869, Pairs: 113, Normal/Accom. Pairs: 12/0
+Samples: (113) ධාරාවන්/ධාරා, වැන්දඹුවන්/වැන්දඹු, හිපෝවන්/හිපෝ
+Overlap ratio: 3.2
+Seg. Precision: 3.459010722933241E-4
+Seg. Precision too low
+
+Vetting transform +($, ල්)
+Weighted Types: 59, Types: 21, Tokens: 1375, Pairs: 184, Normal/Accom. Pairs: 20/1
+Samples: (184) කුකුල/කුකුල්, මගු/මගුල්, වංචාව/වංචාවල්
+Overlap ratio: 0.5070422535211268
+Seg. Precision: 0.06140350877192982
+Seg. Precision too low
+
+Vetting transform (ප්රති, $)+
+Weighted Types: 56, Types: 5, Tokens: 165, Pairs: 28, Normal/Accom. Pairs: 5/0
+Samples: (28) ප්රතිග්රාහක/ග්රාහක, ප්රතිපාදක/පාදක, ප්රතිස්තාපනය/ස්තාපනය
+Transform has too few types.
+
+Vetting transform +($, ර්)
+Weighted Types: 54, Types: 19, Tokens: 20150, Pairs: 147, Normal/Accom. Pairs: 19/0
+Samples: (147) අතරතුරෝ/අතරතුරෝර්, අන්ත/අන්තර්, හයිප/හයිපර්
+Overlap ratio: 0.504950495049505
+Seg. Precision: 0.051630434782608696
+Seg. Precision too low
+
+Vetting transform +($, ීම්)
+Weighted Types: 52, Types: 10, Tokens: 15018, Pairs: 67, Normal/Accom. Pairs: 10/0
+Samples: (67) ක්ර/ක්රීම්, ඩ්ර/ඩ්රීම්, සැල/සැලීම්
+Overlap ratio: 0.3125
+Seg. Precision: 0.1388888888888889
+Selected +($, ීම්)
+Learned +($, ීම්)
+Weighted Types: 135, Types: 26, Tokens: 15979, Pairs: 178, Normal/Accom. Pairs: 16/10
+Samples: (178) ක්ර/ක්රීම්, දැම/දැමීම්, පිටවී/පිටවීම්
+63 new pairs inferred by conservative inference.
+Memory status: 300MiB Used, 7617MiB Remaining
+
+
+Iteration 44
+Lexicon stats:
+Types: 177830 Tokens: 4189713
+Base size: 25204
+Derived size: 70417
+Unmodeled size: 82209
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, කරන්න)
+Weighted Types: 179, Types: 16, Tokens: 7501, Pairs: 144, Normal/Accom. Pairs: 16/0
+Samples: (144) තනි/තනිකරන්න, පුදුම/පුදුමකරන්න, විහිළු/විහිළුකරන්න
+Overlap ratio: 0.9523809523809523
+Seg. Precision: 0.3018867924528302
+Selected +($, කරන්න)
+Learned +($, කරන්න)
+Weighted Types: 525, Types: 47, Tokens: 49554, Pairs: 234, Normal/Accom. Pairs: 45/2
+Samples: (234) පුදුම/පුදුමකරන්න, රැස්/රැස්කරන්න, විහිළු/විහිළුකරන්න
+0 new pairs inferred by conservative inference.
+Memory status: 322MiB Used, 7596MiB Remaining
+
+
+Iteration 45
+Lexicon stats:
+Types: 177830 Tokens: 4189713
+Base size: 25195
+Derived size: 70630
+Unmodeled size: 82005
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +(ි, ්)
+Weighted Types: 48, Types: 48, Tokens: 9536, Pairs: 390, Normal/Accom. Pairs: 48/0
+Samples: (390) ක්ලැන්කි/ක්ලැන්ක්, පාල්සාමි/පාල්සාම්, සීනි/සීන්
+Overlap ratio: 1.1518324607329844
+Seg. Precision: 0.005448354143019296
+Seg. Precision too low
+
+Vetting transform +($, ය)
+Weighted Types: 45, Types: 45, Tokens: 53407, Pairs: 731, Normal/Accom. Pairs: 45/0
+Samples: (731) අභිමතය/අභිමතයය, අභිවෘද්ධි/අභිවෘද්ධිය, කුට/කුටය
+Overlap ratio: 1.3087431693989071
+Seg. Precision: 0.028680688336520075
+Seg. Precision too low
+
+Vetting transform +(ා, ්)
+Weighted Types: 43, Types: 43, Tokens: 6807, Pairs: 259, Normal/Accom. Pairs: 43/0
+Samples: (259) පාවෙලා/පාවෙල්, බේරැනා/බේරැන්, මීහරකා/මීහරක්
+Overlap ratio: 1.2574257425742574
+Seg. Precision: 0.004880817253121453
+Seg. Precision too low
+
+Vetting transform +($, පු)
+Weighted Types: 42, Types: 15, Tokens: 3992, Pairs: 159, Normal/Accom. Pairs: 15/0
+Samples: (159) නැග/නැගපු, පුරෝ/පුරෝපු, රිද්ද/රිද්දපු
+Overlap ratio: 0.5882352941176471
+Seg. Precision: 0.19480519480519481
+Selected +($, පු)
+Learned +($, පු)
+Weighted Types: 88, Types: 31, Tokens: 9077, Pairs: 198, Normal/Accom. Pairs: 31/0
+Samples: (198) නැග/නැගපු, බිඳ/බිඳපු, රිද්ද/රිද්දපු
+115 new pairs inferred by conservative inference.
+Memory status: 347MiB Used, 7571MiB Remaining
+
+
+Iteration 46
+Lexicon stats:
+Types: 177880 Tokens: 4189812
+Base size: 25214
+Derived size: 70943
+Unmodeled size: 81723
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform ($, වි)+
+Weighted Types: 42, Types: 15, Tokens: 1833, Pairs: 86, Normal/Accom. Pairs: 15/0
+Samples: (86) දිවි/විදිවි, ප්රයෝගය/විප්රයෝගය, හංග/විහංග
+Overlap ratio: 0.7
+Seg. Precision: 0.022123893805309734
+Seg. Precision too low
+
+Vetting transform +(න්, $)
+Weighted Types: 42, Types: 15, Tokens: 915, Pairs: 212, Normal/Accom. Pairs: 15/0
+Samples: (212) කාමන්/කාම, මෙතැන්/මෙතැ, හසාන්/හසා
+Overlap ratio: 1.7088607594936709
+Seg. Precision: 4.321894718644654E-4
+Seg. Precision too low
+
+Vetting transform +($, ටර්)
+Weighted Types: 42, Types: 8, Tokens: 1943, Pairs: 42, Normal/Accom. Pairs: 8/0
+Samples: (42) කොස්/කොස්ටර්, පාස්/පාස්ටර්, ස්පෙක්/ස්පෙක්ටර්
+Transform has too few types.
+
+Vetting transform ($, ප්ර)+
+Weighted Types: 42, Types: 8, Tokens: 766, Pairs: 44, Normal/Accom. Pairs: 8/0
+Samples: (44) කෘති/ප්රකෘති, දර්ශනයක/ප්රදර්ශනයක, වෙනි/ප්රවෙනි
+Transform has too few types.
+
+Vetting transform +(ය, ්)
+Weighted Types: 41, Types: 41, Tokens: 3264, Pairs: 271, Normal/Accom. Pairs: 41/0
+Samples: (271) අවසනය/අවසන්, ඩෑමය/ඩෑම්, පවුලය/පවුල්
+Overlap ratio: 1.0315789473684212
+Seg. Precision: 0.004653802497162316
+Seg. Precision too low
+
+Vetting transform +(්, ි)
+Weighted Types: 40, Types: 40, Tokens: 16233, Pairs: 371, Normal/Accom. Pairs: 40/0
+Samples: (371) නෙගටිව්/නෙගටිවි, මෝඩයින්/මෝඩයිනි, මෝර්/මෝරි
+Overlap ratio: 1.377906976744186
+Seg. Precision: 0.01638001638001638
+Seg. Precision too low
+
+Vetting transform +(ස්, $)
+Weighted Types: 40, Types: 14, Tokens: 980, Pairs: 55, Normal/Accom. Pairs: 14/0
+Samples: (55) බැගින්ස්/බැගින්, රැවේජර්ස්/රැවේජර්, වැක්ස්/වැක්
+Conflict: Inverse of transform already learned.
+
+Vetting transform +($, ි)
+Weighted Types: 36, Types: 36, Tokens: 4976, Pairs: 404, Normal/Accom. Pairs: 36/0
+Samples: (404) ඒකකයක/ඒකකයකි, නෙල/නෙලි, හයිඩ/හයිඩි
+Overlap ratio: 0.7009966777408638
+Seg. Precision: 0.014742014742014743
+Seg. Precision too low
+
+Vetting transform +($, ්ඩ්)
+Weighted Types: 36, Types: 7, Tokens: 168, Pairs: 27, Normal/Accom. Pairs: 7/0
+Samples: (27) රෑන/රෑන්ඩ්, වාර/වාර්ඩ්, ෆෝර්/ෆෝර්ඩ්
+Transform has too few types.
+
+Vetting transform ($, කි)+
+Weighted Types: 34, Types: 12, Tokens: 10496, Pairs: 72, Normal/Accom. Pairs: 12/0
+Samples: (72) යන්නඕන/කියන්නඕන, යමන්/කියමන්, වන්න/කිවන්න
+Overlap ratio: 1.0277777777777777
+Seg. Precision: 0.03625377643504532
+Seg. Precision too low
+
+Vetting transform +($, ඩ්)
+Weighted Types: 34, Types: 12, Tokens: 378, Pairs: 99, Normal/Accom. Pairs: 12/0
+Samples: (99) එමරල්/එමරල්ඩ්, ටෑන්/ටෑන්ඩ්, පවුන්/පවුන්ඩ්
+Overlap ratio: 0.8666666666666667
+Seg. Precision: 0.07692307692307693
+Selected +($, ඩ්)
+Learned +($, ඩ්)
+Weighted Types: 40, Types: 14, Tokens: 2135, Pairs: 135, Normal/Accom. Pairs: 14/0
+Samples: (135) අන්/අන්ඩ්, ටෑන්/ටෑන්ඩ්, පවුන්/පවුන්ඩ්
+74 new pairs inferred by conservative inference.
+Memory status: 355MiB Used, 7563MiB Remaining
+
+
+Iteration 47
+Lexicon stats:
+Types: 177915 Tokens: 4190003
+Base size: 25272
+Derived size: 71143
+Unmodeled size: 81500
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, ුනා)
+Weighted Types: 47, Types: 9, Tokens: 221, Pairs: 64, Normal/Accom. Pairs: 9/0
+Samples: (64) පැල/පැලුනා, පැවත/පැවතුනා, පිච්ච/පිච්චුනා
+Transform has too few types.
+
+Vetting transform +($, ්න)
+Weighted Types: 31, Types: 11, Tokens: 1867, Pairs: 304, Normal/Accom. Pairs: 10/1
+Samples: (304) කරනන/කරනන්න, බිඳෙන/බිඳෙන්න, මැරුන/මැරුන්න
+Overlap ratio: 0.9439252336448598
+Seg. Precision: 0.013301088270858524
+Seg. Precision too low
+
+Vetting transform +(න්න, ා)
+Weighted Types: 31, Types: 11, Tokens: 850, Pairs: 93, Normal/Accom. Pairs: 11/0
+Samples: (93) ගහගන්න/ගහගා, නෙරපන්න/නෙරපා, විසන්න/විසා
+Overlap ratio: 1.2982456140350878
+Seg. Precision: 0.003971119133574007
+Seg. Precision too low
+
+Vetting transform +(්, ා)
+Weighted Types: 30, Types: 30, Tokens: 2203, Pairs: 277, Normal/Accom. Pairs: 30/0
+Samples: (277) ටෙස්/ටෙසා, වදින්/වදිනා, හොයන්න්/හොයන්නා
+Overlap ratio: 1.3629032258064515
+Seg. Precision: 0.010830324909747292
+Seg. Precision too low
+
+Vetting transform +($, දි)
+Weighted Types: 28, Types: 10, Tokens: 2068, Pairs: 153, Normal/Accom. Pairs: 10/0
+Samples: (153) ඇලෙස්කාවෙ/ඇලෙස්කාවෙදි, බේරේවි/බේරේවිදි, මෙතැන/මෙතැනදි
+Overlap ratio: 0.7916666666666666
+Seg. Precision: 0.06289308176100629
+Seg. Precision too low
+
+Vetting transform +($, නා)
+Weighted Types: 28, Types: 10, Tokens: 1001, Pairs: 185, Normal/Accom. Pairs: 8/2
+Samples: (185) අපර්/අපර්නා, පට්/පට්නා, ෙන්/ෙන්නා
+Overlap ratio: 0.8356164383561644
+Seg. Precision: 0.040983606557377046
+Seg. Precision too low
+
+Vetting transform +($, නි)
+Weighted Types: 28, Types: 10, Tokens: 825, Pairs: 135, Normal/Accom. Pairs: 10/0
+Samples: (135) කරමි/කරමිනි, දරැව/දරැවනි, පූජකතුමිය/පූජකතුමියනි
+Overlap ratio: 0.8962264150943396
+Seg. Precision: 0.06097560975609756
+Seg. Precision too low
+
+Vetting transform +(ෙක්, ්)
+Weighted Types: 28, Types: 10, Tokens: 662, Pairs: 36, Normal/Accom. Pairs: 10/0
+Samples: (36) එනතෙක්/එනත්, බලලෙක්/බලල්, හෙරෙක්/හෙර්
+Overlap ratio: 1.4705882352941178
+Seg. Precision: 0.0011345586566825505
+Seg. Precision too low
+
+Vetting transform +(ෙක්, ා)
+Weighted Types: 28, Types: 10, Tokens: 294, Pairs: 109, Normal/Accom. Pairs: 10/0
+Samples: (109) තදයෙක්/තදයා, නිළදාරියෙක්/නිළදාරියා, බේබද්දෙක්/බේබද්දා
+Overlap ratio: 1.323076923076923
+Seg. Precision: 0.0036101083032490976
+Seg. Precision too low
+
+Vetting transform ($, අ)+
+Weighted Types: 27, Types: 27, Tokens: 5192, Pairs: 297, Normal/Accom. Pairs: 27/0
+Samples: (297) ආහ්හ්/අආහ්හ්, දම්/අදම්, සමාන්ය/අසමාන්ය
+Overlap ratio: 0.9636363636363636
+Seg. Precision: 0.014665942422596416
+Seg. Precision too low
+Out of good transforms to learn. Learning complete.
+
+
+Handling final compounding...
+Memory status: 287MiB Used, 7631MiB Remaining
+Broke 1517 compounds in base
+Memory status: 345MiB Used, 7573MiB Remaining
+Broke 11297 compounds in unmodeled
+Learning complete. Analyzing...
+Writing output to /Users/lignos/repos/morph-seg/data/segmented/flores/morsel/si_en/si/morsel_analysis.txt using charset UTF-8
+
+Learning time: 73.023s

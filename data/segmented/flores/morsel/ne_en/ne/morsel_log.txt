@@ -1,0 +1,1085 @@
+Setting parameters from /Users/lignos/repos/morph-seg/params/morsel/tuned.txt
+Loading wordlist from /Users/lignos/repos/morph-seg/data/wordlists/ne_en/train.ne.wordlist using charset UTF-8
+135663 types loaded.
+4200818 tokens loaded.
+Init time: 2.26s
+
+Lexicon stats:
+Types: 135663 Tokens: 4200818
+
+Handling hyphenation...
+Lexicon stats:
+Types: 135663 Tokens: 4200818
+Memory status: 182MiB Used, 7736MiB Remaining
+
+Starting learning...
+Iteration 1
+Lexicon stats:
+Types: 135663 Tokens: 4200818
+Base size: 0
+Derived size: 0
+Unmodeled size: 135663
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +(को, $)
+Weighted Types: 6845, Types: 2420, Tokens: 1109376, Pairs: 6973, Normal/Accom. Pairs: 2420/0
+Samples: (6973) निक्सनको/निक्सन, पुछारको/पुछार, फन्टको/फन्ट
+Overlap Ratio: undefined (no base or stem overlap)
+Breaking tie between +(को, $) and +($, को)
+Seg. Precision: 0.7918848167539267
+Selected +($, को)
+Learned +($, को)
+Weighted Types: 6913, Types: 2444, Tokens: 1113558, Pairs: 7086, Normal/Accom. Pairs: 2420/24
+Samples: (7086) उनिहरू/उनिहरूको, उपदेशक/उपदेशकको, प्रजाहरू/प्रजाहरूको
+0 new pairs inferred by conservative inference.
+Memory status: 227MiB Used, 7691MiB Remaining
+
+
+Iteration 2
+Lexicon stats:
+Types: 135663 Tokens: 4200818
+Base size: 6983
+Derived size: 6988
+Unmodeled size: 121692
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, लाई)
+Weighted Types: 6225, Types: 1198, Tokens: 777426, Pairs: 3623, Normal/Accom. Pairs: 1198/0
+Samples: (3623) कुलहरू/कुलहरूलाई, धैर्य/धैर्यलाई, याबेश/याबेशलाई
+Overlap ratio: 1.0484472049689442
+Seg. Precision: 0.9265274555297757
+Selected +($, लाई)
+Learned +($, लाई)
+Weighted Types: 6235, Types: 1200, Tokens: 791665, Pairs: 3661, Normal/Accom. Pairs: 1199/1
+Samples: (3661) कुलहरू/कुलहरूलाई, धैर्य/धैर्यलाई, याबेश/याबेशलाई
+180 new pairs inferred by conservative inference.
+Memory status: 228MiB Used, 7690MiB Remaining
+
+
+Iteration 3
+Lexicon stats:
+Types: 135753 Tokens: 4201059
+Base size: 8281
+Derived size: 10800
+Unmodeled size: 116672
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, मा)
+Weighted Types: 4661, Types: 1648, Tokens: 964045, Pairs: 4488, Normal/Accom. Pairs: 1648/0
+Samples: (4488) एचटीटीपी/एचटीटीपीमा, तोपेत/तोपेतमा, प्रमुखहरू/प्रमुखहरूमा
+Overlap ratio: 1.0222602739726028
+Seg. Precision: 0.8378240976105745
+Selected +($, मा)
+Learned +($, मा)
+Weighted Types: 4729, Types: 1672, Tokens: 1012704, Pairs: 4606, Normal/Accom. Pairs: 1663/9
+Samples: (4606) असत्य/असत्यमा, एचटीटीपी/एचटीटीपीमा, खाल्डाहरू/खाल्डाहरूमा
+238 new pairs inferred by conservative inference.
+Memory status: 310MiB Used, 7608MiB Remaining
+
+
+Iteration 4
+Lexicon stats:
+Types: 135872 Tokens: 4201512
+Base size: 9969
+Derived size: 15606
+Unmodeled size: 110297
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, का)
+Weighted Types: 4090, Types: 1446, Tokens: 815091, Pairs: 4522, Normal/Accom. Pairs: 1446/0
+Samples: (4522) अध्यक्ष/अध्यक्षका, बिरयानी/बिरयानीका, स्त्रीहरू/स्त्रीहरूका
+Overlap ratio: 0.9319965126416739
+Seg. Precision: 0.7824675324675324
+Selected +($, का)
+Learned +($, का)
+Weighted Types: 4192, Types: 1482, Tokens: 853103, Pairs: 4642, Normal/Accom. Pairs: 1462/20
+Samples: (4642) अध्यक्ष/अध्यक्षका, बिरयानी/बिरयानीका, स्त्रीहरू/स्त्रीहरूका
+790 new pairs inferred by conservative inference.
+Memory status: 335MiB Used, 7583MiB Remaining
+
+
+Iteration 5
+Lexicon stats:
+Types: 136267 Tokens: 4203500
+Base size: 11438
+Derived size: 20961
+Unmodeled size: 103868
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, ले)
+Weighted Types: 3615, Types: 1278, Tokens: 694156, Pairs: 4099, Normal/Accom. Pairs: 1278/0
+Samples: (4099) भाइहरू/भाइहरूले, विशेषज्ञहरू/विशेषज्ञहरूले, संयम/संयमले
+Overlap ratio: 0.9581511555277952
+Seg. Precision: 0.8446794448116325
+Selected +($, ले)
+Learned +($, ले)
+Weighted Types: 3674, Types: 1299, Tokens: 709682, Pairs: 4204, Normal/Accom. Pairs: 1295/4
+Samples: (4204) भाइहरू/भाइहरूले, विशेषज्ञहरू/विशेषज्ञहरूले, संयम/संयमले
+408 new pairs inferred by conservative inference.
+Memory status: 204MiB Used, 7714MiB Remaining
+
+
+Iteration 6
+Lexicon stats:
+Types: 136471 Tokens: 4204030
+Base size: 12541
+Derived size: 25543
+Unmodeled size: 98387
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, बाट)
+Weighted Types: 2702, Types: 520, Tokens: 472968, Pairs: 2013, Normal/Accom. Pairs: 520/0
+Samples: (2013) टापुहरू/टापुहरूबाट, डाटाबेस/डाटाबेसबाट, फल्याक/फल्याकबाट
+Overlap ratio: 0.8549280177187154
+Seg. Precision: 0.931899641577061
+Selected +($, बाट)
+Learned +($, बाट)
+Weighted Types: 2754, Types: 530, Tokens: 486774, Pairs: 2042, Normal/Accom. Pairs: 530/0
+Samples: (2042) टापुहरू/टापुहरूबाट, डाटाबेस/डाटाबेसबाट, फल्याक/फल्याकबाट
+150 new pairs inferred by conservative inference.
+Memory status: 336MiB Used, 7582MiB Remaining
+
+
+Iteration 7
+Lexicon stats:
+Types: 136546 Tokens: 4204186
+Base size: 12817
+Derived size: 27731
+Unmodeled size: 95998
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, ुहोस्)
+Weighted Types: 1420, Types: 127, Tokens: 77802, Pairs: 244, Normal/Accom. Pairs: 127/0
+Samples: (244) फेलापार्न/फेलापार्नुहोस्, बँचाउन/बँचाउनुहोस्, हटाउन/हटाउनुहोस्
+Overlap ratio: 1.1666666666666667
+Seg. Precision: 0.6135265700483091
+Selected +($, ुहोस्)
+Learned +($, ुहोस्)
+Weighted Types: 2840, Types: 254, Tokens: 297401, Pairs: 518, Normal/Accom. Pairs: 130/124
+Samples: (518) खोलिदिनु/खोलिदिनुहोस्, फेलापार्न/फेलापार्नुहोस्, रुचाउनु/रुचाउनुहोस्
+6 new pairs inferred by conservative inference.
+Memory status: 240MiB Used, 7678MiB Remaining
+
+
+Iteration 8
+Lexicon stats:
+Types: 136549 Tokens: 4204283
+Base size: 12960
+Derived size: 28041
+Unmodeled size: 95548
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, सँग)
+Weighted Types: 1330, Types: 256, Tokens: 348570, Pairs: 1064, Normal/Accom. Pairs: 256/0
+Samples: (1064) कम्प्युटर/कम्प्युटरसँग, कागजात/कागजातसँग, थोप्ला/थोप्लासँग
+Overlap ratio: 0.9165786694825766
+Seg. Precision: 0.8619528619528619
+Selected +($, सँग)
+Learned +($, सँग)
+Weighted Types: 1439, Types: 277, Tokens: 381420, Pairs: 1123, Normal/Accom. Pairs: 275/2
+Samples: (1123) कम्प्युटर/कम्प्युटरसँग, थोप्ला/थोप्लासँग, सदस्य/सदस्यसँग
+40 new pairs inferred by conservative inference.
+Memory status: 317MiB Used, 7601MiB Remaining
+
+
+Iteration 9
+Lexicon stats:
+Types: 136569 Tokens: 4204344
+Base size: 13057
+Derived size: 29193
+Unmodeled size: 94319
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, हरू)
+Weighted Types: 1263, Types: 243, Tokens: 68716, Pairs: 1176, Normal/Accom. Pairs: 242/1
+Samples: (1176) अन्नबाली/अन्नबालीहरू, पालुवा/पालुवाहरू, रिक्त/रिक्तहरू
+Overlap ratio: 0.9766871165644172
+Seg. Precision: 0.2076923076923077
+Selected +($, हरू)
+Learned +($, हरू)
+Weighted Types: 5326, Types: 1025, Tokens: 583737, Pairs: 2450, Normal/Accom. Pairs: 1024/1
+Samples: (2450) अन्नबाली/अन्नबालीहरू, चितुवा/चितुवाहरू, रूढी/रूढीहरू
+82 new pairs inferred by conservative inference.
+Memory status: 263MiB Used, 7655MiB Remaining
+
+
+Iteration 10
+Lexicon stats:
+Types: 136610 Tokens: 4204436
+Base size: 12200
+Derived size: 31722
+Unmodeled size: 92688
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, न्)
+Weighted Types: 908, Types: 321, Tokens: 143375, Pairs: 958, Normal/Accom. Pairs: 321/0
+Samples: (958) उभ्याइनेछ/उभ्याइनेछन्, जन्माइ/जन्माइन्, बेचिन्छ/बेचिन्छन्
+Overlap ratio: 11.672727272727272
+Overlap ratio too high.
+
+Vetting transform +(न्, $)
+Weighted Types: 860, Types: 304, Tokens: 91163, Pairs: 904, Normal/Accom. Pairs: 304/0
+Samples: (904) डुबिरहन्छन्/डुबिरहन्छ, बस्दैनन्/बस्दैन, लुक्दैछन्/लुक्दैछ
+Overlap ratio: 614.0
+Overlap ratio too high.
+
+Vetting transform +($, ः)
+Weighted Types: 803, Types: 803, Tokens: 837997, Pairs: 1872, Normal/Accom. Pairs: 803/0
+Samples: (1872) उद्वरण/उद्वरणः, बित्यो/बित्योः, लेख्छन्/लेख्छन्ः
+Overlap ratio: 1.1797274275979557
+Seg. Precision: 0.7698945349952061
+Selected +($, ः)
+Learned +($, ः)
+Weighted Types: 944, Types: 944, Tokens: 1007634, Pairs: 2198, Normal/Accom. Pairs: 943/1
+Samples: (2198) बित्यो/बित्योः, लेख्छन्/लेख्छन्ः, हराइरहेको/हराइरहेकोः
+42 new pairs inferred by conservative inference.
+Memory status: 315MiB Used, 7603MiB Remaining
+
+
+Iteration 11
+Lexicon stats:
+Types: 136631 Tokens: 4204530
+Base size: 12919
+Derived size: 33961
+Unmodeled size: 89751
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, न्)
+Weighted Types: 834, Types: 295, Tokens: 90062, Pairs: 920, Normal/Accom. Pairs: 295/0
+Samples: (920) उभ्याइनेछ/उभ्याइनेछन्, जन्माइ/जन्माइन्, बेचिन्छ/बेचिन्छन्
+Overlap ratio: 5.591304347826087
+Overlap ratio too high.
+
+Vetting transform +($, ेछन्)
+Weighted Types: 760, Types: 95, Tokens: 50905, Pairs: 244, Normal/Accom. Pairs: 95/0
+Samples: (244) निभ्न/निभ्नेछन्, बनाइन/बनाइनेछन्, भेटून/भेटूनेछन्
+Overlap ratio: 1.1272727272727272
+Seg. Precision: 0.7786885245901639
+Selected +($, ेछन्)
+Learned +($, ेछन्)
+Weighted Types: 1616, Types: 202, Tokens: 87834, Pairs: 552, Normal/Accom. Pairs: 97/105
+Samples: (552) उडाउने/उडाउनेछन्, बनाइन/बनाइनेछन्, रोकन/रोकनेछन्
+4 new pairs inferred by conservative inference.
+Memory status: 209MiB Used, 7709MiB Remaining
+
+
+Iteration 12
+Lexicon stats:
+Types: 136633 Tokens: 4204536
+Base size: 13047
+Derived size: 34285
+Unmodeled size: 89301
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, name)
+Weighted Types: 696, Types: 87, Tokens: 115525, Pairs: 941, Normal/Accom. Pairs: 87/0
+Samples: (941) host/hostname, अक्सिजन/अक्सिजनname, बीएसओडी/बीएसओडीname
+Overlap ratio: 1.0747028862478778
+Seg. Precision: 0.8285714285714286
+Selected +($, name)
+Learned +($, name)
+Weighted Types: 736, Types: 92, Tokens: 190141, Pairs: 992, Normal/Accom. Pairs: 92/0
+Samples: (992) host/hostname, अक्सिजन/अक्सिजनname, बीएसओडी/बीएसओडीname
+12 new pairs inferred by conservative inference.
+Memory status: 222MiB Used, 7696MiB Remaining
+
+
+Iteration 13
+Lexicon stats:
+Types: 136639 Tokens: 4204543
+Base size: 13405
+Derived size: 35281
+Unmodeled size: 87953
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, न्)
+Weighted Types: 628, Types: 222, Tokens: 82227, Pairs: 729, Normal/Accom. Pairs: 222/0
+Samples: (729) उभ्याइनेछ/उभ्याइनेछन्, जन्माइ/जन्माइन्, बेचिन्छ/बेचिन्छन्
+Overlap ratio: 4.241379310344827
+Seg. Precision: 0.4327485380116959
+Selected +($, न्)
+Learned +($, न्)
+Weighted Types: 832, Types: 294, Tokens: 135638, Pairs: 1012, Normal/Accom. Pairs: 238/56
+Samples: (1012) उभ्याइनेछ/उभ्याइनेछन्, जन्माइ/जन्माइन्, बेचिन्छ/बेचिन्छन्
+2 new pairs inferred by conservative inference.
+Memory status: 239MiB Used, 7679MiB Remaining
+
+
+Iteration 14
+Lexicon stats:
+Types: 136640 Tokens: 4204545
+Base size: 14068
+Derived size: 36127
+Unmodeled size: 86445
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, माथि)
+Weighted Types: 560, Types: 70, Tokens: 77410, Pairs: 333, Normal/Accom. Pairs: 70/0
+Samples: (333) फेटा/फेटामाथि, सिलास/सिलासमाथि, “हामी/“हामीमाथि
+Overlap ratio: 0.7532051282051282
+Seg. Precision: 0.7070707070707071
+Selected +($, माथि)
+Learned +($, माथि)
+Weighted Types: 760, Types: 95, Tokens: 106277, Pairs: 469, Normal/Accom. Pairs: 95/0
+Samples: (469) जमीन/जमीनमाथि, सिलास/सिलासमाथि, “हामी/“हामीमाथि
+10 new pairs inferred by conservative inference.
+Memory status: 272MiB Used, 7646MiB Remaining
+
+
+Iteration 15
+Lexicon stats:
+Types: 136645 Tokens: 4204555
+Base size: 14077
+Derived size: 36601
+Unmodeled size: 85967
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, सित)
+Weighted Types: 457, Types: 88, Tokens: 85299, Pairs: 356, Normal/Accom. Pairs: 88/0
+Samples: (356) कडा/कडासित, यरूशलेम/यरूशलेमसित, यूसुफ/यूसुफसित
+Overlap ratio: 0.7363636363636363
+Seg. Precision: 0.6717557251908397
+Selected +($, सित)
+Learned +($, सित)
+Weighted Types: 639, Types: 123, Tokens: 118207, Pairs: 484, Normal/Accom. Pairs: 122/1
+Samples: (484) पूजाहारीहरू/पूजाहारीहरूसित, भाइहरू/भाइहरूसित, यूसुफ/यूसुफसित
+22 new pairs inferred by conservative inference.
+Memory status: 261MiB Used, 7657MiB Remaining
+
+
+Iteration 16
+Lexicon stats:
+Types: 136656 Tokens: 4204579
+Base size: 14110
+Derived size: 37104
+Unmodeled size: 85442
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, ेछु)
+Weighted Types: 359, Types: 69, Tokens: 52669, Pairs: 177, Normal/Accom. Pairs: 69/0
+Samples: (177) खोस्न/खोस्नेछु, जिउन/जिउनेछु, लखेट्न/लखेट्नेछु
+Overlap ratio: 0.9935064935064936
+Seg. Precision: 0.711340206185567
+Selected +($, ेछु)
+Learned +($, ेछु)
+Weighted Types: 764, Types: 147, Tokens: 82845, Pairs: 392, Normal/Accom. Pairs: 70/77
+Samples: (392) गरिदिन/गरिदिनेछु, छाड्ने/छाड्नेछु, लखेट्न/लखेट्नेछु
+17 new pairs inferred by conservative inference.
+Memory status: 236MiB Used, 7682MiB Remaining
+
+
+Iteration 17
+Lexicon stats:
+Types: 136664 Tokens: 4204609
+Base size: 14162
+Derived size: 37354
+Unmodeled size: 85148
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, stock)
+Weighted Types: 347, Types: 31, Tokens: 66497, Pairs: 35, Normal/Accom. Pairs: 31/0
+Samples: (35) गुण/गुणstock, साइज/साइजstock, होइन/होइनstock
+Overlap ratio: 0.7931034482758621
+Seg. Precision: 0.5961538461538461
+Selected +($, stock)
+Learned +($, stock)
+Weighted Types: 548, Types: 49, Tokens: 147439, Pairs: 57, Normal/Accom. Pairs: 48/1
+Samples: (57) page/pagestock, मेट्नुहोस्/मेट्नुहोस्stock, रोम/रोमstock
+0 new pairs inferred by conservative inference.
+Memory status: 239MiB Used, 7679MiB Remaining
+
+
+Iteration 18
+Lexicon stats:
+Types: 136664 Tokens: 4204609
+Base size: 14168
+Derived size: 37409
+Unmodeled size: 85087
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, ्ने)
+Weighted Types: 327, Types: 63, Tokens: 23239, Pairs: 149, Normal/Accom. Pairs: 63/0
+Samples: (149) उतार/उतार्ने, खोल/खोल्ने, च्यात/च्यात्ने
+Overlap ratio: 0.65
+Seg. Precision: 0.37058823529411766
+Selected +($, ्ने)
+Learned +($, ्ने)
+Weighted Types: 436, Types: 84, Tokens: 30599, Pairs: 186, Normal/Accom. Pairs: 79/5
+Samples: (186) उतार/उतार्ने, केइन/केइन्ने, खोल/खोल्ने
+2 new pairs inferred by conservative inference.
+Memory status: 206MiB Used, 7712MiB Remaining
+
+
+Iteration 19
+Lexicon stats:
+Types: 136665 Tokens: 4204617
+Base size: 14236
+Derived size: 37582
+Unmodeled size: 84847
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, ेछ)
+Weighted Types: 274, Types: 97, Tokens: 27269, Pairs: 275, Normal/Accom. Pairs: 97/0
+Samples: (275) खोलिन/खोलिनेछ, घटन/घटनेछ, रच्न/रच्नेछ
+Overlap ratio: 1.0424528301886793
+Seg. Precision: 0.5
+Selected +($, ेछ)
+Learned +($, ेछ)
+Weighted Types: 701, Types: 248, Tokens: 110409, Pairs: 643, Normal/Accom. Pairs: 108/140
+Samples: (643) खोलिन/खोलिनेछ, घटन/घटनेछ, भाँचिने/भाँचिनेछ
+16 new pairs inferred by conservative inference.
+Memory status: 316MiB Used, 7602MiB Remaining
+
+
+Iteration 20
+Lexicon stats:
+Types: 136673 Tokens: 4204635
+Base size: 14348
+Derived size: 37987
+Unmodeled size: 84338
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, सम्म)
+Weighted Types: 456, Types: 57, Tokens: 31964, Pairs: 272, Normal/Accom. Pairs: 57/0
+Samples: (272) अबेर/अबेरसम्म, छुन/छुनसम्म, राप/रापसम्म
+Overlap ratio: 0.7031963470319634
+Seg. Precision: 0.7307692307692307
+Selected +($, सम्म)
+Learned +($, सम्म)
+Weighted Types: 584, Types: 73, Tokens: 49743, Pairs: 322, Normal/Accom. Pairs: 73/0
+Samples: (322) अबेर/अबेरसम्म, छुन/छुनसम्म, हालाक/हालाकसम्म
+28 new pairs inferred by conservative inference.
+Memory status: 209MiB Used, 7709MiB Remaining
+
+
+Iteration 21
+Lexicon stats:
+Types: 136687 Tokens: 4204668
+Base size: 14381
+Derived size: 38334
+Unmodeled size: 83972
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, ्नु)
+Weighted Types: 270, Types: 52, Tokens: 8620, Pairs: 133, Normal/Accom. Pairs: 52/0
+Samples: (133) तोड/तोड्नु, बेर/बेर्नु, लपेट/लपेट्नु
+Overlap ratio: 0.3711340206185567
+Seg. Precision: 0.4
+Selected +($, ्नु)
+Learned +($, ्नु)
+Weighted Types: 426, Types: 82, Tokens: 21936, Pairs: 185, Normal/Accom. Pairs: 80/2
+Samples: (185) गरिराख्/गरिराख्नु, नपार/नपार्नु, लपेट/लपेट्नु
+52 new pairs inferred by conservative inference.
+Memory status: 313MiB Used, 7605MiB Remaining
+
+
+Iteration 22
+Lexicon stats:
+Types: 136711 Tokens: 4204772
+Base size: 14399
+Derived size: 38559
+Unmodeled size: 83753
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, हुन्छ)
+Weighted Types: 313, Types: 28, Tokens: 41189, Pairs: 101, Normal/Accom. Pairs: 28/0
+Samples: (101) ज्यादा/ज्यादाहुन्छ, बसाउनु/बसाउनुहुन्छ, भन्न/भन्नहुन्छ
+Overlap ratio: 1.9318181818181819
+Seg. Precision: 0.5
+Selected +($, हुन्छ)
+Learned +($, हुन्छ)
+Weighted Types: 559, Types: 50, Tokens: 61347, Pairs: 151, Normal/Accom. Pairs: 50/0
+Samples: (151) ज्यादा/ज्यादाहुन्छ, बसाउनु/बसाउनुहुन्छ, भन्न/भन्नहुन्छ
+2 new pairs inferred by conservative inference.
+Memory status: 286MiB Used, 7632MiB Remaining
+
+
+Iteration 23
+Lexicon stats:
+Types: 136712 Tokens: 4204773
+Base size: 14452
+Derived size: 38712
+Unmodeled size: 83548
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, र)
+Weighted Types: 204, Types: 204, Tokens: 54132, Pairs: 635, Normal/Accom. Pairs: 204/0
+Samples: (635) घसे/घसेर, पेले/पेलेर, सुने/सुनेर
+Overlap ratio: 0.7054945054945055
+Seg. Precision: 0.14166666666666666
+Selected +($, र)
+Learned +($, र)
+Weighted Types: 257, Types: 257, Tokens: 100872, Pairs: 748, Normal/Accom. Pairs: 256/1
+Samples: (748) घसे/घसेर, पट्याए/पट्याएर, पेले/पेलेर
+148 new pairs inferred by conservative inference.
+Memory status: 294MiB Used, 7624MiB Remaining
+
+
+Iteration 24
+Lexicon stats:
+Types: 136785 Tokens: 4205230
+Base size: 14616
+Derived size: 39608
+Unmodeled size: 82561
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, ्यो)
+Weighted Types: 203, Types: 39, Tokens: 12138, Pairs: 112, Normal/Accom. Pairs: 39/0
+Samples: (112) जाग/जाग्यो, ठान/ठान्यो, बसिरह/बसिरह्यो
+Overlap ratio: 0.2857142857142857
+Seg. Precision: 0.38235294117647056
+Selected +($, ्यो)
+Learned +($, ्यो)
+Weighted Types: 249, Types: 48, Tokens: 13162, Pairs: 135, Normal/Accom. Pairs: 44/4
+Samples: (135) जाग/जाग्यो, ठान/ठान्यो, बसिरह/बसिरह्यो
+67 new pairs inferred by conservative inference.
+Memory status: 283MiB Used, 7635MiB Remaining
+
+
+Iteration 25
+Lexicon stats:
+Types: 136816 Tokens: 4205318
+Base size: 14645
+Derived size: 39797
+Unmodeled size: 82374
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, े)
+Weighted Types: 194, Types: 194, Tokens: 54162, Pairs: 629, Normal/Accom. Pairs: 194/0
+Samples: (629) छोडन/छोडने, पहिरिन/पहिरिने, बँचाउन/बँचाउने
+Overlap ratio: 0.9080962800875274
+Seg. Precision: 0.0776
+Selected +($, े)
+Learned +($, े)
+Weighted Types: 333, Types: 333, Tokens: 158402, Pairs: 908, Normal/Accom. Pairs: 333/0
+Samples: (908) छोडन/छोडने, दगुर्न/दगुर्ने, हिंडन/हिंडने
+226 new pairs inferred by conservative inference.
+Memory status: 256MiB Used, 7662MiB Remaining
+
+
+Iteration 26
+Lexicon stats:
+Types: 136929 Tokens: 4206642
+Base size: 14670
+Derived size: 40931
+Unmodeled size: 81328
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, देखि)
+Weighted Types: 408, Types: 51, Tokens: 85664, Pairs: 293, Normal/Accom. Pairs: 51/0
+Samples: (293) मात/मातदेखि, शिक्षा/शिक्षादेखि, शुरू/शुरूदेखि
+Overlap ratio: 0.7043795620437956
+Seg. Precision: 0.8095238095238095
+Selected +($, देखि)
+Learned +($, देखि)
+Weighted Types: 496, Types: 62, Tokens: 117837, Pairs: 341, Normal/Accom. Pairs: 62/0
+Samples: (341) भाइहरू/भाइहरूदेखि, मात/मातदेखि, शुरू/शुरूदेखि
+13 new pairs inferred by conservative inference.
+Memory status: 229MiB Used, 7689MiB Remaining
+
+
+Iteration 27
+Lexicon stats:
+Types: 136935 Tokens: 4206657
+Base size: 14686
+Derived size: 41285
+Unmodeled size: 80964
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, भिल)
+Weighted Types: 177, Types: 34, Tokens: 1376, Pairs: 53, Normal/Accom. Pairs: 34/0
+Samples: (53) ओरो/ओरोभिल, कफि/कफिभिल, बेल्ले/बेल्लेभिल
+Overlap ratio: 1.2916666666666667
+Seg. Precision: 0.43037974683544306
+Selected +($, भिल)
+Learned +($, भिल)
+Weighted Types: 182, Types: 35, Tokens: 1392, Pairs: 56, Normal/Accom. Pairs: 35/0
+Samples: (56) ओरो/ओरोभिल, कफि/कफिभिल, बेल्ले/बेल्लेभिल
+0 new pairs inferred by conservative inference.
+Memory status: 215MiB Used, 7703MiB Remaining
+
+
+Iteration 28
+Lexicon stats:
+Types: 136935 Tokens: 4206657
+Base size: 14715
+Derived size: 41341
+Unmodeled size: 80879
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, ित)
+Weighted Types: 170, Types: 60, Tokens: 34450, Pairs: 121, Normal/Accom. Pairs: 60/0
+Samples: (121) आरोप/आरोपित, आशीष/आशीषित, संक्षेप/संक्षेपित
+Overlap ratio: 1.025
+Seg. Precision: 0.14457831325301204
+Selected +($, ित)
+Learned +($, ित)
+Weighted Types: 209, Types: 74, Tokens: 42976, Pairs: 146, Normal/Accom. Pairs: 68/6
+Samples: (146) आरोप/आरोपित, आशीष/आशीषित, संक्षेप/संक्षेपित
+16 new pairs inferred by conservative inference.
+Memory status: 322MiB Used, 7596MiB Remaining
+
+
+Iteration 29
+Lexicon stats:
+Types: 136943 Tokens: 4207053
+Base size: 14757
+Derived size: 41494
+Unmodeled size: 80692
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +(ता, $)
+Weighted Types: 161, Types: 57, Tokens: 11017, Pairs: 176, Normal/Accom. Pairs: 57/0
+Samples: (176) अशिष्टता/अशिष्ट, नग्नता/नग्न, स्वतंत्रता/स्वतंत्र
+Overlap ratio: 1.6219512195121952
+Seg. Precision: 0.0014311180295764393
+Seg. Precision too low
+
+Vetting transform +($, ी)
+Weighted Types: 159, Types: 159, Tokens: 41694, Pairs: 643, Normal/Accom. Pairs: 159/0
+Samples: (643) कालेब/कालेबी, पखाल/पखाली, शिट/शिटी
+Overlap ratio: 0.7587822014051522
+Seg. Precision: 0.11901197604790419
+Selected +($, ी)
+Learned +($, ी)
+Weighted Types: 306, Types: 306, Tokens: 108834, Pairs: 879, Normal/Accom. Pairs: 305/1
+Samples: (879) अराम/अरामी, कालेब/कालेबी, पखाल/पखाली
+146 new pairs inferred by conservative inference.
+Memory status: 293MiB Used, 7625MiB Remaining
+
+
+Iteration 30
+Lexicon stats:
+Types: 137013 Tokens: 4207590
+Base size: 14811
+Derived size: 42519
+Unmodeled size: 79683
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, ु)
+Weighted Types: 145, Types: 145, Tokens: 27601, Pairs: 493, Normal/Accom. Pairs: 145/0
+Samples: (493) घुसाउन/घुसाउनु, भिर/भिरु, रोकन/रोकनु
+Overlap ratio: 1.033426183844011
+Seg. Precision: 0.15343915343915343
+Selected +($, ु)
+Learned +($, ु)
+Weighted Types: 245, Types: 245, Tokens: 112595, Pairs: 628, Normal/Accom. Pairs: 245/0
+Samples: (628) बुझन/बुझनु, भिर/भिरु, संझन्छ/संझन्छु
+258 new pairs inferred by conservative inference.
+Memory status: 265MiB Used, 7653MiB Remaining
+
+
+Iteration 31
+Lexicon stats:
+Types: 137137 Tokens: 4208165
+Base size: 14927
+Derived size: 43405
+Unmodeled size: 78805
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, ्दा)
+Weighted Types: 145, Types: 28, Tokens: 8976, Pairs: 78, Normal/Accom. Pairs: 28/0
+Samples: (78) उखेल/उखेल्दा, थिच/थिच्दा, पिट/पिट्दा
+Overlap ratio: 0.2972972972972973
+Seg. Precision: 0.2978723404255319
+Selected +($, ्दा)
+Learned +($, ्दा)
+Weighted Types: 192, Types: 37, Tokens: 10720, Pairs: 102, Normal/Accom. Pairs: 33/4
+Samples: (102) थिच/थिच्दा, नपार/नपार्दा, पिट/पिट्दा
+28 new pairs inferred by conservative inference.
+Memory status: 273MiB Used, 7645MiB Remaining
+
+
+Iteration 32
+Lexicon stats:
+Types: 137147 Tokens: 4208204
+Base size: 14928
+Derived size: 43518
+Unmodeled size: 78701
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, ौं)
+Weighted Types: 144, Types: 51, Tokens: 47043, Pairs: 208, Normal/Accom. Pairs: 51/0
+Samples: (208) गरिरह/गरिरहौं, माग्छ/माग्छौं, हुँदैछ/हुँदैछौं
+Overlap ratio: 0.8333333333333334
+Seg. Precision: 0.4015748031496063
+Selected +($, ौं)
+Learned +($, ौं)
+Weighted Types: 438, Types: 155, Tokens: 73657, Pairs: 520, Normal/Accom. Pairs: 70/85
+Samples: (520) गर्दथ्यौ/गर्दथ्यौं, हुँदैछ/हुँदैछौं, हुन्छौ/हुन्छौं
+26 new pairs inferred by conservative inference.
+Memory status: 254MiB Used, 7664MiB Remaining
+
+
+Iteration 33
+Lexicon stats:
+Types: 137160 Tokens: 4208233
+Base size: 15061
+Derived size: 43897
+Unmodeled size: 78202
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +(छ, नुभयो)
+Weighted Types: 208, Types: 26, Tokens: 5877, Pairs: 83, Normal/Accom. Pairs: 26/0
+Samples: (83) चिन्छ/चिन्नुभयो, ढाक्छ/ढाक्नुभयो, मर्छ/मर्नुभयो
+Overlap ratio: 1.0806451612903225
+Seg. Precision: 0.5416666666666666
+Selected +(छ, नुभयो)
+Learned +(छ, नुभयो)
+Weighted Types: 240, Types: 30, Tokens: 12152, Pairs: 89, Normal/Accom. Pairs: 30/0
+Samples: (89) चिन्छ/चिन्नुभयो, ढाक्छ/ढाक्नुभयो, मर्छ/मर्नुभयो
+22 new pairs inferred by conservative inference.
+Memory status: 328MiB Used, 7590MiB Remaining
+
+
+Iteration 34
+Lexicon stats:
+Types: 137171 Tokens: 4208285
+Base size: 15087
+Derived size: 44008
+Unmodeled size: 78076
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, s)
+Weighted Types: 131, Types: 131, Tokens: 37911, Pairs: 361, Normal/Accom. Pairs: 131/0
+Samples: (361) end/ends, here/heres, want/wants
+Overlap ratio: 1.4782608695652173
+Seg. Precision: 0.3841642228739003
+Selected +($, s)
+Learned +($, s)
+Weighted Types: 131, Types: 131, Tokens: 37911, Pairs: 363, Normal/Accom. Pairs: 131/0
+Samples: (363) end/ends, here/heres, want/wants
+0 new pairs inferred by conservative inference.
+Memory status: 293MiB Used, 7625MiB Remaining
+
+
+Iteration 35
+Lexicon stats:
+Types: 137171 Tokens: 4208285
+Base size: 15426
+Derived size: 44370
+Unmodeled size: 77375
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, भित्र)
+Weighted Types: 402, Types: 36, Tokens: 49041, Pairs: 126, Normal/Accom. Pairs: 36/0
+Samples: (126) दया/दयाभित्र, म्यान/म्यानभित्र, समय/समयभित्र
+Overlap ratio: 0.7560975609756098
+Seg. Precision: 0.75
+Selected +($, भित्र)
+Learned +($, भित्र)
+Weighted Types: 514, Types: 46, Tokens: 68671, Pairs: 152, Normal/Accom. Pairs: 46/0
+Samples: (152) दया/दयाभित्र, मुटु/मुटुभित्र, म्यान/म्यानभित्र
+6 new pairs inferred by conservative inference.
+Memory status: 337MiB Used, 7581MiB Remaining
+
+
+Iteration 36
+Lexicon stats:
+Types: 137174 Tokens: 4208295
+Base size: 15423
+Derived size: 44528
+Unmodeled size: 77223
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, ्स)
+Weighted Types: 119, Types: 42, Tokens: 5811, Pairs: 178, Normal/Accom. Pairs: 42/0
+Samples: (178) गिगाबाइट/गिगाबाइट्स, पेक/पेक्स, फायरवर्क/फायरवर्क्स
+Overlap ratio: 0.8090909090909091
+Seg. Precision: 0.1926605504587156
+Selected +($, ्स)
+Learned +($, ्स)
+Weighted Types: 173, Types: 61, Tokens: 7812, Pairs: 233, Normal/Accom. Pairs: 59/2
+Samples: (233) क्विक/क्विक्स, गिगाबाइट/गिगाबाइट्स, फायरवर्क/फायरवर्क्स
+32 new pairs inferred by conservative inference.
+Memory status: 313MiB Used, 7605MiB Remaining
+
+
+Iteration 37
+Lexicon stats:
+Types: 137190 Tokens: 4208340
+Base size: 15474
+Derived size: 44782
+Unmodeled size: 76934
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, ौ)
+Weighted Types: 116, Types: 116, Tokens: 64606, Pairs: 349, Normal/Accom. Pairs: 116/0
+Samples: (349) चहान्छ/चहान्छौ, ठग्छ/ठग्छौ, बाह्र/बाह्रौ
+Overlap ratio: 0.9480968858131488
+Seg. Precision: 0.4393939393939394
+Selected +($, ौ)
+Learned +($, ौ)
+Weighted Types: 157, Types: 157, Tokens: 78337, Pairs: 460, Normal/Accom. Pairs: 157/0
+Samples: (460) गरिदिन्छ/गरिदिन्छौ, चहान्छ/चहान्छौ, सुन्छ/सुन्छौ
+133 new pairs inferred by conservative inference.
+Memory status: 293MiB Used, 7625MiB Remaining
+
+
+Iteration 38
+Lexicon stats:
+Types: 137256 Tokens: 4208540
+Base size: 15590
+Derived size: 45375
+Unmodeled size: 76291
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, स्)
+Weighted Types: 107, Types: 38, Tokens: 29931, Pairs: 132, Normal/Accom. Pairs: 38/0
+Samples: (132) गाओ/गाओस्, बोलि/बोलिस्, सकियो/सकियोस्
+Overlap ratio: 1.077922077922078
+Seg. Precision: 0.11801242236024845
+Selected +($, स्)
+Learned +($, स्)
+Weighted Types: 170, Types: 60, Tokens: 43439, Pairs: 244, Normal/Accom. Pairs: 46/14
+Samples: (244) नबनाउँनुहोस/नबनाउँनुहोस्, बोलि/बोलिस्, सकियो/सकियोस्
+14 new pairs inferred by conservative inference.
+Memory status: 287MiB Used, 7631MiB Remaining
+
+
+Iteration 39
+Lexicon stats:
+Types: 137263 Tokens: 4208555
+Base size: 15678
+Derived size: 45609
+Unmodeled size: 75976
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, ै)
+Weighted Types: 92, Types: 92, Tokens: 70735, Pairs: 303, Normal/Accom. Pairs: 92/0
+Samples: (303) छुन/छुनै, तयार/तयारै, पहल/पहलै
+Overlap ratio: 0.8125
+Seg. Precision: 0.20043572984749455
+Selected +($, ै)
+Learned +($, ै)
+Weighted Types: 150, Types: 150, Tokens: 119298, Pairs: 506, Normal/Accom. Pairs: 150/0
+Samples: (506) छुन/छुनै, पहल/पहलै, वर्षभित्र/वर्षभित्रै
+167 new pairs inferred by conservative inference.
+Memory status: 274MiB Used, 7644MiB Remaining
+
+
+Iteration 40
+Lexicon stats:
+Types: 137342 Tokens: 4209059
+Base size: 15805
+Derived size: 46282
+Unmodeled size: 75255
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, न)
+Weighted Types: 89, Types: 89, Tokens: 44428, Pairs: 440, Normal/Accom. Pairs: 89/0
+Samples: (440) ग्याले/ग्यालेन, फर्किदै/फर्किदैन, होइन/होइनन
+Overlap ratio: 0.9581881533101045
+Seg. Precision: 0.042180094786729856
+Seg. Precision too low
+
+Vetting transform +($, ा)
+Weighted Types: 84, Types: 84, Tokens: 31926, Pairs: 419, Normal/Accom. Pairs: 84/0
+Samples: (419) चुन/चुना, भित्त/भित्ता, सोव/सोवा
+Overlap ratio: 0.6408450704225352
+Seg. Precision: 0.013691931540342298
+Seg. Precision too low
+
+Vetting transform +(ो, ा)
+Weighted Types: 79, Types: 79, Tokens: 29667, Pairs: 243, Normal/Accom. Pairs: 79/0
+Samples: (243) नाङ्गो/नाङ्गा, पेल्लो/पेल्ला, रथको/रथका
+Overlap ratio: 1.6101694915254237
+Breaking tie between +(ो, ा) and +(ा, ो)
+Seg. Precision: 0.012876935615321923
+Seg. Precision too low
+
+Vetting transform +(ा, ो)
+Weighted Types: 79, Types: 79, Tokens: 13187, Pairs: 251, Normal/Accom. Pairs: 79/0
+Samples: (251) जामा/जामो, झुट्टा/झुट्टो, टिकिया/टिकियो
+Overlap ratio: 1.6865671641791045
+Seg. Precision: 0.019244823386114496
+Seg. Precision too low
+
+Vetting transform ($, गर्नु)+
+Weighted Types: 78, Types: 7, Tokens: 4262, Pairs: 24, Normal/Accom. Pairs: 7/0
+Samples: (24) पर्ला/गर्नुपर्ला, पहिले/गर्नुपहिले, हवस्/गर्नुहवस्
+Transform has too few types.
+
+Vetting transform +($, यो)
+Weighted Types: 76, Types: 27, Tokens: 2495, Pairs: 109, Normal/Accom. Pairs: 27/0
+Samples: (109) खन्या/खन्यायो, ग्यालिलि/ग्यालिलियो, छक्का/छक्कायो
+Overlap ratio: 1.15
+Seg. Precision: 0.075
+Selected +($, यो)
+Learned +($, यो)
+Weighted Types: 141, Types: 50, Tokens: 11543, Pairs: 148, Normal/Accom. Pairs: 50/0
+Samples: (148) खन्या/खन्यायो, ग्यालिलि/ग्यालिलियो, छक्का/छक्कायो
+46 new pairs inferred by conservative inference.
+Memory status: 293MiB Used, 7625MiB Remaining
+
+
+Iteration 41
+Lexicon stats:
+Types: 137361 Tokens: 4209167
+Base size: 15839
+Derived size: 46473
+Unmodeled size: 75049
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, िक)
+Weighted Types: 74, Types: 26, Tokens: 4768, Pairs: 96, Normal/Accom. Pairs: 26/0
+Samples: (96) डेमक्र्याट/डेमक्र्याटिक, म्यागेलान/म्यागेलानिक, साल/सालिक
+Overlap ratio: 0.84
+Seg. Precision: 0.104
+Selected +($, िक)
+Learned +($, िक)
+Weighted Types: 133, Types: 47, Tokens: 12625, Pairs: 146, Normal/Accom. Pairs: 38/9
+Samples: (146) प्रति/प्रतिक, म्यागेलान/म्यागेलानिक, साल/सालिक
+28 new pairs inferred by conservative inference.
+Memory status: 250MiB Used, 7668MiB Remaining
+
+
+Iteration 42
+Lexicon stats:
+Types: 137375 Tokens: 4209355
+Base size: 15869
+Derived size: 46627
+Unmodeled size: 74879
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +(न, दै)
+Weighted Types: 60, Types: 60, Tokens: 13614, Pairs: 191, Normal/Accom. Pairs: 60/0
+Samples: (191) चाख्न/चाख्दै, पराउँन/पराउँदै, सच्याउन/सच्याउदै
+Overlap ratio: 0.96
+Seg. Precision: 0.44776119402985076
+Selected +(न, दै)
+Learned +(न, दै)
+Weighted Types: 76, Types: 76, Tokens: 20857, Pairs: 216, Normal/Accom. Pairs: 76/0
+Samples: (216) ओर्लन/ओर्लदै, चाख्न/चाख्दै, बनिन/बनिदै
+90 new pairs inferred by conservative inference.
+Memory status: 274MiB Used, 7644MiB Remaining
+
+
+Iteration 43
+Lexicon stats:
+Types: 137416 Tokens: 4209530
+Base size: 15893
+Derived size: 46933
+Unmodeled size: 74590
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform ($, प्र)+
+Weighted Types: 57, Types: 11, Tokens: 3601, Pairs: 45, Normal/Accom. Pairs: 11/0
+Samples: (45) त्र/प्रत्र, विधिद्वारा/प्रविधिद्वारा, साद/प्रसाद
+Overlap ratio: 0.76
+Seg. Precision: 0.012895662368112544
+Seg. Precision too low
+
+Vetting transform ($, अ)+
+Weighted Types: 56, Types: 56, Tokens: 23093, Pairs: 233, Normal/Accom. Pairs: 56/0
+Samples: (233) प्रिय/अप्रिय, मान्य/अमान्य, सहनीय/असहनीय
+Overlap ratio: 1.3153153153153154
+Seg. Precision: 0.03446153846153846
+Seg. Precision too low
+
+Vetting transform (प्रति, $)+
+Weighted Types: 56, Types: 5, Tokens: 1028, Pairs: 16, Normal/Accom. Pairs: 5/0
+Samples: (16) प्रतिबद्ध/बद्ध, प्रतिबिम्ब/बिम्ब, प्रतिस्थापन/स्थापन
+Transform has too few types.
+
+Vetting transform (व, ब)+
+Weighted Types: 53, Types: 53, Tokens: 10344, Pairs: 168, Normal/Accom. Pairs: 53/0
+Samples: (168) विच्छेदक/बिच्छेदक, विमान/बिमान, विश्लेषण/बिश्लेषण
+Overlap ratio: 1.6417910447761195
+Seg. Precision: 0.023671281822242072
+Seg. Precision too low
+
+Vetting transform +(न, $)
+Weighted Types: 52, Types: 52, Tokens: 37140, Pairs: 284, Normal/Accom. Pairs: 52/0
+Samples: (284) नामान/नामा, पुर्याउन/पुर्याउ, सुत्न/सुत्
+Overlap ratio: 1.1585365853658536
+Seg. Precision: 0.0013019855279300934
+Seg. Precision too low
+
+Vetting transform +($, िया)
+Weighted Types: 52, Types: 10, Tokens: 1356, Pairs: 52, Normal/Accom. Pairs: 10/0
+Samples: (52) टिक/टिकिया, रूप/रूपिया, रेस/रेसिया
+Overlap ratio: 0.45714285714285713
+Seg. Precision: 0.0684931506849315
+Seg. Precision too low
+
+Vetting transform +(ी, ि)
+Weighted Types: 51, Types: 51, Tokens: 15941, Pairs: 173, Normal/Accom. Pairs: 51/0
+Samples: (173) एचआईभी/एचआईभि, जगमाथी/जगमाथि, हेइटी/हेइटि
+Overlap ratio: 1.591549295774648
+Seg. Precision: 0.06115107913669065
+Seg. Precision too low
+
+Vetting transform +($, ो)
+Weighted Types: 50, Types: 50, Tokens: 30902, Pairs: 215, Normal/Accom. Pairs: 50/0
+Samples: (215) मिड/मिडो, सोल/सोलो, सोह/सोहो
+Overlap ratio: 0.5
+Seg. Precision: 0.012180267965895249
+Seg. Precision too low
+
+Vetting transform +($, एको)
+Weighted Types: 47, Types: 9, Tokens: 999, Pairs: 54, Normal/Accom. Pairs: 9/0
+Samples: (54) उठाउ/उठाउएको, जलाइ/जलाइएको, मिलि/मिलिएको
+Transform has too few types.
+
+Vetting transform +($, ि)
+Weighted Types: 43, Types: 43, Tokens: 10300, Pairs: 225, Normal/Accom. Pairs: 43/0
+Samples: (225) खेर/खेरि, जीवनभर/जीवनभरि, बराबर/बराबरि
+Overlap ratio: 0.5869565217391305
+Seg. Precision: 0.05155875299760192
+Seg. Precision too low
+Out of good transforms to learn. Learning complete.
+
+
+Handling final compounding...
+Memory status: 329MiB Used, 7589MiB Remaining
+Broke 725 compounds in base
+Memory status: 228MiB Used, 7690MiB Remaining
+Broke 13533 compounds in unmodeled
+Learning complete. Analyzing...
+Writing output to /Users/lignos/repos/morph-seg/data/segmented/flores/morsel/ne_en/ne/morsel_analysis.txt using charset UTF-8
+
+Learning time: 47.363s
