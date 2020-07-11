@@ -1,84 +1,113 @@
 # Morphological / BPE segmentation experiments
 
-## Morpho Challenge Eval on English - 07/01/2020
+# Hyperameter tuning for Morfessor Baseline
 
-These models were trained on Flores data, applied to Flores/Brown data, and evaluated with respect to the Morpho Challenge 2010 gold standard analyses.
+- For each of `EN-SI` and `EN-NE` we take the English vocabulary in the corpus, train a Morfessor Baseline model using each `alpha`-value (i.e. "corpus weight") from table below, and record the **F1-score** as computed on the Morpho Challenge 2010 gold analyses.
 
-**NOTE**: The model binaries used can be found in `./bin/cache-070120`. New models will be added, as the performance on Flores data with these parameters is quite abysmal. 
+- Additionally, we concatenate the English sides of both corpora and train Morfessor Baseline on this combined data set.
 
-### Flores
-```
-### flatcat
+[F1 vs. alpha](./f1-vs-alpha-combined.png)
 
-#
-PART0. Precision: 13.61% (20/147); non-affixes: 13.61% (20/147); affixes: 100.00% (0/0)
-PART0. Recall:    0.86% (6/759); non-affixes: 1.15% (4/390); affixes: 0.54% (2/369)
-PART0. F-measure: 1.61%; non-affixes: 2.13%; affixes: 1.08%
-#
-TOTAL. Precision: 13.61%; non-affixes: 13.61%; affixes: 100.00%
-TOTAL. Recall:    0.86%; non-affixes: 1.15%; affixes: 0.54%
-TOTAL. F-measure: 1.61%; non-affixes: 2.13%; affixes: 1.08%
-
-### lmvr
-
-#
-PART0. Precision: 11.76% (79/669); non-affixes: 17.69% (47/264); affixes: 7.91% (32/405)
-PART0. Recall:    4.34% (33/759); non-affixes: 7.12% (28/390); affixes: 1.41% (5/369)
-PART0. F-measure: 6.34%; non-affixes: 10.15%; affixes: 2.39%
-#
-TOTAL. Precision: 11.76%; non-affixes: 17.69%; affixes: 7.91%
-TOTAL. Recall:    4.34%; non-affixes: 7.12%; affixes: 1.41%
-TOTAL. F-measure: 6.34%; non-affixes: 10.15%; affixes: 2.39%
-
-### morsel
-#
-PART0. Precision: 78.74% (450/572); non-affixes: 84.91% (94/110); affixes: 77.27% (357/462)
-PART0. Recall:    52.24% (392/751); non-affixes: 34.25% (135/393); affixes: 72.00% (258/358)
-PART0. F-measure: 62.81%; non-affixes: 48.81%; affixes: 74.54%
-#
-TOTAL. Precision: 78.74%; non-affixes: 84.91%; affixes: 77.27%
-TOTAL. Recall:    52.24%; non-affixes: 34.25%; affixes: 72.00%
-TOTAL. F-measure: 62.81%; non-affixes: 48.81%; affixes: 74.54%
+### EN - SI
 
 ```
-
-
-### Brown
+alpha   f1
+0.01	38.72
+0.025	44.34
+0.05	46.92
+0.1	46.33
+0.25	39.20
+0.5	32.86
+1.0	20.15
+2.5	6.71
+5.0	0.61
+10.0	0.24
+12.5	0.24
+15.0	0.24
+17.5	0.24
+20.0	0.17
+22.25	0.17
+25.0	0.17
+50.0	0.17
+100.0	0.17
+125.0	0.17
+150.0	0.17
+175.0	0.17
+200.0	0.17
+225.0	0.17
+250.0	0.17
+275.0	0.17
+300.0	0.17
 ```
-### flatcat
 
-#
-PART0. Precision: 69.63% (94/135); non-affixes: 69.63% (94/135); affixes: 100.00% (0/0)
-PART0. Recall:    7.30% (29/396); non-affixes: 10.24% (23/223); affixes: 3.51% (6/173)
-PART0. F-measure: 13.21%; non-affixes: 17.86%; affixes: 6.77%
-#
-TOTAL. Precision: 69.63%; non-affixes: 69.63%; affixes: 100.00%
-TOTAL. Recall:    7.30%; non-affixes: 10.24%; affixes: 3.51%
-TOTAL. F-measure: 13.21%; non-affixes: 17.86%; affixes: 6.77%
+Best `alpha` = 0.05
 
-### lmvr
-
-#
-PART0. Precision: 50.54% (372/736); non-affixes: 34.00% (87/255); affixes: 59.33% (285/481)
-PART0. Recall:    30.30% (232/766); non-affixes: 36.32% (147/405); affixes: 23.53% (85/361)
-PART0. F-measure: 37.88%; non-affixes: 35.12%; affixes: 33.70%
-#
-TOTAL. Precision: 50.54%; non-affixes: 34.00%; affixes: 59.33%
-TOTAL. Recall:    30.30%; non-affixes: 36.32%; affixes: 23.53%
-TOTAL. F-measure: 37.88%; non-affixes: 35.12%; affixes: 33.70%
-
-### morsel
-
-#
-PART0. Precision: 71.85% (477/664); non-affixes: 82.69% (92/111); affixes: 69.68% (385/553)
-PART0. Recall:    52.35% (401/766); non-affixes: 38.93% (158/405); affixes: 67.42% (243/361)
-PART0. F-measure: 60.57%; non-affixes: 52.94%; affixes: 68.53%
-#
-TOTAL. Precision: 71.85%; non-affixes: 82.69%; affixes: 69.68%
-TOTAL. Recall:    52.35%; non-affixes: 38.93%; affixes: 67.42%
-TOTAL. F-measure: 60.57%; non-affixes: 52.94%; affixes: 68.53%
+### EN - NE
 
 ```
+alpha   f1
+0.01	38.85
+0.025	42.69
+0.05	42.45
+0.1	39.08
+0.25	34.46
+0.5	28.64
+1.0	19.67
+2.5	6.18
+5.0	3.01
+10.0	0.59
+12.5	0.59
+15.0	0.59
+17.5	0.41
+20.0	0.41
+22.25	0.41
+25.0	0.41
+50.0	0.41
+100.0	0.04
+125.0	0.04
+150.0	0.04
+175.0	0.04
+200.0	0.04
+225.0	0.04
+250.0	0.04
+275.0	0.04
+300.0	0.04
+```
+Best `alpha` = 0.025
+
+### Combined
+
+```
+alpha   f1
+0.01	44.14
+0.025	47.26
+0.05	47.01
+0.1	43.59
+0.25	35.98
+0.5	31.25
+1.0	19.71
+2.5	10.17
+5.0	3.20
+10.0	1.07
+12.5	0.81
+15.0	0.48
+17.5	0.48
+20.0	0.48
+22.25	0.48
+25.0	0.48
+50.0	0.22
+100.0	0.22
+125.0	0.22
+150.0	0.22
+175.0	0.22
+200.0	0.22
+225.0	0.22
+250.0	0.22
+275.0	0.22
+300.0	0.22
+```
+
+Best `alpha` = 0.025
 
 ## Notes
 - `src/indic` taken from main [FLoRes repo](https://github.com/j0ma/flores)

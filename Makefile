@@ -5,6 +5,82 @@ flores: create_flores_vocab train_morfessor train_lmvr
 install_lmvr:
 	bash ./src/download-lmvr.sh
 
+train_lmvr_tuned_small: train_lmvr_tuned_small_ne train_lmvr_tuned_small_si train_lmvr_tuned_small_en
+
+train_lmvr_tuned_small_ne:
+	shuf ./data/raw/flores/wiki_ne_en/flores.vocab.ne.lowercase.withcounts | head -n 20 \
+		> ./data/raw/flores/wiki_ne_en/flores.vocab.ne.lowercase.withcounts.small
+	bash ./src/train-lmvr-tuned.sh \
+		--lang ne \
+		--lexicon-size 15 \
+		--corpus-name flores.vocab.small \
+		--input-path ./data/raw/flores/wiki_ne_en/flores.vocab.ne.lowercase.withcounts.small \
+		--segmentation-output-path ./data/segmented/flores/ne \
+		--model-output-path ./bin \
+		--lexicon-output-path ./data \
+		--max-epochs 5
+
+train_lmvr_tuned_small_si:
+	shuf ./data/raw/flores/wiki_si_en/flores.vocab.si.lowercase.withcounts | head -n 20 \
+		> ./data/raw/flores/wiki_si_en/flores.vocab.si.lowercase.withcounts.small
+	bash ./src/train-lmvr-tuned.sh \
+		--lang si \
+		--lexicon-size 15 \
+		--corpus-name flores.vocab.small \
+		--input-path ./data/raw/flores/wiki_si_en/flores.vocab.si.lowercase.withcounts.small \
+		--segmentation-output-path ./data/segmented/flores/si \
+		--model-output-path ./bin \
+		--lexicon-output-path ./data \
+		--max-epochs 5
+
+train_lmvr_tuned_small_en:
+	shuf ./data/raw/flores/flores.vocab.en.lowercase.withcounts | head -n 20 \
+		> ./data/raw/flores/flores.vocab.en.lowercase.withcounts.small
+	bash ./src/train-lmvr-tuned.sh \
+		--lang en \
+		--lexicon-size 15 \
+		--corpus-name flores.vocab.small \
+		--input-path ./data/raw/flores/flores.vocab.en.lowercase.withcounts.small \
+		--segmentation-output-path ./data/segmented/flores/en \
+		--model-output-path ./bin \
+		--lexicon-output-path ./data \
+		--max-epochs 5
+
+train_lmvr_tuned: train_lmvr_tuned_ne train_lmvr_tuned_si train_lmvr_tuned_en
+
+train_lmvr_tuned_ne:
+	bash ./src/train-lmvr-tuned.sh \
+		--lang ne \
+		--lexicon-size 2500 \
+		--corpus-name flores.vocab \
+	--input-path ./data/raw/flores/wiki_ne_en/flores.vocab.ne.lowercase.withcounts \
+	--segmentation-output-path ./data/segmented/flores/ne \
+	--model-output-path ./bin \
+	--lexicon-output-path ./data \
+	--max-epochs 5
+
+train_lmvr_tuned_si:
+	bash ./src/train-lmvr-tuned.sh \
+		--lang si \
+		--lexicon-size 2500 \
+		--corpus-name flores.vocab \
+		--input-path ./data/raw/flores/wiki_si_en/flores.vocab.si.lowercase.withcounts \
+		--segmentation-output-path ./data/segmented/flores/si \
+		--model-output-path ./bin \
+		--lexicon-output-path ./data \
+		--max-epochs 5
+
+train_lmvr_tuned_en:
+	bash ./src/train-lmvr-tuned.sh \
+		--lang en \
+		--lexicon-size 2500 \
+		--corpus-name flores.vocab \
+		--input-path ./data/raw/flores/flores.vocab.en.lowercase.withcounts \
+		--segmentation-output-path ./data/segmented/flores/en \
+		--model-output-path ./bin \
+		--lexicon-output-path ./data \
+		--max-epochs 5
+
 train_lmvr_small: train_lmvr_small_ne train_lmvr_small_si train_lmvr_small_en
 
 train_lmvr_small_ne:
@@ -53,11 +129,11 @@ train_lmvr_ne:
 		--lang ne \
 		--lexicon-size 2500 \
 		--corpus-name flores.vocab \
-		--input-path ./data/raw/flores/wiki_ne_en/flores.vocab.ne.lowercase.withcounts \
-		--segmentation-output-path ./data/segmented/flores/ne \
-		--model-output-path ./bin \
-		--lexicon-output-path ./data \
-		--max-epochs 5
+	--input-path ./data/raw/flores/wiki_ne_en/flores.vocab.ne.lowercase.withcounts \
+	--segmentation-output-path ./data/segmented/flores/ne \
+	--model-output-path ./bin \
+	--lexicon-output-path ./data \
+	--max-epochs 5
 
 train_lmvr_si:
 	bash ./src/train-lmvr.sh \
@@ -81,83 +157,83 @@ train_lmvr_en:
 		--lexicon-output-path ./data \
 		--max-epochs 5
 
-train_morfessor: train_morfessor_baseline train_flatcat_sh
+train_morfessor: train_morfessor_baseline
 
-train_flatcat_sh: \
-	train_flatcat_sh_ne \
-	train_flatcat_sh_en \
-	train_flatcat_sh_si
+#train_flatcat_sh: \
+#train_flatcat_sh_ne \
+#train_flatcat_sh_en \
+#train_flatcat_sh_si
 
-train_flatcat_sh_en:
-	echo "Training Morfessor Flatcat for EN"
-	bash ./src/train-flatcat.sh \
-		--lang en \
-		--model-type batch \
-		--model-output-path ./bin \
-		--construction-separator "<ConstSep>" \
-		--perplexity-threshold 10 \
-		--lowercase
+#train_flatcat_sh_en:
+#echo "Training Morfessor Flatcat for EN"
+#bash ./src/train-flatcat.sh \
+	#--lang en \
+	#--model-type batch \
+	#--model-output-path ./bin \
+	#--construction-separator "<ConstSep>" \
+	#--perplexity-threshold 10 \
+	#--lowercase
 
-train_flatcat_sh_ne:
-	echo "Training Morfessor Flatcat for NE"
-	bash ./src/train-flatcat.sh \
-		--lang ne \
-		--model-type batch \
-		--model-output-path ./bin \
-		--construction-separator "<ConstSep>" \
-		--perplexity-threshold 10 \
-		--lowercase
+#train_flatcat_sh_ne:
+#echo "Training Morfessor Flatcat for NE"
+#bash ./src/train-flatcat.sh \
+	#--lang ne \
+	#--model-type batch \
+	#--model-output-path ./bin \
+	#--construction-separator "<ConstSep>" \
+	#--perplexity-threshold 10 \
+	#--lowercase
 
-train_flatcat_sh_si:
-	echo "Training Morfessor Flatcat for SI"
-	bash ./src/train-flatcat.sh \
-		--lang si \
-		--model-type batch \
-		--model-output-path ./bin \
-		--construction-separator "<ConstSep>" \
-		--perplexity-threshold 10 \
-		--lowercase
+#train_flatcat_sh_si:
+#echo "Training Morfessor Flatcat for SI"
+#bash ./src/train-flatcat.sh \
+	#--lang si \
+	#--model-type batch \
+	#--model-output-path ./bin \
+	#--construction-separator "<ConstSep>" \
+	#--perplexity-threshold 10 \
+	#--lowercase
 
-train_flatcat: \
-	train_flatcat_ne \
-	train_flatcat_si \
-	train_flatcat_en
+#train_flatcat: \
+#train_flatcat_ne \
+#train_flatcat_si \
+#train_flatcat_en
 
-train_flatcat_en:
-	echo "Training Morfessor Flatcat for EN"
-	python ./src/train-flatcat.py \
-		--lang en \
-		-i ./data/raw/flores/flores.vocab.en.lowercase.withcounts \
-		-o ./data/segmented/flores/en \
-		--seed-segmentation-path ./data/segmented/flores/en/flores.vocab.en.lowercase.segmented.morfessor-baseline-batch-recursive \
-		--construction-separator "<ConstSep>" \
-		--model-type batch \
-		--model-output-folder ./bin \
-		--lowercase
+#train_flatcat_en:
+#echo "Training Morfessor Flatcat for EN"
+#python ./src/train-flatcat.py \
+	#--lang en \
+	#-i ./data/raw/flores/flores.vocab.en.lowercase.withcounts \
+	#-o ./data/segmented/flores/en \
+	#--seed-segmentation-path ./data/segmented/flores/en/flores.vocab.en.lowercase.segmented.morfessor-baseline-batch-recursive \
+	#--construction-separator "<ConstSep>" \
+	#--model-type batch \
+	#--model-output-folder ./bin \
+	#--lowercase
 
-train_flatcat_ne:
-	echo "Training Morfessor Flatcat for NE"
-	python ./src/train-flatcat.py \
-		--lang ne \
-		-i ./data/raw/flores/wiki_ne_en/flores.vocab.ne.lowercase.withcounts \
-		-o ./data/segmented/flores/ne \
-		--seed-segmentation-path ./data/segmented/flores/ne/flores.vocab.ne.lowercase.segmented.morfessor-baseline-batch-recursive \
-		--construction-separator "<ConstSep>" \
-		--model-type batch \
-		--model-output-folder ./bin \
-		--lowercase
+#train_flatcat_ne:
+#echo "Training Morfessor Flatcat for NE"
+#python ./src/train-flatcat.py \
+	#--lang ne \
+	#-i ./data/raw/flores/wiki_ne_en/flores.vocab.ne.lowercase.withcounts \
+	#-o ./data/segmented/flores/ne \
+	#--seed-segmentation-path ./data/segmented/flores/ne/flores.vocab.ne.lowercase.segmented.morfessor-baseline-batch-recursive \
+	#--construction-separator "<ConstSep>" \
+	#--model-type batch \
+	#--model-output-folder ./bin \
+	#--lowercase
 
-train_flatcat_si:
-	echo "Training Morfessor Flatcat for SI"
-	python ./src/train-flatcat.py \
-		--lang si \
-		-i ./data/raw/flores/wiki_si_en/flores.vocab.si.lowercase.withcounts \
-		-o ./data/segmented/flores/si \
-		--seed-segmentation-path ./data/segmented/flores/si/flores.vocab.si.lowercase.segmented.morfessor-baseline-batch-recursive \
-		--construction-separator "<ConstSep>" \
-		--model-type batch \
-		--model-output-folder ./bin \
-		--lowercase
+#train_flatcat_si:
+#echo "Training Morfessor Flatcat for SI"
+#python ./src/train-flatcat.py \
+	#--lang si \
+	#-i ./data/raw/flores/wiki_si_en/flores.vocab.si.lowercase.withcounts \
+	#-o ./data/segmented/flores/si \
+	#--seed-segmentation-path ./data/segmented/flores/si/flores.vocab.si.lowercase.segmented.morfessor-baseline-batch-recursive \
+	#--construction-separator "<ConstSep>" \
+	#--model-type batch \
+	#--model-output-folder ./bin \
+	#--lowercase
 
 train_morfessor_baseline: \
 	train_morfessor_baseline_en \
@@ -173,6 +249,7 @@ train_morfessor_baseline_en:
 		--construction-separator "<ConstSep>" \
 		--model-type batch-recursive \
 		--model-output-folder ./bin \
+		--corpus-weight 15 \
 		--lowercase
 
 train_morfessor_baseline_ne:
@@ -184,6 +261,7 @@ train_morfessor_baseline_ne:
 		--construction-separator "<ConstSep>" \
 		--model-type batch-recursive \
 		--model-output-folder ./bin \
+		--corpus-weight 15 \
 		--lowercase
 
 train_morfessor_baseline_si:
@@ -192,10 +270,11 @@ train_morfessor_baseline_si:
 		--lang si \
 		-i ./data/raw/flores/wiki_si_en/flores.vocab.si.lowercase.withcounts \
 		-o ./data/segmented/flores/si \
-		--construction-separator "<ConstSep>" \
-		--model-type batch-recursive \
-		--model-output-folder ./bin \
-		--lowercase
+			--construction-separator "<ConstSep>" \
+			--model-type batch-recursive \
+			--model-output-folder ./bin \
+			--corpus-weight 15 \
+			--lowercase
 
 create_flores_vocab: \
 	create_flores_vocab_en \

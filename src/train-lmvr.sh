@@ -8,6 +8,7 @@ set -eo pipefail
 # ARG_OPTIONAL_SINGLE([input-path])
 # ARG_OPTIONAL_SINGLE([corpus-name])
 # ARG_OPTIONAL_SINGLE([segmentation-output-path])
+# ARG_OPTIONAL_SINGLE([seed-segmentation-input-path])
 # ARG_OPTIONAL_SINGLE([model-output-path])
 # ARG_OPTIONAL_SINGLE([min-shift-remainder])
 # ARG_OPTIONAL_SINGLE([length-threshold])
@@ -45,6 +46,7 @@ begins_with_short_option() {
 #_arg_segmentation_output_path=
 #_arg_model_output_path=
 #_arg_lexicon_output_path=
+_arg_seed_segmentation_input_path=
 _arg_min_shift_remainder=1
 _arg_length_threshold=5
 _arg_perplexity_threshold=10
@@ -54,7 +56,7 @@ _arg_encoding="utf-8"
 
 print_help() {
     printf '%s\n' "Script for training LMVR"
-    printf 'Usage: %s [--lang <arg>] [--lexicon-size <arg>] [--input-path <arg>] [--segmentation-output-path <arg>] [--model-output-path <arg>] [--min-shift-remainder <arg>] [--length-threshold <arg>] [--perplexity-threshold <arg>] [--min-perplexity-length <arg>] [--lexicon-output-path <arg>] [--max-epochs <arg>] [--encoding <arg>] [-h|--help]\n' "$0"
+    printf 'Usage: %s [--lang <arg>] [--lexicon-size <arg>] [--input-path <arg>] [--segmentation-output-path <arg>] [ --seed-segmentation-input-path <arg> ] [--model-output-path <arg>] [--min-shift-remainder <arg>] [--length-threshold <arg>] [--perplexity-threshold <arg>] [--min-perplexity-length <arg>] [--lexicon-output-path <arg>] [--max-epochs <arg>] [--encoding <arg>] [-h|--help]\n' "$0"
     printf '\t%s\n' "-h, --help: Prints help"
 }
 
@@ -101,6 +103,14 @@ parse_commandline() {
             ;;
         --segmentation-output-path=*)
             _arg_segmentation_output_path="${_key##--segmentation-output-path=}"
+            ;;
+        --seed-segmentation-input-path)
+            test $# -lt 2 && die "Missing value for the optional argument '$_key'." 1
+            _arg_seed_segmentation_input_path="$2"
+            shift
+            ;;
+        --seed-segmentation-input-path=*)
+            _arg_seed_segmentation_input_path="${_key##--seed-segmentation-input-path=}"
             ;;
         --model-output-path)
             test $# -lt 2 && die "Missing value for the optional argument '$_key'." 1
@@ -202,6 +212,7 @@ printf 'Value of --%s: %s\n' 'lexicon-size' "$_arg_lexicon_size"
 printf 'Value of --%s: %s\n' 'input-path' "$_arg_input_path"
 printf 'Value of --%s: %s\n' 'corpus-name' "$_arg_corpus_name"
 printf 'Value of --%s: %s\n' 'segmentation-output-path' "$_arg_segmentation_output_path"
+printf 'Value of --%s: %s\n' 'seed-segmentation-input-path' "$_arg_seed_segmentation_input_path"
 printf 'Value of --%s: %s\n' 'model-output-path' "$_arg_model_output_path"
 printf 'Value of --%s: %s\n' 'min-shift-remainder' "$_arg_min_shift_remainder"
 printf 'Value of --%s: %s\n' 'length-threshold' "$_arg_length_threshold"
@@ -211,17 +222,21 @@ printf 'Value of --%s: %s\n' 'lexicon-output-path' "$_arg_lexicon_output_path"
 printf 'Value of --%s: %s\n' 'max-epochs' "$_arg_max_epochs"
 printf 'Value of --%s: %s\n' 'encoding' "$_arg_encoding"
 
-echo "Training morfessor baseline..."
-MBL_SEGM_OUTPUT="$_arg_segmentation_output_path/morfessor-baseline.lmvr.${_arg_lexicon_size}.seed.${_arg_lang}"
-MBL_SEGM_CLEAN="${MBL_SEGM_OUTPUT//seed\.${_arg_lang}/seed.clean.${_arg_lang}}"
-MBL_LEXICON_OUTPUT_FNAME="${_arg_lexicon_output_path}/${_arg_corpus_name}.${_arg_lexicon_size}.morfessor-baseline.lexicon.${_arg_lang}.txt"
-morfessor-train \
-    -x ${MBL_LEXICON_OUTPUT_FNAME} \
-    -S "${MBL_SEGM_OUTPUT}" \
-    --max-epochs ${_arg_max_epochs} \
-    "${_arg_input_path}"
+if [ -z "$_arg_seed_segmentation_input_path" ]; then
+    echo "No seed segmentation received! Training morfessor baseline..."
+    MBL_SEGM_OUTPUT="$_arg_segmentation_output_path/morfessor-baseline.lmvr.${_arg_lexicon_size}.seed.${_arg_lang}"
+    MBL_LEXICON_OUTPUT_FNAME="${_arg_lexicon_output_path}/${_arg_corpus_name}.${_arg_lexicon_size}.morfessor-baseline.lexicon.${_arg_lang}.txt"
+    morfessor-train \
+        -x ${MBL_LEXICON_OUTPUT_FNAME} \
+        -S "${MBL_SEGM_OUTPUT}" \
+        --max-epochs ${_arg_max_epochs} \
+        "${_arg_input_path}"
 
-cp "${MBL_SEGM_OUTPUT}" "${MBL_SEGM_CLEAN}"
+    SEED_SEGM_FNAME="${MBL_SEGM_OUTPUT}"
+else
+    echo "Seed segmentation received! No need to train Morfessor Baseline!"
+    SEED_SEGM_FNAME="${_arg_seed_segmentation_input_path}"
+fi
 
 ## Train LMVR model using the training set
 echo "Training LMVR model..."
@@ -230,7 +245,7 @@ LMVR_LEXICON_OUTPUT_FNAME="${_arg_lexicon_output_path}/${_arg_corpus_name}.${_ar
 
 # TODO: why is -T relevant if we use lmvr-segment already?
 #       notably, it's not relevant in flatcat!
-lmvr-train "${MBL_SEGM_CLEAN}" \
+lmvr-train "${SEED_SEGM_FNAME}" \
     -T "${_arg_input_path}" \
     -s "${LMVR_MODEL_OUTPUT_FNAME}" \
     -p "${_arg_perplexity_threshold}" \

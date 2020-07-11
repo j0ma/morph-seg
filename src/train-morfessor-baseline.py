@@ -34,9 +34,11 @@ import helpers as h
 @click.option(
     "--model-output-path", help="Path to save model binary in", default=None
 )
+@click.option("--segmentation-output-file", default=None)
 @click.option("--lowercase", help="Use lowercase words", is_flag=True)
 @click.option("--construction-separator", default=" + ")
 @click.option("--corpus-weight", default=1.0)
+
 def main(
     lang,
     input_path,
@@ -44,6 +46,7 @@ def main(
     model_type,
     model_output_folder,
     model_output_path,
+    segmentation_output_file,
     lowercase,
     construction_separator,
     corpus_weight=1.0,
@@ -88,6 +91,7 @@ def main(
             model_output_folder=model_output_folder,
             model_output_path=model_output_path,
             segm_output_folder=abs_output_folder,
+            segm_output_file=segmentation_output_file,
             lowercase=lowercase,
             construction_separator=construction_separator,
             corpus_weight=corpus_weight,

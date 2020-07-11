@@ -62,6 +62,7 @@ def train_model(
     model_output_folder,
     model_output_path,
     segm_output_folder,
+    segm_output_file=None,
     seed_segmentation_path=None,
     corpus_weight=1.0,
     construction_separator=" + ",
@@ -82,8 +83,11 @@ def train_model(
         raise ValueError(err_msg)
 
     model = "morfessor-{}".format(model_name)
-    output_filename = "{}.segmented.{}.corpusweight{}".format(input_file_name, model, corpus_weight)
-    output_path = os.path.join(segm_output_folder, output_filename)
+    if segm_output_file is None:
+        output_filename = "{}.segmented.{}.corpusweight{}".format(input_file_name, model, corpus_weight)
+        output_path = os.path.join(segm_output_folder, output_filename)
+    else:
+        output_path = segm_output_file
 
     # make sure model is saved based on absolute path
 
