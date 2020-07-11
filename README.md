@@ -6,7 +6,7 @@
 
 - Additionally, we concatenate the English sides of both corpora and train Morfessor Baseline on this combined data set.
 
-[F1 vs. alpha](./f1-vs-alpha-combined.png)
+![F1 vs. alpha](./f1-vs-alpha-combined.png)
 
 ### EN - SI
 
