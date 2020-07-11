@@ -14,7 +14,7 @@ out_dir=$4
 mkdir -p $out_dir
 
 # Run MORSEL
-java -jar MORSEL/target/morsel.jar "$wordlist" MORSEL/params/dev.txt "$out_dir/morsel_analysis.txt" --segment > "$out_dir/morsel_log.txt"
+java -XX:+UseSerialGC -jar MORSEL/target/morsel.jar "$wordlist" params/morsel/tuned.txt "$out_dir/morsel_analysis.txt" --segment > "$out_dir/morsel_log.txt"
 # Make a copy of just the first two columns so Morpho Challenge (MC) evaluation can be run
 cut -f 1-2 "$out_dir/morsel_analysis.txt" > "$out_dir/morsel_analysis_mc.txt"
 # Process MORSEL's output into a proper segmentation and a dictionary of stems

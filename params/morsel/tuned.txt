@@ -1,0 +1,46 @@
+# All params taking from MORSEL dev params except where noted at the end of the file
+
+# Iteration parameters
+max_iter = 50
+top_affixes = 50
+window_size = 10
+
+# Word scoring parameters
+frequent_type_threshold = 1
+frequent_prob_threshold = 0.000001
+
+# Transform scoring parameters
+reeval = true
+score_reeval = false
+doubling = true
+allow_inferred_forms_as_derived = true
+
+# Transform selection parameters
+type_threshold = 10
+overlap_stem_length = 4
+overlap_threshold = 5.0
+
+# Weighting parameters
+weighted_transforms = true
+weighted_affixes = true
+
+# Preprocessing flags
+hyphenation = true
+compounding = true
+iter_compounding = false
+aggr_compounding = false
+
+# Inference flags
+base_inference_conservative = true
+base_inference_recompute_bases = true
+transform_relations = false
+allow_unmod_simplex_word_analysis = false
+
+# Implementation miscellanea
+transform_optimization = true
+transform_debug = false
+iteration_analysis = false
+
+# Set by tuning on flores data
+transform_length_weighting_exponent = 1.5
+precision_threshold = 0.075
