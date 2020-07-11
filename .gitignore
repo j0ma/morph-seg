@@ -1,6 +1,16 @@
+# Nuisance files
+*.swp
+*~
+.DS_Store
+.idea/
+tmp/
+
 data/comparison-table*.md
 src/__pycache__
 __pycache__
 data/raw/flores/all-clean*
 src/indic/indic_nlp_library
 data/raw/flores/wiki*
+/tuning/morsel
+/data/wordlists
+/data/segmented/flores/morsel/
