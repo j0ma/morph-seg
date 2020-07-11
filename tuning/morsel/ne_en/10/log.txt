@@ -1,0 +1,767 @@
+Setting parameters from /Users/lignos/repos/morph-seg/tuning/morsel/ne_en/10/params.txt
+Loading wordlist from /Users/lignos/repos/morph-seg/data/wordlists/ne_en/train.en.wordlist using charset UTF-8
+62727 types loaded.
+4483440 tokens loaded.
+Init time: 1.096s
+
+Lexicon stats:
+Types: 62727 Tokens: 4483440
+
+Handling hyphenation...
+Lexicon stats:
+Types: 63773 Tokens: 4486325
+Memory status: 115MiB Used, 7803MiB Remaining
+
+Starting learning...
+Iteration 1
+Lexicon stats:
+Types: 63773 Tokens: 4486325
+Base size: 0
+Derived size: 0
+Unmodeled size: 63773
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +(ing, $)
+Weighted Types: 2889, Types: 556, Tokens: 358740, Pairs: 1125, Normal/Accom. Pairs: 556/0
+Samples: (1125) colorifying/colorify, graphing/graph, unlinking/unlink
+Overlap Ratio: undefined (no base or stem overlap)
+Breaking tie between +(ing, $) and +($, ing)
+Seg. Precision: 0.5346153846153846
+Selected +($, ing)
+Learned +($, ing)
+Weighted Types: 3279, Types: 631, Tokens: 416848, Pairs: 1291, Normal/Accom. Pairs: 556/75
+Samples: (1291) decrypt/decrypting, encroach/encroaching, overspread/overspreading
+0 new pairs inferred by conservative inference.
+Memory status: 142MiB Used, 7776MiB Remaining
+
+
+Iteration 2
+Lexicon stats:
+Types: 63773 Tokens: 4486325
+Base size: 1258
+Derived size: 1258
+Unmodeled size: 61257
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, s)
+Weighted Types: 2214, Types: 2214, Tokens: 1176341, Pairs: 4694, Normal/Accom. Pairs: 2214/0
+Samples: (4694) encoder/encoders, illusion/illusions, seal/seals
+Overlap ratio: 1.8446475195822454
+Seg. Precision: 0.605414273995078
+Selected +($, s)
+Learned +($, s)
+Weighted Types: 2256, Types: 2256, Tokens: 1192545, Pairs: 4828, Normal/Accom. Pairs: 2250/6
+Samples: (4828) encoder/encoders, illusion/illusions, seal/seals
+20 new pairs inferred by conservative inference.
+Memory status: 132MiB Used, 7786MiB Remaining
+
+
+Iteration 3
+Lexicon stats:
+Types: 63783 Tokens: 4486359
+Base size: 5192
+Derived size: 6082
+Unmodeled size: 52509
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, ed)
+Weighted Types: 1858, Types: 657, Tokens: 363316, Pairs: 1235, Normal/Accom. Pairs: 657/0
+Samples: (1235) chair/chaired, escort/escorted, hel/heled
+Overlap ratio: 0.934020618556701
+Seg. Precision: 0.4451219512195122
+Selected +($, ed)
+Learned +($, ed)
+Weighted Types: 3205, Types: 1133, Tokens: 582237, Pairs: 2141, Normal/Accom. Pairs: 660/473
+Samples: (2141) chair/chaired, last/lasted, sap/sapped
+176 new pairs inferred by conservative inference.
+Memory status: 188MiB Used, 7730MiB Remaining
+
+
+Iteration 4
+Lexicon stats:
+Types: 63871 Tokens: 4487246
+Base size: 5834
+Derived size: 8264
+Unmodeled size: 49773
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, ly)
+Weighted Types: 727, Types: 257, Tokens: 142841, Pairs: 528, Normal/Accom. Pairs: 257/0
+Samples: (528) implicit/implicitly, pure/purely, unlike/unlikely
+Overlap ratio: 2.6343283582089554
+Seg. Precision: 0.7259887005649718
+Selected +($, ly)
+Learned +($, ly)
+Weighted Types: 778, Types: 275, Tokens: 149901, Pairs: 567, Normal/Accom. Pairs: 269/6
+Samples: (567) implicit/implicitly, pure/purely, unlike/unlikely
+3 new pairs inferred by conservative inference.
+Memory status: 135MiB Used, 7783MiB Remaining
+
+
+Iteration 5
+Lexicon stats:
+Types: 63872 Tokens: 4487248
+Base size: 6233
+Derived size: 8826
+Unmodeled size: 48813
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, eth)
+Weighted Types: 686, Types: 132, Tokens: 74739, Pairs: 409, Normal/Accom. Pairs: 132/0
+Samples: (409) grow/groweth, wast/wasteth, withdraw/withdraweth
+Overlap ratio: 0.7914572864321608
+Seg. Precision: 0.5972850678733032
+Selected +($, eth)
+Learned +($, eth)
+Weighted Types: 1065, Types: 205, Tokens: 135784, Pairs: 628, Normal/Accom. Pairs: 132/73
+Samples: (628) grow/groweth, wast/wasteth, withdraw/withdraweth
+56 new pairs inferred by conservative inference.
+Memory status: 184MiB Used, 7734MiB Remaining
+
+
+Iteration 6
+Lexicon stats:
+Types: 63900 Tokens: 4487348
+Base size: 6279
+Derived size: 9460
+Unmodeled size: 48161
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +(e, ing)
+Weighted Types: 591, Types: 209, Tokens: 80386, Pairs: 487, Normal/Accom. Pairs: 209/0
+Samples: (487) convince/convincing, revive/reviving, shore/shoring
+Overlap ratio: 1.0650602409638554
+Seg. Precision: 0.20096153846153847
+Selected +(e, ing)
+Learned +(e, ing)
+Weighted Types: 648, Types: 229, Tokens: 111388, Pairs: 515, Normal/Accom. Pairs: 229/0
+Samples: (515) convince/convincing, revive/reviving, shore/shoring
+12 new pairs inferred by conservative inference.
+Memory status: 203MiB Used, 7714MiB Remaining
+
+
+Iteration 7
+Lexicon stats:
+Types: 63906 Tokens: 4487361
+Base size: 6329
+Derived size: 9987
+Unmodeled size: 47590
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, ness)
+Weighted Types: 504, Types: 63, Tokens: 29159, Pairs: 170, Normal/Accom. Pairs: 63/0
+Samples: (170) attentive/attentiveness, fierce/fierceness, unclean/uncleanness
+Overlap ratio: 1.0
+Seg. Precision: 0.7325581395348837
+Selected +($, ness)
+Learned +($, ness)
+Weighted Types: 544, Types: 68, Tokens: 30698, Pairs: 183, Normal/Accom. Pairs: 65/3
+Samples: (183) attentive/attentiveness, fierce/fierceness, unclean/uncleanness
+26 new pairs inferred by conservative inference.
+Memory status: 119MiB Used, 7799MiB Remaining
+
+
+Iteration 8
+Lexicon stats:
+Types: 63919 Tokens: 4487772
+Base size: 6392
+Derived size: 10190
+Unmodeled size: 47337
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, ville)
+Weighted Types: 380, Types: 34, Tokens: 4372, Pairs: 71, Normal/Accom. Pairs: 34/0
+Samples: (71) col/colville, france/franceville, grange/grangeville
+Overlap ratio: 1.32
+Seg. Precision: 0.38202247191011235
+Selected +($, ville)
+Learned +($, ville)
+Weighted Types: 503, Types: 45, Tokens: 6031, Pairs: 91, Normal/Accom. Pairs: 45/0
+Samples: (91) grange/grangeville, wells/wellsville, winter/winterville
+8 new pairs inferred by conservative inference.
+Memory status: 184MiB Used, 7734MiB Remaining
+
+
+Iteration 9
+Lexicon stats:
+Types: 63923 Tokens: 4487824
+Base size: 6442
+Derived size: 10287
+Unmodeled size: 47194
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, able)
+Weighted Types: 376, Types: 47, Tokens: 76364, Pairs: 126, Normal/Accom. Pairs: 47/0
+Samples: (126) bear/bearable, reorder/reorderable, repeat/repeatable
+Overlap ratio: 0.8928571428571429
+Seg. Precision: 0.4563106796116505
+Selected +($, able)
+Learned +($, able)
+Weighted Types: 440, Types: 55, Tokens: 80925, Pairs: 152, Normal/Accom. Pairs: 50/5
+Samples: (152) bear/bearable, reorder/reorderable, repeat/repeatable
+35 new pairs inferred by conservative inference.
+Memory status: 111MiB Used, 7807MiB Remaining
+
+
+Iteration 10
+Lexicon stats:
+Types: 63940 Tokens: 4487943
+Base size: 6471
+Derived size: 10466
+Unmodeled size: 47003
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, est)
+Weighted Types: 301, Types: 58, Tokens: 65680, Pairs: 235, Normal/Accom. Pairs: 58/0
+Samples: (235) chasten/chastenest, number/numberest, thick/thickest
+Overlap ratio: 0.7711442786069652
+Seg. Precision: 0.5471698113207547
+Selected +($, est)
+Learned +($, est)
+Weighted Types: 468, Types: 90, Tokens: 106879, Pairs: 359, Normal/Accom. Pairs: 60/30
+Samples: (359) became/becamest, number/numberest, revile/revilest
+14 new pairs inferred by conservative inference.
+Memory status: 160MiB Used, 7758MiB Remaining
+
+
+Iteration 11
+Lexicon stats:
+Types: 63947 Tokens: 4487955
+Base size: 6523
+Derived size: 10797
+Unmodeled size: 46627
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +(y, ies)
+Weighted Types: 280, Types: 99, Tokens: 35103, Pairs: 241, Normal/Accom. Pairs: 99/0
+Samples: (241) documentary/documentaries, library/libraries, technology/technologies
+Overlap ratio: 4.444444444444445
+Seg. Precision: 0.7983870967741935
+Selected +(y, ies)
+Learned +(y, ies)
+Weighted Types: 288, Types: 102, Tokens: 36512, Pairs: 250, Normal/Accom. Pairs: 102/0
+Samples: (250) documentary/documentaries, library/libraries, technology/technologies
+0 new pairs inferred by conservative inference.
+Memory status: 201MiB Used, 7717MiB Remaining
+
+
+Iteration 12
+Lexicon stats:
+Types: 63947 Tokens: 4487955
+Base size: 6728
+Derived size: 11047
+Unmodeled size: 46172
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, er)
+Weighted Types: 277, Types: 98, Tokens: 68722, Pairs: 284, Normal/Accom. Pairs: 97/1
+Samples: (284) chest/chester, recent/recenter, stein/steiner
+Overlap ratio: 0.7123893805309734
+Seg. Precision: 0.1211372064276885
+Selected +($, er)
+Learned +($, er)
+Weighted Types: 984, Types: 348, Tokens: 301355, Pairs: 768, Normal/Accom. Pairs: 213/135
+Samples: (768) chest/chester, handle/handler, ledge/ledger
+45 new pairs inferred by conservative inference.
+Memory status: 114MiB Used, 7804MiB Remaining
+
+
+Iteration 13
+Lexicon stats:
+Types: 63969 Tokens: 4488228
+Base size: 6542
+Derived size: 11789
+Unmodeled size: 45638
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, es)
+Weighted Types: 240, Types: 85, Tokens: 40324, Pairs: 220, Normal/Accom. Pairs: 85/0
+Samples: (220) glitch/glitches, surplus/surpluses, watch/watches
+Overlap ratio: 1.1260504201680672
+Seg. Precision: 0.08717948717948718
+Seg. Precision too low
+
+Vetting transform +($, ation)
+Weighted Types: 145, Types: 13, Tokens: 13089, Pairs: 46, Normal/Accom. Pairs: 13/0
+Samples: (46) consult/consultation, deform/deformation, resign/resignation
+Overlap ratio: 0.8918918918918919
+Seg. Precision: 0.05416666666666667
+Seg. Precision too low
+
+Vetting transform +($, ion)
+Weighted Types: 135, Types: 26, Tokens: 5668, Pairs: 75, Normal/Accom. Pairs: 26/0
+Samples: (75) bisect/bisection, lann/lannion, success/succession
+Overlap ratio: 1.0545454545454545
+Seg. Precision: 0.053497942386831275
+Seg. Precision too low
+
+Vetting transform +($, al)
+Weighted Types: 113, Types: 40, Tokens: 32319, Pairs: 133, Normal/Accom. Pairs: 40/0
+Samples: (133) logic/logical, orient/oriental, rhetoric/rhetorical
+Overlap ratio: 1.375
+Seg. Precision: 0.12618296529968454
+Selected +($, al)
+Learned +($, al)
+Weighted Types: 198, Types: 70, Tokens: 48425, Pairs: 201, Normal/Accom. Pairs: 65/5
+Samples: (201) convolution/convolutional, doctor/doctoral, orient/oriental
+24 new pairs inferred by conservative inference.
+Memory status: 166MiB Used, 7752MiB Remaining
+
+
+Iteration 14
+Lexicon stats:
+Types: 63981 Tokens: 4488366
+Base size: 6595
+Derived size: 12001
+Unmodeled size: 45385
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +(e, ation)
+Weighted Types: 112, Types: 14, Tokens: 3968, Pairs: 45, Normal/Accom. Pairs: 14/0
+Samples: (45) deprive/deprivation, equalize/equalization, synchronize/synchronization
+Overlap ratio: 1.0810810810810811
+Seg. Precision: 0.058333333333333334
+Seg. Precision too low
+
+Vetting transform +($, ton)
+Weighted Types: 109, Types: 21, Tokens: 19816, Pairs: 72, Normal/Accom. Pairs: 21/0
+Samples: (72) darling/darlington, staple/stapleton, thomas/thomaston
+Overlap ratio: 0.9090909090909091
+Seg. Precision: 0.168
+Selected +($, ton)
+Learned +($, ton)
+Weighted Types: 229, Types: 44, Tokens: 34428, Pairs: 118, Normal/Accom. Pairs: 36/8
+Samples: (118) mans/manston, staple/stapleton, wan/wanton
+16 new pairs inferred by conservative inference.
+Memory status: 196MiB Used, 7722MiB Remaining
+
+
+Iteration 15
+Lexicon stats:
+Types: 63989 Tokens: 4488603
+Base size: 6645
+Derived size: 12125
+Unmodeled size: 45219
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform ($, re)+
+Weighted Types: 105, Types: 37, Tokens: 33248, Pairs: 119, Normal/Accom. Pairs: 37/0
+Samples: (119) consider/reconsider, public/republic, type/retype
+Overlap ratio: 0.8860759493670886
+Seg. Precision: 0.056402439024390245
+Seg. Precision too low
+
+Vetting transform +(e, ion)
+Weighted Types: 105, Types: 37, Tokens: 4243, Pairs: 98, Normal/Accom. Pairs: 37/0
+Samples: (98) chile/chilion, integrate/integration, rehabilitate/rehabilitation
+Overlap ratio: 1.1830985915492958
+Seg. Precision: 0.07613168724279835
+Seg. Precision too low
+
+Vetting transform +($, ity)
+Weighted Types: 94, Types: 18, Tokens: 3864, Pairs: 53, Normal/Accom. Pairs: 18/0
+Samples: (53) elastic/elasticity, fidel/fidelity, ver/verity
+Overlap ratio: 1.1142857142857143
+Seg. Precision: 0.1565217391304348
+Selected +($, ity)
+Learned +($, ity)
+Weighted Types: 135, Types: 26, Tokens: 5476, Pairs: 68, Normal/Accom. Pairs: 26/0
+Samples: (68) elastic/elasticity, fidel/fidelity, ver/verity
+6 new pairs inferred by conservative inference.
+Memory status: 94MiB Used, 7824MiB Remaining
+
+
+Iteration 16
+Lexicon stats:
+Types: 63992 Tokens: 4488649
+Base size: 6658
+Derived size: 12197
+Unmodeled size: 45137
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, e)
+Weighted Types: 92, Types: 92, Tokens: 283194, Pairs: 311, Normal/Accom. Pairs: 92/0
+Samples: (311) assign/assigne, pet/pete, tom/tome
+Overlap ratio: 0.5933333333333334
+Seg. Precision: 0.03371198241113961
+Seg. Precision too low
+
+Vetting transform (s, $)+
+Weighted Types: 92, Types: 92, Tokens: 161057, Pairs: 255, Normal/Accom. Pairs: 92/0
+Samples: (255) sickle/ickle, sjis/jis, squad/quad
+Overlap ratio: 1.422680412371134
+Seg. Precision: 0.00400976290097629
+Seg. Precision too low
+
+Vetting transform ($, un)+
+Weighted Types: 91, Types: 32, Tokens: 21390, Pairs: 108, Normal/Accom. Pairs: 32/0
+Samples: (108) ity/unity, rest/unrest, ripe/unripe
+Overlap ratio: 1.1311475409836065
+Seg. Precision: 0.13675213675213677
+Selected ($, un)+
+Learned ($, un)+
+Weighted Types: 359, Types: 127, Tokens: 82985, Pairs: 329, Normal/Accom. Pairs: 127/0
+Samples: (329) clothed/unclothed, rest/unrest, safe/unsafe
+2 new pairs inferred by conservative inference.
+Memory status: 146MiB Used, 7772MiB Remaining
+
+
+Iteration 17
+Lexicon stats:
+Types: 63993 Tokens: 4488652
+Base size: 6651
+Derived size: 12527
+Unmodeled size: 44815
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, an)
+Weighted Types: 91, Types: 32, Tokens: 6952, Pairs: 118, Normal/Accom. Pairs: 32/0
+Samples: (118) biri/birian, nav/navan, pus/pusan
+Overlap ratio: 0.45652173913043476
+Seg. Precision: 0.10256410256410256
+Selected +($, an)
+Learned +($, an)
+Weighted Types: 184, Types: 65, Tokens: 12821, Pairs: 246, Normal/Accom. Pairs: 38/27
+Samples: (246) doth/dothan, pus/pusan, sardinia/sardinian
+21 new pairs inferred by conservative inference.
+Memory status: 198MiB Used, 7720MiB Remaining
+
+
+Iteration 18
+Lexicon stats:
+Types: 64003 Tokens: 4488728
+Base size: 6805
+Derived size: 12765
+Unmodeled size: 44433
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform ($, a)+
+Weighted Types: 81, Types: 81, Tokens: 45436, Pairs: 246, Normal/Accom. Pairs: 81/0
+Samples: (246) msbfirst/amsbfirst, riel/ariel, verse/averse
+Overlap ratio: 0.49056603773584906
+Seg. Precision: 0.05567010309278351
+Seg. Precision too low
+
+Vetting transform ($, in)+
+Weighted Types: 79, Types: 28, Tokens: 63056, Pairs: 88, Normal/Accom. Pairs: 28/0
+Samples: (88) ches/inches, kling/inkling, valuable/invaluable
+Overlap ratio: 1.2619047619047619
+Seg. Precision: 0.07777777777777778
+Seg. Precision too low
+
+Vetting transform ($, s)+
+Weighted Types: 76, Types: 76, Tokens: 50155, Pairs: 247, Normal/Accom. Pairs: 76/0
+Samples: (247) group/sgroup, hadrach/shadrach, trove/strove
+Overlap ratio: 0.5858585858585859
+Seg. Precision: 0.033216783216783216
+Seg. Precision too low
+
+Vetting transform +($, th)
+Weighted Types: 71, Types: 25, Tokens: 57105, Pairs: 55, Normal/Accom. Pairs: 25/0
+Samples: (55) bar/barth, shimea/shimeath, taha/tahath
+Overlap ratio: 0.7894736842105263
+Seg. Precision: 0.06265664160401002
+Seg. Precision too low
+
+Vetting transform +($, en)
+Weighted Types: 71, Types: 25, Tokens: 32575, Pairs: 91, Normal/Accom. Pairs: 25/0
+Samples: (91) arm/armen, lad/laden, load/loaden
+Overlap ratio: 0.3898305084745763
+Seg. Precision: 0.10775862068965517
+Selected +($, en)
+Learned +($, en)
+Weighted Types: 229, Types: 81, Tokens: 90330, Pairs: 221, Normal/Accom. Pairs: 42/39
+Samples: (221) handmaid/handmaiden, mare/maren, undertake/undertaken
+67 new pairs inferred by conservative inference.
+Memory status: 95MiB Used, 7823MiB Remaining
+
+
+Iteration 19
+Lexicon stats:
+Types: 64036 Tokens: 4489580
+Base size: 6843
+Derived size: 13020
+Unmodeled size: 44173
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, iah)
+Weighted Types: 68, Types: 13, Tokens: 1477, Pairs: 38, Normal/Accom. Pairs: 13/0
+Samples: (38) ahaz/ahaziah, azar/azariah, ner/neriah
+Overlap ratio: 0.5714285714285714
+Seg. Precision: 0.18055555555555555
+Selected +($, iah)
+Learned +($, iah)
+Weighted Types: 88, Types: 17, Tokens: 1767, Pairs: 58, Normal/Accom. Pairs: 15/2
+Samples: (58) ner/neriah, neri/neriah, shema/shemaiah
+8 new pairs inferred by conservative inference.
+Memory status: 125MiB Used, 7793MiB Remaining
+
+
+Iteration 20
+Lexicon stats:
+Types: 64040 Tokens: 4489589
+Base size: 6888
+Derived size: 13078
+Unmodeled size: 44074
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +(es, $)
+Weighted Types: 65, Types: 23, Tokens: 13232, Pairs: 86, Normal/Accom. Pairs: 23/0
+Samples: (86) lovingkindnesses/lovingkindness, parishes/parish, reyes/rey
+Overlap ratio: undefined (no base overlap, but stem overlap of 35)
+Overlap ratio too high.
+
+Vetting transform (c, $)+
+Weighted Types: 61, Types: 61, Tokens: 52612, Pairs: 164, Normal/Accom. Pairs: 61/0
+Samples: (164) chorus/horus, compose/ompose, custom/ustom
+Overlap ratio: 1.1829268292682926
+Seg. Precision: 0.002656563017158784
+Seg. Precision too low
+
+Vetting transform +($, or)
+Weighted Types: 59, Types: 21, Tokens: 11503, Pairs: 67, Normal/Accom. Pairs: 21/0
+Samples: (67) ast/astor, jail/jailor, ten/tenor
+Overlap ratio: 0.574468085106383
+Seg. Precision: 0.11931818181818182
+Selected +($, or)
+Learned +($, or)
+Weighted Types: 147, Types: 52, Tokens: 43463, Pairs: 124, Normal/Accom. Pairs: 48/4
+Samples: (124) bang/bangor, jail/jailor, ten/tenor
+32 new pairs inferred by conservative inference.
+Memory status: 163MiB Used, 7755MiB Remaining
+
+
+Iteration 21
+Lexicon stats:
+Types: 64055 Tokens: 4489727
+Base size: 6891
+Derived size: 13224
+Unmodeled size: 43940
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +(es, $)
+Weighted Types: 62, Types: 22, Tokens: 13124, Pairs: 83, Normal/Accom. Pairs: 22/0
+Samples: (83) lovingkindnesses/lovingkindness, parishes/parish, reyes/rey
+Overlap ratio: undefined (no base overlap, but stem overlap of 34)
+Overlap ratio too high.
+
+Vetting transform (re, $)+
+Weighted Types: 59, Types: 21, Tokens: 4435, Pairs: 57, Normal/Accom. Pairs: 21/0
+Samples: (57) relax/lax, remit/mit, resur/sur
+Overlap ratio: 2.0416666666666665
+Seg. Precision: 9.142757629848927E-4
+Seg. Precision too low
+
+Vetting transform +(t, $)
+Weighted Types: 58, Types: 58, Tokens: 44986, Pairs: 154, Normal/Accom. Pairs: 58/0
+Samples: (154) cost/cos, kyat/kya, wast/was
+Overlap ratio: 0.9054054054054054
+Seg. Precision: 0.0025251425834820844
+Seg. Precision too low
+
+Vetting transform ($, k)+
+Weighted Types: 58, Types: 58, Tokens: 25367, Pairs: 203, Normal/Accom. Pairs: 58/0
+Samples: (203) goldrunner/kgoldrunner, mdr/kmdr, yle/kyle
+Overlap ratio: 1.0795454545454546
+Seg. Precision: 0.11788617886178862
+Selected ($, k)+
+Learned ($, k)+
+Weighted Types: 76, Types: 76, Tokens: 51293, Pairs: 240, Normal/Accom. Pairs: 76/0
+Samples: (240) byte/kbyte, goldrunner/kgoldrunner, yle/kyle
+18 new pairs inferred by conservative inference.
+Memory status: 201MiB Used, 7717MiB Remaining
+
+
+Iteration 22
+Lexicon stats:
+Types: 64064 Tokens: 4489748
+Base size: 7006
+Derived size: 13482
+Unmodeled size: 43576
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +(es, $)
+Weighted Types: 62, Types: 22, Tokens: 13124, Pairs: 82, Normal/Accom. Pairs: 22/0
+Samples: (82) lovingkindnesses/lovingkindness, parishes/parish, reyes/rey
+Overlap ratio: undefined (no base overlap, but stem overlap of 34)
+Overlap ratio too high.
+
+Vetting transform +($, ic)
+Weighted Types: 57, Types: 20, Tokens: 6129, Pairs: 56, Normal/Accom. Pairs: 20/0
+Samples: (56) alphabet/alphabetic, nomad/nomadic, photograph/photographic
+Overlap ratio: 0.9117647058823529
+Seg. Precision: 0.14925373134328357
+Selected +($, ic)
+Learned +($, ic)
+Weighted Types: 91, Types: 32, Tokens: 11920, Pairs: 77, Normal/Accom. Pairs: 30/2
+Samples: (77) alphabet/alphabetic, nomad/nomadic, top/topic
+18 new pairs inferred by conservative inference.
+Memory status: 103MiB Used, 7815MiB Remaining
+
+
+Iteration 23
+Lexicon stats:
+Types: 64072 Tokens: 4490419
+Base size: 7021
+Derived size: 13575
+Unmodeled size: 43476
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +(es, $)
+Weighted Types: 59, Types: 21, Tokens: 13099, Pairs: 81, Normal/Accom. Pairs: 21/0
+Samples: (81) lovingkindnesses/lovingkindness, parishes/parish, reyes/rey
+Overlap ratio: undefined (no base overlap, but stem overlap of 33)
+Overlap ratio too high.
+
+Vetting transform +(tion, $)
+Weighted Types: 56, Types: 7, Tokens: 3377, Pairs: 26, Normal/Accom. Pairs: 7/0
+Samples: (26) donation/dona, function/func, separation/separa
+Transform has too few types.
+
+Vetting transform +($, tion)
+Weighted Types: 56, Types: 7, Tokens: 1217, Pairs: 27, Normal/Accom. Pairs: 5/2
+Samples: (27) discriminat/discrimination, erupt/eruption, rea/reation
+Transform has too few types.
+
+Vetting transform +($, board)
+Weighted Types: 56, Types: 5, Tokens: 2768, Pairs: 8, Normal/Accom. Pairs: 5/0
+Samples: (8) dash/dashboard, story/storyboard, switch/switchboard
+Transform has too few types.
+
+Vetting transform (a, $)+
+Weighted Types: 55, Types: 55, Tokens: 18565, Pairs: 177, Normal/Accom. Pairs: 55/0
+Samples: (177) aichi/ichi, ajah/jah, atari/tari
+Overlap ratio: 1.4042553191489362
+Seg. Precision: 0.002394114830453141
+Seg. Precision too low
+
+Vetting transform +($, in)
+Weighted Types: 54, Types: 19, Tokens: 41203, Pairs: 60, Normal/Accom. Pairs: 19/0
+Samples: (60) bol/bolin, bowl/bowlin, mart/martin
+Overlap ratio: 0.5588235294117647
+Seg. Precision: 0.12179487179487179
+Selected +($, in)
+Learned +($, in)
+Weighted Types: 76, Types: 27, Tokens: 46642, Pairs: 89, Normal/Accom. Pairs: 24/3
+Samples: (89) bowl/bowlin, log/login, mart/martin
+19 new pairs inferred by conservative inference.
+Memory status: 144MiB Used, 7774MiB Remaining
+
+
+Iteration 24
+Lexicon stats:
+Types: 64080 Tokens: 4490451
+Base size: 7049
+Derived size: 13669
+Unmodeled size: 43362
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +(es, $)
+Weighted Types: 57, Types: 20, Tokens: 12913, Pairs: 79, Normal/Accom. Pairs: 20/0
+Samples: (79) lovingkindnesses/lovingkindness, parishes/parish, reyes/rey
+Overlap ratio: undefined (no base overlap, but stem overlap of 33)
+Overlap ratio too high.
+
+Vetting transform +($, on)
+Weighted Types: 54, Types: 19, Tokens: 14857, Pairs: 85, Normal/Accom. Pairs: 19/0
+Samples: (85) harm/harmon, pin/pinon, til/tilon
+Overlap ratio: 0.2777777777777778
+Seg. Precision: 0.02261904761904762
+Seg. Precision too low
+
+Vetting transform +(se, $)
+Weighted Types: 51, Types: 18, Tokens: 243344, Pairs: 45, Normal/Accom. Pairs: 18/0
+Samples: (45) abuse/abu, browse/brow, orense/oren
+Overlap ratio: 1.3529411764705883
+Seg. Precision: 7.834602829162133E-4
+Seg. Precision too low
+
+Vetting transform (co, $)+
+Weighted Types: 51, Types: 18, Tokens: 6297, Pairs: 39, Normal/Accom. Pairs: 18/0
+Samples: (39) compensate/mpensate, configure/nfigure, contrast/ntrast
+Overlap ratio: 1.4705882352941178
+Seg. Precision: 7.834602829162133E-4
+Seg. Precision too low
+
+Vetting transform +($, y)
+Weighted Types: 50, Types: 50, Tokens: 277509, Pairs: 191, Normal/Accom. Pairs: 50/0
+Samples: (191) craft/crafty, earth/earthy, flash/flashy
+Overlap ratio: 0.7886178861788617
+Seg. Precision: 0.046948356807511735
+Seg. Precision too low
+
+Vetting transform +($, a)
+Weighted Types: 49, Types: 49, Tokens: 63395, Pairs: 330, Normal/Accom. Pairs: 49/0
+Samples: (330) abi/abia, maun/mauna, med/meda
+Overlap ratio: 0.45454545454545453
+Seg. Precision: 0.04914744232698094
+Seg. Precision too low
+
+Vetting transform ($, be)+
+Weighted Types: 48, Types: 17, Tokens: 17332, Pairs: 55, Normal/Accom. Pairs: 17/0
+Samples: (55) bai/bebai, eri/beeri, red/bered
+Overlap ratio: 0.5
+Seg. Precision: 0.07727272727272727
+Seg. Precision too low
+
+Vetting transform ($, de)+
+Weighted Types: 48, Types: 17, Tokens: 14412, Pairs: 55, Normal/Accom. Pairs: 17/0
+Samples: (55) mangle/demangle, queue/dequeue, wald/dewald
+Overlap ratio: 0.9285714285714286
+Seg. Precision: 0.04271356783919598
+Seg. Precision too low
+
+Vetting transform (in, $)+
+Weighted Types: 48, Types: 17, Tokens: 3864, Pairs: 59, Normal/Accom. Pairs: 17/0
+Samples: (59) inkscape/kscape, insensitivity/sensitivity, intra/tra
+Overlap ratio: 2.8125
+Seg. Precision: 7.399347116430903E-4
+Seg. Precision too low
+
+Vetting transform (r, $)+
+Weighted Types: 47, Types: 47, Tokens: 134301, Pairs: 108, Normal/Accom. Pairs: 47/0
+Samples: (108) raise/aise, reate/eate, rely/ely
+Overlap ratio: 1.0689655172413792
+Seg. Precision: 0.002045701849836779
+Seg. Precision too low
+
+Vetting transform +(ion, $)
+Weighted Types: 47, Types: 9, Tokens: 3446, Pairs: 26, Normal/Accom. Pairs: 9/0
+Samples: (26) attention/attent, diversion/divers, fraction/fract
+Transform has too few types.
+Out of good transforms to learn. Learning complete.
+
+
+Handling final compounding...
+Memory status: 160MiB Used, 7758MiB Remaining
+Broke 444 compounds in base
+Memory status: 174MiB Used, 7744MiB Remaining
+Broke 3632 compounds in unmodeled
+Learning complete. Analyzing...
+Writing output to /Users/lignos/repos/morph-seg/tuning/morsel/ne_en/10/analysis.txt using charset UTF-8
+
+Learning time: 20.994s

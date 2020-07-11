@@ -1,0 +1,30 @@
+# Fixed parameters
+max_iter = 50
+top_affixes = 50
+window_size = 10
+frequent_type_threshold = 1
+frequent_prob_threshold = 0.000001
+reeval = true
+score_reeval = false
+doubling = true
+allow_inferred_forms_as_derived = true
+type_threshold = 10
+overlap_stem_length = 4
+overlap_threshold = 5.0
+weighted_transforms = true
+weighted_affixes = true
+hyphenation = true
+compounding = true
+iter_compounding = false
+aggr_compounding = false
+base_inference_conservative = true
+base_inference_recompute_bases = true
+transform_relations = false
+allow_unmod_simplex_word_analysis = false
+transform_optimization = true
+transform_debug = false
+iteration_analysis = false
+
+# Parameters being searched
+transform_length_weighting_exponent = 1.5
+precision_threshold = 0.1
