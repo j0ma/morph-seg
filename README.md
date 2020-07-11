@@ -42,6 +42,37 @@ alpha   f1
 
 Best `alpha` = 0.05
 
+#### Verbose score of best config
+
+```
+% tail -3 mbl.corpusweight0.05.score          20-07-11 - 18:10:34
+TOTAL. Precision: 45.68%; non-affixes: 45.68%; affixes: 100.00%
+TOTAL. Recall:    48.24%; non-affixes: 58.63%; affixes: 38.30%
+TOTAL. F-measure: 46.92%; non-affixes: 51.35%; affixes: 55.38%
+```
+
+#### Sample segmentations from best config
+
+```
+% shuf -n 5 mbl.corpusweight0.05.segm4eval.en --random-source=../../corpus-weights
+floors	floor s
+lonneman	l on n e man
+protest	pro test
+tempered	temp er ed
+apparel	app ar el
+```
+
+#### Sample segmentations from garbage config
+
+```
+% shuf -n 5 mbl.corpusweight5.0.segm4eval.en --random-source=../../corpus-weights
+floors	floors
+lonneman	lonneman
+protest	protest
+tempered	tempered
+apparel	apparel
+```
+
 ### EN - NE
 
 ```
@@ -74,6 +105,37 @@ alpha   f1
 300.0	0.04
 ```
 Best `alpha` = 0.025
+
+#### Verbose score of best config
+
+```
+% tail -3 mbl.corpusweight0.025.score         20-07-11 - 18:20:05
+TOTAL. Precision: 35.32%; non-affixes: 35.32%; affixes: 100.00%
+TOTAL. Recall:    53.96%; non-affixes: 59.27%; affixes: 49.76%
+TOTAL. F-measure: 42.69%; non-affixes: 44.26%; affixes: 66.45%
+```
+
+#### Sample segmentations from best config
+
+```
+% shuf -n 5 mbl.corpusweight0.025.segm4eval.en --random-source=../../corpus-weights
+cinépata.com	c in é pa ta . com
+cinneroth	c in ner oth
+benin	be n in
+checksum	check sum
+coffeyville	c of fe y ville
+```
+
+#### Sample segmentations from garbage config
+
+```
+% shuf -n 5 mbl.corpusweight5.0.segm4eval.en --random-source=../../corpus-weights
+cinépata.com	cinépata.com
+cinneroth	cinneroth
+benin	benin
+checksum	checksum
+coffeyville	coffeyville
+```
 
 ### Combined
 
@@ -108,6 +170,37 @@ alpha   f1
 ```
 
 Best `alpha` = 0.025
+
+#### Verbose score of best config
+
+```
+% tail -3 mbl.corpusweight0.025.score         20-07-11 - 18:24:12
+TOTAL. Precision: 42.39%; non-affixes: 42.39%; affixes: 100.00%
+TOTAL. Recall:    53.41%; non-affixes: 61.49%; affixes: 44.89%
+TOTAL. F-measure: 47.26%; non-affixes: 50.18%; affixes: 61.96%
+```
+
+#### Sample segmentations from best config
+
+```
+% shuf -n 5 mbl.corpusweight0.025.segm4eval.en --random-source=../../corpus-weights
+corin	cor in
+confounds	con found s
+apar-	a par -
+malmö	mal m ö
+eyeing	eye ing
+```
+
+#### Sample segmentations from garbage config
+
+```
+% shuf -n 5 mbl.corpusweight5.0.segm4eval.en --random-source=../../corpus-weights
+corin	corin
+confounds	confound s
+apar-	apar-
+malmö	malmö
+eyeing	eyeing
+```
 
 ## Notes
 - `src/indic` taken from main [FLoRes repo](https://github.com/j0ma/flores)
