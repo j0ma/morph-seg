@@ -1,0 +1,26 @@
+........................ERROR:flatcat.flatcat:Fatal Error <type 'exceptions.ValueError'> math domain error
+Traceback (most recent call last):
+  File "/home/think/lmvr/lmvr-env/bin/lmvr-train", line 4, in <module>
+    __import__('pkg_resources').run_script('LMVR==1.0.6', 'lmvr-train')
+  File "/home/think/lmvr/lmvr-env/lib/python2.7/site-packages/pkg_resources/__init__.py", line 666, in run_script
+    self.require(requires)[0].run_script(script_name, ns)
+  File "/home/think/lmvr/lmvr-env/lib/python2.7/site-packages/pkg_resources/__init__.py", line 1469, in run_script
+    exec(script_code, namespace, namespace)
+  File "/home/think/lmvr/lmvr-env/lib/python2.7/site-packages/LMVR-1.0.6-py2.7.egg/EGG-INFO/scripts/lmvr-train", line 58, in <module>
+    
+  File "/home/think/lmvr/lmvr-env/lib/python2.7/site-packages/LMVR-1.0.6-py2.7.egg/EGG-INFO/scripts/lmvr-train", line 49, in main
+    
+  File "build/bdist.linux-x86_64/egg/flatcat/cmd.py", line 782, in flatcat_main
+    
+  File "build/bdist.linux-x86_64/egg/flatcat/flatcat.py", line 928, in train_batch
+  File "build/bdist.linux-x86_64/egg/flatcat/flatcat.py", line 2061, in _train_epoch
+  File "build/bdist.linux-x86_64/egg/flatcat/flatcat.py", line 1889, in _convergence_of_cost
+  File "build/bdist.linux-x86_64/egg/flatcat/flatcat.py", line 2057, in <lambda>
+  File "build/bdist.linux-x86_64/egg/flatcat/flatcat.py", line 2166, in _operation_loop
+  File "build/bdist.linux-x86_64/egg/flatcat/flatcat.py", line 1198, in get_cost
+  File "build/bdist.linux-x86_64/egg/flatcat/flatcat.py", line 2713, in get_cost
+  File "build/bdist.linux-x86_64/egg/flatcat/flatcat.py", line 2687, in logtransitionsum
+ValueError: math domain error
+make: *** [Makefile:65: train_lmvr_tuned_si_en] Error 1
+(lmvr-env) 
+

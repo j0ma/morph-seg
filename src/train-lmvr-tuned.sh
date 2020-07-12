@@ -223,14 +223,15 @@ printf 'Value of --%s: %s\n' 'max-epochs' "$_arg_max_epochs"
 printf 'Value of --%s: %s\n' 'encoding' "$_arg_encoding"
 
 echo "Training morfessor baseline..."
+corpusweight=1.0
 MBL_SEGM_OUTPUT="$_arg_segmentation_output_path/morfessor-baseline-cw15.0.lmvr.${_arg_lexicon_size}.seed.${_arg_lang}"
-MBL_LEXICON_OUTPUT_FNAME="${_arg_lexicon_output_path}/${_arg_corpus_name}.${_arg_lexicon_size}.morfessor-baseline-cw15.0.lexicon.${_arg_lang}.txt"
+MBL_LEXICON_OUTPUT_FNAME="${_arg_lexicon_output_path}/${_arg_corpus_name}.${_arg_lexicon_size}.morfessor-baseline-cw${corpusweight}.lexicon.${_arg_lang}.txt"
 
 morfessor-train \
     -x ${MBL_LEXICON_OUTPUT_FNAME} \
     -S "${MBL_SEGM_OUTPUT}" \
     --max-epochs ${_arg_max_epochs} \
-    --corpusweight 15.0 \
+    --corpusweight "${corpusweight}" \
     "${_arg_input_path}"
 SEED_SEGM_FNAME="${MBL_SEGM_OUTPUT}"
 

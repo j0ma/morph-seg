@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 xlim = (0, 3)
-output_file = "./f1-vs-alpha-combined.png"
+output_file = "./f1-vs-alpha-all.png"
 plot_title = "F1 vs. alpha"
 columns = ("alpha", "f1")
 pair_to_result_file = {
