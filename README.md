@@ -74,7 +74,7 @@ marietta	mari etta
 pact	pac t
 ```
 
-#### Sample segmentations from garbage config
+#### Sample segmentations from garbage config (cw=5.0)
 
 ```
 % shuf -n 10 mbl.corpusweight*.segm4eval.en --random-source=../../../corpus-weights
@@ -156,7 +156,7 @@ circuit	circuit
 benjamites	benjamite s
 ```
 
-#### Sample segmentations from garbage config
+#### Sample segmentations from garbage config (cw=5.0)
 
 ```
 % shuf -n 10 mbl.corpusweight*.segm4eval.en --random-source=../../../corpus-weights
@@ -238,7 +238,7 @@ seein	see in
 bekah	be kah
 ```
 
-#### Sample segmentations from garbage config
+#### Sample segmentations from garbage config (cw=5.0)
 
 ```
 % shuf -n 10 mbl.corpusweight*.segm4eval.en --random-source=../../../corpus-weights
@@ -327,7 +327,7 @@ marietta	mar i et ta
 pact	p act
 ```
 
-#### Sample segmentations from garbage config
+#### Sample segmentations from garbage config (cw=5.0)
 
 ```
 % shuf -n 10 mbl.corpusweight*.segm4eval.en --random-source=../../../corpus-weights
@@ -404,7 +404,7 @@ circuit	circuit
 benjamites	be n ja m ite s
 ```
 
-#### Sample segmentations from garbage config
+#### Sample segmentations from garbage config (cw=5.0)
 
 ```
 % shuf -n 10 mbl.corpusweight*.segm4eval.en --random-source=../../../corpus-weights
@@ -482,7 +482,7 @@ seein	see in
 bekah	be k ah
 ```
 
-#### Sample segmentations from garbage config
+#### Sample segmentations from garbage config (cw=5.0)
 
 ```
 % shuf -n 10 mbl.corpusweight*.segm4eval.en --random-source=../../../corpus-weights
