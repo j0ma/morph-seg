@@ -1,5 +1,6 @@
 import itertools as it
 import os
+import math
 import pickle
 import sys
 import flatcat
@@ -67,6 +68,7 @@ def train_model(
     corpus_weight=1.0,
     construction_separator=" + ",
     lowercase=True,
+    dampening="none",
 ):
     """
     Description
@@ -83,8 +85,11 @@ def train_model(
         raise ValueError(err_msg)
 
     model = "morfessor-{}".format(model_name)
+
     if segm_output_file is None:
-        output_filename = "{}.segmented.{}.corpusweight{}".format(input_file_name, model, corpus_weight)
+        output_filename = "{}.segmented.{}.corpusweight{}".format(
+            input_file_name, model, corpus_weight
+        )
         output_path = os.path.join(segm_output_folder, output_filename)
     else:
         output_path = segm_output_file
@@ -123,6 +128,7 @@ def train_model(
                 lang=lang,
                 lowercase=lowercase,
                 corpus_weight=corpus_weight,
+                dampening=dampening,
             )
 
     model_bin = run(model, input_path)
@@ -168,6 +174,7 @@ def run_morfessor_baseline(
     lang=None,
     lowercase=True,
     corpus_weight=1.0,
+    dampening="none",
 ):
     if hyperparams is None:
         hyperparams = {}
@@ -179,8 +186,20 @@ def run_morfessor_baseline(
 
     model = morfessor.BaselineModel(corpusweight=corpus_weight)
 
+    if dampening == "none":
+        count_modifier_fn = lambda x: x
+    elif dampening == "ones":
+        count_modifier_fn = lambda x: 1
+    elif dampening == "log":
+        count_modifier_fn = lambda x: math.log(x)
+    else:
+        msg = (
+            "Only 'none', 'ones', and 'log' are supported dampening settings!"
+        )
+        raise ValueError(msg)
+
     if training_type == "batch-recursive":
-        model.load_data(train_data)
+        model.load_data(train_data, count_modifier=count_modifier_fn)
         model.train_batch()
     elif training_type == "batch-viterbi":
         model.load_data(train_data)

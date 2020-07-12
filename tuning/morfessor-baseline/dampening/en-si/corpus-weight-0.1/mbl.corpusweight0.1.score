@@ -1,0 +1,8 @@
+#
+PART0. Precision: 16.28% (161/991); non-affixes: 16.28% (161/991); affixes: 100.00% (0/0)
+PART0. Recall:    77.29% (556/719); non-affixes: 78.40% (275/351); affixes: 76.23% (280/368)
+PART0. F-measure: 26.90%; non-affixes: 26.97%; affixes: 86.51%
+#
+TOTAL. Precision: 16.28%; non-affixes: 16.28%; affixes: 100.00%
+TOTAL. Recall:    77.29%; non-affixes: 78.40%; affixes: 76.23%
+TOTAL. F-measure: 26.90%; non-affixes: 26.97%; affixes: 86.51%

@@ -1,6 +1,7 @@
-set -euxo pipefail
+#set -euo pipefail
 
 LANG="$1"
+DAMPENING="$2"
 
 case "${LANG}" in
 "en-all")
@@ -13,14 +14,29 @@ case "${LANG}" in
     INPUT_FILE="./data/wordlists/si_en/train.en.wordlist"
     ;;
 *)
-    echo "Command line argument must be one of 'en-all', 'en-ne' or 'en-si'!"
+    echo "Usage: tune-morfessor-baseline.sh <en-ne/en-si/en-all> <dampening/no-dampening>"
+    exit 1
+    ;;
+esac
+
+case "${DAMPENING}" in
+"dampening")
+    DAMP="ones"
+    echo "Performing type-level tranining..."
+    ;;
+"no-dampening")
+    DAMP="none"
+    echo "Performing token-level tranining..."
+    ;;
+*)
+    echo "Usage: tune-morfessor-baseline.sh <en-ne/en-si/en-all> <dampening/no-dampening>"
     exit 1
     ;;
 esac
 
 TRAIN_SCRIPT="./src/train-morfessor-baseline.py"
 EVAL_SCRIPT="./src/eval-mc.sh"
-OUTPUT_BASE="./tuning/morfessor-baseline/${LANG}"
+OUTPUT_BASE="./tuning/morfessor-baseline/${DAMPENING}/${LANG}"
 CORPUS_WEIGHTS=$(cat ./tuning/morfessor-baseline/corpus-weights)
 MODEL_OUTPUT_FOLDER="./bin/morfessor-baseline-tuning"
 GOLD_ANALYSES="./data/morpho-challenge/en/all_analyses"
@@ -47,6 +63,7 @@ for cw in $CORPUS_WEIGHTS; do
         --lang "${LANG}" \
         -i "${INPUT_FILE}" \
         -o "${OUTPUT_FOLDER}" \
+        --dampening "${DAMP}" \
         --construction-separator "${CONST_SEP}" \
         --model-type batch-recursive \
         --model-output-folder "${MODEL_OUTPUT_FOLDER}" \

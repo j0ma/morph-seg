@@ -38,7 +38,7 @@ import helpers as h
 @click.option("--lowercase", help="Use lowercase words", is_flag=True)
 @click.option("--construction-separator", default=" + ")
 @click.option("--corpus-weight", default=1.0)
-
+@click.option("--dampening", default="none")
 def main(
     lang,
     input_path,
@@ -50,6 +50,7 @@ def main(
     lowercase,
     construction_separator,
     corpus_weight=1.0,
+    dampening="none",
 ):
 
     # load data
@@ -95,6 +96,7 @@ def main(
             lowercase=lowercase,
             construction_separator=construction_separator,
             corpus_weight=corpus_weight,
+            dampening=dampening,
         )
 
 
