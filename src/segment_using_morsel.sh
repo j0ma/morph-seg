@@ -177,7 +177,8 @@ echo "Actually segmenting the sentences file..."
 python "${PYTHON_SEGM_SCRIPT}" \
     --sentences "${SENTENCES}" \
     --segmentations "${VOCAB_TOT}.segm" \
-    --output "${_arg_output_file}.segm"
+    --output "${_arg_output_file}" \
+    > "${_arg_output_file}"
 
 echo "All done!"
 

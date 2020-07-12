@@ -12,7 +12,7 @@ train_lmvr_tuned_small_ne:
 		> ./data/raw/flores/wiki_ne_en/flores.vocab.ne.lowercase.withcounts.small
 	bash ./src/train-lmvr-tuned.sh \
 		--lang ne \
-		--lexicon-size 15 \
+		--lexicon-size 25 \
 		--corpus-name flores.vocab.small \
 		--input-path ./data/raw/flores/wiki_ne_en/flores.vocab.ne.lowercase.withcounts.small \
 		--segmentation-output-path ./data/segmented/flores/ne \
@@ -25,7 +25,7 @@ train_lmvr_tuned_small_si:
 		> ./data/raw/flores/wiki_si_en/flores.vocab.si.lowercase.withcounts.small
 	bash ./src/train-lmvr-tuned.sh \
 		--lang si \
-		--lexicon-size 15 \
+		--lexicon-size 25 \
 		--corpus-name flores.vocab.small \
 		--input-path ./data/raw/flores/wiki_si_en/flores.vocab.si.lowercase.withcounts.small \
 		--segmentation-output-path ./data/segmented/flores/si \
@@ -38,7 +38,7 @@ train_lmvr_tuned_small_en:
 		> ./data/raw/flores/flores.vocab.en.lowercase.withcounts.small
 	bash ./src/train-lmvr-tuned.sh \
 		--lang en \
-		--lexicon-size 15 \
+		--lexicon-size 25 \
 		--corpus-name flores.vocab.small \
 		--input-path ./data/raw/flores/flores.vocab.en.lowercase.withcounts.small \
 		--segmentation-output-path ./data/segmented/flores/en \
@@ -46,40 +46,77 @@ train_lmvr_tuned_small_en:
 		--lexicon-output-path ./data \
 		--max-epochs 5
 
+train_lmvr_tuned_small_si_en:
+	shuf ./data/wordlists/si_en/train.en.wordlist | head -20 \
+		> /tmp/train.en.wordlist.small
+	bash ./src/train-lmvr-tuned.sh \
+		--lang si_en \
+		--lexicon-size 25 \
+		--corpus-name flores.vocab.small \
+		--input-path /tmp/train.en.wordlist.small \
+		--segmentation-output-path /tmp/ \
+		--model-output-path /tmp \
+		--lexicon-output-path /tmp/ \
+		--max-epochs 5
 train_lmvr_tuned: train_lmvr_tuned_ne train_lmvr_tuned_si train_lmvr_tuned_en
 
+# math domain error
+train_lmvr_tuned_si_en:
+	bash ./src/train-lmvr-tuned.sh \
+		--lang si_en \
+		--lexicon-size 2500 \
+		--corpus-name flores.vocab \
+		--input-path ./data/wordlists/si_en/train.en.wordlist.noslash  \
+		--segmentation-output-path ./data/segmented/flores/si \
+		--model-output-path ./bin \
+		--lexicon-output-path ./data \
+		--max-epochs 5
+
+# works
+train_lmvr_tuned_ne_en:
+	bash ./src/train-lmvr-tuned.sh \
+		--lang ne_en \
+		--lexicon-size 2500 \
+		--corpus-name flores.vocab \
+		--input-path ./data/wordlists/ne_en/train.en.wordlist.noslash  \
+		--segmentation-output-path ./data/segmented/flores/ne \
+		--model-output-path ./bin \
+		--lexicon-output-path ./data \
+		--max-epochs 5
+
+# works
 train_lmvr_tuned_ne:
 	bash ./src/train-lmvr-tuned.sh \
 		--lang ne \
 		--lexicon-size 2500 \
 		--corpus-name flores.vocab \
-	--input-path ./data/raw/flores/wiki_ne_en/flores.vocab.ne.lowercase.withcounts \
-	--segmentation-output-path ./data/segmented/flores/ne \
-	--model-output-path ./bin \
-	--lexicon-output-path ./data \
-	--max-epochs 5
+		--input-path ./data/wordlists/ne_en/train.ne.wordlist.noslash \
+		--segmentation-output-path ./data/segmented/flores/ne \
+		--model-output-path ./bin \
+		--lexicon-output-path ./data \
+		--max-epochs 5
 
 train_lmvr_tuned_si:
 	bash ./src/train-lmvr-tuned.sh \
 		--lang si \
 		--lexicon-size 2500 \
 		--corpus-name flores.vocab \
-		--input-path ./data/raw/flores/wiki_si_en/flores.vocab.si.lowercase.withcounts \
+		--input-path ./data/wordlists/si_en/train.si.wordlist.noslash \
 		--segmentation-output-path ./data/segmented/flores/si \
 		--model-output-path ./bin \
 		--lexicon-output-path ./data \
 		--max-epochs 5
 
-train_lmvr_tuned_en:
-	bash ./src/train-lmvr-tuned.sh \
-		--lang en \
-		--lexicon-size 2500 \
-		--corpus-name flores.vocab \
-		--input-path ./data/raw/flores/flores.vocab.en.lowercase.withcounts \
-		--segmentation-output-path ./data/segmented/flores/en \
-		--model-output-path ./bin \
-		--lexicon-output-path ./data \
-		--max-epochs 5
+#train_lmvr_tuned_en:
+	#bash ./src/train-lmvr-tuned.sh \
+		#--lang en \
+		#--lexicon-size 2500 \
+		#--corpus-name flores.vocab \
+		#--input-path ./data/raw/flores/flores.vocab.en.lowercase.withcounts \
+		#--segmentation-output-path ./data/segmented/flores/en \
+		#--model-output-path ./bin \
+		#--lexicon-output-path ./data \
+		#--max-epochs 5
 
 train_lmvr_small: train_lmvr_small_ne train_lmvr_small_si train_lmvr_small_en
 
