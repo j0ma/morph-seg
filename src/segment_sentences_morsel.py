@@ -1,4 +1,3 @@
-from collections import defaultdict
 import click
 import sys
 
@@ -15,7 +14,7 @@ def read_sentences(sentences_path):
 
 def read_segmentations(segmentations_path):
     with open(segmentations_path, "r") as f:
-        out = defaultdict(str)
+        out = {}
 
         for line in f.readlines():
             try:
@@ -27,6 +26,11 @@ def read_segmentations(segmentations_path):
 
         return out
 
+def segment(w, segm_map):
+    try:
+        return segm_map[w]
+    except KeyError:
+        return w
 
 @click.command()
 @click.option("--sentences")
@@ -48,7 +52,7 @@ def main(sentences, segmentations, output):
         tokens_out = []
 
         for token in sent.split(SPACE):
-            tokens_out.append(segmentations[token])
+            tokens_out.append(segment(token, segm_map=segmentations))
         sent_out = SPACE.join(tokens_out)
         segmented_sentences.append(sent_out)
 
