@@ -53,7 +53,6 @@ def main(sentences, segmentations, output):
     segmented_sentences = []
 
     for sent in sentences:
-        print("Sentence: {}".format(sent))
         tokens_out = []
 
         for token in sent.split(SPACE):
@@ -64,6 +63,7 @@ def main(sentences, segmentations, output):
     # step 3: write corpus to output
     print("Writing output to disk...")
     segmented_corpus = NEWLINE.join(segmented_sentences)
+    print(segmented_corpus)
     with open(output, "w") as f:
         f.write(segmented_corpus)
 
