@@ -1,6 +1,6 @@
 # Morphological / BPE segmentation experiments
 
-![F1 vs. alpha](./f1-vs-alpha-combined.png)
+![F1 vs. alpha](./f1-vs-alpha-all.png)
 
 ## Hyperparameter tuning for Morfessor Baseline (dampening)
 
