@@ -1,4 +1,78 @@
-........................ERROR:flatcat.flatcat:Fatal Error <type 'exceptions.ValueError'> math domain error
+
+
+
+ make train_lmvr_tuned_si                           20-07-13 - 17:17:16
+bash ./src/train-lmvr-tuned.sh \
+	--lang si \
+	--lexicon-size 2500 \
+	--corpus-name flores.vocab \
+	--input-path ./data/wordlists/si_en/train.si.wordlist.noslash \
+	--segmentation-output-path ./data/segmented/flores/si \
+	--model-output-path ./bin \
+	--lexicon-output-path ./data \
+	--max-epochs 5
+Value of --lang: si
+Value of --lexicon-size: 2500
+Value of --input-path: ./data/wordlists/si_en/train.si.wordlist.noslash
+Value of --corpus-name: flores.vocab
+Value of --segmentation-output-path: ./data/segmented/flores/si
+Value of --seed-segmentation-input-path: 
+Value of --model-output-path: ./bin
+Value of --min-shift-remainder: 1
+Value of --length-threshold: 5
+Value of --perplexity-threshold: 10
+Value of --min-perplexity-length: 1
+Value of --lexicon-output-path: ./data
+Value of --max-epochs: 5
+Value of --encoding: utf-8
+Training morfessor baseline...
+Reading corpus from './data/wordlists/si_en/train.si.wordlist.noslash'...
+Detected utf-8 encoding
+Done.
+Compounds in training data: 175704 types / 175704 tokens
+Starting batch training
+Epochs: 0	Cost: 5684384.49738
+...........................................................
+Epochs: 1	Cost: 4187812.67641
+...................^[........................................
+Epochs: 2	Cost: 3963766.88345
+...........................................................
+Epochs: 3	Cost: 3942279.58635
+...........................................................
+Epochs: 4	Cost: 3937126.54761
+...........................................................
+Epochs: 5	Cost: 3935792.59065
+Max number of epochs reached, stop training
+Done.
+Epochs: 5
+Final cost: 3935792.59065
+Training time: 379.199s
+Saving segmentations to './data/segmented/flores/si/morfessor-baseline-cw15.0.lmvr.2500.seed.si'...
+Done.
+Saving model lexicon to './data/flores.vocab.2500.morfessor-baseline-cw1.0.lexicon.si.txt'...
+Done.
+Training LMVR model...
+Initializing from segmentation...
+INFO:flatcat.io:Reading segmentations from './data/segmented/flores/si/morfessor-baseline-cw15.0.lmvr.2500.seed.si'...
+INFO:morfessor.io:Detected utf-8 encoding
+INFO:flatcat.io:Done.
+INFO:flatcat.categorizationscheme:Setting perplexity-threshold to 10.0
+INFO:flatcat.flatcat:Iteration  0 (reestimate_with_unchanged_segmentation).  1/15
+INFO:flatcat.flatcat:Segmentation differences:  16228 (limit    878). Cost difference: 0.0
+INFO:flatcat.flatcat:Iteration  0 (reestimate_with_unchanged_segmentation).  2/15
+INFO:flatcat.flatcat:Segmentation differences:   8343 (limit    878). Cost difference: -31282.5195884
+INFO:flatcat.flatcat:Iteration  0 (reestimate_with_unchanged_segmentation).  3/15
+INFO:flatcat.flatcat:Segmentation differences:   3887 (limit    878). Cost difference: -11669.273416
+INFO:flatcat.flatcat:Iteration  0 (reestimate_with_unchanged_segmentation).  4/15
+INFO:flatcat.flatcat:Segmentation differences:   3105 (limit    878). Cost difference: -2858.11081143
+INFO:flatcat.flatcat:Iteration  0 (reestimate_with_unchanged_segmentation).  5/15
+INFO:flatcat.flatcat:Segmentation differences:    795 (limit    878). in iteration  5    (Converged).
+Vocabulary Size of Test Set:  175704
+Regularization weight set to, 70.2816
+INFO:flatcat.flatcat:epoch      1/5           Cost: 34486669.6550.
+INFO:flatcat.flatcat:Epoch  1, operation  0 (split), max  1 iteration(s).
+INFO:flatcat.flatcat:iteration  1/1           Cost: 34486669.6550.
+.............................................ERROR:flatcat.flatcat:Fatal Error <type 'exceptions.ValueError'> math domain error
 Traceback (most recent call last):
   File "/home/think/lmvr/lmvr-env/bin/lmvr-train", line 4, in <module>
     __import__('pkg_resources').run_script('LMVR==1.0.6', 'lmvr-train')
@@ -21,6 +95,4 @@ Traceback (most recent call last):
   File "build/bdist.linux-x86_64/egg/flatcat/flatcat.py", line 2713, in get_cost
   File "build/bdist.linux-x86_64/egg/flatcat/flatcat.py", line 2687, in logtransitionsum
 ValueError: math domain error
-make: *** [Makefile:65: train_lmvr_tuned_si_en] Error 1
-(lmvr-env) 
-
+make: *** [Makefile:100: train_lmvr_tuned_si] Error 1
