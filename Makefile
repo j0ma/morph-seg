@@ -317,6 +317,7 @@ create_flores_vocab: \
 	create_flores_vocab_en \
 	create_flores_vocab_ne \
 	create_flores_vocab_si
+	bash ./src/remove-slash-from-wordlists.sh
 
 create_flores_vocab_en:
 	echo "Creating vocabulary for EN"
@@ -360,8 +361,9 @@ create_flores_vocab_si:
 
 package_segmentation_models:
 	mkdir -p segmentation-models
-	cp ./bin/*.{bin,tar.gz} segmentation-models/
-	zip -r segmentation-models.zip ./segmentation-models
+	cp ./bin/*.{bin,tar.gz} ./segmentation-models/
+	cp -r ./data/segmented/flores/morsel ./segmentation-models/
+	zip -r segmentation-models.zip ./segmentation-models/
 	rm -R segmentation-models
 
 prep: prepare_neen prepare_sien
