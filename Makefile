@@ -60,7 +60,6 @@ train_lmvr_tuned_small_si_en:
 		--max-epochs 5
 train_lmvr_tuned: train_lmvr_tuned_ne train_lmvr_tuned_si train_lmvr_tuned_en
 
-# math domain error
 train_lmvr_tuned_si_en:
 	bash ./src/train-lmvr-tuned.sh \
 		--lang si_en \
@@ -72,7 +71,6 @@ train_lmvr_tuned_si_en:
 		--lexicon-output-path ./data \
 		--max-epochs 5
 
-# works
 train_lmvr_tuned_ne_en:
 	bash ./src/train-lmvr-tuned.sh \
 		--lang ne_en \
