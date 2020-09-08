@@ -11,11 +11,15 @@ Wordlists were then made using `make_mc_wordlist`, for example:
 python src/make_mc_wordlist.py < data/tokenized/ne_en/train.en.tok.lower > data/tokenized/ne_en/train.en.wordlist
 ```
 
+# Note: 9/7/2020
+
+For GU the words with word-initial slashes were manually removed.
+
 # Note: 7/11/2020
 
 For some reason LMVR does not like `/` or `\` in the data. Thus, wordlists without those two characters were used.
 
-The files ./*/train.{en,ne,si}.wordlist.noslash were created using:
+The files ./*/train.{en,ne,si,kk}.wordlist.noslash were created using:
 
 For example, for SI-EN:
 

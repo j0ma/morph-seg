@@ -5,6 +5,7 @@ flores: create_flores_vocab train_morfessor train_lmvr
 install_lmvr:
 	bash ./src/download-lmvr.sh
 
+## LMVR-TUNED
 train_lmvr_tuned_small: train_lmvr_tuned_small_ne train_lmvr_tuned_small_si train_lmvr_tuned_small_en
 
 train_lmvr_tuned_small_ne:
@@ -58,7 +59,8 @@ train_lmvr_tuned_small_si_en:
 		--model-output-path /tmp \
 		--lexicon-output-path /tmp/ \
 		--max-epochs 5
-train_lmvr_tuned: train_lmvr_tuned_ne train_lmvr_tuned_si train_lmvr_tuned_en
+
+train_lmvr_tuned: train_lmvr_tuned_ne train_lmvr_tuned_si train_lmvr_tuned_si_en train_lmvr_tuned_ne_en
 
 train_lmvr_tuned_si_en:
 	bash ./src/train-lmvr-tuned.sh \
@@ -82,7 +84,6 @@ train_lmvr_tuned_ne_en:
 		--lexicon-output-path ./data \
 		--max-epochs 5
 
-# works
 train_lmvr_tuned_ne:
 	bash ./src/train-lmvr-tuned.sh \
 		--lang ne \
@@ -105,17 +106,53 @@ train_lmvr_tuned_si:
 		--lexicon-output-path ./data \
 		--max-epochs 5
 
-#train_lmvr_tuned_en:
-	#bash ./src/train-lmvr-tuned.sh \
-		#--lang en \
-		#--lexicon-size 2500 \
-		#--corpus-name flores.vocab \
-		#--input-path ./data/raw/flores/flores.vocab.en.lowercase.withcounts \
-		#--segmentation-output-path ./data/segmented/flores/en \
-		#--model-output-path ./bin \
-		#--lexicon-output-path ./data \
-		#--max-epochs 5
+train_lmvr_tuned_wmt19: train_lmvr_tuned_wmt19_kk train_lmvr_tuned_wmt19_kk_en 
 
+train_lmvr_tuned_wmt19_gu_en:
+	bash ./src/train-lmvr-tuned.sh \
+		--lang gu_en \
+		--lexicon-size 2500 \
+		--corpus-name wmt19 \
+		--input-path ./data/wordlists/gu_en/train.en.wordlist.noslash  \
+		--segmentation-output-path ./data/segmented/wmt19/gu \
+		--model-output-path ./bin \
+		--lexicon-output-path ./data \
+		--max-epochs 5
+
+train_lmvr_tuned_wmt19_gu:
+	bash ./src/train-lmvr-tuned.sh \
+		--lang gu \
+		--lexicon-size 2500 \
+		--corpus-name wmt19 \
+		--input-path ./data/wordlists/gu_en/train.gu.wordlist.noslash \
+		--segmentation-output-path ./data/segmented/wmt19/gu \
+		--model-output-path ./bin \
+		--lexicon-output-path ./data \
+		--max-epochs 5
+
+train_lmvr_tuned_wmt19_kk_en:
+	bash ./src/train-lmvr-tuned.sh \
+		--lang kk_en \
+		--lexicon-size 2500 \
+		--corpus-name wmt19 \
+		--input-path ./data/wordlists/kk_en/train.en.wordlist.noslash  \
+		--segmentation-output-path ./data/segmented/wmt19/kk \
+		--model-output-path ./bin \
+		--lexicon-output-path ./data \
+		--max-epochs 5
+
+train_lmvr_tuned_wmt19_kk:
+	bash ./src/train-lmvr-tuned.sh \
+		--lang kk \
+		--lexicon-size 2500 \
+		--corpus-name wmt19 \
+		--input-path ./data/wordlists/kk_en/train.kk.wordlist.noslash \
+		--segmentation-output-path ./data/segmented/wmt19/kk \
+		--model-output-path ./bin \
+		--lexicon-output-path ./data \
+		--max-epochs 5
+
+## LMVR 
 train_lmvr_small: train_lmvr_small_ne train_lmvr_small_si train_lmvr_small_en
 
 train_lmvr_small_ne:
@@ -310,6 +347,16 @@ train_morfessor_baseline_si:
 			--model-output-folder ./bin \
 			--corpus-weight 15 \
 			--lowercase
+
+#create_wmt19_vocab: \
+	#create_wmt19_vocab_kk \
+	#create_wmt19_vocab_en
+	#bash ./src/remove-slash-from-wordlists.sh
+
+#create_wmt19_vocab_kk:
+	#echo
+#create_wmt19_vocab_en:
+	#echo
 
 create_flores_vocab: \
 	create_flores_vocab_en \

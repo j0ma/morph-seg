@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ROOT=$(pwd)
-for pair in "ne_en" "si_en"
+for pair in "ne_en" "si_en" "kk_en" "fi_en"
 do
     cd "${ROOT}/data/wordlists/${pair}" || exit
     for lang in ${pair//_/ }
