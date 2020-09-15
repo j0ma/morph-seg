@@ -11,7 +11,7 @@ stem_bpe_size=$2
 word_bpe_size=$3
 out_dir=$4
 
-mkdir -p $out_dir
+mkdir -p "$out_dir"
 
 # Run MORSEL
 java -XX:+UseSerialGC -jar MORSEL/target/morsel.jar "$wordlist" params/morsel/tuned.txt "$out_dir/morsel_analysis.txt" --segment > "$out_dir/morsel_log.txt"

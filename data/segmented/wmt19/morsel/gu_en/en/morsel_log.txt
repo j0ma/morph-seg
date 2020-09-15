@@ -1,0 +1,126 @@
+Setting parameters from /Users/lignos/repos/morph-seg/params/morsel/tuned.txt
+Loading wordlist from /Users/lignos/repos/morph-seg/data/wordlists/gu_en/train.en.wordlist.noslash using charset UTF-8
+10694 types loaded.
+22760 tokens loaded.
+Init time: 0.373s
+
+Lexicon stats:
+Types: 10694 Tokens: 22760
+
+Handling hyphenation...
+Lexicon stats:
+Types: 10937 Tokens: 23013
+Memory status: 53MiB Used, 7865MiB Remaining
+
+Starting learning...
+Iteration 1
+Lexicon stats:
+Types: 10937 Tokens: 23013
+Base size: 0
+Derived size: 0
+Unmodeled size: 10937
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +(s, $)
+Weighted Types: 87, Types: 87, Tokens: 2406, Pairs: 239, Normal/Accom. Pairs: 87/0
+Samples: (239) groups/group, projects/project, types/type
+Overlap Ratio: undefined (no base or stem overlap)
+Breaking tie between +(s, $) and +($, s)
+Seg. Precision: 0.3936651583710407
+Selected +($, s)
+Learned +($, s)
+Weighted Types: 87, Types: 87, Tokens: 2406, Pairs: 239, Normal/Accom. Pairs: 87/0
+Samples: (239) banana/bananas, land/lands, request/requests
+0 new pairs inferred by conservative inference.
+Memory status: 134MiB Used, 7784MiB Remaining
+
+
+Iteration 2
+Lexicon stats:
+Types: 10937 Tokens: 23013
+Base size: 239
+Derived size: 239
+Unmodeled size: 10459
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +(nagar, $)
+Weighted Types: 67, Types: 6, Tokens: 63, Pairs: 16, Normal/Accom. Pairs: 6/0
+Samples: (16) ahmednagar/ahmed, karimnagar/karim, maninagar/mani
+Transform has too few types.
+
+Vetting transform +($, nagar)
+Weighted Types: 67, Types: 6, Tokens: 63, Pairs: 16, Normal/Accom. Pairs: 6/0
+Samples: (16) ahmed/ahmednagar, jawahar/jawaharnagar, muzaffar/muzaffarnagar
+Transform has too few types.
+
+Vetting transform ($, maha)+
+Weighted Types: 64, Types: 8, Tokens: 53, Pairs: 15, Normal/Accom. Pairs: 8/0
+Samples: (15) baleshwar/mahabaleshwar, devi/mahadevi, gujarat/mahagujarat
+Transform has too few types.
+
+Vetting transform +(pur, $)
+Weighted Types: 52, Types: 10, Tokens: 70, Pairs: 36, Normal/Accom. Pairs: 10/0
+Samples: (36) dholpur/dhol, jaipur/jai, vallabhipur/vallabhi
+Overlap ratio: undefined (no base overlap, but stem overlap of 2)
+Overlap ratio too high.
+
+Vetting transform +($, pur)
+Weighted Types: 52, Types: 10, Tokens: 70, Pairs: 36, Normal/Accom. Pairs: 10/0
+Samples: (36) anand/anandpur, chandra/chandrapur, udham/udhampur
+Overlap ratio: undefined (no base overlap, but stem overlap of 2)
+Overlap ratio too high.
+
+Vetting transform +(garh, $)
+Weighted Types: 40, Types: 5, Tokens: 32, Pairs: 14, Normal/Accom. Pairs: 5/0
+Samples: (14) fatehgarh/fateh, hanumangarh/hanuman, taragarh/tara
+Transform has too few types.
+
+Vetting transform +($, garh)
+Weighted Types: 40, Types: 5, Tokens: 32, Pairs: 14, Normal/Accom. Pairs: 5/0
+Samples: (14) adam/adamgarh, jai/jaigarh, raj/rajgarh
+Transform has too few types.
+
+Vetting transform +(na, $)
+Weighted Types: 20, Types: 7, Tokens: 207, Pairs: 21, Normal/Accom. Pairs: 7/0
+Samples: (21) brahmana/brahma, girna/gir, pushkarna/pushkar
+Transform has too few types.
+
+Vetting transform +($, na)
+Weighted Types: 20, Types: 7, Tokens: 207, Pairs: 21, Normal/Accom. Pairs: 7/0
+Samples: (21) brahma/brahmana, india/indiana, pur/purna
+Transform has too few types.
+
+Vetting transform +(a, $)
+Weighted Types: 19, Types: 19, Tokens: 270, Pairs: 115, Normal/Accom. Pairs: 19/0
+Samples: (115) chawla/chawl, dhara/dhar, sampradaya/sampraday
+Overlap ratio: 1.0
+Seg. Precision: 0.007164404223227752
+Seg. Precision too low
+
+Vetting transform +($, a)
+Weighted Types: 17, Types: 17, Tokens: 251, Pairs: 113, Normal/Accom. Pairs: 17/0
+Samples: (113) elephant/elephanta, prahlad/prahlada, tilak/tilaka
+Overlap ratio: 2.0
+Seg. Precision: 0.045576407506702415
+Seg. Precision too low
+
+Vetting transform +(i, $)
+Weighted Types: 16, Types: 16, Tokens: 292, Pairs: 81, Normal/Accom. Pairs: 16/0
+Samples: (81) dnyaneshwari/dnyaneshwar, kutchi/kutch, punjabi/punjab
+Overlap ratio: 3.5
+Seg. Precision: 0.006033182503770739
+Seg. Precision too low
+Out of good transforms to learn. Learning complete.
+
+
+Handling final compounding...
+Memory status: 155MiB Used, 7763MiB Remaining
+Broke 4 compounds in base
+Memory status: 155MiB Used, 7763MiB Remaining
+Broke 223 compounds in unmodeled
+Learning complete. Analyzing...
+Writing output to /Users/lignos/repos/morph-seg/data/segmented/wmt19/morsel/gu_en/en/morsel_analysis.txt using charset UTF-8
+
+Learning time: 1.062s

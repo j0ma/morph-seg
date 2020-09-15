@@ -1,0 +1,1496 @@
+Setting parameters from /Users/lignos/repos/morph-seg/params/morsel/tuned.txt
+Loading wordlist from /Users/lignos/repos/morph-seg/data/wordlists/kk_en/train.kk.wordlist.noslash using charset UTF-8
+114885 types loaded.
+344632 tokens loaded.
+Init time: 1.72s
+
+Lexicon stats:
+Types: 114885 Tokens: 344632
+
+Handling hyphenation...
+Lexicon stats:
+Types: 126330 Tokens: 356615
+Memory status: 235MiB Used, 7683MiB Remaining
+
+Starting learning...
+Iteration 1
+Lexicon stats:
+Types: 126330 Tokens: 356615
+Base size: 0
+Derived size: 0
+Unmodeled size: 126330
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +(ның, $)
+Weighted Types: 1590, Types: 306, Tokens: 14168, Pairs: 653, Normal/Accom. Pairs: 306/0
+Samples: (653) палатаның/палата, рентаның/рента, құрылымының/құрылымы
+Overlap Ratio: undefined (no base or stem overlap)
+Breaking tie between +(ның, $) and +($, ның)
+Seg. Precision: 0.8453038674033149
+Selected +($, ның)
+Learned +($, ның)
+Weighted Types: 2136, Types: 411, Tokens: 15872, Pairs: 912, Normal/Accom. Pairs: 306/105
+Samples: (912) балама/баламаның, лондон/лондонның, формасын/формасының
+0 new pairs inferred by conservative inference.
+Memory status: 267MiB Used, 7651MiB Remaining
+
+
+Iteration 2
+Lexicon stats:
+Types: 126330 Tokens: 356615
+Base size: 680
+Derived size: 680
+Unmodeled size: 124970
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, дағы)
+Weighted Types: 1168, Types: 146, Tokens: 14174, Pairs: 309, Normal/Accom. Pairs: 146/0
+Samples: (309) ауқым/ауқымдағы, базар/базардағы, тақырыптар/тақырыптардағы
+Overlap ratio: 2.024390243902439
+Seg. Precision: 0.7891891891891892
+Selected +($, дағы)
+Learned +($, дағы)
+Weighted Types: 1168, Types: 146, Tokens: 14174, Pairs: 310, Normal/Accom. Pairs: 146/0
+Samples: (310) ауқым/ауқымдағы, базар/базардағы, тақырыптар/тақырыптардағы
+2 new pairs inferred by conservative inference.
+Memory status: 205MiB Used, 7713MiB Remaining
+
+
+Iteration 3
+Lexicon stats:
+Types: 126331 Tokens: 356616
+Base size: 908
+Derived size: 991
+Unmodeled size: 124432
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, лық)
+Weighted Types: 1076, Types: 207, Tokens: 8798, Pairs: 408, Normal/Accom. Pairs: 207/0
+Samples: (408) автономия/автономиялық, кинетика/кинетикалық, қалар/қаларлық
+Overlap ratio: 1.7211538461538463
+Seg. Precision: 0.6388888888888888
+Selected +($, лық)
+Learned +($, лық)
+Weighted Types: 1081, Types: 208, Tokens: 8820, Pairs: 415, Normal/Accom. Pairs: 207/1
+Samples: (415) автономия/автономиялық, кинетика/кинетикалық, қалар/қаларлық
+2 new pairs inferred by conservative inference.
+Memory status: 262MiB Used, 7656MiB Remaining
+
+
+Iteration 4
+Lexicon stats:
+Types: 126332 Tokens: 356617
+Base size: 1214
+Derived size: 1402
+Unmodeled size: 123716
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, дың)
+Weighted Types: 1029, Types: 198, Tokens: 12597, Pairs: 404, Normal/Accom. Pairs: 198/0
+Samples: (404) бағалау/бағалаудың, сұрыптау/сұрыптаудың, қызу/қызудың
+Overlap ratio: 4.444444444444445
+Seg. Precision: 0.8959276018099548
+Selected +($, дың)
+Learned +($, дың)
+Weighted Types: 1029, Types: 198, Tokens: 12597, Pairs: 406, Normal/Accom. Pairs: 198/0
+Samples: (406) бағалау/бағалаудың, сұрыптау/сұрыптаудың, қызу/қызудың
+2 new pairs inferred by conservative inference.
+Memory status: 189MiB Used, 7729MiB Remaining
+
+
+Iteration 5
+Lexicon stats:
+Types: 126333 Tokens: 356618
+Base size: 1565
+Derived size: 1808
+Unmodeled size: 122960
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, ға)
+Weighted Types: 919, Types: 325, Tokens: 20214, Pairs: 653, Normal/Accom. Pairs: 325/0
+Samples: (653) бағалар/бағаларға, филантропия/филантропияға, ынталандыру/ынталандыруға
+Overlap ratio: 1.2772020725388602
+Seg. Precision: 0.8666666666666667
+Selected +($, ға)
+Learned +($, ға)
+Weighted Types: 922, Types: 326, Tokens: 20218, Pairs: 657, Normal/Accom. Pairs: 325/1
+Samples: (657) бағалар/бағаларға, салған/салғанға, филантропия/филантропияға
+32 new pairs inferred by conservative inference.
+Memory status: 258MiB Used, 7660MiB Remaining
+
+
+Iteration 6
+Lexicon stats:
+Types: 126349 Tokens: 356639
+Base size: 1849
+Derived size: 2496
+Unmodeled size: 122004
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, ды)
+Weighted Types: 914, Types: 323, Tokens: 16904, Pairs: 666, Normal/Accom. Pairs: 323/0
+Samples: (666) айтыла/айтылады, малайлар/малайларды, тапсырыстар/тапсырыстарды
+Overlap ratio: 1.4922118380062306
+Seg. Precision: 0.5872727272727273
+Selected +($, ды)
+Learned +($, ды)
+Weighted Types: 936, Types: 331, Tokens: 17098, Pairs: 681, Normal/Accom. Pairs: 327/4
+Samples: (681) айтыла/айтылады, малайлар/малайларды, сайд/сайды
+40 new pairs inferred by conservative inference.
+Memory status: 271MiB Used, 7647MiB Remaining
+
+
+Iteration 7
+Lexicon stats:
+Types: 126369 Tokens: 356686
+Base size: 2215
+Derived size: 3211
+Unmodeled size: 120943
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform (1, $)+
+Weighted Types: 900, Types: 900, Tokens: 8668, Pairs: 909, Normal/Accom. Pairs: 900/0
+Samples: (909) 1480/480, 1615/615, 1655/655
+Overlap Ratio: undefined (no base or stem overlap)
+Breaking tie between (1, $)+ and ($, 1)+
+Seg. Precision: 0.881488736532811
+Selected ($, 1)+
+Learned ($, 1)+
+Weighted Types: 900, Types: 900, Tokens: 8668, Pairs: 909, Normal/Accom. Pairs: 900/0
+Samples: (909) 444/1444, 571/1571, 930/1930
+0 new pairs inferred by conservative inference.
+Memory status: 280MiB Used, 7638MiB Remaining
+
+
+Iteration 8
+Lexicon stats:
+Types: 126369 Tokens: 356686
+Base size: 3124
+Derived size: 4120
+Unmodeled size: 119125
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, нің)
+Weighted Types: 805, Types: 155, Tokens: 6588, Pairs: 340, Normal/Accom. Pairs: 155/0
+Samples: (340) бірліктері/бірліктерінің, путин/путиннің, үрейі/үрейінің
+Overlap ratio: 8.0
+Overlap ratio too high.
+
+Vetting transform +(нің, $)
+Weighted Types: 785, Types: 151, Tokens: 6425, Pairs: 335, Normal/Accom. Pairs: 151/0
+Samples: (335) бетінің/беті, мемлекетінің/мемлекеті, нацизмнің/нацизм
+Overlap ratio: undefined (no base overlap, but stem overlap of 36)
+Overlap ratio too high.
+
+Vetting transform +(тар, $)
+Weighted Types: 722, Types: 139, Tokens: 3503, Pairs: 345, Normal/Accom. Pairs: 139/0
+Samples: (345) ойыншықтар/ойыншық, қуыршақтар/қуыршақ, құрттар/құрт
+Overlap ratio: 1.9684210526315788
+Seg. Precision: 0.00446715516133179
+Seg. Precision too low
+
+Vetting transform +($, н)
+Weighted Types: 716, Types: 716, Tokens: 16423, Pairs: 2240, Normal/Accom. Pairs: 716/0
+Samples: (2240) дуе/дуен, сира/сиран, сөзі/сөзін
+Overlap ratio: 2.948717948717949
+Seg. Precision: 0.18807459942211716
+Selected +($, н)
+Learned +($, н)
+Weighted Types: 761, Types: 761, Tokens: 18615, Pairs: 2298, Normal/Accom. Pairs: 761/0
+Samples: (2298) дуе/дуен, салығы/салығын, сира/сиран
+20 new pairs inferred by conservative inference.
+Memory status: 299MiB Used, 7619MiB Remaining
+
+
+Iteration 9
+Lexicon stats:
+Types: 126379 Tokens: 356732
+Base size: 5065
+Derived size: 6438
+Unmodeled size: 114876
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, нің)
+Weighted Types: 795, Types: 153, Tokens: 6517, Pairs: 334, Normal/Accom. Pairs: 153/0
+Samples: (334) бірліктері/бірліктерінің, путин/путиннің, үрейі/үрейінің
+Overlap ratio: 1.5337837837837838
+Seg. Precision: 0.9
+Selected +($, нің)
+Learned +($, нің)
+Weighted Types: 1180, Types: 227, Tokens: 7846, Pairs: 495, Normal/Accom. Pairs: 155/72
+Samples: (495) бірліктері/бірліктерінің, кезең/кезеңнің, үрейі/үрейінің
+0 new pairs inferred by conservative inference.
+Memory status: 283MiB Used, 7635MiB Remaining
+
+
+Iteration 10
+Lexicon stats:
+Types: 126379 Tokens: 356732
+Base size: 5262
+Derived size: 6789
+Unmodeled size: 114328
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, мен)
+Weighted Types: 670, Types: 129, Tokens: 14471, Pairs: 484, Normal/Accom. Pairs: 129/0
+Samples: (484) көріністері/көріністерімен, ығысу/ығысумен, ұғымдар/ұғымдармен
+Overlap ratio: 1.2419354838709677
+Seg. Precision: 0.7543859649122807
+Selected +($, мен)
+Learned +($, мен)
+Weighted Types: 681, Types: 131, Tokens: 14486, Pairs: 504, Normal/Accom. Pairs: 129/2
+Samples: (504) ақшам/ақшамен, көріністері/көріністерімен, ұғымдар/ұғымдармен
+40 new pairs inferred by conservative inference.
+Memory status: 223MiB Used, 7695MiB Remaining
+
+
+Iteration 11
+Lexicon stats:
+Types: 126399 Tokens: 356764
+Base size: 5456
+Derived size: 7317
+Unmodeled size: 113626
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, дің)
+Weighted Types: 670, Types: 129, Tokens: 4342, Pairs: 303, Normal/Accom. Pairs: 129/0
+Samples: (303) төлеушілер/төлеушілердің, іздеу/іздеудің, үнемдеу/үнемдеудің
+Overlap ratio: 3.7586206896551726
+Seg. Precision: 0.832258064516129
+Selected +($, дің)
+Learned +($, дің)
+Weighted Types: 670, Types: 129, Tokens: 4342, Pairs: 305, Normal/Accom. Pairs: 129/0
+Samples: (305) төлеушілер/төлеушілердің, іздеу/іздеудің, үнемдеу/үнемдеудің
+6 new pairs inferred by conservative inference.
+Memory status: 245MiB Used, 7673MiB Remaining
+
+
+Iteration 12
+Lexicon stats:
+Types: 126402 Tokens: 356767
+Base size: 5704
+Derived size: 7626
+Unmodeled size: 113072
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, ді)
+Weighted Types: 634, Types: 224, Tokens: 9594, Pairs: 440, Normal/Accom. Pairs: 224/0
+Samples: (440) ережелер/ережелерді, окси/оксиді, тіркей/тіркейді
+Overlap ratio: 1.5794871794871794
+Seg. Precision: 0.6021505376344086
+Selected +($, ді)
+Learned +($, ді)
+Weighted Types: 651, Types: 230, Tokens: 9740, Pairs: 457, Normal/Accom. Pairs: 229/1
+Samples: (457) ережелер/ережелерді, окси/оксиді, тіркей/тіркейді
+32 new pairs inferred by conservative inference.
+Memory status: 303MiB Used, 7615MiB Remaining
+
+
+Iteration 13
+Lexicon stats:
+Types: 126418 Tokens: 356787
+Base size: 5964
+Derived size: 8110
+Unmodeled size: 112344
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, лар)
+Weighted Types: 509, Types: 98, Tokens: 2116, Pairs: 342, Normal/Accom. Pairs: 98/0
+Samples: (342) коммуникация/коммуникациялар, тартар/тартарлар, қарашай/қарашайлар
+Overlap ratio: 1.7474747474747474
+Seg. Precision: 0.3234323432343234
+Selected +($, лар)
+Learned +($, лар)
+Weighted Types: 852, Types: 164, Tokens: 5882, Pairs: 432, Normal/Accom. Pairs: 163/1
+Samples: (432) коммуникация/коммуникациялар, нота/ноталар, тартар/тартарлар
+30 new pairs inferred by conservative inference.
+Memory status: 284MiB Used, 7634MiB Remaining
+
+
+Iteration 14
+Lexicon stats:
+Types: 126433 Tokens: 356805
+Base size: 6142
+Derived size: 8568
+Unmodeled size: 111723
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, ге)
+Weighted Types: 495, Types: 175, Tokens: 7589, Pairs: 371, Normal/Accom. Pairs: 175/0
+Samples: (371) жүру/жүруге, экожүйе/экожүйеге, үлестіру/үлестіруге
+Overlap ratio: 1.0923076923076922
+Seg. Precision: 0.8333333333333334
+Selected +($, ге)
+Learned +($, ге)
+Weighted Types: 503, Types: 178, Tokens: 7624, Pairs: 384, Normal/Accom. Pairs: 178/0
+Samples: (384) жүру/жүруге, экожүйе/экожүйеге, үлестіру/үлестіруге
+32 new pairs inferred by conservative inference.
+Memory status: 298MiB Used, 7620MiB Remaining
+
+
+Iteration 15
+Lexicon stats:
+Types: 126449 Tokens: 356826
+Base size: 6272
+Derived size: 8984
+Unmodeled size: 111193
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, на)
+Weighted Types: 492, Types: 174, Tokens: 9395, Pairs: 590, Normal/Accom. Pairs: 174/0
+Samples: (590) дилеммасы/дилеммасына, тууы/тууына, флоты/флотына
+Overlap ratio: 1.193220338983051
+Seg. Precision: 0.3418467583497053
+Selected +($, на)
+Learned +($, на)
+Weighted Types: 990, Types: 350, Tokens: 12792, Pairs: 1081, Normal/Accom. Pairs: 236/114
+Samples: (1081) корти/кортина, реза/резана, соғыстарын/соғыстарына
+32 new pairs inferred by conservative inference.
+Memory status: 279MiB Used, 7639MiB Remaining
+
+
+Iteration 16
+Lexicon stats:
+Types: 126465 Tokens: 356847
+Base size: 6588
+Derived size: 9838
+Unmodeled size: 110039
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, виль)
+Weighted Types: 480, Types: 60, Tokens: 2849, Pairs: 274, Normal/Accom. Pairs: 60/0
+Samples: (274) аблен/абленвиль, еско/есковиль, мэдисон/мэдисонвиль
+Overlap ratio: 0.6296296296296297
+Seg. Precision: 0.36363636363636365
+Selected +($, виль)
+Learned +($, виль)
+Weighted Types: 616, Types: 77, Tokens: 3070, Pairs: 339, Normal/Accom. Pairs: 71/6
+Samples: (339) аблен/абленвиль, еско/есковиль, мэдисон/мэдисонвиль
+66 new pairs inferred by conservative inference.
+Memory status: 306MiB Used, 7612MiB Remaining
+
+
+Iteration 17
+Lexicon stats:
+Types: 126498 Tokens: 356889
+Base size: 6822
+Derived size: 10227
+Unmodeled size: 109449
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +(тары, $)
+Weighted Types: 544, Types: 68, Tokens: 2110, Pairs: 144, Normal/Accom. Pairs: 68/0
+Samples: (144) аймақтары/аймақ, портары/пор, құрттары/құрт
+Overlap ratio: 1.890625
+Seg. Precision: 0.002183406113537118
+Seg. Precision too low
+
+Vetting transform +($, нда)
+Weighted Types: 468, Types: 90, Tokens: 6038, Pairs: 182, Normal/Accom. Pairs: 90/0
+Samples: (182) бұра/бұранда, салтанаты/салтанатында, талқылауы/талқылауында
+Overlap ratio: 1.0977443609022557
+Seg. Precision: 0.6
+Selected +($, нда)
+Learned +($, нда)
+Weighted Types: 930, Types: 179, Tokens: 10234, Pairs: 383, Normal/Accom. Pairs: 91/88
+Samples: (383) болатынын/болатынында, бұра/бұранда, стандарттарын/стандарттарында
+12 new pairs inferred by conservative inference.
+Memory status: 185MiB Used, 7733MiB Remaining
+
+
+Iteration 18
+Lexicon stats:
+Types: 126504 Tokens: 356895
+Base size: 6927
+Derived size: 10514
+Unmodeled size: 109063
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +(тер, $)
+Weighted Types: 468, Types: 90, Tokens: 2466, Pairs: 250, Normal/Accom. Pairs: 90/0
+Samples: (250) альфтер/альф, керіктер/керік, континенттер/континент
+Overlap ratio: 1.8953488372093024
+Seg. Precision: 0.0028898022090932444
+Seg. Precision too low
+
+Vetting transform +($, тар)
+Weighted Types: 359, Types: 69, Tokens: 824, Pairs: 251, Normal/Accom. Pairs: 69/0
+Samples: (251) бегемот/бегемоттар, вильяс/вильястар, сандуғаш/сандуғаштар
+Overlap ratio: 18.666666666666668
+Overlap ratio too high.
+
+Vetting transform +(ты, $)
+Weighted Types: 342, Types: 121, Tokens: 5550, Pairs: 226, Normal/Accom. Pairs: 121/0
+Samples: (226) еуроаймақты/еуроаймақ, нарықты/нарық, экспортты/экспорт
+Overlap ratio: 6.576923076923077
+Overlap ratio too high.
+
+Vetting transform +($, тын)
+Weighted Types: 317, Types: 61, Tokens: 1583, Pairs: 136, Normal/Accom. Pairs: 61/0
+Samples: (136) айтпай/айтпайтын, жаза/жазатын, қарастыра/қарастыратын
+Overlap ratio: 0.9910714285714286
+Seg. Precision: 0.43884892086330934
+Selected +($, тын)
+Learned +($, тын)
+Weighted Types: 343, Types: 66, Tokens: 1762, Pairs: 146, Normal/Accom. Pairs: 63/3
+Samples: (146) айтпай/айтпайтын, жаза/жазатын, қарастыра/қарастыратын
+98 new pairs inferred by conservative inference.
+Memory status: 188MiB Used, 7730MiB Remaining
+
+
+Iteration 19
+Lexicon stats:
+Types: 126553 Tokens: 357062
+Base size: 7001
+Derived size: 10755
+Unmodeled size: 108797
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, тар)
+Weighted Types: 359, Types: 69, Tokens: 824, Pairs: 251, Normal/Accom. Pairs: 69/0
+Samples: (251) бегемот/бегемоттар, вильяс/вильястар, сандуғаш/сандуғаштар
+Overlap ratio: 16.142857142857142
+Overlap ratio too high.
+
+Vetting transform +(ты, $)
+Weighted Types: 342, Types: 121, Tokens: 5550, Pairs: 226, Normal/Accom. Pairs: 121/0
+Samples: (226) еуроаймақты/еуроаймақ, нарықты/нарық, экспортты/экспорт
+Overlap ratio: 6.576923076923077
+Overlap ratio too high.
+
+Vetting transform +($, ты)
+Weighted Types: 311, Types: 110, Tokens: 5520, Pairs: 208, Normal/Accom. Pairs: 110/0
+Samples: (208) ақиқа/ақиқаты, дыбыс/дыбысты, ынтымақтастық/ынтымақтастықты
+Overlap ratio: 17.375
+Overlap ratio too high.
+
+Vetting transform +($, ті)
+Weighted Types: 286, Types: 101, Tokens: 3964, Pairs: 212, Normal/Accom. Pairs: 101/0
+Samples: (212) белес/белесті, егемендік/егемендікті, көпшілік/көпшілікті
+Overlap ratio: 19.285714285714285
+Overlap ratio too high.
+
+Vetting transform +($, да)
+Weighted Types: 269, Types: 95, Tokens: 2862, Pairs: 276, Normal/Accom. Pairs: 95/0
+Samples: (276) арту/артуда, исландия/исландияда, тағайындау/тағайындауда
+Overlap ratio: 0.8707865168539326
+Seg. Precision: 0.23690773067331672
+Selected +($, да)
+Learned +($, да)
+Weighted Types: 444, Types: 157, Tokens: 14170, Pairs: 401, Normal/Accom. Pairs: 149/8
+Samples: (401) арту/артуда, исландия/исландияда, тағайындау/тағайындауда
+75 new pairs inferred by conservative inference.
+Memory status: 224MiB Used, 7694MiB Remaining
+
+
+Iteration 20
+Lexicon stats:
+Types: 126590 Tokens: 357141
+Base size: 7069
+Derived size: 11212
+Unmodeled size: 108309
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, тар)
+Weighted Types: 359, Types: 69, Tokens: 824, Pairs: 250, Normal/Accom. Pairs: 69/0
+Samples: (250) бегемот/бегемоттар, вильяс/вильястар, сандуғаш/сандуғаштар
+Overlap ratio: 16.285714285714285
+Overlap ratio too high.
+
+Vetting transform +(ты, $)
+Weighted Types: 342, Types: 121, Tokens: 5550, Pairs: 226, Normal/Accom. Pairs: 121/0
+Samples: (226) еуроаймақты/еуроаймақ, нарықты/нарық, экспортты/экспорт
+Overlap ratio: 6.653846153846154
+Overlap ratio too high.
+
+Vetting transform +($, ты)
+Weighted Types: 311, Types: 110, Tokens: 5520, Pairs: 208, Normal/Accom. Pairs: 110/0
+Samples: (208) ақиқа/ақиқаты, дыбыс/дыбысты, ынтымақтастық/ынтымақтастықты
+Overlap ratio: 17.625
+Overlap ratio too high.
+
+Vetting transform +($, ті)
+Weighted Types: 286, Types: 101, Tokens: 3964, Pairs: 212, Normal/Accom. Pairs: 101/0
+Samples: (212) белес/белесті, егемендік/егемендікті, көпшілік/көпшілікті
+Overlap ratio: 19.285714285714285
+Overlap ratio too high.
+
+Vetting transform +($, сы)
+Weighted Types: 274, Types: 97, Tokens: 2976, Pairs: 278, Normal/Accom. Pairs: 97/0
+Samples: (278) дивергенция/дивергенциясы, манго/мангосы, тарихшы/тарихшысы
+Overlap ratio: 1.3380281690140845
+Seg. Precision: 0.3233333333333333
+Selected +($, сы)
+Learned +($, сы)
+Weighted Types: 554, Types: 196, Tokens: 7173, Pairs: 443, Normal/Accom. Pairs: 183/13
+Samples: (443) будда/буддасы, модус/модусы, тарихшы/тарихшысы
+39 new pairs inferred by conservative inference.
+Memory status: 216MiB Used, 7701MiB Remaining
+
+
+Iteration 21
+Lexicon stats:
+Types: 126608 Tokens: 357187
+Base size: 7127
+Derived size: 11681
+Unmodeled size: 107800
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, тар)
+Weighted Types: 359, Types: 69, Tokens: 824, Pairs: 250, Normal/Accom. Pairs: 69/0
+Samples: (250) бегемот/бегемоттар, вильяс/вильястар, сандуғаш/сандуғаштар
+Overlap ratio: 8.357142857142858
+Overlap ratio too high.
+
+Vetting transform +(ты, $)
+Weighted Types: 334, Types: 118, Tokens: 5519, Pairs: 220, Normal/Accom. Pairs: 118/0
+Samples: (220) еуроаймақты/еуроаймақ, нарықты/нарық, экспортты/экспорт
+Overlap ratio: 5.862068965517241
+Overlap ratio too high.
+
+Vetting transform +($, дық)
+Weighted Types: 301, Types: 58, Tokens: 9167, Pairs: 133, Normal/Accom. Pairs: 58/0
+Samples: (133) аңғал/аңғалдық, жаушыл/жаушылдық, итальян/итальяндық
+Overlap ratio: 1.4179104477611941
+Seg. Precision: 0.5576923076923077
+Selected +($, дық)
+Learned +($, дық)
+Weighted Types: 327, Types: 63, Tokens: 9291, Pairs: 148, Normal/Accom. Pairs: 61/2
+Samples: (148) аңғал/аңғалдық, жаушыл/жаушылдық, итальян/итальяндық
+50 new pairs inferred by conservative inference.
+Memory status: 206MiB Used, 7712MiB Remaining
+
+
+Iteration 22
+Lexicon stats:
+Types: 126632 Tokens: 357233
+Base size: 7216
+Derived size: 11877
+Unmodeled size: 107539
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, тар)
+Weighted Types: 359, Types: 69, Tokens: 824, Pairs: 241, Normal/Accom. Pairs: 69/0
+Samples: (241) вильяс/вильястар, пышақ/пышақтар, сандуғаш/сандуғаштар
+Overlap ratio: 7.857142857142857
+Overlap ratio too high.
+
+Vetting transform +(ты, $)
+Weighted Types: 308, Types: 109, Tokens: 5391, Pairs: 206, Normal/Accom. Pairs: 109/0
+Samples: (206) еуроаймақты/еуроаймақ, нарықты/нарық, экспортты/экспорт
+Overlap ratio: 5.448275862068965
+Overlap ratio too high.
+
+Vetting transform +($, ті)
+Weighted Types: 286, Types: 101, Tokens: 3964, Pairs: 212, Normal/Accom. Pairs: 101/0
+Samples: (212) белес/белесті, егемендік/егемендікті, көпшілік/көпшілікті
+Overlap ratio: 19.285714285714285
+Overlap ratio too high.
+
+Vetting transform +(ті, $)
+Weighted Types: 280, Types: 99, Tokens: 3853, Pairs: 209, Normal/Accom. Pairs: 99/0
+Samples: (209) конструктивті/конструктив, теректі/терек, қабілетті/қабілет
+Overlap ratio: 35.75
+Overlap ratio too high.
+
+Vetting transform +($, ты)
+Weighted Types: 274, Types: 97, Tokens: 4959, Pairs: 190, Normal/Accom. Pairs: 97/0
+Samples: (190) ақиқа/ақиқаты, дыбыс/дыбысты, ынтымақтастық/ынтымақтастықты
+Overlap ratio: 9.846153846153847
+Overlap ratio too high.
+
+Vetting transform +($, не)
+Weighted Types: 266, Types: 94, Tokens: 1743, Pairs: 362, Normal/Accom. Pairs: 94/0
+Samples: (362) бөлінуі/бөлінуіне, көбі/көбіне, өзгертуі/өзгертуіне
+Overlap ratio: 0.9276595744680851
+Seg. Precision: 0.3643410852713178
+Selected +($, не)
+Learned +($, не)
+Weighted Types: 614, Types: 217, Tokens: 4703, Pairs: 702, Normal/Accom. Pairs: 158/59
+Samples: (702) еркіндігін/еркіндігіне, күйреуі/күйреуіне, шеванн/шеванне
+28 new pairs inferred by conservative inference.
+Memory status: 184MiB Used, 7734MiB Remaining
+
+
+Iteration 23
+Lexicon stats:
+Types: 126646 Tokens: 357263
+Base size: 7308
+Derived size: 12431
+Unmodeled size: 106907
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, тар)
+Weighted Types: 359, Types: 69, Tokens: 824, Pairs: 241, Normal/Accom. Pairs: 69/0
+Samples: (241) вильяс/вильястар, пышақ/пышақтар, сандуғаш/сандуғаштар
+Overlap ratio: 7.928571428571429
+Overlap ratio too high.
+
+Vetting transform +(ты, $)
+Weighted Types: 308, Types: 109, Tokens: 5391, Pairs: 206, Normal/Accom. Pairs: 109/0
+Samples: (206) еуроаймақты/еуроаймақ, нарықты/нарық, экспортты/экспорт
+Overlap ratio: 5.448275862068965
+Overlap ratio too high.
+
+Vetting transform +($, ті)
+Weighted Types: 283, Types: 100, Tokens: 3960, Pairs: 211, Normal/Accom. Pairs: 100/0
+Samples: (211) белес/белесті, егемендік/егемендікті, көпшілік/көпшілікті
+Overlap ratio: 19.428571428571427
+Overlap ratio too high.
+
+Vetting transform +(ті, $)
+Weighted Types: 277, Types: 98, Tokens: 3849, Pairs: 208, Normal/Accom. Pairs: 98/0
+Samples: (208) конструктивті/конструктив, теректі/терек, қабілетті/қабілет
+Overlap ratio: 36.0
+Overlap ratio too high.
+
+Vetting transform +($, ты)
+Weighted Types: 274, Types: 97, Tokens: 4959, Pairs: 190, Normal/Accom. Pairs: 97/0
+Samples: (190) ақиқа/ақиқаты, дыбыс/дыбысты, ынтымақтастық/ынтымақтастықты
+Overlap ratio: 9.846153846153847
+Overlap ratio too high.
+
+Vetting transform +($, тер)
+Weighted Types: 244, Types: 47, Tokens: 2754, Pairs: 174, Normal/Accom. Pairs: 47/0
+Samples: (174) бүркіт/бүркіттер, клос/клостер, лес/лестер
+Overlap ratio: 6.818181818181818
+Overlap ratio too high.
+
+Vetting transform +(лер, $)
+Weighted Types: 244, Types: 47, Tokens: 811, Pairs: 165, Normal/Accom. Pairs: 47/0
+Samples: (165) берілер/бері, интеруикилер/интеруики, өлкелер/өлке
+Overlap ratio: 2.793103448275862
+Seg. Precision: 0.0015066034106936787
+Seg. Precision too low
+
+Vetting transform +($, с)
+Weighted Types: 223, Types: 223, Tokens: 6926, Pairs: 893, Normal/Accom. Pairs: 223/0
+Samples: (893) сали/салис, сек/секс, қия/қияс
+Overlap ratio: 0.8936170212765957
+Seg. Precision: 0.22255489021956087
+Selected +($, с)
+Learned +($, с)
+Weighted Types: 237, Types: 237, Tokens: 7317, Pairs: 962, Normal/Accom. Pairs: 236/1
+Samples: (962) сали/салис, сек/секс, қия/қияс
+290 new pairs inferred by conservative inference.
+Memory status: 228MiB Used, 7690MiB Remaining
+
+
+Iteration 24
+Lexicon stats:
+Types: 126789 Tokens: 357699
+Base size: 8042
+Derived size: 13681
+Unmodeled size: 105066
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, тар)
+Weighted Types: 353, Types: 68, Tokens: 810, Pairs: 237, Normal/Accom. Pairs: 68/0
+Samples: (237) борат/бораттар, пышақ/пышақтар, сандуғаш/сандуғаштар
+Overlap ratio: 5.7894736842105265
+Overlap ratio too high.
+
+Vetting transform +(ты, $)
+Weighted Types: 291, Types: 103, Tokens: 4758, Pairs: 192, Normal/Accom. Pairs: 103/0
+Samples: (192) еуроаймақты/еуроаймақ, нарықты/нарық, экспортты/экспорт
+Overlap ratio: 5.96
+Overlap ratio too high.
+
+Vetting transform +($, ті)
+Weighted Types: 280, Types: 99, Tokens: 3792, Pairs: 208, Normal/Accom. Pairs: 99/0
+Samples: (208) егемендік/егемендікті, көпшілік/көпшілікті, мүмкіндік/мүмкіндікті
+Overlap ratio: 12.454545454545455
+Overlap ratio too high.
+
+Vetting transform +($, ты)
+Weighted Types: 272, Types: 96, Tokens: 4921, Pairs: 183, Normal/Accom. Pairs: 96/0
+Samples: (183) ақиқа/ақиқаты, дыбыс/дыбысты, ынтымақтастық/ынтымақтастықты
+Overlap ratio: 7.75
+Overlap ratio too high.
+
+Vetting transform +(ті, $)
+Weighted Types: 272, Types: 96, Tokens: 3593, Pairs: 201, Normal/Accom. Pairs: 96/0
+Samples: (201) конструктивті/конструктив, теректі/терек, қабілетті/қабілет
+Overlap ratio: 35.25
+Overlap ratio too high.
+
+Vetting transform +($, дар)
+Weighted Types: 270, Types: 52, Tokens: 2128, Pairs: 184, Normal/Accom. Pairs: 52/0
+Samples: (184) фрактал/фракталдар, хай/хайдар, қолдаған/қолдағандар
+Overlap ratio: 1.4788732394366197
+Seg. Precision: 0.3132530120481928
+Selected +($, дар)
+Learned +($, дар)
+Weighted Types: 556, Types: 107, Tokens: 12503, Pairs: 271, Normal/Accom. Pairs: 106/1
+Samples: (271) фрактал/фракталдар, хай/хайдар, шығын/шығындар
+12 new pairs inferred by conservative inference.
+Memory status: 231MiB Used, 7687MiB Remaining
+
+
+Iteration 25
+Lexicon stats:
+Types: 126795 Tokens: 357707
+Base size: 8099
+Derived size: 13961
+Unmodeled size: 104735
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, тар)
+Weighted Types: 353, Types: 68, Tokens: 810, Pairs: 237, Normal/Accom. Pairs: 68/0
+Samples: (237) борат/бораттар, пышақ/пышақтар, сандуғаш/сандуғаштар
+Overlap ratio: 5.894736842105263
+Overlap ratio too high.
+
+Vetting transform +(ты, $)
+Weighted Types: 291, Types: 103, Tokens: 4758, Pairs: 192, Normal/Accom. Pairs: 103/0
+Samples: (192) еуроаймақты/еуроаймақ, нарықты/нарық, экспортты/экспорт
+Overlap ratio: 6.0
+Overlap ratio too high.
+
+Vetting transform +($, ті)
+Weighted Types: 280, Types: 99, Tokens: 3792, Pairs: 208, Normal/Accom. Pairs: 99/0
+Samples: (208) егемендік/егемендікті, көпшілік/көпшілікті, мүмкіндік/мүмкіндікті
+Overlap ratio: 12.454545454545455
+Overlap ratio too high.
+
+Vetting transform +($, ты)
+Weighted Types: 272, Types: 96, Tokens: 4921, Pairs: 183, Normal/Accom. Pairs: 96/0
+Samples: (183) ақиқа/ақиқаты, дыбыс/дыбысты, ынтымақтастық/ынтымақтастықты
+Overlap ratio: 7.8125
+Overlap ratio too high.
+
+Vetting transform +(ті, $)
+Weighted Types: 272, Types: 96, Tokens: 3593, Pairs: 201, Normal/Accom. Pairs: 96/0
+Samples: (201) конструктивті/конструктив, теректі/терек, қабілетті/қабілет
+Overlap ratio: 35.25
+Overlap ratio too high.
+
+Vetting transform +($, тер)
+Weighted Types: 239, Types: 46, Tokens: 2725, Pairs: 165, Normal/Accom. Pairs: 46/0
+Samples: (165) бүркіт/бүркіттер, лес/лестер, үңгірек/үңгіректер
+Overlap ratio: 4.294117647058823
+Seg. Precision: 0.2169811320754717
+Selected +($, тер)
+Learned +($, тер)
+Weighted Types: 301, Types: 58, Tokens: 3622, Pairs: 208, Normal/Accom. Pairs: 50/8
+Samples: (208) бүркіт/бүркіттер, лес/лестер, рей/рейтер
+15 new pairs inferred by conservative inference.
+Memory status: 237MiB Used, 7681MiB Remaining
+
+
+Iteration 26
+Lexicon stats:
+Types: 126802 Tokens: 357724
+Base size: 8268
+Derived size: 14172
+Unmodeled size: 104362
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, тар)
+Weighted Types: 353, Types: 68, Tokens: 810, Pairs: 237, Normal/Accom. Pairs: 68/0
+Samples: (237) борат/бораттар, пышақ/пышақтар, сандуғаш/сандуғаштар
+Overlap ratio: 5.7
+Overlap ratio too high.
+
+Vetting transform +($, лары)
+Weighted Types: 320, Types: 40, Tokens: 929, Pairs: 116, Normal/Accom. Pairs: 40/0
+Samples: (116) кинооператор/кинооператорлары, тасымалдаушы/тасымалдаушылары, қосымша/қосымшалары
+Overlap ratio: 1.0520833333333333
+Seg. Precision: 0.2898550724637681
+Selected +($, лары)
+Learned +($, лары)
+Weighted Types: 760, Types: 95, Tokens: 3244, Pairs: 193, Normal/Accom. Pairs: 95/0
+Samples: (193) жұмысшы/жұмысшылары, кинооператор/кинооператорлары, компания/компаниялары
+64 new pairs inferred by conservative inference.
+Memory status: 212MiB Used, 7706MiB Remaining
+
+
+Iteration 27
+Lexicon stats:
+Types: 126833 Tokens: 357826
+Base size: 8244
+Derived size: 14427
+Unmodeled size: 104162
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, тар)
+Weighted Types: 353, Types: 68, Tokens: 810, Pairs: 237, Normal/Accom. Pairs: 68/0
+Samples: (237) борат/бораттар, пышақ/пышақтар, сандуғаш/сандуғаштар
+Overlap ratio: 5.75
+Overlap ratio too high.
+
+Vetting transform +(ты, $)
+Weighted Types: 288, Types: 102, Tokens: 4734, Pairs: 191, Normal/Accom. Pairs: 102/0
+Samples: (191) еуроаймақты/еуроаймақ, нарықты/нарық, экспортты/экспорт
+Overlap ratio: 5.96
+Overlap ratio too high.
+
+Vetting transform +($, ті)
+Weighted Types: 280, Types: 99, Tokens: 3792, Pairs: 208, Normal/Accom. Pairs: 99/0
+Samples: (208) егемендік/егемендікті, көпшілік/көпшілікті, мүмкіндік/мүмкіндікті
+Overlap ratio: 3.58974358974359
+Seg. Precision: 0.4876847290640394
+Selected +($, ті)
+Learned +($, ті)
+Weighted Types: 334, Types: 118, Tokens: 4281, Pairs: 256, Normal/Accom. Pairs: 102/16
+Samples: (256) белес/белесті, вин/винті, егемендік/егемендікті
+12 new pairs inferred by conservative inference.
+Memory status: 242MiB Used, 7676MiB Remaining
+
+
+Iteration 28
+Lexicon stats:
+Types: 126839 Tokens: 357835
+Base size: 8442
+Derived size: 14689
+Unmodeled size: 103708
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, тар)
+Weighted Types: 353, Types: 68, Tokens: 810, Pairs: 237, Normal/Accom. Pairs: 68/0
+Samples: (237) борат/бораттар, пышақ/пышақтар, сандуғаш/сандуғаштар
+Overlap ratio: 5.8
+Overlap ratio too high.
+
+Vetting transform +(ты, $)
+Weighted Types: 288, Types: 102, Tokens: 4734, Pairs: 190, Normal/Accom. Pairs: 102/0
+Samples: (190) еуроаймақты/еуроаймақ, нарықты/нарық, экспортты/экспорт
+Overlap ratio: 5.92
+Overlap ratio too high.
+
+Vetting transform +($, ты)
+Weighted Types: 272, Types: 96, Tokens: 4921, Pairs: 183, Normal/Accom. Pairs: 96/0
+Samples: (183) ақиқа/ақиқаты, дыбыс/дыбысты, ынтымақтастық/ынтымақтастықты
+Overlap ratio: 6.944444444444445
+Overlap ratio too high.
+
+Vetting transform +(лері, $)
+Weighted Types: 192, Types: 24, Tokens: 492, Pairs: 58, Normal/Accom. Pairs: 24/0
+Samples: (58) бөлінулері/бөліну, киножүлделері/киножүлде, критерийлері/критерий
+Overlap ratio: 2.466666666666667
+Seg. Precision: 7.677052012027381E-4
+Seg. Precision too low
+
+Vetting transform +($, ль)
+Weighted Types: 187, Types: 66, Tokens: 882, Pairs: 309, Normal/Accom. Pairs: 66/0
+Samples: (309) виста/висталь, гай/гайль, лесте/лестель
+Overlap ratio: 0.5590062111801242
+Seg. Precision: 0.11438474870017332
+Selected +($, ль)
+Learned +($, ль)
+Weighted Types: 257, Types: 91, Tokens: 1213, Pairs: 403, Normal/Accom. Pairs: 72/19
+Samples: (403) крол/кроль, лесте/лестель, лораге/лорагель
+200 new pairs inferred by conservative inference.
+Memory status: 256MiB Used, 7662MiB Remaining
+
+
+Iteration 29
+Lexicon stats:
+Types: 126938 Tokens: 357980
+Base size: 8711
+Derived size: 15264
+Unmodeled size: 102963
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, тар)
+Weighted Types: 353, Types: 68, Tokens: 810, Pairs: 237, Normal/Accom. Pairs: 68/0
+Samples: (237) борат/бораттар, пышақ/пышақтар, сандуғаш/сандуғаштар
+Overlap ratio: 5.8
+Overlap ratio too high.
+
+Vetting transform +(ты, $)
+Weighted Types: 288, Types: 102, Tokens: 4734, Pairs: 190, Normal/Accom. Pairs: 102/0
+Samples: (190) еуроаймақты/еуроаймақ, нарықты/нарық, экспортты/экспорт
+Overlap ratio: 5.92
+Overlap ratio too high.
+
+Vetting transform +($, ты)
+Weighted Types: 272, Types: 96, Tokens: 4921, Pairs: 183, Normal/Accom. Pairs: 96/0
+Samples: (183) ақиқа/ақиқаты, дыбыс/дыбысты, ынтымақтастық/ынтымақтастықты
+Overlap ratio: 6.944444444444445
+Overlap ratio too high.
+
+Vetting transform +($, лер)
+Weighted Types: 187, Types: 36, Tokens: 596, Pairs: 172, Normal/Accom. Pairs: 36/0
+Samples: (172) буи/буилер, шеңбер/шеңберлер, әсер/әсерлер
+Overlap ratio: 1.6888888888888889
+Seg. Precision: 0.18274111675126903
+Selected +($, лер)
+Learned +($, лер)
+Weighted Types: 390, Types: 75, Tokens: 1975, Pairs: 236, Normal/Accom. Pairs: 72/3
+Samples: (236) буи/буилер, жеткізуші/жеткізушілер, шеңбер/шеңберлер
+21 new pairs inferred by conservative inference.
+Memory status: 287MiB Used, 7631MiB Remaining
+
+
+Iteration 30
+Lexicon stats:
+Types: 126948 Tokens: 357993
+Base size: 8801
+Derived size: 15518
+Unmodeled size: 102629
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, тар)
+Weighted Types: 353, Types: 68, Tokens: 810, Pairs: 237, Normal/Accom. Pairs: 68/0
+Samples: (237) борат/бораттар, пышақ/пышақтар, сандуғаш/сандуғаштар
+Overlap ratio: 5.571428571428571
+Overlap ratio too high.
+
+Vetting transform +(ты, $)
+Weighted Types: 286, Types: 101, Tokens: 4729, Pairs: 189, Normal/Accom. Pairs: 101/0
+Samples: (189) еуроаймақты/еуроаймақ, нарықты/нарық, экспортты/экспорт
+Overlap ratio: 5.92
+Overlap ratio too high.
+
+Vetting transform +($, ты)
+Weighted Types: 272, Types: 96, Tokens: 4921, Pairs: 183, Normal/Accom. Pairs: 96/0
+Samples: (183) ақиқа/ақиқаты, дыбыс/дыбысты, ынтымақтастық/ынтымақтастықты
+Overlap ratio: 6.578947368421052
+Overlap ratio too high.
+
+Vetting transform +($, ы)
+Weighted Types: 177, Types: 177, Tokens: 3137, Pairs: 477, Normal/Accom. Pairs: 177/0
+Samples: (477) жоғалту/жоғалтуы, кандидаттар/кандидаттары, шықпаған/шықпағаны
+Overlap ratio: 1.54337899543379
+Seg. Precision: 0.07057416267942583
+Seg. Precision too low
+
+Vetting transform +(ы, $)
+Weighted Types: 158, Types: 158, Tokens: 3865, Pairs: 400, Normal/Accom. Pairs: 158/0
+Samples: (400) рауғашы/рауғаш, сызықтары/сызықтар, ұлттары/ұлттар
+Overlap ratio: 2.035211267605634
+Seg. Precision: 0.0050503436151510305
+Seg. Precision too low
+
+Vetting transform ($, мон)+
+Weighted Types: 151, Types: 29, Tokens: 1034, Pairs: 121, Normal/Accom. Pairs: 29/0
+Samples: (121) арх/монарх, сек/монсек, тиньи/монтиньи
+Overlap ratio: 0.4838709677419355
+Seg. Precision: 0.19333333333333333
+Selected ($, мон)+
+Learned ($, мон)+
+Weighted Types: 171, Types: 33, Tokens: 1073, Pairs: 147, Normal/Accom. Pairs: 32/1
+Samples: (147) арх/монарх, сек/монсек, тиньи/монтиньи
+41 new pairs inferred by conservative inference.
+Memory status: 267MiB Used, 7651MiB Remaining
+
+
+Iteration 31
+Lexicon stats:
+Types: 126968 Tokens: 358025
+Base size: 8880
+Derived size: 15704
+Unmodeled size: 102384
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, тар)
+Weighted Types: 353, Types: 68, Tokens: 810, Pairs: 236, Normal/Accom. Pairs: 68/0
+Samples: (236) борат/бораттар, пышақ/пышақтар, сандуғаш/сандуғаштар
+Overlap ratio: 5.523809523809524
+Overlap ratio too high.
+
+Vetting transform +(ты, $)
+Weighted Types: 286, Types: 101, Tokens: 4729, Pairs: 187, Normal/Accom. Pairs: 101/0
+Samples: (187) еуроаймақты/еуроаймақ, нарықты/нарық, экспортты/экспорт
+Overlap ratio: 5.84
+Overlap ratio too high.
+
+Vetting transform +($, ты)
+Weighted Types: 272, Types: 96, Tokens: 4921, Pairs: 181, Normal/Accom. Pairs: 96/0
+Samples: (181) ақиқа/ақиқаты, дыбыс/дыбысты, ынтымақтастық/ынтымақтастықты
+Overlap ratio: 6.473684210526316
+Overlap ratio too high.
+
+Vetting transform +($, тон)
+Weighted Types: 151, Types: 29, Tokens: 907, Pairs: 137, Normal/Accom. Pairs: 29/0
+Samples: (137) клиф/клифтон, литтл/литтлтон, хат/хаттон
+Overlap ratio: 0.5370370370370371
+Seg. Precision: 0.22137404580152673
+Selected +($, тон)
+Learned +($, тон)
+Weighted Types: 229, Types: 44, Tokens: 1170, Pairs: 207, Normal/Accom. Pairs: 36/8
+Samples: (207) калвэрт/калвэртон, плизант/плизантон, хат/хаттон
+35 new pairs inferred by conservative inference.
+Memory status: 246MiB Used, 7672MiB Remaining
+
+
+Iteration 32
+Lexicon stats:
+Types: 126985 Tokens: 358047
+Base size: 8983
+Derived size: 15921
+Unmodeled size: 102081
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, тар)
+Weighted Types: 353, Types: 68, Tokens: 810, Pairs: 236, Normal/Accom. Pairs: 68/0
+Samples: (236) борат/бораттар, пышақ/пышақтар, сандуғаш/сандуғаштар
+Overlap ratio: 4.833333333333333
+Seg. Precision: 0.2677165354330709
+Selected +($, тар)
+Learned +($, тар)
+Weighted Types: 410, Types: 79, Tokens: 1169, Pairs: 273, Normal/Accom. Pairs: 78/1
+Samples: (273) азиялық/азиялықтар, вильяс/вильястар, сандуғаш/сандуғаштар
+9 new pairs inferred by conservative inference.
+Memory status: 235MiB Used, 7683MiB Remaining
+
+
+Iteration 33
+Lexicon stats:
+Types: 126989 Tokens: 358051
+Base size: 9191
+Derived size: 16198
+Unmodeled size: 101600
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, тың)
+Weighted Types: 338, Types: 65, Tokens: 3504, Pairs: 136, Normal/Accom. Pairs: 65/0
+Samples: (136) заряд/зарядтың, фунт/фунттың, ғимарат/ғимараттың
+Overlap ratio: 2.857142857142857
+Seg. Precision: 0.6770833333333334
+Selected +($, тың)
+Learned +($, тың)
+Weighted Types: 426, Types: 82, Tokens: 3948, Pairs: 169, Normal/Accom. Pairs: 82/0
+Samples: (169) жиырмалық/жиырмалықтың, фунт/фунттың, халық/халықтың
+0 new pairs inferred by conservative inference.
+Memory status: 210MiB Used, 7708MiB Remaining
+
+
+Iteration 34
+Lexicon stats:
+Types: 126989 Tokens: 358051
+Base size: 9292
+Derived size: 16365
+Unmodeled size: 101332
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, ты)
+Weighted Types: 272, Types: 96, Tokens: 4921, Pairs: 181, Normal/Accom. Pairs: 96/0
+Samples: (181) ақиқа/ақиқаты, дыбыс/дыбысты, ынтымақтастық/ынтымақтастықты
+Overlap ratio: 1.4105263157894736
+Seg. Precision: 0.3794466403162055
+Selected +($, ты)
+Learned +($, ты)
+Weighted Types: 404, Types: 143, Tokens: 6243, Pairs: 281, Normal/Accom. Pairs: 131/12
+Samples: (281) ақиқа/ақиқаты, дыбыс/дыбысты, сана/санаты
+21 new pairs inferred by conservative inference.
+Memory status: 188MiB Used, 7730MiB Remaining
+
+
+Iteration 35
+Lexicon stats:
+Types: 126999 Tokens: 358067
+Base size: 9379
+Derived size: 16656
+Unmodeled size: 100964
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +(тері, $)
+Weighted Types: 160, Types: 20, Tokens: 217, Pairs: 45, Normal/Accom. Pairs: 20/0
+Samples: (45) брендтері/бренд, жетістіктері/жетістік, мектептері/мектеп
+Overlap ratio: 1.95
+Seg. Precision: 6.391001469930338E-4
+Seg. Precision too low
+
+Vetting transform +($, дорф)
+Weighted Types: 144, Types: 18, Tokens: 384, Pairs: 91, Normal/Accom. Pairs: 18/0
+Samples: (91) айхен/айхендорф, зассен/зассендорф, фор/фордорф
+Overlap ratio: 0.4222222222222222
+Seg. Precision: 0.21176470588235294
+Selected +($, дорф)
+Learned +($, дорф)
+Weighted Types: 192, Types: 24, Tokens: 450, Pairs: 154, Normal/Accom. Pairs: 22/2
+Samples: (154) герс/герсдорф, дарен/дарендорф, фор/фордорф
+36 new pairs inferred by conservative inference.
+Memory status: 302MiB Used, 7615MiB Remaining
+
+
+Iteration 36
+Lexicon stats:
+Types: 127017 Tokens: 358099
+Base size: 9446
+Derived size: 16836
+Unmodeled size: 100735
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, берг)
+Weighted Types: 144, Types: 18, Tokens: 173, Pairs: 111, Normal/Accom. Pairs: 18/0
+Samples: (111) даль/дальберг, нагель/нагельберг, хал/халберг
+Overlap ratio: 0.723404255319149
+Seg. Precision: 0.1935483870967742
+Selected +($, берг)
+Learned +($, берг)
+Weighted Types: 184, Types: 23, Tokens: 228, Pairs: 157, Normal/Accom. Pairs: 23/0
+Samples: (157) верн/вернберг, нагель/нагельберг, хал/халберг
+77 new pairs inferred by conservative inference.
+Memory status: 304MiB Used, 7614MiB Remaining
+
+
+Iteration 37
+Lexicon stats:
+Types: 127055 Tokens: 358171
+Base size: 9547
+Derived size: 17069
+Unmodeled size: 100439
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, дегі)
+Weighted Types: 208, Types: 26, Tokens: 2025, Pairs: 78, Normal/Accom. Pairs: 26/0
+Samples: (78) туиттер/туиттердегі, филиппиндер/филиппиндердегі, ішін/ішіндегі
+Overlap ratio: 1.0
+Seg. Precision: 0.4
+Selected +($, дегі)
+Learned +($, дегі)
+Weighted Types: 336, Types: 42, Tokens: 2321, Pairs: 126, Normal/Accom. Pairs: 42/0
+Samples: (126) сәуір/сәуірдегі, сөздерін/сөздеріндегі, туиттер/туиттердегі
+7 new pairs inferred by conservative inference.
+Memory status: 219MiB Used, 7699MiB Remaining
+
+
+Iteration 38
+Lexicon stats:
+Types: 127058 Tokens: 358176
+Base size: 9570
+Derived size: 17201
+Unmodeled size: 100287
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, тін)
+Weighted Types: 260, Types: 50, Tokens: 1152, Pairs: 94, Normal/Accom. Pairs: 50/0
+Samples: (94) күресе/күресетін, түсе/түсетін, шеге/шегетін
+Overlap ratio: 0.9733333333333334
+Seg. Precision: 0.5154639175257731
+Selected +($, тін)
+Learned +($, тін)
+Weighted Types: 260, Types: 50, Tokens: 1152, Pairs: 98, Normal/Accom. Pairs: 50/0
+Samples: (98) жеткізе/жеткізетін, сүйрей/сүйрейтін, өте/өтетін
+56 new pairs inferred by conservative inference.
+Memory status: 227MiB Used, 7691MiB Remaining
+
+
+Iteration 39
+Lexicon stats:
+Types: 127086 Tokens: 358247
+Base size: 9618
+Derived size: 17355
+Unmodeled size: 100113
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, но)
+Weighted Types: 141, Types: 50, Tokens: 548, Pairs: 270, Normal/Accom. Pairs: 50/0
+Samples: (270) альби/альбино, нонтрон/нонтронно, сери/серино
+Overlap ratio: 0.7177914110429447
+Seg. Precision: 0.22321428571428573
+Selected +($, но)
+Learned +($, но)
+Weighted Types: 226, Types: 80, Tokens: 1008, Pairs: 455, Normal/Accom. Pairs: 56/24
+Samples: (455) альби/альбино, коми/комино, савин/савино
+122 new pairs inferred by conservative inference.
+Memory status: 208MiB Used, 7710MiB Remaining
+
+
+Iteration 40
+Lexicon stats:
+Types: 127147 Tokens: 358359
+Base size: 9822
+Derived size: 17835
+Unmodeled size: 99490
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, інде)
+Weighted Types: 264, Types: 33, Tokens: 2749, Pairs: 68, Normal/Accom. Pairs: 33/0
+Samples: (68) елдер/елдерінде, комитет/комитетінде, әлем/әлемінде
+Overlap ratio: 0.8545454545454545
+Seg. Precision: 0.55
+Selected +($, інде)
+Learned +($, інде)
+Weighted Types: 632, Types: 79, Tokens: 4645, Pairs: 174, Normal/Accom. Pairs: 33/46
+Samples: (174) комитет/комитетінде, саммиті/саммитінде, өзгерісі/өзгерісінде
+0 new pairs inferred by conservative inference.
+Memory status: 219MiB Used, 7699MiB Remaining
+
+
+Iteration 41
+Lexicon stats:
+Types: 127147 Tokens: 358359
+Base size: 9844
+Derived size: 17942
+Unmodeled size: 99361
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, бург)
+Weighted Types: 128, Types: 16, Tokens: 321, Pairs: 84, Normal/Accom. Pairs: 16/0
+Samples: (84) райхен/райхенбург, хам/хамбург, юлиус/юлиусбург
+Overlap ratio: 0.5576923076923077
+Seg. Precision: 0.1951219512195122
+Selected +($, бург)
+Learned +($, бург)
+Weighted Types: 208, Types: 26, Tokens: 405, Pairs: 133, Normal/Accom. Pairs: 26/0
+Samples: (133) томас/томасбург, хам/хамбург, юлиус/юлиусбург
+66 new pairs inferred by conservative inference.
+Memory status: 227MiB Used, 7691MiB Remaining
+
+
+Iteration 42
+Lexicon stats:
+Types: 127179 Tokens: 358417
+Base size: 9907
+Derived size: 18139
+Unmodeled size: 99133
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, тік)
+Weighted Types: 171, Types: 33, Tokens: 1492, Pairs: 90, Normal/Accom. Pairs: 33/0
+Samples: (90) дімкәс/дімкәстік, ерік/еріктік, миф/мифтік
+Overlap ratio: 1.2549019607843137
+Seg. Precision: 0.39759036144578314
+Selected +($, тік)
+Learned +($, тік)
+Weighted Types: 208, Types: 40, Tokens: 1733, Pairs: 107, Normal/Accom. Pairs: 36/4
+Samples: (107) дімкәс/дімкәстік, миф/мифтік, президент/президенттік
+44 new pairs inferred by conservative inference.
+Memory status: 249MiB Used, 7669MiB Remaining
+
+
+Iteration 43
+Lexicon stats:
+Types: 127201 Tokens: 358764
+Base size: 9974
+Derived size: 18288
+Unmodeled size: 98939
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, лері)
+Weighted Types: 216, Types: 27, Tokens: 368, Pairs: 68, Normal/Accom. Pairs: 27/0
+Samples: (68) білу/білулері, дәуір/дәуірлері, офицер/офицерлері
+Overlap ratio: 1.0588235294117647
+Seg. Precision: 0.29347826086956524
+Selected +($, лері)
+Learned +($, лері)
+Weighted Types: 360, Types: 45, Tokens: 1126, Pairs: 102, Normal/Accom. Pairs: 45/0
+Samples: (102) билеуші/билеушілері, білу/білулері, дәуір/дәуірлері
+28 new pairs inferred by conservative inference.
+Memory status: 225MiB Used, 7693MiB Remaining
+
+
+Iteration 44
+Lexicon stats:
+Types: 127215 Tokens: 358798
+Base size: 9976
+Derived size: 18418
+Unmodeled size: 98821
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, бах)
+Weighted Types: 130, Types: 25, Tokens: 415, Pairs: 118, Normal/Accom. Pairs: 25/0
+Samples: (118) вайден/вайденбах, заль/зальбах, мас/масбах
+Overlap ratio: 0.4823529411764706
+Seg. Precision: 0.2976190476190476
+Selected +($, бах)
+Learned +($, бах)
+Weighted Types: 177, Types: 34, Tokens: 481, Pairs: 160, Normal/Accom. Pairs: 34/0
+Samples: (160) вайден/вайденбах, хорн/хорнбах, эссель/эссельбах
+78 new pairs inferred by conservative inference.
+Memory status: 230MiB Used, 7688MiB Remaining
+
+
+Iteration 45
+Lexicon stats:
+Types: 127254 Tokens: 358857
+Base size: 10048
+Derived size: 18655
+Unmodeled size: 98551
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, тық)
+Weighted Types: 234, Types: 45, Tokens: 2246, Pairs: 107, Normal/Accom. Pairs: 45/0
+Samples: (107) агрегат/агрегаттық, азық/азықтық, коллоид/коллоидтық
+Overlap ratio: 1.1323529411764706
+Seg. Precision: 0.5113636363636364
+Selected +($, тық)
+Learned +($, тық)
+Weighted Types: 265, Types: 51, Tokens: 2379, Pairs: 122, Normal/Accom. Pairs: 51/0
+Samples: (122) агрегат/агрегаттық, азық/азықтық, период/периодтық
+15 new pairs inferred by conservative inference.
+Memory status: 258MiB Used, 7660MiB Remaining
+
+
+Iteration 46
+Lexicon stats:
+Types: 127261 Tokens: 358875
+Base size: 10091
+Derived size: 18791
+Unmodeled size: 98379
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, та)
+Weighted Types: 116, Types: 41, Tokens: 1157, Pairs: 143, Normal/Accom. Pairs: 41/0
+Samples: (143) дыбрава/дыбравата, сапа/сапата, штат/штатта
+Overlap ratio: 0.6333333333333333
+Seg. Precision: 0.211340206185567
+Selected +($, та)
+Learned +($, та)
+Weighted Types: 266, Types: 94, Tokens: 5031, Pairs: 278, Normal/Accom. Pairs: 82/12
+Samples: (278) аралық/аралықта, дракат/драката, зауыт/зауытта
+48 new pairs inferred by conservative inference.
+Memory status: 261MiB Used, 7657MiB Remaining
+
+
+Iteration 47
+Lexicon stats:
+Types: 127284 Tokens: 358909
+Base size: 10114
+Derived size: 19088
+Unmodeled size: 98082
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, ия)
+Weighted Types: 107, Types: 38, Tokens: 1610, Pairs: 179, Normal/Accom. Pairs: 38/0
+Samples: (179) автоном/автономия, амазон/амазония, маньчжур/маньчжурия
+Overlap ratio: 1.1917808219178083
+Seg. Precision: 0.07063197026022305
+Seg. Precision too low
+
+Vetting transform +($, и)
+Weighted Types: 105, Types: 105, Tokens: 3773, Pairs: 502, Normal/Accom. Pairs: 104/1
+Samples: (502) бақ/бақи, димитр/димитри, фел/фели
+Overlap ratio: 0.828125
+Seg. Precision: 0.11064278187565858
+Selected +($, и)
+Learned +($, и)
+Weighted Types: 174, Types: 174, Tokens: 8846, Pairs: 755, Normal/Accom. Pairs: 158/16
+Samples: (755) димитр/димитри, маратх/маратхи, фен/фени
+142 new pairs inferred by conservative inference.
+Memory status: 233MiB Used, 7684MiB Remaining
+
+
+Iteration 48
+Lexicon stats:
+Types: 127353 Tokens: 359015
+Base size: 10402
+Derived size: 19965
+Unmodeled size: 96986
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +(у, ген)
+Weighted Types: 105, Types: 37, Tokens: 522, Pairs: 60, Normal/Accom. Pairs: 37/0
+Samples: (60) ескермеу/ескермеген, иелену/иеленген, істеу/істеген
+Overlap ratio: 1.275
+Seg. Precision: 0.18048780487804877
+Selected +(у, ген)
+Learned +(у, ген)
+Weighted Types: 116, Types: 41, Tokens: 765, Pairs: 66, Normal/Accom. Pairs: 41/0
+Samples: (66) ескермеу/ескермеген, иелену/иеленген, істеу/істеген
+18 new pairs inferred by conservative inference.
+Memory status: 283MiB Used, 7635MiB Remaining
+
+
+Iteration 49
+Lexicon stats:
+Types: 127362 Tokens: 359044
+Base size: 10425
+Derived size: 20049
+Unmodeled size: 96888
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, а)
+Weighted Types: 102, Types: 102, Tokens: 3588, Pairs: 440, Normal/Accom. Pairs: 102/0
+Samples: (440) гранж/гранжа, пье/пьеа, сальвадор/сальвадора
+Overlap ratio: 0.7602040816326531
+Seg. Precision: 0.03294573643410853
+Seg. Precision too low
+
+Vetting transform +($, ово)
+Weighted Types: 99, Types: 19, Tokens: 475, Pairs: 85, Normal/Accom. Pairs: 19/0
+Samples: (85) кемер/кемерово, круш/крушово, самуил/самуилово
+Overlap ratio: 0.7692307692307693
+Seg. Precision: 0.24050632911392406
+Selected +($, ово)
+Learned +($, ово)
+Weighted Types: 140, Types: 27, Tokens: 556, Pairs: 138, Normal/Accom. Pairs: 20/7
+Samples: (138) вино/виново, кемер/кемерово, круш/крушово
+38 new pairs inferred by conservative inference.
+Memory status: 239MiB Used, 7679MiB Remaining
+
+
+Iteration 50
+Lexicon stats:
+Types: 127380 Tokens: 359067
+Base size: 10499
+Derived size: 20202
+Unmodeled size: 96679
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, ович)
+Weighted Types: 288, Types: 36, Tokens: 1497, Pairs: 85, Normal/Accom. Pairs: 36/0
+Samples: (85) ринат/ринатович, семён/семёнович, халил/халилович
+Overlap ratio: 1.4827586206896552
+Seg. Precision: 0.6923076923076923
+Selected +($, ович)
+Learned +($, ович)
+Weighted Types: 376, Types: 47, Tokens: 1705, Pairs: 118, Normal/Accom. Pairs: 40/7
+Samples: (118) густаво/густавович, казбек/казбекович, филип/филиппович
+12 new pairs inferred by conservative inference.
+Memory status: 237MiB Used, 7681MiB Remaining
+
+
+Handling final compounding...
+Memory status: 237MiB Used, 7681MiB Remaining
+Broke 250 compounds in base
+Memory status: 259MiB Used, 7659MiB Remaining
+Broke 4992 compounds in unmodeled
+Learning complete. Analyzing...
+Writing output to /Users/lignos/repos/morph-seg/data/segmented/wmt19/morsel/kk_en/kk/morsel_analysis.txt using charset UTF-8
+
+Learning time: 46.305s

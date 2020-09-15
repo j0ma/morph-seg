@@ -1,0 +1,9 @@
+Number of unique affixes: 49
+Number of word-internal characters: 167
+Number of word-final characters: 130
+Reducing number of merge operations by 297
+MORSEL + BPE segmentation vocab size: 2458
+Number of word-internal characters: 169
+Number of word-final characters: 128
+Reducing number of merge operations by 297
+BPE segmentation vocab size: 2486

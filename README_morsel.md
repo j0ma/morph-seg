@@ -21,11 +21,11 @@ precision_threshold = 0.075
 * These params were saved in `params/morsel/tuned.txt`
 
 
-## Applying MORSEL + BPE to wordlists
+## Applying MORSEL + BPE to the Flores data
 
 Now that the parameters are tuned, we can apply MORSEL and BPE together:
 
-* Run `src/morsel-bpe-all-langs.sh`. It will automatically use the tuned parameters and the wordlists from the training data, and writes output to `data/segmented/flores/morsel/`. Note that the number of units in the output isn't exact. You can check as follows:
+* Run `src/run-morsel-bpe-flores.sh`. It will automatically use the tuned parameters and the wordlists from the training data, and writes output to `data/segmented/flores/morsel/`. Note that the number of units in the output isn't exact. You can check as follows:
 ```
 grep "MORSEL + BPE segmentation vocab size" data/segmented/flores/morsel/*/*/run.log
 data/segmented/flores/morsel/ne_en/en/run.log:MORSEL + BPE segmentation vocab size: 2393
@@ -37,4 +37,14 @@ data/segmented/flores/morsel/si_en/si/run.log:MORSEL + BPE segmentation vocab si
 * You'll use this map to transform an in-vocabulary words, which should cover all of training, but not all of dev and test.
 * To cover the remaining words in dev and test, you'll want to make a list of the words in dev and test that this doesn't cover, and use `subword-nmt apply-bpe` using the BPE code that MORSEL used on the stems, for example (`data/segmented/flores/morsel/ne_en/en/stem_code.txt`)
 * The MORSEL + BPE script also creates BPE codes and output for applying BPE directly to words (no MORSEL). These files are prefixed with `word` (e.g. `word_code.txt`, `words_bpe_map.txt`). Do not use these except for the purpose of comparing pure BPE vs. MORSEL + BPE.
- 
+
+
+## Applying MORSEL + BPE to the Flores data
+
+Run `./src/run-morsel-bpe-wmt19.sh`. It will automatically print the resulting vocab sizes:
+```
+data/segmented/wmt19/morsel/gu_en/en/run.log:MORSEL + BPE segmentation vocab size: 2474
+data/segmented/wmt19/morsel/gu_en/gu/run.log:MORSEL + BPE segmentation vocab size: 2415
+data/segmented/wmt19/morsel/kk_en/en/run.log:MORSEL + BPE segmentation vocab size: 2458
+data/segmented/wmt19/morsel/kk_en/kk/run.log:MORSEL + BPE segmentation vocab size: 2423
+```

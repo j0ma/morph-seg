@@ -1,0 +1,226 @@
+Setting parameters from /Users/lignos/repos/morph-seg/params/morsel/tuned.txt
+Loading wordlist from /Users/lignos/repos/morph-seg/data/wordlists/gu_en/train.gu.wordlist.noslash using charset UTF-8
+11697 types loaded.
+21693 tokens loaded.
+Init time: 0.386s
+
+Lexicon stats:
+Types: 11697 Tokens: 21693
+
+Handling hyphenation...
+Lexicon stats:
+Types: 11921 Tokens: 21927
+Memory status: 55MiB Used, 7863MiB Remaining
+
+Starting learning...
+Iteration 1
+Lexicon stats:
+Types: 11921 Tokens: 21927
+Base size: 0
+Derived size: 0
+Unmodeled size: 11921
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +(ના, $)
+Weighted Types: 59, Types: 21, Tokens: 406, Pairs: 75, Normal/Accom. Pairs: 21/0
+Samples: (75) અમેરિકાના/અમેરિકા, કર્ણાટકના/કર્ણાટક, કોમ્પ્યુટરના/કોમ્પ્યુટર
+Overlap Ratio: undefined (no base or stem overlap)
+Breaking tie between +(ના, $) and +($, ના)
+Seg. Precision: 0.7
+Selected +($, ના)
+Learned +($, ના)
+Weighted Types: 59, Types: 21, Tokens: 406, Pairs: 80, Normal/Accom. Pairs: 21/0
+Samples: (80) કોમ્પ્યુટર/કોમ્પ્યુટરના, નાગાલેંડ/નાગાલેંડના, મંગળ/મંગળના
+0 new pairs inferred by conservative inference.
+Memory status: 34MiB Used, 7884MiB Remaining
+
+
+Iteration 2
+Lexicon stats:
+Types: 11921 Tokens: 21927
+Base size: 79
+Derived size: 79
+Unmodeled size: 11763
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform ($, મહા)+
+Weighted Types: 52, Types: 10, Tokens: 95, Pairs: 17, Normal/Accom. Pairs: 10/0
+Samples: (17) કાળી/મહાકાળી, નગરો/મહાનગરો, લક્ષ્મી/મહાલક્ષ્મી
+Overlap ratio: 0.5
+Seg. Precision: 0.5555555555555556
+Selected ($, મહા)+
+Learned ($, મહા)+
+Weighted Types: 52, Types: 10, Tokens: 95, Pairs: 17, Normal/Accom. Pairs: 10/0
+Samples: (17) કાળી/મહાકાળી, નગરો/મહાનગરો, લક્ષ્મી/મહાલક્ષ્મી
+0 new pairs inferred by conservative inference.
+Memory status: 68MiB Used, 7849MiB Remaining
+
+
+Iteration 3
+Lexicon stats:
+Types: 11921 Tokens: 21927
+Base size: 94
+Derived size: 96
+Unmodeled size: 11731
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +(પુર, $)
+Weighted Types: 42, Types: 8, Tokens: 58, Pairs: 43, Normal/Accom. Pairs: 8/0
+Samples: (43) આનંદપુર/આનંદ, જાદવપુર/જાદવ, ભોજપુર/ભોજ
+Transform has too few types.
+
+Vetting transform +($, પુર)
+Weighted Types: 42, Types: 8, Tokens: 58, Pairs: 43, Normal/Accom. Pairs: 8/0
+Samples: (43) અનૂપ/અનૂપપુર, આણંદ/આણંદપુર, સુલ્તાન/સુલ્તાનપુર
+Transform has too few types.
+
+Vetting transform +(નગર, $)
+Weighted Types: 31, Types: 6, Tokens: 72, Pairs: 16, Normal/Accom. Pairs: 6/0
+Samples: (16) ગંગાનગર/ગંગા, વિજયનગર/વિજય, સિદ્ધાર્થનગર/સિદ્ધાર્થ
+Transform has too few types.
+
+Vetting transform +($, નગર)
+Weighted Types: 31, Types: 6, Tokens: 72, Pairs: 16, Normal/Accom. Pairs: 6/0
+Samples: (16) ગંગા/ગંગાનગર, નવા/નવાનગર, શ્રી/શ્રીનગર
+Transform has too few types.
+
+Vetting transform +($, ની)
+Weighted Types: 23, Types: 8, Tokens: 173, Pairs: 47, Normal/Accom. Pairs: 8/0
+Samples: (47) ધોરીમાર્ગો/ધોરીમાર્ગોની, ભવાની/ભવાનીની, ભારત/ભારતની
+Transform has too few types.
+
+Vetting transform +($, ી)
+Weighted Types: 22, Types: 22, Tokens: 289, Pairs: 121, Normal/Accom. Pairs: 22/0
+Samples: (121) જયંત/જયંતી, પ્રેમ/પ્રેમી, સુર/સુરી
+Overlap ratio: 0.9230769230769231
+Seg. Precision: 0.08906882591093117
+Selected +($, ી)
+Learned +($, ી)
+Weighted Types: 24, Types: 24, Tokens: 312, Pairs: 123, Normal/Accom. Pairs: 24/0
+Samples: (123) જયંત/જયંતી, પ્રેમ/પ્રેમી, સુર/સુરી
+0 new pairs inferred by conservative inference.
+Memory status: 95MiB Used, 7823MiB Remaining
+
+
+Iteration 4
+Lexicon stats:
+Types: 11921 Tokens: 21927
+Base size: 200
+Derived size: 219
+Unmodeled size: 11502
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +($, ો)
+Weighted Types: 21, Types: 21, Tokens: 333, Pairs: 76, Normal/Accom. Pairs: 21/0
+Samples: (76) દિવસ/દિવસો, ભારતીય/ભારતીયો, લેખ/લેખો
+Overlap ratio: 0.8333333333333334
+Seg. Precision: 0.2625
+Selected +($, ો)
+Learned +($, ો)
+Weighted Types: 27, Types: 27, Tokens: 404, Pairs: 92, Normal/Accom. Pairs: 24/3
+Samples: (92) અઝેરબીજાન/અઝેરબીજાનનો, દિવસ/દિવસો, સામયિક/સામયિકો
+30 new pairs inferred by conservative inference.
+Memory status: 122MiB Used, 7795MiB Remaining
+
+
+Iteration 5
+Lexicon stats:
+Types: 11936 Tokens: 21950
+Base size: 291
+Derived size: 341
+Unmodeled size: 11304
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform +(s, $)
+Weighted Types: 21, Types: 21, Tokens: 321, Pairs: 58, Normal/Accom. Pairs: 21/0
+Samples: (58) columns/column, groups/group, scripts/script
+Overlap Ratio: undefined (no base or stem overlap)
+Breaking tie between +(s, $) and +($, s)
+Seg. Precision: 0.4375
+Selected +($, s)
+Learned +($, s)
+Weighted Types: 21, Types: 21, Tokens: 321, Pairs: 58, Normal/Accom. Pairs: 21/0
+Samples: (58) link/links, phrase/phrases, template/templates
+0 new pairs inferred by conservative inference.
+Memory status: 158MiB Used, 7760MiB Remaining
+
+
+Iteration 6
+Lexicon stats:
+Types: 11936 Tokens: 21950
+Base size: 349
+Derived size: 399
+Unmodeled size: 11188
+Hypothesizing and scoring transforms...
+Selecting a transform...
+
+Vetting transform (wiki, $)+
+Weighted Types: 16, Types: 2, Tokens: 397, Pairs: 4, Normal/Accom. Pairs: 2/0
+Samples: (4) wikibreak/break, wikiproject/project, wikiquote/quote
+Transform has too few types.
+
+Vetting transform ($, wiki)+
+Weighted Types: 16, Types: 2, Tokens: 397, Pairs: 5, Normal/Accom. Pairs: 2/0
+Samples: (5) data/wikidata, project/wikiproject, quote/wikiquote
+Transform has too few types.
+
+Vetting transform +(ગઢ, $)
+Weighted Types: 14, Types: 5, Tokens: 36, Pairs: 13, Normal/Accom. Pairs: 5/0
+Samples: (13) મહેન્દ્રગઢ/મહેન્દ્ર, રાયગઢ/રાય, હનુમાનગઢ/હનુમાન
+Transform has too few types.
+
+Vetting transform +($, ા)
+Weighted Types: 13, Types: 13, Tokens: 117, Pairs: 85, Normal/Accom. Pairs: 13/0
+Samples: (85) અડાલજ/અડાલજા, કાળ/કાળા, ડુંગર/ડુંગરા
+Overlap ratio: 0.2916666666666667
+Seg. Precision: 0.04406779661016949
+Seg. Precision too low
+
+Vetting transform ($, સં)+
+Weighted Types: 11, Types: 4, Tokens: 37, Pairs: 12, Normal/Accom. Pairs: 4/0
+Samples: (12) ગીતકાર/સંગીતકાર, ગ્રામ/સંગ્રામ, જીવ/સંજીવ
+Transform has too few types.
+
+Vetting transform (ચંદ્ર, $)+
+Weighted Types: 11, Types: 1, Tokens: 4, Pairs: 4, Normal/Accom. Pairs: 1/0
+Samples: (4) ચંદ્રગુપ્ત/ગુપ્ત, ચંદ્રતાલ/તાલ, ચંદ્રશેખર/શેખર
+Transform has too few types.
+
+Vetting transform ($, ચંદ્ર)+
+Weighted Types: 11, Types: 1, Tokens: 4, Pairs: 5, Normal/Accom. Pairs: 1/0
+Samples: (5) તાલ/ચંદ્રતાલ, પૂર/ચંદ્રપૂર, યાન/ચંદ્રયાન
+Transform has too few types.
+
+Vetting transform +(ા, $)
+Weighted Types: 10, Types: 10, Tokens: 72, Pairs: 62, Normal/Accom. Pairs: 10/0
+Samples: (62) દુર્ગા/દુર્ગ, સેના/સેન, સોમા/સોમ
+Overlap ratio: 2.0
+Seg. Precision: 0.0039541320680110716
+Seg. Precision too low
+
+Vetting transform (વિ, $)+
+Weighted Types: 8, Types: 3, Tokens: 46, Pairs: 12, Normal/Accom. Pairs: 3/0
+Samples: (12) વિજયનગર/જયનગર, વિદિશા/દિશા, વિરામ/રામ
+Transform has too few types.
+
+Vetting transform (સં, $)+
+Weighted Types: 8, Types: 3, Tokens: 26, Pairs: 11, Normal/Accom. Pairs: 3/0
+Samples: (11) સંક્રાંતિ/ક્રાંતિ, સંજીવ/જીવ, સંયુક્ત/યુક્ત
+Transform has too few types.
+Out of good transforms to learn. Learning complete.
+
+
+Handling final compounding...
+Memory status: 46MiB Used, 7872MiB Remaining
+Broke 0 compounds in base
+Memory status: 47MiB Used, 7871MiB Remaining
+Broke 147 compounds in unmodeled
+Learning complete. Analyzing...
+Writing output to /Users/lignos/repos/morph-seg/data/segmented/wmt19/morsel/gu_en/gu/morsel_analysis.txt using charset UTF-8
+
+Learning time: 1.549s
